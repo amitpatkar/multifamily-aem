@@ -1,0 +1,109 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"    
+    data-sly-use.association="com.brookfieldpropertiesprogram.core.models.AssociationConfigModel" 
+    >   
+
+    <div class="carouselSection__header-wrapper grid-container">
+        <div class="carouselSection__header">
+            <!--replace the content with the title and seo text-->
+            <div class="horizontal-divider"></div>
+            <h2 class="section-title">${properties.subTitle}</h2>
+            <p data-sly-test="${properties.mainTitle}" class="highlight-title">${properties.mainTitle}</p>
+        </div>
+    </div>
+    <div  class="glider-contain" data-sly-test="${association.collectionConfigModels && association.collectionConfigModels.size > 0}" data-layer-section>
+        <div class="glider">
+            <div class="slide-contain" data-sly-repeat.collectionConfig = "${association.collectionConfigModels}">
+                <div class="cmp-section50 cmp-section50--info-right" >
+                    <div class="image-above grid-container">
+                        <div class="cmp-section50__wrapper grid-row">
+                            <div class="cmp-section50__image">
+                                <img src="${collectionConfig.featuredImage}" alt="${collectionConfig.featuredImageAltText ? collectionConfig.featuredImageAltText : 'Collection Featured Image'}"/>
+                            </div>
+                            <div class="cmp-section50__info">
+                                <div class="cmp-section50__info-inner">
+                                    <!--add highlight html if there is a highlight title-->
+                                    <div class="cmp-section50__highlight">
+                                        <h2 class="highlight-title">${collectionConfig.title}</h2>
+                                    </div>
+                                    <!---->
+
+                                    <!--add description html if there is a description-->
+                                    <!--add "hide-for-mobile" css class if hiding description on mobile-->
+                                    <div class="cmp-section50__description hide-for-mobile">
+                                        <p class="body-text">${collectionConfig.metaDescription}</p>
+                                    </div>
+                                    <!---->
+
+                                    <!--add address html if there is an address-->
+                                    <div class="cmp-section50__address">
+                                        <p class="link-text">${collectionConfig.addressLine1}</p>
+                                        <p class="link-text">${collectionConfig.addressLine2}</p>
+                                    </div>
+                                    <!---->
+
+                                    <!--add the link/list html if there is a link/text list, replace the 'href' with configured link values, add open to new/same window-->
+                                    <div class="cmp-section50__list">
+                                        <!--add title html if there is a title for link/text list-->
+                                        <p class="medium-title">Featured Properties</p>
+                                        <!---->
+                                        <ul>
+                                            <li data-sly-repeat.propertyConfig = "${collectionConfig.collectionPropertiesConfigModel.propertyConfigModels}">
+                                                <a class="link-text" href="/content/portfolio/en/properties/${propertyConfig.name}.html">${propertyConfig.title}</a></li>                                            
+                                        </ul>
+                                        <!--do not use the <a> if there is no link, usse the following <ul> html for plain text list-->
+                                        <!-- 
+                                            <ul>
+                                                <li>Minutes to Subway lines & Penn Station</li>
+                                                <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                                <li>2-Acre Public Plaza</li>
+                                            </ul> 
+                                        -->
+                                    </div>
+                                    <!---->
+
+                                    <!--add cta html if there is a cta-->
+                                    <div class="cmp-section50__cta">
+                                        <a href="/content/portfolio/en/collections/${collectionConfig.name}.html" class="btn btn-tertiary btn-dark">${collectionConfig.ctaLabel}</a>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <div data-sly-test="${association.collectionConfigModels && association.collectionConfigModels.size > 0}" class="carouselSection__control-wrapper grid-container" data-layer-section>
+    <div class="grid-row">
+        <div class="carouselSection__control">
+            <div class="carouselSection__status">
+                <p class="label-text">
+                    <!--replace the number "3" with the total number of slides; replace the "collections" with the NAME of carousel -->
+                    <span class="current-page">1</span> of ${association.collectionConfigModels.size} ${properties.sliderType}
+                </p>
+            </div>
+            <div class="carouselSection__buttons">
+                <button class="carouselSection__btn carouselSection__btn--prev">
+                    <span class="visually-hidden">Previous</span>
+                    <span class="carouselSection__btn-icon">
+                        <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </button>
+                <button class="carouselSection__btn carouselSection__btn--next">
+                    <span class="visually-hidden">Next</span>
+                    <span class="carouselSection__btn-icon">
+                        <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M1 31L16 16L1 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = (!association.collectionConfigModels || association.collectionConfigModels.size == 0), classAppend='cmp-text'}"></sly>

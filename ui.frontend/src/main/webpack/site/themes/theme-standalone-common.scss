@@ -1,0 +1,29 @@
+.root {
+    &.theme-eugene-small,
+    &.theme-nashvilletheplace-small,
+    &.theme-radia-small,
+    &.theme-third-small,
+    &.theme-webster11-small,
+    &.theme-george-small, 
+    &.theme-edmund-small,
+    &.theme-olivia-small,
+    &.theme-burnham-small,
+    &.theme-eugene,
+    &.theme-nashvilletheplace,
+    &.theme-radian,
+    &.theme-third,
+    &.theme-webster11,
+    &.theme-george, 
+    &.theme-edmund,
+    &.theme-olivia,
+    &.theme-burnham {
+        --bg-dark: #{$universal-alto};
+        --bg-dark-rgb: #{hexToRGB($universal-alto)};
+        --alt-bg-dark: #{$universal-alto};
+        --alt-bg-dark-rgb: #{hexToRGB($universal-alto)};
+        --section33-ctaCard-bg: #{$universal-alto};
+        --form-submit-bg: #{$universal-alto};
+        --form-input-bg: rgba(var(--bg-dark-rgb), 0.05);
+        --divider-color: rgba(var(--bg-dark-rgb), 0.1);
+    }
+}

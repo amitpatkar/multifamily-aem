@@ -1,0 +1,33 @@
+<div 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+    data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+    class="cmp-section100__wrapper ${ ( properties.animationBehavior=='enabled' )  ||   (pageInfo.valueMapFinal['site.animationEnableAll'] && (!properties.animationBehavior || properties.animationBehavior=='disabled')) ? 'animation-on' : ''}"
+    data-layer-section>
+    <div data-sly-test.isVisual="${properties.bgImagePath}" class="cmp-section100__media">
+        <img src="${updatedProps.properties.bgImagePath @context='uri'}${pageInfo.valueMapFinal['site.imageServiceUrl'] ?  '?tx=c_fill,h_1022,w_1920' : ''}" alt="${updatedProps.properties.bgImageLabel ? updatedProps.properties.bgImageLabel : 'Section 100% Image'}" width="1920" height="1022"/>
+    </div>
+    <div data-sly-test="${!isVisual}" class="cmp-section100__lead">
+        ${updatedProps.properties.lead @context='html'}
+    </div>
+    <div data-sly-test="${isVisual}" class="cmp-section100__info-box grid-row">
+        <div class="cmp-section100__info">
+            <div class="cmp-section100__info-inner">
+                <div class="cmp-section100__title"><h3 class="large-title">${properties.title}</h3></div>
+                <div class="cmp-section100__text">${properties.text @context='html'}</div>
+                <div data-sly-test="${cta && cta.label}" class="cmp-section100__cta">
+                    <a data-sly-test="${cta && cta.label}" href="${cta.absUrl}"  target="${cta.target}" class="btn ${cta.btnStyle ? cta.btnStyle :'btn-dark'} ${cta.btnType ? cta.btnType : 'btn-tertiary' }">${cta.label}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-sly-test.displayAddress="${!isVisual && properties.displayAddress}" class="cmp-section100__contacts">
+       ${updatedProps.getProperties.getInTouch @context='html'}
+    </div>
+    <div data-sly-test="${!isVisual && !displayAddress}" class="cmp-section100__copy">
+        ${properties.copy @context='html'}
+        <a data-sly-test="${cta && cta.label}"  target="${cta.target}" href="${cta.absUrl}" class="btn ${cta.btnStyle ? cta.btnStyle :'btn-light'} ${cta.btnType ? cta.btnType : 'btn-tertiary' }">${cta.label}</a>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.lead, classAppend='cmp-text'}"></sly>

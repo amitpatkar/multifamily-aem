@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~ Copyright 2019 Adobe
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~     http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Container"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          helpPath="https://www.adobe.com/go/aem_cmp_container_v1"
+          extraClientlibs="[core.wcm.components.container.v1.editor]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container"
+        granite:class="cmp-container__editor">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <bodyJavaScriptSettings
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Body JavaScripts"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <container
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <mega-menu-links
+                                        jcr:primaryType="nt:unstructured"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Body Javascript"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./bodyJavascript">
+                                            <items
+                                                jcr:primaryType="nt:unstructured">
+                                                <key
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Key"
+                                                    name="./key"/>
+                                                <value
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Value - Include the &lt;script&gt; tag"
+                                                    name="./value"/>   
+                                                <runOnAllPages
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check for this script to run on all pages"
+                                                    name="./runOnAllPages"
+                                                    text="Run On All Pages"
+                                                    checked="{Boolean}false"
+                                                    uncheckedValue="false"
+                                                    value="true"/>                                                                                                   
+                                            </items>
+                                        </field>
+                                    </mega-menu-links>
+                                </items>
+                            </container>
+                        </items>
+                    </bodyJavaScriptSettings>
+                    <generalConfiguration
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Global Config"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <container
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items
+                                    jcr:primaryType="nt:unstructured">
+                                    <catchAllContactUsEmail
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDesc="Email Address across all properties used as catch all for contact us form"
+                                        fieldLabel="catchAllContactUsEmail"
+                                        name="./catchAllContactUsEmail"/>
+                                    <googleMapsAPIKey
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldLabel="googleMapsAPIKey"
+                                        name="./googleMapsAPIKey"/>    
+                                </items>
+                            </container>
+                        </items>
+                    </generalConfiguration>
+                    <otherConfiguration
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Other Config Items"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <container
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <mega-menu-links
+                                        jcr:primaryType="nt:unstructured"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Body Javascript"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./otherConfigItems">
+                                            <items
+                                                jcr:primaryType="nt:unstructured">
+                                                <key
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Key"
+                                                    name="./key"/>
+                                                <value
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Value - Include the &lt;script&gt; tag"
+                                                    name="./value"/>                                                                                                    
+                                            </items>
+                                        </field>
+                                    </mega-menu-links>
+                                </items>
+                            </container>
+                        </items>
+                    </otherConfiguration>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

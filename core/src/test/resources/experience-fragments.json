@@ -1,0 +1,2363 @@
+{
+    "jcr:primaryType": "sling:Folder",
+    "jcr:mixinTypes": ["rep:AccessControllable"],
+    "jcr:createdBy": "admin",
+    "jcr:title": "Experience Fragments",
+    "jcr:created": "Tue Nov 09 2021 22:35:06 GMT-0800",
+    "cq:allowedTemplates": ["/libs/cq/experience-fragments/components/experiencefragment/template"],
+    "common": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Common Fragments",
+        "sling:configRef": "/conf/common",
+        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+        "cq:conf": "/conf/common",
+        "cq:allowedTemplates": [
+            "/conf/common/settings/wcm/templates/(?!page-).*",
+            "/libs/cq/experience-fragments/components/experiencefragment/template"
+        ],
+        "en": {
+            "jcr:primaryType": "sling:OrderedFolder",
+            "jcr:createdBy": "admin",
+            "jcr:title": "en",
+            "cq:adobeTargetExportFormat": "html",
+            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+            "site": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Site",
+                "cq:adobeTargetExportFormat": "html",
+                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                "footer": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Footer",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Footer",
+                            "cq:template": "/conf/brookfieldpropertiesprogram/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "separator": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/separator"
+                                },
+                                "text": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "text": "<p>Copyright 2021, BROOKFIELD PROPERTIES Program.&nbsp;All rights reserved.</p>\r\n<p>345 Park Avenue,&nbsp;San Jose, CA 95110-2704, USA</p>\r\n",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                    "textIsRich": "true"
+                                }
+                            }
+                        }
+                    }
+                },
+                "header": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Header",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Header",
+                            "cq:template": "/conf/brookfieldpropertiesprogram/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "simple",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "skipNavigationRoot": "false",
+                                    "navigationRoot": "/content/brookfieldpropertiesprogram/us/en",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation",
+                                    "collectAllPages": "false",
+                                    "structureDepth": "1"
+                                },
+                                "languagenavigation": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "navigationRoot": "/content/brookfieldpropertiesprogram/us",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/languagenavigation",
+                                    "structureDepth": "2"
+                                },
+                                "search": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "searchRoot": "/content/brookfieldpropertiesprogram/us",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/search"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "properties": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Properties",
+                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                "demo": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Demo",
+                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                    "gallery": {
+                        "jcr:primaryType": "sling:OrderedFolder",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Gallery",
+                        "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                        "unittype": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Unit Type Default",
+                                "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "cq:lastModified": "Wed Sep 22 2021 17:19:15 GMT-0700",
+                                "cq:tags": [],
+                                "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                                "cq:lastModifiedBy": "admin"
+                            },
+                            "master": {
+                                "jcr:primaryType": "cq:Page",
+                                "jcr:createdBy": "admin",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "jcr:content": {
+                                    "jcr:primaryType": "cq:PageContent",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:title": "Unit Type Default",
+                                    "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                    "cq:xfMasterVariation": true,
+                                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                    "cq:lastModified": "Wed Sep 22 2021 17:20:17 GMT-0700",
+                                    "cq:xfVariantType": "web",
+                                    "cq:tags": [],
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                    "cq:lastModifiedBy": "admin",
+                                    "root": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "layout": "responsiveGrid",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "apt_type_gallery": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "jcr:createdBy": "admin",
+                                            "jcr:lastModifiedBy": "admin",
+                                            "jcr:created": "Wed Sep 22 2021 17:19:31 GMT-0700",
+                                            "leftImagePath": "/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg",
+                                            "rightImagePath": "/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg",
+                                            "topImagePath": "/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg",
+                                            "jcr:lastModified": "Wed Sep 22 2021 17:20:17 GMT-0700",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_gallery",
+                                            "cq:styleIds": ["55987109887"]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "unit": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Unit Default",
+                                "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "cq:lastModified": "Wed Sep 22 2021 17:50:03 GMT-0700",
+                                "cq:tags": [],
+                                "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                                "cq:lastModifiedBy": "admin"
+                            },
+                            "master": {
+                                "jcr:primaryType": "cq:Page",
+                                "jcr:createdBy": "admin",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "jcr:content": {
+                                    "jcr:primaryType": "cq:PageContent",
+                                    "jcr:mixinTypes": ["mix:versionable"],
+                                    "jcr:createdBy": "admin",
+                                    "jcr:title": "Unit Default",
+                                    "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                                    "cq:lastReplicationAction": "Activate",
+                                    "jcr:versionHistory": "2e1bfe90-d3c7-462f-9110-bd486a6b79d2",
+                                    "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                    "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                                    "cq:xfMasterVariation": true,
+                                    "cq:lastReplicationAction_publish": "Activate",
+                                    "jcr:predecessors": ["28056df6-384e-4d62-ba64-54859f6b4467"],
+                                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                    "cq:lastReplicated": "Thu Oct 07 2021 17:17:24 GMT+0000",
+                                    "cq:lastModified": "Thu Oct 07 2021 17:17:15 GMT+0000",
+                                    "cq:xfVariantType": "web",
+                                    "jcr:baseVersion": "28056df6-384e-4d62-ba64-54859f6b4467",
+                                    "jcr:isCheckedOut": true,
+                                    "cq:tags": [],
+                                    "jcr:uuid": "8df70b51-a33e-4d03-9402-89ea6bc808fb",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                    "cq:lastReplicated_publish": "Thu Oct 07 2021 17:17:24 GMT+0000",
+                                    "cq:lastModifiedBy": "amit.patkar@toptal.com",
+                                    "root": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "layout": "responsiveGrid",
+                                        "jcr:lastModified": "Wed Sep 22 2021 20:31:53 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "section33_33_33": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "jcr:createdBy": "admin",
+                                            "jcr:lastModifiedBy": "admin",
+                                            "jcr:created": "Wed Sep 22 2021 17:50:41 GMT-0700",
+                                            "numberOfCols": "cols-33-33-33",
+                                            "jcr:lastModified": "Wed Sep 22 2021 17:50:41 GMT-0700",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33",
+                                            "container_1": {
+                                                "jcr:primaryType": "nt:unstructured",
+                                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                                "section_33_33_33_card": {
+                                                    "jcr:primaryType": "nt:unstructured",
+                                                    "jcr:lastModifiedBy": "amit.patkar@toptal.com",
+                                                    "text": "<h3 class=\"cmp-section33__headline\">CLAIM YOUR SPACE</h3>",
+                                                    "jcr:lastModified": "Thu Oct 07 2021 17:17:14 GMT+0000",
+                                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                                    "textIsRich": "true",
+                                                    "cq:styleIds": ["5327944215"],
+                                                    "menuLinks": {
+                                                        "jcr:primaryType": "nt:unstructured",
+                                                        "item0": {
+                                                            "jcr:primaryType": "nt:unstructured",
+                                                            "cssClass": "schedule-tour-popup-button btn-light",
+                                                            "openLinkInNewTab": "false",
+                                                            "url": "#",
+                                                            "label": "Schedule a Tour",
+                                                            "btnType": "btn btn-primary"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "container_2": {
+                                                "jcr:primaryType": "nt:unstructured",
+                                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                                "section_33_33_33_card": {
+                                                    "jcr:primaryType": "nt:unstructured",
+                                                    "bgImagePath": "/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg",
+                                                    "data-image-caption": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
+                                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                                    "cq:styleIds": ["5327944212"]
+                                                }
+                                            },
+                                            "container_3": {
+                                                "jcr:primaryType": "nt:unstructured",
+                                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                                "section_33_33_33_card": {
+                                                    "jcr:primaryType": "nt:unstructured",
+                                                    "bgImagePath": "/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg",
+                                                    "data-image-caption": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
+                                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                                    "cq:styleIds": ["5327944212"]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "virtual-tour": {
+                        "jcr:primaryType": "sling:OrderedFolder",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Virtual Tour",
+                        "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                        "unittype-default": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Unit Type Default",
+                                "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "cq:lastModified": "Wed Sep 22 2021 15:43:55 GMT-0700",
+                                "cq:tags": [],
+                                "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                                "cq:lastModifiedBy": "admin"
+                            },
+                            "master": {
+                                "jcr:primaryType": "cq:Page",
+                                "jcr:createdBy": "admin",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "jcr:content": {
+                                    "jcr:primaryType": "cq:PageContent",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:title": "Unit Type Default",
+                                    "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                    "cq:xfMasterVariation": true,
+                                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                    "cq:lastModified": "Wed Sep 22 2021 16:44:50 GMT-0700",
+                                    "cq:xfVariantType": "web",
+                                    "cq:tags": [],
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                    "cq:lastModifiedBy": "admin",
+                                    "root": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "layout": "responsiveGrid",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "apt_type_virtual_tou": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "jcr:createdBy": "admin",
+                                            "jcr:lastModifiedBy": "admin",
+                                            "tourId": "51aWK4tRDsH",
+                                            "jcr:created": "Wed Sep 22 2021 16:44:45 GMT-0700",
+                                            "jcr:lastModified": "Wed Sep 22 2021 16:44:50 GMT-0700",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_virtual_tour"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "unittype": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Unit Type Default",
+                                "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "cq:lastModified": "Wed Sep 22 2021 17:21:28 GMT-0700",
+                                "cq:tags": [],
+                                "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                                "cq:lastModifiedBy": "admin"
+                            },
+                            "master": {
+                                "jcr:primaryType": "cq:Page",
+                                "jcr:createdBy": "admin",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "jcr:content": {
+                                    "jcr:primaryType": "cq:PageContent",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:title": "Unit Type Default",
+                                    "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                    "cq:xfMasterVariation": true,
+                                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                    "cq:lastModified": "Wed Sep 22 2021 17:21:49 GMT-0700",
+                                    "cq:xfVariantType": "web",
+                                    "cq:tags": [],
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                    "cq:lastModifiedBy": "admin",
+                                    "root": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "layout": "responsiveGrid",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "apt_type_virtual_tou": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "jcr:createdBy": "admin",
+                                            "jcr:lastModifiedBy": "admin",
+                                            "tourId": "51aWK4tRDsH",
+                                            "jcr:created": "Wed Sep 22 2021 17:21:44 GMT-0700",
+                                            "jcr:lastModified": "Wed Sep 22 2021 17:21:49 GMT-0700",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_virtual_tour"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "unit": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Unit",
+                                "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "cq:lastModified": "Wed Sep 22 2021 17:51:08 GMT-0700",
+                                "cq:tags": [],
+                                "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                                "cq:lastModifiedBy": "admin"
+                            },
+                            "master": {
+                                "jcr:primaryType": "cq:Page",
+                                "jcr:createdBy": "admin",
+                                "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                "jcr:content": {
+                                    "jcr:primaryType": "cq:PageContent",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:title": "Unit",
+                                    "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                    "cq:xfMasterVariation": true,
+                                    "jcr:created": "Mon Nov 15 2021 13:21:22 GMT-0800",
+                                    "cq:lastModified": "Wed Sep 22 2021 17:51:08 GMT-0700",
+                                    "cq:xfVariantType": "web",
+                                    "cq:tags": [],
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                    "cq:lastModifiedBy": "admin",
+                                    "root": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "layout": "responsiveGrid",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "content": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "content",
+                "jcr:created": "Tue Nov 30 2021 11:39:34 GMT-0800",
+                "apartment-type": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Tue Nov 30 2021 11:40:02 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:mixinTypes": ["mix:versionable"],
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "apartment-type",
+                        "jcr:versionHistory": "ee0b0ad1-4736-4746-bf55-5bd8775100bc",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:predecessors": ["bf3e2ea5-789b-454e-9269-32bf05b68bd4"],
+                        "jcr:created": "Tue Nov 30 2021 11:40:02 GMT-0800",
+                        "cq:lastModified": "Tue Nov 30 2021 12:38:14 GMT-0800",
+                        "jcr:baseVersion": "bf3e2ea5-789b-454e-9269-32bf05b68bd4",
+                        "jcr:isCheckedOut": true,
+                        "cq:tags": [],
+                        "jcr:uuid": "e0fd8a6e-1b47-4058-aaff-cf479bd96e46",
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Tue Nov 30 2021 11:40:02 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:mixinTypes": ["mix:versionable"],
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "apartment-availability",
+                            "jcr:versionHistory": "fffcec36-4672-4136-b9be-8a3ac327f8f7",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:predecessors": ["2dc8b0e3-ae48-498e-adf9-74edceab6086"],
+                            "jcr:created": "Tue Nov 30 2021 11:40:02 GMT-0800",
+                            "cq:lastModified": "Tue Nov 30 2021 12:38:42 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "jcr:baseVersion": "2dc8b0e3-ae48-498e-adf9-74edceab6086",
+                            "jcr:isCheckedOut": true,
+                            "cq:tags": [],
+                            "jcr:uuid": "2dfcb465-3f7f-488c-ba88-dd03a74bf385",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "text": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 12:32:59 GMT-0800",
+                                    "text": "<p>TEXT</p>\r\n",
+                                    "jcr:lastModified": "Tue Nov 30 2021 12:32:59 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                    "textIsRich": "true"
+                                },
+                                "apt_type_section": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 12:38:42 GMT-0800",
+                                    "jcr:lastModified": "Tue Nov 30 2021 12:38:42 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_section",
+                                    "cq:styleIds": ["5671290001"],
+                                    "container_left": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "cssClasses": "cmp-apartmentDetail__main-left",
+                                        "apt_promo": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "text": "${specials}",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_promo",
+                                            "textIsRich": "true"
+                                        },
+                                        "apt_type_available": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_available"
+                                        }
+                                    },
+                                    "container_right": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "cssClasses": "cmp-apartmentDetail__main-right",
+                                        "apt_type_section_fragment_1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sectionName": "virtual-tour",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_section_fragment"
+                                        },
+                                        "apt_type_section_fragment_2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sectionName": "floorplan",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_section_fragment"
+                                        },
+                                        "apt_type_section_fragment_3": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sectionName": "gallery",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_type_section_fragment"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "apartment": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Tue Nov 30 2021 12:38:59 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "apartment",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Tue Nov 30 2021 12:38:59 GMT-0800",
+                        "cq:lastModified": "Tue Nov 30 2021 12:38:59 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Tue Nov 30 2021 12:38:59 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "apartment",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Tue Nov 30 2021 12:38:59 GMT-0800",
+                            "cq:lastModified": "Tue Nov 30 2021 12:39:09 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "apt_detail_section": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 12:39:09 GMT-0800",
+                                    "jcr:lastModified": "Tue Nov 30 2021 12:39:09 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_section",
+                                    "header_left": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "cssClasses": "cmp-apartmentDetail__header--left",
+                                        "apt_detail_promo": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "text": "${specials}",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_promo",
+                                            "textIsRich": "true"
+                                        }
+                                    },
+                                    "header_right": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "cssClasses": "cmp-apartmentDetail__header--right",
+                                        "apt_detail_cta": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "cmp-apartmentDetail__cta",
+                                            "text": "<p class=\"cmp-apartmentDetail__info medium-title\">{{@root.group.name}} | {{@root.group.area}} sq. ft. |  ${{@root.unit.rent}}/month**</p>",
+                                            "label": "Apply Now",
+                                            "btnType": "btn btn-secondary btn-dark",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_cta",
+                                            "textIsRich": "true"
+                                        }
+                                    },
+                                    "container_main": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container_nodiv",
+                                        "cssClasses": "cmp-apartmentDetail__main",
+                                        "apt_detail_section_fragment_1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "cmp-apartmentDetail__main",
+                                            "sectionName": "floorplan",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_section_fragment"
+                                        },
+                                        "apt_detail_section_fragment_2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "cmp-apartmentDetail__gallery",
+                                            "sectionName": "gallery",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_section_fragment"
+                                        }
+                                    },
+                                    "container_footer": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                        "cssClasses": "cmp-apartmentDetail__footer",
+                                        "apt_detail_footer": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_footer"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "apartment-availability": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Tue Nov 30 2021 12:39:29 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "apartment-availability",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Tue Nov 30 2021 12:39:29 GMT-0800",
+                        "cq:lastModified": "Tue Nov 30 2021 12:39:29 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Tue Nov 30 2021 12:39:29 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "apartment-availability",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Tue Nov 30 2021 12:39:29 GMT-0800",
+                            "cq:lastModified": "Tue Nov 30 2021 12:40:52 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "availabilitylist": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 12:40:52 GMT-0800",
+                                    "jcr:lastModified": "Tue Nov 30 2021 12:40:52 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/availabilitylist"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tos": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "TOS",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "cq:lastModified": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "TOS",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                            "cq:lastModified": "Tue Nov 30 2021 13:54:14 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "hero": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "bgImagePath": "/content/dam/common/components/hero/hero_sample_image.jpg",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "bannerBadgeImagePath": "/content/dam/common/components/hero/banner-medallion-sample.svg",
+                                    "jcr:created": "Tue Nov 30 2021 13:53:50 GMT-0800",
+                                    "title": "Welcome to the you generation",
+                                    "jcr:lastModified": "Tue Nov 30 2021 13:53:50 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                    "cq:styleIds": ["8467799"]
+                                },
+                                "text": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 13:44:02 GMT-0800",
+                                    "text": "<p>TOS</p>\r\n",
+                                    "jcr:lastModified": "Tue Nov 30 2021 13:44:07 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                    "textIsRich": "true"
+                                }
+                            }
+                        }
+                    }
+                },
+                "home": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "TOS",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "cq:lastModified": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "TOS",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Tue Nov 30 2021 13:43:49 GMT-0800",
+                            "cq:lastModified": "Tue Nov 30 2021 13:54:14 GMT-0800",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "hero": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "bgImagePath": "/content/dam/common/components/hero/hero_sample_image.jpg",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "bannerBadgeImagePath": "/content/dam/common/components/hero/banner-medallion-sample.svg",
+                                    "jcr:created": "Tue Nov 30 2021 13:53:50 GMT-0800",
+                                    "title": "Welcome to the you generation",
+                                    "jcr:lastModified": "Tue Nov 30 2021 13:53:50 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                    "cq:styleIds": ["8467799"]
+                                },
+                                "text": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Tue Nov 30 2021 13:44:02 GMT-0800",
+                                    "text": "<p>TOS</p>\r\n",
+                                    "jcr:lastModified": "Tue Nov 30 2021 13:44:07 GMT-0800",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                    "textIsRich": "true"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rep:policy": {
+        "jcr:primaryType": "rep:ACL",
+        "deny": {
+            "jcr:primaryType": "rep:DenyACE",
+            "rep:principalName": "everyone",
+            "rep:privileges": [
+                "rep:privilegeManagement",
+                "jcr:versionManagement",
+                "jcr:namespaceManagement",
+                "jcr:modifyAccessControl",
+                "jcr:lifecycleManagement",
+                "jcr:readAccessControl",
+                "rep:indexDefinitionManagement",
+                "jcr:nodeTypeDefinitionManagement",
+                "rep:write",
+                "crx:replicate",
+                "jcr:retentionManagement",
+                "jcr:lockManagement",
+                "rep:userManagement",
+                "jcr:workspaceManagement"
+            ]
+        },
+        "allow1": {
+            "jcr:primaryType": "rep:GrantACE",
+            "rep:principalName": "experience-fragments-editors",
+            "rep:privileges": [
+                "jcr:versionManagement",
+                "rep:write",
+                "crx:replicate",
+                "jcr:lockManagement"
+            ]
+        },
+        "allow2": {
+            "jcr:primaryType": "rep:GrantACE",
+            "rep:principalName": "everyone",
+            "rep:privileges": ["jcr:read"]
+        }
+    },
+    "portfolio": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Portfolio Fragments",
+        "cq:adobeTargetExportFormat": "html",
+        "sling:configRef": "/conf/common",
+        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+        "cq:conf": "/conf/common",
+        "cq:allowedTemplates": ["/conf/common/settings/wcm/templates/(?!page-).*"],
+        "en": {
+            "jcr:primaryType": "sling:OrderedFolder",
+            "jcr:createdBy": "admin",
+            "jcr:title": "en",
+            "cq:adobeTargetExportFormat": "html",
+            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+            "site": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Site",
+                "cq:adobeTargetExportFormat": "html",
+                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                "header": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "master-two": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:mixinTypes": ["mix:versionable"],
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Header",
+                            "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                            "cq:lastReplicationAction": "Activate",
+                            "jcr:versionHistory": "406d7589-f5b2-4fc7-97cb-da020c9879ca",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                            "cq:xfMasterVariation": true,
+                            "cq:lastReplicationAction_publish": "Activate",
+                            "jcr:predecessors": ["27b991b7-6301-42af-812e-ed15b18d0eb1"],
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastReplicated": "Fri Oct 22 2021 13:35:41 GMT+0000",
+                            "cq:lastModified": "Fri Nov 12 2021 15:03:37 GMT+0530",
+                            "cq:xfVariantType": "web",
+                            "jcr:baseVersion": "27b991b7-6301-42af-812e-ed15b18d0eb1",
+                            "jcr:isCheckedOut": true,
+                            "cq:tags": [],
+                            "jcr:uuid": "7bcdfa65-8ea0-4299-810b-b64228d7bd7b",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastReplicated_publish": "Fri Oct 22 2021 13:35:41 GMT+0000",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "layout": "simple",
+                                "jcr:lastModified": "Sat Aug 21 2021 18:32:45 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation_portfolio_apartments": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "amit.patkar@toptal.com",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "backButtonTargetPath": "/content/portfolio/en/home",
+                                    "jcr:created": "Fri Oct 22 2021 13:34:45 GMT+0000",
+                                    "label": "Contact Us",
+                                    "jcr:lastModified": "Fri Nov 12 2021 15:03:36 GMT+0530",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_portfolio_apartments",
+                                    "backButtonLabel": "The Eugene",
+                                    "menuLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/content/portfolio/en/properties",
+                                            "label": "Properties"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/content/portfolio/en/about-us",
+                                            "label": "About Brookfield"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/content/portfolio/en/careers",
+                                            "label": "Careers"
+                                        }
+                                    },
+                                    "socialLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Availability"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Features & Amenities"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/content/portfolio/en/neighborhoods",
+                                            "label": "Neighborhood"
+                                        },
+                                        "item3": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Gallery"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Header",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastModified": "Sat Aug 21 2021 18:32:12 GMT-0700",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Header",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:36:14 GMT-0700",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "layout": "simple",
+                                "jcr:lastModified": "Sat Aug 21 2021 18:32:45 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation_standalon": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Mon Aug 09 2021 17:05:39 GMT-0700",
+                                    "jcr:lastModified": "Wed Aug 11 2021 20:07:08 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_standalone",
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "features_amenities",
+                                            "url": "/",
+                                            "label": "Features & Amenities"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "neighborhood",
+                                            "url": "/",
+                                            "label": "Neighborhood"
+                                        }
+                                    },
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "schedule-tour-popup-button btn btn-primary btn-light",
+                                            "openLinkInNewTab": "false",
+                                            "id": "schedule-tour-popup-button",
+                                            "url": "javascript:void(0)",
+                                            "label": "Schedule a Tour"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "lease_online",
+                                            "url": "/",
+                                            "label": "Lease Online"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "standalone-get-in-touch",
+                                            "openLinkInNewTab": "false",
+                                            "id": "get_in_touch",
+                                            "url": "/content/experience-fragments/standalone/en/site/get-in-touch/master.content.html",
+                                            "label": "Get in touch"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "footer": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Footer",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastModified": "Sat Aug 21 2021 18:33:22 GMT-0700",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Footer",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:35:32 GMT-0700",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "layout": "simple",
+                                "jcr:lastModified": "Sat Aug 21 2021 18:33:45 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "footer_portfolio_128": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "subTitle": "Properties",
+                                    "jcr:createdBy": "admin",
+                                    "logoLabel": "Brookfield Properties",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Thu Aug 05 2021 18:42:07 GMT-0700",
+                                    "title": "Brookfield",
+                                    "logoUrl": "/",
+                                    "jcr:lastModified": "Tue Aug 10 2021 23:18:55 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_portfolio",
+                                    "logoPath": "/content/dam/common/logos/logo_Brookfield.svg",
+                                    "menuLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Test1"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "test3"
+                                        }
+                                    },
+                                    "socialLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "icon": "/content/dam/common/icons/equal-housing.svg",
+                                            "label": "Equal Housing Opportunity"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "icon": "/content/dam/common/icons/accessibility.svg",
+                                            "label": "Brookfield Properties Accessibility"
+                                        }
+                                    },
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "privacy_policy",
+                                            "url": "/",
+                                            "label": "Privacy Policy"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Terms of Use"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Do Not Sell My Info"
+                                        }
+                                    },
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "NY Fair Housing Notice"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Brookfield Properties Customer Service"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "content": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Content",
+                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                "neighborhoods": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Neighborhoods",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "union-square": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Union Square",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:43:26 GMT-0700",
+                            "cq:tags": [],
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                            "cq:lastModifiedBy": "admin"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Union Square",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:xfMasterVariation": true,
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sat Aug 21 2021 18:43:26 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "layout": "responsiveGrid",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+                                }
+                            }
+                        }
+                    }
+                },
+                "cities": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Cities",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "oakland": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "rock-concert-2022": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:mixinTypes": [
+                                    "cq:LiveRelationship",
+                                    "cq:LiveSync"
+                                ],
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Rock Concert 2022",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:lastRolledout": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sun Aug 22 2021 14:17:16 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastRolledoutBy": "admin",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:mixinTypes": ["cq:LiveRelationship"],
+                                    "layout": "responsiveGrid",
+                                    "cq:lastRolledout": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "cq:lastRolledoutBy": "admin",
+                                    "hero": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:mixinTypes": ["cq:LiveRelationship"],
+                                        "jcr:createdBy": "admin",
+                                        "bgImagePath": "/content/dam/portfolio/cities/oakland.jpeg",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "cq:lastRolledout": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 17:39:26 GMT-0700",
+                                        "title": "${name}",
+                                        "btnType": "btn-primary",
+                                        "jcr:lastModified": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                        "textIsRich": "true",
+                                        "cq:lastRolledoutBy": "admin"
+                                    },
+                                    "section_100": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:mixinTypes": [
+                                            "cq:LiveRelationship",
+                                            "cq:LiveSyncCancelled"
+                                        ],
+                                        "jcr:createdBy": "admin",
+                                        "cq:isCancelledForChildren": true,
+                                        "jcr:lastModifiedBy": "admin",
+                                        "cq:lastRolledout": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 18:03:00 GMT-0700",
+                                        "url": "/",
+                                        "copy": "<p>Welcome 2022</p>\r\n",
+                                        "lead": "<p>Rock Concert in OAKLAND</p>\r\n",
+                                        "label": "Buy Tickets",
+                                        "btnType": "btn-primary",
+                                        "displayAddress": "false",
+                                        "jcr:lastModified": "Sun Aug 22 2021 14:17:11 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section_100",
+                                        "textIsRich": [
+                                            "true",
+                                            "true",
+                                            "true"
+                                        ],
+                                        "cq:lastRolledoutBy": "admin",
+                                        "cq:styleIds": [
+                                            "678000",
+                                            "668001"
+                                        ]
+                                    },
+                                    "text": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:mixinTypes": ["cq:LiveRelationship"],
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "cq:lastRolledout": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                        "jcr:created": "Sat Aug 21 2021 18:04:01 GMT-0700",
+                                        "text": "<p>${name}</p>\r\n",
+                                        "jcr:lastModified": "Sun Aug 22 2021 14:14:14 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                        "textIsRich": "true",
+                                        "cq:lastRolledoutBy": "admin"
+                                    }
+                                },
+                                "cq:LiveSyncConfig": {
+                                    "jcr:primaryType": "cq:LiveCopy",
+                                    "cq:rolloutConfigs": [],
+                                    "cq:isDeep": true,
+                                    "cq:master": "/content/experience-fragments/portfolio/en/content/cities/oakland/master"
+                                }
+                            }
+                        },
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Oakland",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 17:33:19 GMT-0700",
+                            "cq:tags": [],
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                            "cq:lastModifiedBy": "admin"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Oakland",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:xfMasterVariation": true,
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sat Aug 21 2021 18:12:45 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "layout": "responsiveGrid",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "hero": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "bgImagePath": "/content/dam/portfolio/cities/oakland.jpeg",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 17:39:26 GMT-0700",
+                                        "title": "${name}",
+                                        "btnType": "btn-primary",
+                                        "jcr:lastModified": "Sat Aug 21 2021 18:12:45 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                        "textIsRich": "true"
+                                    },
+                                    "section_100": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 18:03:00 GMT-0700",
+                                        "lead": "<p>${name}</p>\r\n",
+                                        "btnType": "btn-primary",
+                                        "displayAddress": "false",
+                                        "jcr:lastModified": "Sat Aug 21 2021 18:03:12 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section_100",
+                                        "textIsRich": [
+                                            "true",
+                                            "true",
+                                            "true"
+                                        ],
+                                        "cq:styleIds": [
+                                            "678000",
+                                            "668000"
+                                        ]
+                                    },
+                                    "text": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "jcr:created": "Sat Aug 21 2021 18:04:01 GMT-0700",
+                                        "text": "<p>${name}</p>\r\n",
+                                        "jcr:lastModified": "Sat Aug 21 2021 18:04:12 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                        "textIsRich": "true"
+                                    }
+                                }
+                            }
+                        },
+                        "back-to-school": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:mixinTypes": [
+                                    "cq:LiveRelationship",
+                                    "cq:LiveSync"
+                                ],
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Back To School",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:lastRolledout": "Sat Aug 21 2021 17:40:42 GMT-0700",
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sat Aug 21 2021 17:42:15 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastRolledoutBy": "admin",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:mixinTypes": ["cq:LiveRelationship"],
+                                    "layout": "responsiveGrid",
+                                    "cq:lastRolledout": "Sat Aug 21 2021 17:40:42 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "cq:lastRolledoutBy": "admin",
+                                    "hero": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:mixinTypes": ["cq:LiveRelationship"],
+                                        "jcr:createdBy": "admin",
+                                        "bgImagePath": "/content/dam/portfolio/cities/oakland.jpeg",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "cq:lastRolledout": "Sat Aug 21 2021 17:40:42 GMT-0700",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 17:39:26 GMT-0700",
+                                        "btnType": "btn-primary",
+                                        "jcr:lastModified": "Sat Aug 21 2021 17:40:42 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                        "textIsRich": "true",
+                                        "cq:lastRolledoutBy": "admin"
+                                    },
+                                    "section_100": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 17:41:53 GMT-0700",
+                                        "copy": "<p>Copy Text</p>\r\n",
+                                        "lead": "<p>Lead Text</p>\r\n",
+                                        "btnType": "btn-primary",
+                                        "displayAddress": "false",
+                                        "jcr:lastModified": "Sat Aug 21 2021 17:42:09 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section_100",
+                                        "textIsRich": [
+                                            "true",
+                                            "true",
+                                            "true"
+                                        ],
+                                        "cq:styleIds": [
+                                            "678000",
+                                            "668001"
+                                        ]
+                                    }
+                                },
+                                "cq:LiveSyncConfig": {
+                                    "jcr:primaryType": "cq:LiveCopy",
+                                    "cq:rolloutConfigs": [],
+                                    "cq:isDeep": true,
+                                    "cq:master": "/content/experience-fragments/portfolio/en/content/cities/oakland/master"
+                                }
+                            }
+                        }
+                    }
+                },
+                "properties": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Properties",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "the-eugene": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "The Eugene",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:56:33 GMT-0700",
+                            "cq:tags": [],
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                            "cq:lastModifiedBy": "admin"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "The Eugene",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:xfMasterVariation": true,
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sat Aug 21 2021 19:15:17 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "layout": "responsiveGrid",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "hero": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "bgImagePath": "/content/dam/common/components/hero/hero_sample_image.jpg",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 18:57:55 GMT-0700",
+                                        "logoImagePath": "${logo}",
+                                        "btnType": "btn-primary",
+                                        "hideForAuthoring": "false",
+                                        "jcr:lastModified": "Sat Aug 21 2021 19:15:17 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                        "textIsRich": "true",
+                                        "cq:styleIds": ["8467800"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "states": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "States",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800"
+                },
+                "collections": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Collections",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800"
+                },
+                "metroareas": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "MetroAreas",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "chicago-metro-area": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Chicago Metro Area",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:44:44 GMT-0700",
+                            "cq:tags": [],
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                            "cq:lastModifiedBy": "admin"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Chicago Metro Area",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:xfMasterVariation": true,
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Sat Aug 21 2021 18:46:39 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "layout": "responsiveGrid",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "hero": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "bgImagePath": "/content/dam/portfolio/metroareas/chicago-metro.jpeg",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "openLinkInNewTab": "false",
+                                        "jcr:created": "Sat Aug 21 2021 18:46:29 GMT-0700",
+                                        "btnType": "btn-primary",
+                                        "jcr:lastModified": "Sat Aug 21 2021 18:46:39 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                        "textIsRich": "true"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "city": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "City",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "oakland": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Oakland",
+                            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Wed Aug 18 2021 16:16:26 GMT-0700",
+                            "cq:tags": [],
+                            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                            "cq:lastModifiedBy": "admin"
+                        },
+                        "master": {
+                            "jcr:primaryType": "cq:Page",
+                            "jcr:createdBy": "admin",
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "jcr:content": {
+                                "jcr:primaryType": "cq:PageContent",
+                                "jcr:createdBy": "admin",
+                                "jcr:title": "Oakland",
+                                "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                                "cq:xfMasterVariation": true,
+                                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                                "cq:lastModified": "Wed Aug 18 2021 20:16:57 GMT-0700",
+                                "cq:xfVariantType": "web",
+                                "cq:tags": [],
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                                "cq:lastModifiedBy": "admin",
+                                "root": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "layout": "responsiveGrid",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_100": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "jcr:created": "Wed Aug 18 2021 16:27:34 GMT-0700",
+                                        "url": [
+                                            "",
+                                            ""
+                                        ],
+                                        "copy": "<p>Testsdfinsdf</p>\r\n",
+                                        "lead": "<p>Testsdfinsdf</p>\r\n",
+                                        "label": [
+                                            "",
+                                            ""
+                                        ],
+                                        "btnType": [
+                                            "btn-primary",
+                                            "btn-primary"
+                                        ],
+                                        "displayAddress": "false",
+                                        "jcr:lastModified": "Wed Aug 18 2021 16:30:12 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section_100",
+                                        "textIsRich": [
+                                            "true",
+                                            "true",
+                                            "true"
+                                        ],
+                                        "cq:styleIds": [
+                                            "678000",
+                                            "668000"
+                                        ]
+                                    },
+                                    "section_100_video": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "jcr:createdBy": "admin",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "jcr:created": "Wed Aug 18 2021 20:16:30 GMT-0700",
+                                        "jcr:lastModified": "Wed Aug 18 2021 20:16:30 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section_100_video",
+                                        "videoPath": "https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "portfolio": {
+                    "jcr:primaryType": "sling:OrderedFolder",
+                    "jcr:createdBy": "admin",
+                    "jcr:title": "Portfolio",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800"
+                },
+                "index": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Home",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastModified": "Sat Aug 21 2021 18:27:42 GMT-0700",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Home",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Sat Aug 21 2021 18:28:27 GMT-0700",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "hero": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "bgImagePath": "/content/dam/common/components/hero/hero_sample_image.jpg",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "openLinkInNewTab": "false",
+                                    "jcr:created": "Sat Aug 21 2021 18:28:10 GMT-0700",
+                                    "btnType": "btn-primary",
+                                    "jcr:lastModified": "Sat Aug 21 2021 18:28:27 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                                    "textIsRich": "true"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "standalone": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Standalone Fragments",
+        "cq:adobeTargetExportFormat": "html",
+        "sling:configRef": "/conf/common",
+        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+        "cq:conf": "/conf/common",
+        "cq:allowedTemplates": ["/conf/common/settings/wcm/templates/(?!page-).*"],
+        "en": {
+            "jcr:primaryType": "sling:OrderedFolder",
+            "jcr:createdBy": "admin",
+            "jcr:title": "en",
+            "cq:adobeTargetExportFormat": "html",
+            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+            "site": {
+                "jcr:primaryType": "sling:OrderedFolder",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Site",
+                "cq:adobeTargetExportFormat": "html",
+                "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                "footer": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:mixinTypes": ["mix:versionable"],
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Footer",
+                        "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                        "cq:lastReplicationAction": "Activate",
+                        "jcr:versionHistory": "a1d290ad-bf87-4dbe-8b1e-b7bac8498b07",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                        "cq:lastReplicationAction_publish": "Activate",
+                        "jcr:predecessors": ["4fdac430-eb63-45f4-a4d0-aef5268351ee"],
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastReplicated": "Tue Aug 24 2021 15:11:11 GMT+0000",
+                        "cq:lastModified": "Thu Aug 05 2021 18:41:33 GMT-0700",
+                        "jcr:baseVersion": "4fdac430-eb63-45f4-a4d0-aef5268351ee",
+                        "jcr:isCheckedOut": true,
+                        "cq:tags": [],
+                        "jcr:uuid": "53baf0c7-8b22-4c1b-9d7b-fd270ca0a8a5",
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastReplicated_publish": "Tue Aug 24 2021 15:11:11 GMT+0000",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:mixinTypes": ["mix:versionable"],
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Footer",
+                            "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                            "cq:lastReplicationAction": "Activate",
+                            "jcr:versionHistory": "e536b72a-4c03-4a8e-9955-d3a342e61955",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                            "cq:xfMasterVariation": true,
+                            "cq:lastReplicationAction_publish": "Activate",
+                            "jcr:predecessors": ["4ad41eac-062c-403e-b7c0-4856e1b082f2"],
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastReplicated": "Thu Oct 07 2021 19:15:15 GMT+0000",
+                            "cq:lastModified": "Thu Oct 07 2021 19:14:57 GMT+0000",
+                            "cq:xfVariantType": "web",
+                            "jcr:baseVersion": "4ad41eac-062c-403e-b7c0-4856e1b082f2",
+                            "jcr:isCheckedOut": true,
+                            "cq:tags": [],
+                            "jcr:uuid": "030e0717-1d14-4c60-a978-4ffacb4a292e",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastReplicated_publish": "Thu Oct 07 2021 19:15:15 GMT+0000",
+                            "cq:lastModifiedBy": "amit.patkar@toptal.com",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "layout": "simple",
+                                "jcr:lastModified": "Tue Aug 10 2021 23:16:02 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "cssClasses": "cmp-footer--combined",
+                                "footer_standalone": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "satish.dakudora@toptal.com",
+                                    "jcr:created": "Thu Aug 05 2021 18:42:19 GMT-0700",
+                                    "jcr:lastModified": "Thu Sep 23 2021 16:28:02 GMT+0000",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_standalone",
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_availability",
+                                            "url": "/",
+                                            "label": "Availability"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_experience",
+                                            "url": "/",
+                                            "label": "Experience"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_gallery",
+                                            "url": "/",
+                                            "label": "Gallery"
+                                        },
+                                        "item3": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_neighborhood",
+                                            "url": "/",
+                                            "label": "Neighborhood"
+                                        },
+                                        "item4": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "schedule-tour-popup-button",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_schedule_a_tour",
+                                            "url": "/",
+                                            "label": "Schedule a Tour"
+                                        },
+                                        "item5": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_lease_online",
+                                            "url": "/",
+                                            "label": "Lease Online"
+                                        },
+                                        "item6": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_resident_portal",
+                                            "url": "/",
+                                            "label": "Resident Portal"
+                                        },
+                                        "item7": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "standalone-get-in-touch",
+                                            "openLinkInNewTab": "false",
+                                            "id": "footer_get_in_touch",
+                                            "url": "/",
+                                            "label": "Get In Touch"
+                                        }
+                                    }
+                                },
+                                "footer_standalone_bl": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Thu Aug 05 2021 18:41:57 GMT-0700",
+                                    "jcr:lastModified": "Thu Aug 05 2021 18:41:57 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_standalone_block"
+                                },
+                                "footer_portfolio_1280813375": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "subTitle": "Properties",
+                                    "jcr:createdBy": "admin",
+                                    "logoLabel": "Brookfield Properties",
+                                    "jcr:lastModifiedBy": "amit.patkar@toptal.com",
+                                    "jcr:created": "Thu Aug 05 2021 18:42:07 GMT-0700",
+                                    "title": "Brookfield",
+                                    "logoUrl": "/",
+                                    "jcr:lastModified": "Thu Oct 07 2021 19:14:56 GMT+0000",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_portfolio",
+                                    "logoPath": "/content/dam/common/logos/logo_Brookfield.svg",
+                                    "menuLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "Test1"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "/",
+                                            "label": "test3"
+                                        }
+                                    },
+                                    "socialLinks": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://www.hud.gov/program_offices/fair_housing_equal_opp",
+                                            "icon": "/content/dam/common/icons/equal-housing.svg",
+                                            "label": "Equal Housing Opportunity"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://www.brookfieldproperties.com/en/accessibility.html",
+                                            "icon": "/content/dam/common/icons/accessibility.svg",
+                                            "label": "Brookfield Properties Accessibility"
+                                        }
+                                    },
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "id": "privacy_policy",
+                                            "url": "https://www.brookfieldproperties.com/en/privacy.html",
+                                            "label": "Privacy Policy"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://www.brookfieldproperties.com/en/privacy.html",
+                                            "label": "Terms of Use"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://privacyportal-cdn.onetrust.com/dsarwebform/1a83e5ad-9ea4-49fa-91d0-295c0bddffd1/df2e90d7-7184-4907-a2b6-bab727f59770.html",
+                                            "label": "Do Not Sell My Info"
+                                        }
+                                    },
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://www.dos.ny.gov/licensing/docs/Final%20Adopted%20Text%20(Enhanced%20Fair%20Housing).pdf",
+                                            "label": "NY Fair Housing Notice"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "url": "https://www.theeugenenyc.com/corporate-customer-service/",
+                                            "label": "Brookfield Properties Customer Service"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "header": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:mixinTypes": ["mix:versionable"],
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Header",
+                        "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                        "cq:lastReplicationAction": "Activate",
+                        "jcr:versionHistory": "98b09e6f-8b0a-4bc9-b3ce-22a98d49ce72",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                        "cq:lastReplicationAction_publish": "Activate",
+                        "jcr:predecessors": ["e6333078-1c42-492b-b62f-b6c49a8ec214"],
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastReplicated": "Tue Aug 24 2021 15:11:11 GMT+0000",
+                        "cq:lastModified": "Thu Aug 05 2021 18:43:36 GMT-0700",
+                        "jcr:baseVersion": "e6333078-1c42-492b-b62f-b6c49a8ec214",
+                        "jcr:isCheckedOut": true,
+                        "cq:tags": [],
+                        "jcr:uuid": "0a022530-e4dc-4c1d-a892-6c7396fa7f37",
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastReplicated_publish": "Tue Aug 24 2021 15:11:11 GMT+0000",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:mixinTypes": ["mix:versionable"],
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Header",
+                            "cq:lastReplicatedBy_publish": "amit.patkar@toptal.com",
+                            "cq:lastReplicationAction": "Activate",
+                            "jcr:versionHistory": "9b3fe877-c6ec-401f-818c-a038dedd87dd",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:lastReplicatedBy": "amit.patkar@toptal.com",
+                            "cq:xfMasterVariation": true,
+                            "cq:lastReplicationAction_publish": "Activate",
+                            "jcr:predecessors": ["44818a89-e978-4dee-8275-d47fe3960293"],
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastReplicated": "Mon Sep 27 2021 14:31:48 GMT+0000",
+                            "cq:lastModified": "Mon Sep 27 2021 14:31:08 GMT+0000",
+                            "cq:xfVariantType": "web",
+                            "jcr:baseVersion": "44818a89-e978-4dee-8275-d47fe3960293",
+                            "jcr:isCheckedOut": true,
+                            "cq:tags": [],
+                            "jcr:uuid": "25381824-331d-4590-b051-6ba79bd5062e",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastReplicated_publish": "Mon Sep 27 2021 14:31:48 GMT+0000",
+                            "cq:lastModifiedBy": "amit.patkar@toptal.com",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "satish.dakudora@toptal.com",
+                                "layout": "simple",
+                                "jcr:lastModified": "Tue Sep 14 2021 16:47:23 GMT+0000",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation_standalon": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "amit.patkar@toptal.com",
+                                    "jcr:lastModifiedBy": "amit.patkar@toptal.com",
+                                    "jcr:created": "Mon Sep 27 2021 00:33:47 GMT+0000",
+                                    "jcr:lastModified": "Mon Sep 27 2021 14:31:08 GMT+0000",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_standalone",
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "features_amenities",
+                                            "label": "Features & Amenities"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "neighborhood",
+                                            "label": "Neighborhood"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "url": "./apartment-availability.html",
+                                            "label": "Search"
+                                        }
+                                    },
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "schedule-tour-popup-button btn btn-primary btn-light",
+                                            "openLinkInNewTab": "false",
+                                            "id": "schedule-tour-popup-button",
+                                            "url": "javascript:void(0)",
+                                            "label": "Schedule a Tour"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "lease_online",
+                                            "label": "Lease Online"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "standalone-get-in-touch",
+                                            "openLinkInNewTab": "false",
+                                            "id": "get_in_touch",
+                                            "label": "Get in touch"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "header-2": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Mon Nov 15 2021 13:21:23 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:mixinTypes": ["mix:versionable"],
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Demo-the-eugene",
+                            "cq:lastReplicatedBy_publish": "satish.dakudora@toptal.com",
+                            "cq:lastReplicationAction": "Activate",
+                            "jcr:versionHistory": "4869bf1e-c65d-47cb-91bb-a2aac7672831",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:lastReplicatedBy": "satish.dakudora@toptal.com",
+                            "cq:lastReplicationAction_publish": "Activate",
+                            "jcr:predecessors": ["d84ade1a-006a-47f7-b249-dc8af1df1fdf"],
+                            "jcr:created": "Mon Nov 15 2021 13:21:23 GMT-0800",
+                            "cq:lastReplicated": "Tue Sep 28 2021 16:29:08 GMT+0000",
+                            "cq:lastModified": "Tue Sep 28 2021 15:53:56 GMT+0000",
+                            "cq:xfVariantType": "web",
+                            "jcr:description": "Header for Property Landing Page",
+                            "jcr:baseVersion": "d84ade1a-006a-47f7-b249-dc8af1df1fdf",
+                            "jcr:isCheckedOut": true,
+                            "jcr:uuid": "637fd132-b78f-4a1a-adb5-d6cc2f80f9e6",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastReplicated_publish": "Tue Sep 28 2021 16:29:08 GMT+0000",
+                            "cq:lastModifiedBy": "satish.dakudora@toptal.com",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "satish.dakudora@toptal.com",
+                                "jcr:lastModified": "Mon Sep 06 2021 17:09:25 GMT+0000",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation_standalon": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "satish.dakudora@toptal.com",
+                                    "jcr:created": "Mon Aug 09 2021 17:05:39 GMT-0700",
+                                    "jcr:lastModified": "Tue Sep 28 2021 07:53:09 GMT+0000",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_standalone",
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "availability",
+                                            "url": "/content/standalone/demo-the-eugene/apartment-availability",
+                                            "label": "availability"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "experience",
+                                            "label": "experience"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "gallery",
+                                            "url": "/content/standalone/demo-the-eugene/property-gallery",
+                                            "label": "gallery"
+                                        },
+                                        "item3": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "id": "neighborhood",
+                                            "url": "/",
+                                            "label": "Neighborhood"
+                                        }
+                                    },
+                                    "menuLinksRight": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "schedule-tour-popup-button btn btn-primary btn-light",
+                                            "openLinkInNewTab": "false",
+                                            "id": "schedule-tour-popup-button",
+                                            "url": "javascript:void(0)",
+                                            "label": "Schedule a Tour"
+                                        },
+                                        "item1": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "id": "lease_online",
+                                            "url": "https://rent.brookfieldproperties.com/lease-online/4554639#k=98790",
+                                            "label": "Lease Online"
+                                        },
+                                        "item2": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "true",
+                                            "id": "resident_portal",
+                                            "label": "resident portal"
+                                        },
+                                        "item3": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "cssClass": "standalone-get-in-touch",
+                                            "openLinkInNewTab": "false",
+                                            "id": "get_in_touch",
+                                            "url": "/content/experience-fragments/standalone/en/site/get-in-touch/master.content.html",
+                                            "label": "Get in touch"
+                                        }
+                                    }
+                                }
+                            },
+                            "cq:metadata": {
+                                "jcr:primaryType": "nt:unstructured"
+                            }
+                        }
+                    },
+                    "headertest": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Mon Nov 15 2021 13:21:23 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "HeaderTest",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "jcr:created": "Mon Nov 15 2021 13:21:23 GMT-0800",
+                            "cq:lastModified": "Thu Sep 09 2021 09:59:11 GMT+0000",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "satish.dakudora@toptal.com",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "layout": "responsiveGrid",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "navigation_standalon": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "satish.dakudora@toptal.com",
+                                    "jcr:lastModifiedBy": "satish.dakudora@toptal.com",
+                                    "jcr:created": "Thu Sep 09 2021 09:54:27 GMT+0000",
+                                    "jcr:lastModified": "Thu Sep 09 2021 09:58:38 GMT+0000",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_standalone",
+                                    "menuLinksLeft": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "item0": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "openLinkInNewTab": "false",
+                                            "label": "EUGENE"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "get-in-touch": {
+                    "jcr:primaryType": "cq:Page",
+                    "jcr:createdBy": "admin",
+                    "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                    "jcr:content": {
+                        "jcr:primaryType": "cq:PageContent",
+                        "jcr:createdBy": "admin",
+                        "jcr:title": "Get In Touch",
+                        "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "cq:lastModified": "Mon Aug 09 2021 08:59:35 GMT-0700",
+                        "cq:tags": [],
+                        "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+                        "cq:lastModifiedBy": "admin"
+                    },
+                    "master": {
+                        "jcr:primaryType": "cq:Page",
+                        "jcr:createdBy": "admin",
+                        "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                        "jcr:content": {
+                            "jcr:primaryType": "cq:PageContent",
+                            "jcr:createdBy": "admin",
+                            "jcr:title": "Get In Touch",
+                            "cq:template": "/conf/common/settings/wcm/templates/xf-web-variation",
+                            "cq:xfMasterVariation": true,
+                            "jcr:created": "Sun Nov 14 2021 19:38:07 GMT-0800",
+                            "cq:lastModified": "Wed Aug 11 2021 20:02:56 GMT-0700",
+                            "cq:xfVariantType": "web",
+                            "cq:tags": [],
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage",
+                            "cq:lastModifiedBy": "admin",
+                            "root": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "layout": "simple",
+                                "jcr:lastModified": "Wed Aug 11 2021 20:02:55 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "cssClasses": "modal",
+                                "getintouch": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "jcr:createdBy": "admin",
+                                    "jcr:lastModifiedBy": "admin",
+                                    "jcr:created": "Mon Aug 09 2021 09:02:31 GMT-0700",
+                                    "jcr:lastModified": "Mon Aug 09 2021 09:02:31 GMT-0700",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/getintouch",
+                                    "contactus": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "action": "/content/usergenerated/experience-fragments/standalone/en/site/get-in-touch/master/cq-gen1628737342988/",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/form/container",
+                                        "actionType": "foundation/components/form/actions/store",
+                                        "text": {
+                                            "jcr:primaryType": "nt:unstructured",
+                                            "jcr:createdBy": "admin",
+                                            "jcr:lastModifiedBy": "admin",
+                                            "jcr:created": "Wed Aug 11 2021 20:02:22 GMT-0700",
+                                            "text": "<p>What's Happening</p>\r\n",
+                                            "jcr:lastModified": "Wed Aug 11 2021 20:02:31 GMT-0700",
+                                            "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                            "textIsRich": "true"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

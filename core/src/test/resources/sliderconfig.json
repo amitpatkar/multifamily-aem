@@ -1,0 +1,68 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "subTitle": "Properties",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Thu Aug 05 2021 18:42:07 GMT-0700",
+    "title": "Brookfield",
+    "jcr:lastModified": "Thu Aug 05 2021 20:45:52 GMT-0700",
+    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_portfolio",
+    "sliderImagePath": "sliderImagePath",
+    "sliderImageLabel": "sliderImageLabel",
+    "title": "title",
+    "metaDescription": "metaDescription",
+    "featuredPropertyList": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        },
+        "item2": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        }
+    },
+    "sliderList": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        },
+        "item2": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "sliderImagePath": "sliderImagePath",
+            "sliderImageLabel": "sliderImageLabel",
+            "title": "title",
+            "metaDescription": "metaDescription"
+        }
+    }
+}

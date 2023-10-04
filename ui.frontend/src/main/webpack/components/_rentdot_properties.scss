@@ -1,0 +1,314 @@
+.cmp-rentdotProperties {
+    &__listView {
+        margin-bottom: 70px;
+        @include breakpoint-up(desktop) {
+            margin-bottom: 120px;
+        }
+    }
+
+    #properties-filters-toggle {
+        padding:0;
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+        @include link-text();
+        @include breakpoint-up(desktop) {
+            display: none;
+        }
+        &[aria-expanded="true"] {
+            .text--open {
+                display: none;
+            }
+        }
+        &[aria-expanded="false"] {
+            .text--collapse {
+                display: none;
+            }
+        }
+
+    }
+    &__filters {
+        padding: 30px 31px 0 32px;
+        @include breakpoint-up(desktop) {
+            padding: 70px 0 40px;
+        }
+        @include breakpoint-up(desktop-large) {
+            padding: 70px 0;
+        }
+    }
+    #properties-filters-panel {
+        @include breakpoint-down(tablet){
+            display: none;
+            &.expanded {
+                display: block;
+                margin-top: 30px;
+            }
+        }
+    }
+    #properties-filters {
+        @include breakpoint-up(desktop) {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) 190px;
+            column-gap: 10px;
+        }
+        .cmp-options {
+            @include breakpoint-down(tablet){
+                &:not(:last-of-type) {
+                    margin-bottom: 20px;
+                }
+                &:last-of-type {
+                    margin-bottom: 30px;
+                }
+            }
+            &.property {
+                @include breakpoint-up(desktop) {
+                    grid-column: 1/2;
+                }
+            }
+            &.state {
+                @include breakpoint-up(desktop) {
+                    grid-column: 2/3;
+                }
+            }
+            &.city {
+                @include breakpoint-up(desktop) {
+                    grid-column: 3/4;
+                }
+            }
+            &.neighborhood {
+                @include breakpoint-up(desktop) {
+                    grid-column: 4/5;
+                }
+            }
+        }
+        #properties-filters-reset {
+            height: 50px;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            background-color: $universal-salt;
+            @include breakpoint-up(desktop) {
+                width: 180px;
+                grid-column: 5/6;
+                align-self: end;
+                justify-self: end;
+            }
+        }
+    }
+
+    &__propertyList {
+        @include breakpoint-up(desktop) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: 0px 15px;
+        }
+        @include breakpoint-up(desktop-large) {
+            gap: 0px 20px;
+        }
+    }
+    &__propertyCard {
+        padding: 30px 31px 0 32px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: $universal-alto;
+        &:hover,
+        &:focus {
+            box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08); 
+        }
+        @include breakpoint-down(tablet) {
+            display:block;
+        }
+        @include breakpoint-up(desktop) {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto 1fr auto;
+            padding: 20px 10px 0;
+        }
+        @include breakpoint-up(desktop-large) { 
+            padding: 30px 32px 0;
+        }
+        &-container--image{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 84% 16%;
+            grid-row: 1/2;
+            grid-column: 1;
+            @include breakpoint-up(desktop) {
+                grid-template-rows: 79.5% 20.5%;
+            }
+        }
+        &-container--text {
+            padding: 30px 0 0;
+            @include breakpoint-up(desktop) {
+                padding: 11px 0 0;
+                min-height: 146px;
+                grid-row: 2/3;
+                grid-column: 1;
+            }
+            @include breakpoint-up(desktop-large) {
+                padding: 30px 0 0;
+                min-height: 166px;
+            }
+        }
+        &-container--cta {
+            padding-top: 30px;
+            @include breakpoint-up(desktop) {
+                padding-top: 22px;
+                grid-row: 3/4;
+                grid-column: 1;
+            }
+        }
+        &-image {
+            grid-column: 1;
+            grid-row: 1/3;
+            @include breakpoint-down(tablet) {
+                @include aspect-ratio-box-fixed(1 1);
+            }
+            @include breakpoint-up(desktop) {
+                @include aspect-ratio-box-fixed(356 311);
+            }
+        }
+        &-banner {
+            grid-column: 1;
+            grid-row: 2/3;
+            z-index: 1;
+            color: $universal-salt;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p, h2, h3, h4, h5, h6 {
+                @include propertyCard-banner-text();
+            }
+        }
+        &-name {
+            @include small-title();
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include breakpoint-up(desktop) {
+                margin-bottom: 4px;
+            }
+        }
+        &-address {
+            @include label-text();
+            color: rgba(var(--universal-black-rgb), 0.6);
+        }
+        &-cta {
+            &.btn-secondary {
+                width: 250px;
+                padding: 9px 35px;
+                @include breakpoint-up(desktop) {
+                    width: 100%;
+                    height: 50px;
+                    padding: 12.5px 35px 11px;
+                }
+            }
+        }
+        &-spacer {
+            width: 100%;
+            height: 2px;
+            background-color: rgba(var(--universal-black-rgb), 0.1);
+            margin: 40px 0 0;
+            @include breakpoint-up(desktop) {
+                width: 250px;
+                margin: 35px 22px 0 22px;
+            }
+            @include breakpoint-up(desktop-large) {
+                width: 312px;
+                margin: 30px 20px 0 20px;
+            }
+        }
+    }
+    &__loadMore {
+        text-align: center;
+        margin-top: 30px;
+        @include breakpoint-up(desktop) {
+            margin-top: 60px;
+        }
+
+    }
+    #load-more {
+        width: 250px;
+        height: 50px;
+        padding: 12px 20px 11px;
+        text-align: center;
+        background-color: $brookfield-sapphire;
+    }
+    // #back-to-top {
+    //     position: fixed;
+    //     right: 20px;
+    //     bottom:30px;
+    //     z-index: 10;
+    //     width: 80px;
+    //     height: 80px;
+    //     display: flex;
+    //     flex-direction: column-reverse;
+    //     align-items: center;
+    //     justify-content: center;
+    //     padding: 14px 8px;
+
+    //     @include breakpoint-down(tablet) {
+    //         text-align: center;
+    //         span {
+    //             margin-top: 4px;
+    //         }
+    //     }
+    //     @include breakpoint-up(desktop) {
+    //         flex-direction: row;
+    //         justify-content: space-between;
+    //         width: 250px;
+    //         height: 40px;
+    //         padding: 10px 18px 9px 20px;
+    //         right: calc(50% - 480px);
+    //         bottom: 50px;
+    //     }
+    //     @include breakpoint-up(desktop-large) {
+    //         right: calc(50% - 650px);
+    //     }
+    //     img {
+    //         filter: invert(1);
+    //         transform: rotate(180deg);
+    //     }
+    // }
+
+    &--spotlight {
+        .carouselSection {
+            &__control-wrapper {
+                @include breakpoint-up(desktop) {
+                    display: none;
+                }
+            }
+            &__footer {
+                text-align: center;
+                margin-top: 30px;
+                @include breakpoint-up(desktop) { 
+                    margin-top: 60px;
+                }
+                .btn {
+                    height: 50px;
+                    padding: 14px 50px 12px 20px;;
+                    background-color: $brookfield-sapphire;
+                }
+            }
+
+        }
+        .glider-contain {
+            @include breakpoint-up(desktop) {
+                display: none;
+            }
+        }
+        .cmp-rentdotProperties{
+            &__propertyList {
+                @include breakpoint-down(tablet) {
+                    display: none;
+                }
+            }
+            &__propertyCard {
+                margin-bottom: 0;
+            }
+
+        }
+
+
+    }
+}

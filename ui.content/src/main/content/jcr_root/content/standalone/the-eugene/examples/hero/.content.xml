@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-23T15:54:19.495-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/common/settings/wcm/templates/page-standalone"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hero"
+        sling:resourceType="brookfieldpropertiesprogram/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="brookfieldpropertiesprogram/components/container">
+                    <hero
+                        cq:styleIds="[8467799]"
+                        jcr:created="{Date}2021-08-23T15:35:44.188-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:36:22.151-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        btnType="btn-primary"
+                        iFrame="false"
+                        isPlayInPlace="false"
+                        isVirtualTour="false"
+                        openLinkInNewTab="false"
+                        textIsRich="true"
+                        title="Welcome to the you generation"/>
+                    <section_copy jcr:primaryType="nt:unstructured"/>
+                    <text
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:36:10.952-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Hero title, banner-badge on&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_1741463283
+                        cq:styleIds="[8467799]"
+                        jcr:created="{Date}2021-08-23T15:36:15.790-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:36:15.790-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bannerBadgeImagePath="/content/dam/common/components/hero/banner-medallion-sample.svg"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        title="Welcome to the you generation"/>
+                    <section_copy_1174963014 jcr:primaryType="nt:unstructured"/>
+                    <text_copy
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:36:57.042-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Hero logo, banner off&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_2031069195
+                        cq:styleIds="[8467800]"
+                        jcr:created="{Date}2021-08-23T15:37:01.588-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:38:05.894-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        btnType="btn-primary"
+                        iFrame="false"
+                        isPlayInPlace="false"
+                        isVirtualTour="false"
+                        logoImagePath="${logo}"
+                        openLinkInNewTab="false"
+                        textIsRich="true"/>
+                    <text_copy_copy
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:38:37.432-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Hero logo, banner on&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_2031069195_copy
+                        cq:styleIds="[8467800]"
+                        jcr:created="{Date}2021-08-23T15:37:01.588-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:39:11.376-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bannerTitle="&lt;p>Tour Today &amp;amp; get a &lt;a href=&quot;#&quot;>$250 Whole Foods Gift Card&lt;/a>&lt;/p>&#xd;&#xa;"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        btnType="btn-primary"
+                        iFrame="false"
+                        isPlayInPlace="false"
+                        isVirtualTour="false"
+                        label="Schedule a Tour"
+                        logoImagePath="${logo}"
+                        openLinkInNewTab="false"
+                        textIsRich="true"
+                        url="/content/cq:graphql"/>
+                    <text_copy_copy_copy
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:39:46.898-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Hero virtual tour&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_2031069195_copy_1519769573
+                        cq:styleIds="[8467803]"
+                        jcr:created="{Date}2021-08-23T15:37:01.588-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:49:52.332-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bannerTitle="&lt;p>Tour Today &amp;amp; get a &lt;a href=&quot;#&quot;>$250 Whole Foods Gift Card&lt;/a>&lt;/p>&#xd;&#xa;"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        btnType="btn-primary"
+                        iFrame="&lt;iframe src=&quot;https://my.matterport.com/show/?m=51aWK4tRDsH&quot; title=&quot;H (5-35)&quot; frameborder=&quot;0&quot; allowfullscreen allow=&quot;xr-spatial-tracking&quot;>&lt;/iframe>"
+                        isPlayInPlace="false"
+                        isVirtualTour="true"
+                        label="Begin Virtual Tour"
+                        openLinkInNewTab="false"
+                        textIsRich="true"
+                        title="Apartment 23R"/>
+                    <text_copy_copy_copy_
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:50:43.879-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>&amp;nbsp;Hero virtual tour (play in place) Matterport example&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_2031069195_copy_1068506616
+                        cq:styleIds="[8467804]"
+                        jcr:created="{Date}2021-08-23T15:37:01.588-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:52:09.469-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        btnType="btn-primary"
+                        iFrame="&lt;iframe src=&quot;https://my.matterport.com/show/?m=51aWK4tRDsH&quot; title=&quot;H (5-35)&quot; frameborder=&quot;0&quot; allowfullscreen allow=&quot;xr-spatial-tracking&quot;>&lt;/iframe>"
+                        isPlayInPlace="true"
+                        isVirtualTour="true"
+                        openLinkInNewTab="false"
+                        textIsRich="true"/>
+                    <text_copy_copy_copy__687486321
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:52:42.951-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Hero virtual tour (play in place) googlemap example&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_2031069195_copy_1863850717
+                        cq:styleIds="[8467804]"
+                        jcr:created="{Date}2021-08-23T15:37:01.588-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:53:05.858-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        btnType="btn-primary"
+                        iFrame="            &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!4v1614022840396!6m8!1m7!1sCAoSLEFGMVFpcE9lSmQ3ZHZTcDNVeWhyWXdCRjZDaG9PSGlxYUNZN0g4WjJuWnpD!2m2!1d39.960178163164!2d-75.167331603475!3f63.19!4f-6.700000000000003!5f0.7820865974627469&quot; title=&quot;one franklin town&quot; frameborder=&quot;0&quot; allowfullscreen allow=&quot;xr-spatial-tracking&quot;>&lt;/iframe>"
+                        isPlayInPlace="true"
+                        isVirtualTour="true"
+                        openLinkInNewTab="false"
+                        textIsRich="true"/>
+                    <text_copy_copy_copy__1179013043
+                        jcr:created="{Date}2021-08-23T15:35:54.426-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:53:50.467-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>&amp;nbsp;Hero short&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <hero_882793777
+                        cq:styleIds="[8467802]"
+                        jcr:created="{Date}2021-08-23T15:53:58.115-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:54:19.489-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        btnType="btn-primary"
+                        isPlayInPlace="false"
+                        isVirtualTour="false"
+                        openLinkInNewTab="false"
+                        textIsRich="true"
+                        title="Welcome to the you generation"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

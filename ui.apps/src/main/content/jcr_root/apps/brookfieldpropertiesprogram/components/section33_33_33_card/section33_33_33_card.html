@@ -1,0 +1,44 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+	 data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     class="cmp-section33__cardContent"
+     data-layer-section>
+    <sly data-sly-test="${!properties.videoPath}">
+        <img data-sly-test="${properties.patternImagePath}" alt="${properties.bgImageCaption ? properties.bgImageCaption : 'Pattern Image'}" data-sly-attribute.src='${properties.disableLazy ? updatedProps.getProperties.patternImagePath : ""}' class="cmp-section33__pattern ${properties.disableLazy ? '' : 'lazy'}" data-src="${updatedProps.getProperties.patternImagePath @context='uri'}" alt="${updatedProps.getProperties.bgImageLabel}" data-sly-attribute.data-image-caption='${properties.bgImageCaption}'>
+        <img data-sly-test="${properties.patternImagePath && properties.bgImagePath}" alt="${properties.bgImageCaption ? properties.bgImageCaption : 'Pattern Image'}" data-sly-attribute.src='${properties.disableLazy ? updatedProps.getProperties.bgImagePath : ""}' class="cmp-section33__logo ${properties.disableLazy ? '' : 'lazy'}" data-src="${updatedProps.getProperties.bgImagePath @context='uri'}" alt="${updatedProps.getProperties.bgImageLabel}" data-sly-attribute.data-image-caption='${properties.bgImageCaption}'>
+        <img data-sly-test="${!properties.patternImagePath && properties.bgImagePath}" alt="${properties.bgImageCaption ? properties.bgImageCaption : 'Pattern Image'}" data-sly-attribute.src='${properties.disableLazy ? updatedProps.getProperties.bgImagePath : ""}' class="${properties.disableLazy ? '' : 'lazy'}" data-src="${updatedProps.getProperties.bgImagePath @context='uri'}" alt="${updatedProps.getProperties.bgImageLabel}" data-sly-attribute.data-image-caption='${properties.bgImageCaption}'>
+        <a data-sly-test="${properties.enableTextLink == 'true'}" class="cmp-section33__link" href="${properties.textLink}" target="_self">
+            ${properties.text @context='html'}
+        </a>
+        <sly data-sly-test="${!properties.enableTextLink || properties.enableTextLink == 'false'}">
+            ${properties.text @context='html'}
+        </sly>
+
+        <a data-sly-repeat.cta="${ctas.componentModel.menuLinks}" href="${cta.absUrl  @context='uri'}" target="${cta.target}" class="${cta.cssClass @context='attribute'} ${cta.btnType  @context='attribute'}"
+           data-sly-attribute.data-a11y-dialog-show="${cta.openVirtualTour ? 'virtualtour-dialog' : ''}">
+            ${cta.label}
+        </a>
+    </sly>
+    <div data-sly-test="${properties.videoPath}" class="cmp-section33__video-player" data-cmp-component="videoplayer">
+        <div class="cmp-section33__video">
+            <video src="${properties.videoPath}"
+                   preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="cmp-section33__play-control">
+            <button class="btn-videoControl btn-videoControl--pause">
+                <span class="visually-hidden">Pause the video</span>
+            </button>
+        </div>
+        <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+        <div data-sly-test="${properties.videoMuteUnMute == 'true'}" class="cmp-section33__sound-control">
+            <button class="btn-soundControl btn-soundControl--unmute">
+                <span class="visually-hidden">Unmute the video</span>
+            </button>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

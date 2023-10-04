@@ -1,0 +1,60 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<a id="_topofthepage"></a>
+<sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"     
+     data-sly-repeat.child="${templatedContainer.structureResources}"
+     data-sly-use.bodyInfo="${'body-addl-info.js' @ rootClasses = [pageInfo.siteConfigModel.theme,pageInfo.siteConfigModel.activeVariation]}"
+     data-sly-resource="${child.path @ resourceType=child.resourceType,cssClassName=bodyInfo.cssClassName, decorationTagName='div'}"></sly>
+<!--/*
+<div id="rentgrata-props"
+     data-sly-test="${pageInfo.propertyConfigModel.rentgrataKey}"
+     data-chat-key="${pageInfo.propertyConfigModel.rentgrataKey}"
+     style="display: none">
+</div>
+*/-->
+<!--modal for playing the virtual tour video -->
+<div data-sly-use.customfooterlibs="${'customfooterlibs.js' @pageInfo=pageInfo}"
+     data-cmp-component="footervirtualtourplaceholder"
+     class="dialog-container"
+     id="virtualtour-dialog"
+     aria-hidden="true"
+     aria-labelledby="virtualtour-dialog-title"
+     aria-describedby="virtualtour-dialog-description"
+     >
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <div class="dialog-content" role="document">
+        <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+            <span>close</span>
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt="Close the dialog window"/>              
+        </button>
+
+        <!--dialog title and description are for accessibility purposes.  -->
+        <h1 id="virtualtour-dialog-title" class="visually-hidden">3D virtual tour</h1>
+        <p id="virtualtour-dialog-description" class="visually-hidden">Explore the space seamlessly</p>
+        <div class="dialog-media-wrapper">
+            <iframe loading="lazy" data-sly-test.isPeek="${customfooterlibs.tourProvider == 'peek' && customfooterlibs.tourId}" src="${customfooterlibs.tourId}" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+            <iframe loading="lazy" lazy data-sly-test.isMatterport="${customfooterlibs.tourProvider == 'matterport' && customfooterlibs.tourId}" src="https://my.matterport.com/show/?m=${customfooterlibs.tourId}" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+            <div data-sly-test.isPanoskin="${customfooterlibs.tourProvider == 'panoskin' && customfooterlibs.tourId}"
+                 id="panoskin-tour-footer"
+                 data-tour-id="${customfooterlibs.tourId}"
+                 data-tour-hide-buttons="false"
+                 data-tour-hide-fullscreen="true"
+                 data-cmp-component="panoskin-tour"
+                 class="panoskin-tour__wrapper"></div>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,207 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Sep 13 2021 14:56:34 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": ["mix:versionable"],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Property Detail",
+        "jcr:versionHistory": "c20af158-d95b-4d72-8f3e-e8befa1adb91",
+        "cq:template": "/conf/common/settings/wcm/templates/page-standalone",
+        "jcr:predecessors": ["f27613cf-340d-42cb-a2da-1ab43d34650e"],
+        "jcr:created": "Mon Sep 13 2021 14:56:34 GMT-0700",
+        "cq:lastModified": "Wed Sep 15 2021 18:59:13 GMT-0700",
+        "jcr:baseVersion": "f27613cf-340d-42cb-a2da-1ab43d34650e",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "6ce12845-8fdb-40d4-8340-569141936578",
+        "sling:resourceType": "brookfieldpropertiesprogram/components/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+            "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                "container": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                    "hero": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "admin",
+                        "bgImagePath": "/content/dam/common/components/hero/hero_sample_image.jpg",
+                        "jcr:lastModifiedBy": "admin",
+                        "bannerBadgeImagePath": "/content/dam/common/components/hero/banner-medallion-sample.svg",
+                        "jcr:created": "Wed Sep 15 2021 00:09:42 GMT-0700",
+                        "title": "Welcome to the you generation",
+                        "jcr:lastModified": "Wed Sep 15 2021 00:09:42 GMT-0700",
+                        "sling:resourceType": "brookfieldpropertiesprogram/components/hero",
+                        "cq:styleIds": ["8467799"]
+                    },
+                    "apt_detail_section": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "admin",
+                        "jcr:lastModifiedBy": "admin",
+                        "jcr:created": "Wed Sep 15 2021 17:27:24 GMT-0700",
+                        "jcr:lastModified": "Wed Sep 15 2021 17:27:24 GMT-0700",
+                        "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_section",
+                        "header_left": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                            "cssClasses": "cmp-apartmentDetail__header--left",
+                            "apt_detail_promo": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "text": "<h3><span class=\"cmp-apartmentDetail__promo-headline\">Limited-time Offer</span></h3><h4><span class=\"cmp-apartmentDetail__promo-subhead\">Apply by May 31 for a June move-in and...</span></h4><h3><span class=\"cmp-apartmentDetail__promo-headline\">July is free!*</span></h3>",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/apt_promo",
+                                "textIsRich": "true"
+                            }
+                        },
+                        "header_right": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                            "cssClasses": "cmp-apartmentDetail__header--right",
+                            "apt_detail_available": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "text": "<p class=\"cmp-apartmentDetail__info medium-title\">{{@root.group.name}} | {{@root.group.area}} sq. ft. |  {{@root.unit.unitMarketRent}}/month**</p> <p class=\"cmp-apartmentDetail__cta\"><a href=\"#\" class=\"schedule-tour-popup-button btn btn-secondary btn-dark\">Apply Now</a></p>",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/text",
+                                "textIsRich": "true"
+                            }
+                        },
+                        "container_main": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                            "cssClasses": "cmp-apartmentDetail__main",
+                            "apt_detail_floorplan": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_floorplan"
+                            }
+                        },
+                        "container_gallery": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                            "cssClasses": "cmp-apartmentDetail__gallery",
+                            "section_33_1": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "numberOfCols": "cols-33-33-33",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33",
+                                "container_1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_33_33_33_card": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "bgImagePath": "${unit-gallery-src-1}",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                        "cq:styleIds": ["5327944212"]
+                                    }
+                                },
+                                "container_2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_33_33_33_card": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "bgImagePath": "${unit-gallery-src-2}",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                        "cq:styleIds": ["5327944212"]
+                                    }
+                                },
+                                "container_3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_33_33_33_card": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "bgImagePath": "${unit-gallery-src-3}",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                        "cq:styleIds": ["5327944212"]
+                                    }
+                                }
+                            },
+                            "section_33_1_copy": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "jcr:lastModifiedBy": "admin",
+                                "numberOfCols": "cols-33-66",
+                                "jcr:lastModified": "Wed Sep 15 2021 18:58:49 GMT-0700",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33",
+                                "container_1": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_33_33_33_card": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "bgImagePath": "${unit-gallery-src-4}",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "jcr:lastModified": "Wed Sep 15 2021 18:57:39 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                        "textIsRich": "true",
+                                        "cq:styleIds": ["5327944212"]
+                                    }
+                                },
+                                "container_2": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                    "section_33_33_33_card": {
+                                        "jcr:primaryType": "nt:unstructured",
+                                        "bgImagePath": "${unit-gallery-src-5}",
+                                        "jcr:lastModifiedBy": "admin",
+                                        "jcr:lastModified": "Wed Sep 15 2021 18:57:56 GMT-0700",
+                                        "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                        "textIsRich": "true",
+                                        "cq:styleIds": ["5327944217"]
+                                    }
+                                },
+                                "container_3": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+                                }
+                            }
+                        },
+                        "container_footer": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                            "cssClasses": "cmp-apartmentDetail__footer",
+                            "apt_detail_footer": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/apt_detail_footer"
+                            }
+                        },
+                        "section_33_1_copy": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "numberOfCols": "cols-33-33-33",
+                            "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33",
+                            "container_1": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "section_33_33_33_card": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "bgImagePath": "${unit-gallery-src-1}",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                    "cq:styleIds": ["5327944212"]
+                                }
+                            },
+                            "container_2": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "section_33_33_33_card": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "bgImagePath": "${unit-gallery-src-2}",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                    "cq:styleIds": ["5327944212"]
+                                }
+                            },
+                            "container_3": {
+                                "jcr:primaryType": "nt:unstructured",
+                                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                                "section_33_33_33_card": {
+                                    "jcr:primaryType": "nt:unstructured",
+                                    "bgImagePath": "${unit-gallery-src-3}",
+                                    "sling:resourceType": "brookfieldpropertiesprogram/components/section33_33_33_card",
+                                    "cq:styleIds": ["5327944212"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

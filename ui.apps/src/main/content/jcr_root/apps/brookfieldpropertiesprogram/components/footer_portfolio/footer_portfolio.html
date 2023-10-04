@@ -1,0 +1,28 @@
+
+<nav class="cmp-footer__navigation" 
+     data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+     data-sly-use.menu="com.brookfieldpropertiesprogram.core.models.NavigationLinksLeftRight"
+     > 
+    <div class="cmp-footer__col1">
+        <div class="cmp-footer__logo">
+            <a href="${properties.logoUrl @context='uri'}" class="cmp-footer__logoLink" target="_blank">
+                <img src="${properties.logoPath @context='uri'}" alt="${properties.logoLabel ? properties.logoLabel : 'Logo'}" />
+            </a>
+        </div>
+        <div class="cmp-footer__icons">
+            <a data-sly-repeat.socialLink="${navigation.socialLinks}" href="${socialLink.absUrl}"  class="cmp-footer__iconLink" target="${socialLink.target}">
+                <img src="${socialLink.icon}" alt="${socialLink.label ? socialLink.label : 'Social Link'}" />
+            </a>              
+        </div>
+    </div>
+    <div class="cmp-footer__col2">
+        <ul>
+            <li data-sly-repeat="${menu.menuLinksLeft}"><a href="${item.absUrl}" target="${item.target}" class="cmp-footer__link">${item.label} <span class="visually-hidden">opens in new window</span></a></li>
+        </ul>
+    </div>
+    <div class="cmp-footer__col3">
+        <ul>
+            <li data-sly-repeat="${menu.menuLinksRight}"><a href="${item.absUrl}" target="${item.target}" class="cmp-footer__link">${item.label}<span class="visually-hidden">opens in new window</span></a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,49 @@
+.tooltip-container {
+    position: relative;
+    margin-right: 20px;
+    @include breakpoint-down(mobile-small) {
+      margin-right: 12px;
+    }
+    button {
+      border: none;
+      background: transparent;
+      padding: 0;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    [role="tooltip"] {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-top: 8px;
+      transform: translateX(-50%);
+      @include legal-text();
+      color: $universal-salt;
+      min-width: max-content;
+      padding: 4px 20px;
+      border-radius: 2px;
+        &::before {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: var(--tooltip-thingy-height) solid transparent;
+            border-bottom-color: var(--brand-primary-90);
+            content: '';
+        }
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            left: 0;
+            display: block;
+            height: calc(var(--tooltip-thingy-height) * 2);
+            content: '';
+        }
+  
+    }
+  }
+  

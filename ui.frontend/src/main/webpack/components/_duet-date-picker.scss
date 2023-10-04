@@ -1,0 +1,72 @@
+.duet-date {
+    &__input {
+        @include form-input();
+        border: none;
+        background-color: var(--form-input-bg);
+        height: 50px;
+        padding: 10px 45px 10px 20px;
+    }
+    &__toggle {
+        width: 50px;
+        box-shadow: none;
+        background: transparent url($calendar) no-repeat calc(100% - 12px) center;
+        border-left: 2px solid $universal-salt;
+        &:focus {
+            box-shadow: 0 0 0 2px var(--form-input-focus);
+        }
+    }
+    &__toggle-icon {
+        svg {
+            display: none;
+        }
+    }
+    &__select-label {
+        @include font-book;
+        font-size: rem(18);
+        line-height: 1.2;
+        letter-spacing: 0.08rem;
+    }
+    &__day {
+        width: 30px;
+        height: 30px;
+        @include date-picker-text;
+        &.is-today {
+            color: var(--brand-primary);
+            box-shadow: 0 0 0 2px var(--brand-primary);
+            &::before {
+                background: var(--form-input-bg);
+                opacity: 1;
+            }
+        }
+        &[aria-pressed=true],
+        &:focus,
+        &:active {
+            background: var(--brand-primary);
+            color: $universal-salt;
+        }
+        &:active {
+            box-shadow: 0 0 5px var(--brand-primary);
+        }
+        &:hover::before {
+            background: var(--form-input-bg);
+            opacity: 1;
+        }
+    }
+    &__select select:focus + .duet-date__select-label,
+    &__prev:focus, 
+    &__next:focus {
+        box-shadow: 0 0 0 2px var(--brand-primary);
+    }
+    &__mobile-heading {
+        display: inline-block;
+        @include breakpoint-up(date-picker-desktop) { 
+            display: none!important;
+
+        }
+    }
+    &__table-header {
+        @include font-medium();
+        @include date-picker-text;
+    }
+
+}

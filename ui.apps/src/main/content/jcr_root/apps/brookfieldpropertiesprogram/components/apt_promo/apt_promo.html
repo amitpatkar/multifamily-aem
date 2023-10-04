@@ -1,0 +1,14 @@
+
+    <div class="cmp-apartmentDetail__promo"
+         data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+         data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+         data-sly-test="${!pageInfo.propertyConfigModel.isSpecialsExpired && pageInfo.propertyConfigModel.specials}">
+        <div class="cmp-apartmentDetail__promo-wrap">
+            <div
+                class="cmp-apartmentDetail__promo-inner">
+                ${pageInfo.propertyConfigModel.specials @context='html'}
+            </div>
+        </div>
+    </div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !pageInfo.propertyConfigModel.specials, classAppend='cmp-text'}"></sly>

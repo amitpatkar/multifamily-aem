@@ -1,0 +1,100 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.carousel="com.brookfieldpropertiesprogram.core.models.CarouselComponentModel" >
+    <!--Notable Contents Carousel Start-->
+
+        <div class="carouselSection__header-wrapper grid-container">
+            <div class="carouselSection__header">
+                <div class="horizontal-divider"></div>
+                <!--replace the content with the title and seo text-->
+                <h2 class="section-title">${properties.subTitle}</h2>
+                <p class="highlight-title">${properties.mainTitle}</p>
+            </div>
+        </div>
+        <div role="region" aria-label="Notable destinations carousel" data-sly-test="${carousel.sliderList && carousel.sliderList.size > 0}" data-layer-section>
+            <div class="carouselSection__main">
+                <div class="slider-contain">
+                    <div class="slider">
+                        <!--html of one slide-->
+                        <div class="slide-contain" data-sly-repeat.sliderList = "${carousel.sliderList}" data-slide-index=${sliderListList.index} role="group" aria-label="slide ${sliderListList.count}">
+                            <div class="cmp-notableContents__slide">
+                                <div class="cmp-notableContents__slide-image">
+                                    <!--replace the "src" and "alt" with the real image data-->
+                                    <img src="${sliderList.sliderImagePath}" alt="${sliderList.sliderImageLabel ? sliderList.sliderImageLabel : 'Slider Image'}">
+                                </div>
+                                <div class="cmp-notableContents__slide-textBox">
+
+                                    <!--Add the following html if paragraph is configured-->
+                                    <div class="cmp-notableContents__slide-title">
+                                        <!--Replace the text with Title-->
+                                        <h3 class="medium-title">${sliderList.title}</h3>
+                                    </div>
+
+                                    <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                                    <div class="cmp-notableContents__slide-paragraph hide-for-mobile" data-sly-test="${sliderList.metaDescription}">
+                                        <!--Replace the text with paragraph-->
+                                        <p class="body-text" >${sliderList.metaDescription}</p>
+                                    </div>
+
+                                    <!--add the following html if there is a sub title -->
+                                    <div class="cmp-notableContents__slide-subtitle" data-sly-test="${sliderList.featuredTitle}">
+                                        <!--Replace the text with subTitle-->
+                                        <h4 class="interactive-title" >${sliderList.featuredTitle}</h4>
+                                    </div>
+
+                                    <!--add the following html if there is a list -->
+                                    <div class="cmp-notableContents__slide-list" data-sly-test="${sliderList.featuredPropertyList}">
+                                        <ul data-sly-list.propertyConfig = "${sliderList.featuredPropertyList}">
+                                            <li data-sly-test="${propertyConfigList.index < 4}">
+                                                <a class="link-text" href="/content/portfolio/en/properties/${propertyConfig.name}.html">${propertyConfig.title}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!--Add the following html if cta is configured-->
+                                    <div class="cmp-notableContents__slide-cta" data-sly-test="${sliderList.ctaLinkText}">
+                                        <!--replace the href with url data, add open in same/new window-->
+                                        <a href="${sliderList.ctaLinkTarget}" class="btn btn-tertiary btn-dark" >${sliderList.ctaLinkText}</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carouselSection__control-wrapper grid-container">
+            <div class="grid-row">
+                <div class="carouselSection__control">
+                    <div class="carouselSection__status">
+                        <p class="label-text">
+                            <!--replace the number "5" with the total number of slides; replace the "destinations" with the NAME of carousel -->
+                            <span class="current-page">1</span> of ${carousel.sliderList.size} ${properties.sliderType}
+                        </p>
+                    </div>
+                    <div class="carouselSection__buttons">
+                        <button class="carouselSection__btn carouselSection__btn--prev">
+                            <span class="visually-hidden">Previous</span>
+                            <span class="carouselSection__btn-icon">
+                            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        </button>
+                        <button class="carouselSection__btn carouselSection__btn--next">
+                            <span class="visually-hidden">Next</span>
+                            <span class="carouselSection__btn-icon">
+                            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M1 31L16 16L1 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,45 @@
+{
+    "jcr:primaryType": "sling:OrderedFolder",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Form To Email",
+    "jcr:created": "Thu Jul 22 2021 15:41:15 GMT-0700",
+    "cq:allowedTemplates": "/conf/siteconfig/settings/wcm/templates/xf-form-to-email",
+    "contactus-anyonehome": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Jul 22 2021 15:46:09 GMT-0700",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "ContactUsAnyoneHome",
+            "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+            "jcr:created": "Thu Jul 22 2021 15:46:09 GMT-0700",
+            "cq:lastModified": "Thu Jul 22 2021 15:46:09 GMT-0700",
+            "cq:tags": [],
+            "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+            "cq:lastModifiedBy": "admin",
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "ContactUsAnyoneHome",
+            "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-form-to-email",
+            "cq:xfMasterVariation": true,
+            "jcr:created": "Thu Jul 22 2021 15:46:09 GMT-0700",
+            "cq:lastModified": "Thu Jul 22 2021 15:47:46 GMT-0700",
+            "cq:xfVariantType": "web",
+            "sendGridTemplateId": "d-d5a7efbc99b3441ab35bfb231eac370f",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-form-to-email",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+            },
+            "cq:featuredimage": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Thu Jul 22 2021 15:47:46 GMT-0700",
+                "sling:resourceType": "core/wcm/components/image"
+            }
+        }
+    }
+}

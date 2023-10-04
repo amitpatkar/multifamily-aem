@@ -1,0 +1,12 @@
+<div class="cmp-footer__ctaWrap" 
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel" 
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     data-sly-use.footer_standalone_block="${'footer_standalone_block.js' @url=updatedProps.properties.footer_cta_url}"
+     data-sly-test="${pageInfo.siteConfigModel.footer_cta_heading}">
+    <h2 class="cmp-footer__ctaTitle">
+        ${updatedProps.properties.footer_cta_heading}
+    </h2>
+    <div class="cmp-footer__cta">
+        <a href="${footer_standalone_block.url @context='uri'}" target="${updatedProps.properties.footer_cta_target}" class="btn btn-primary btn-dark">${updatedProps.properties.footer_cta_label}</a>
+    </div>
+</div>

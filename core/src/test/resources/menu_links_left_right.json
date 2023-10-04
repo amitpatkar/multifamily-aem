@@ -1,0 +1,57 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Mon Aug 09 2021 17:05:39 GMT-0700",
+    "jcr:lastModified": "Tue Aug 10 2021 13:59:34 GMT-0700",
+    "sling:resourceType": "brookfieldpropertiesprogram/components/navigation_standalone",
+    "menuLinksLeft": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "id": "features_amenities",
+            "url": "/",
+            "label": "Features & Amenities"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "id": "neighborhood",
+            "url": "/",
+            "label": "Neighborhood"
+        },
+        "item2": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "id": "test",
+            "url": "/",
+            "label": "Test"
+        }
+    },
+    "menuLinksRight": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "cssClass": "btn btn-primary btn-light",
+            "openLinkInNewTab": "false",
+            "id": "schedule_tour",
+            "url": "/",
+            "label": "Schedule a Tour"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "id": "lease_online",
+            "url": "/",
+            "label": "Lease Online"
+        },
+        "item2": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "id": "get_in_touch",
+            "url": "/",
+            "label": "Get in touch"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.panoskin-tour__wrapper {
+  width: 100%;
+  @include aspect-ratio-box-fixed(375 500);
+  @include breakpoint-up(desktop) {
+    @include aspect-ratio-box-fixed(1920 1099);
+  }
+}

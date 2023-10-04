@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-11-12T15:03:37.016+05:30"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2021-10-22T13:35:41.872Z"
+        cq:lastReplicated_publish="{Date}2021-10-22T13:35:41.872Z"
+        cq:lastReplicatedBy="amit.patkar@toptal.com"
+        cq:lastReplicatedBy_publish="amit.patkar@toptal.com"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
+        cq:tags="[]"
+        cq:template="/conf/common/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        jcr:uuid="7bcdfa65-8ea0-4299-810b-b64228d7bd7b"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2021-08-21T18:32:45.468-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="simple">
+            <navigation_portfolio_apartments
+                jcr:created="{Date}2021-10-22T13:34:45.948Z"
+                jcr:createdBy="amit.patkar@toptal.com"
+                jcr:lastModified="{Date}2021-11-12T15:03:36.803+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/navigation_portfolio_apartments"
+                backButtonLabel="The Eugene"
+                backButtonTargetPath="/content/portfolio/en/home"                
+                label="Contact Us">
+                <menuLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="Properties"
+                        openLinkInNewTab="false"
+                        url="/content/portfolio/en/properties"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="About Brookfield"
+                        openLinkInNewTab="false"
+                        url="/content/portfolio/en/about-us"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        label="Careers"
+                        openLinkInNewTab="false"
+                        url="/content/portfolio/en/careers"/>
+                </menuLinks>
+                <socialLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="Availability"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="Features &amp; Amenities"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        label="Neighborhood"
+                        openLinkInNewTab="false"
+                        url="/content/portfolio/en/neighborhoods"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        label="Gallery"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </socialLinks>
+            </navigation_portfolio_apartments>
+        </root>
+    </jcr:content>
+</jcr:root>

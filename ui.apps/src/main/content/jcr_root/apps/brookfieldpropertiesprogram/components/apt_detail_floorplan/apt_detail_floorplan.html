@@ -1,0 +1,18 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     >
+     <div class="grid-container">
+        <div class="grid-row">
+            <div class="cmp-apartmentDetail__floorplan--large">
+                <img src="${pageInfo.unitImagesModel.floorPlanImagePaths['unit-floorplan-src-1'] @context='uri'}" alt="floorplan of ${pageInfo.unitImagesModel.floorPlanImagePaths['unit-floorplan-title-1']}"/>
+            </div>
+            <div class="cmp-apartmentDetail__floorplan--emptyMessage hidden">
+                <p class="intermediate-title">Currently the floor plan is not available for this apartment.</p>
+            </div>
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

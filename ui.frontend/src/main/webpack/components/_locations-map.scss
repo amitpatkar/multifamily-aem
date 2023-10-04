@@ -1,0 +1,14 @@
+.cmp-poi-map--locations {
+  .cmp-availability__wrapper {
+    padding-bottom: 0;
+  }
+
+  &--empty-result {
+    padding-top: 87px;
+    padding-bottom: 87px;
+    background-color: rgba(var(--brand-tertiary-rgb), 0.2);
+    color: $universal-alto;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

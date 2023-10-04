@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-21T17:36:37.925-07:00"
+        cq:lastModifiedBy="reference-adjustment-service"
+        cq:tags="[experience-fragments:variation/web,states:CA]"
+        cq:template="/conf/siteconfig/settings/wcm/templates/xf-property-config"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="The Eugene"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage-property-config"
+        address="435 West 31st Street"
+        affordableDisclaimer="Test"
+        anyoneHomeEmailAddress="amitpatkar@gmail.com"
+        city="Sunnyvale"
+        custServiceEmailAddress="RS@TheEugeneNYC.com"
+        description="Located in Midtown West, Manhattan, residents of The Eugene have a haven in the middle of one of the most dynamic cities in the world. Each penthouse apartment boasts floor-to-ceiling views of New York’s iconic skyline. An NBA-size basketball court, climbing wall, yoga room, and game room are just a few of many ways to unwind without putting on a coat. There’s a library lounge ideal for distraction-free reading or working. There’s even a rooftop club sixty-two stories above the city complete with a sunroom, bar, and outdoor grilling stations. Pets get love, too, thanks to an on-site grooming station. And when residents want to explore, there are dining and shopping options, galore at nearby Hudson Yards. "
+        embedAnyoneHome="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://www.myshowing.com/css/schedule_a_tour_webform_popup.css&quot; media=&quot;all&quot;>&#xd;&#xa;&lt;div id=&quot;schedule-tour-modal&quot; class=&quot;schedule-tour-modal&quot;>&#xd;&#xa; &lt;div class=&quot;schedule-tour-modal-content&quot;>&#xd;&#xa;&lt;div class=&quot;schedule-tour-modal-body&quot;>&#xd;&#xa;&lt;div class=&quot;self_schedule_popup_close&quot;>&lt;span class=&quot;schedule_popup_close&quot;>&amp;times;&lt;/span>&lt;/div>&#xd;&#xa;&lt;div class='embed-container'>&lt;iframe id='ifrm' src='https://www.myshowing.com/Brookfield_Properties/Guild/scheduletourwidget/a0F0H00000d3cusUAA/' frameborder='0' style='border:0;' frameborder='0' >&lt;/iframe>&#xd;&#xa;&lt;/div>&lt;/div>&lt;/div>&lt;/div>&#xd;&#xa;&lt;script src=&quot;https://www.myshowing.com/js/properties/schedule_a_tour_webform_popup.js&quot;>&lt;/script>&#xd;&#xa;"
+        facebookURL="https://www.instagram.com/theeugenenyc/"
+        featuredImage="/content/dam/common/properties/the-eugune/logo.svg"
+        googleAddress="407 W 31st St, New York, NY 10001, USA"
+        headline="IT'S TIME TO DISCOVER THE EUGENE"
+        instagramURL="https://www.instagram.com/theeugenenyc/"
+        legalText="&amp;copy; 2021 The Eugene, All Rights Reserved."
+        logo="/content/dam/common/properties/the-eugune/logo.svg"
+        lroPricing="yes"
+        metaDescription="The Eugene is a spectacular high-rise residential tower at Hudson Yards, with expansive lifestyle and recreational amenities. Click to see available apartments."
+        metaKeywords="test"
+        metaName="The Eugene | Luxury Manhattan Apartments for Rent near Hudson Yards"
+        onesiteID="4545111"
+        phoneNumber="8443966697"
+        preferredLeaseTerm="test"
+        residentPortalURL="http://theeugenenyc.activebuilding.com/"
+        scheduleTourJavaScriptSnippet="test"
+        scheduleTourURL="test"
+        selfGuidedTourURL="test"
+        specials="&lt;p>test&lt;/p>&#xd;&#xa;"
+        specialsDisclaimer="&lt;p>test&lt;/p>&#xd;&#xa;"
+        specialsExpiry="{Date}2021-08-17T00:00:00.000-07:00"
+        textIsRich="[true,true,true]"
+        tourInfo="&lt;p>test&lt;/p>&#xd;&#xa;"
+        twitterURL="test"
+        websiteURL="https://www.theeugenenyc.com"
+        zipCode="94087">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid"/>
+        <nestioBuildingIds jcr:primaryType="nt:unstructured">
+            <item0
+                jcr:primaryType="nt:unstructured"
+                nestioBuildingId="1421640"/>
+        </nestioBuildingIds>
+    </jcr:content>
+</jcr:root>

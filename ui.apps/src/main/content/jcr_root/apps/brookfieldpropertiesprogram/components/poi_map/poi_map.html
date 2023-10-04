@@ -1,0 +1,73 @@
+<sly
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+        data-sly-use.data="com.brookfieldpropertiesprogram.core.models.MapModel"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+<div class="temp-grid-container">
+<poi-map map-id="${data.mapId}" zoom="15" no-cluster>
+    <div class="cmp-poi-map__container--map">
+        <div class="map"></div>
+    </div>
+    <div class="cmp-poi-map__container--points">
+        <div class="cmp-poi-map__points">
+            <div class="cmp-poi-map__property">
+                <poi-marker lat="${pageInfo.propertyConfigModel.latitude}" lng="${pageInfo.propertyConfigModel.longitude}" zoom="19" color="--brand-primary" center>
+<!--                    We just put the marker on the map, don't display anything on the right part-->
+                </poi-marker>
+            </div>
+
+            <div class="cmp-poi-map__categories">
+
+                <div class="cmp-poi-map__category-item" data-sly-repeat="${data.categories}">
+                    <!--add the same uuid to id of button and panel in the same category item-->
+                    <sly data-sly-use.id="random.js" />
+                    <h2 class="cmp-poi-map__category-header">
+                        <button
+                                id="poi-map-category-button-${id}"
+                                class="cmp-poi-map__category-button"
+                                aria-controls="poi-map-category-panel-${id}"
+                                aria-expanded="false">
+                            <span class="cmp-poi-map__category-button-inner">
+                            <span class="cmp-poi-map__category-title">${item.category}</span>
+                            <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div
+                            id="poi-map-category-panel-${id}"
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden ${item.showMorePredicate ? 'show-less' : ''}"
+                            role="region"
+                            aria-labelledby="poi-map-category-button-${id}">
+                        <poi-marker data-sly-repeat.point="${item.points}" lat="${point.lat}" lng="${point.lng}" zoom="18" color="#00FF3D" active-color="#758D9C" init-hidden>
+                            <h3 class="poi-marker--name">${point.title}</h3>
+                            <p class="poi-marker--address">${point.addressLine1}</p>
+                            <p class="poi-marker--address">${point.addressLine2}</p>
+                            <a class="poi-marker--direction" href="${point.mapLink}" target="_blank">Get Directions</a>
+                            <info-window>
+                                <div class="cmp-poi-map__container--popup--address">
+                                    <div class="cmp-poi-map__popup-address">
+                                        <p class="body-text">${point.addressLine1}</p>
+                                        <p class="body-text">${point.addressLine2}</p>
+                                    </div>
+                                    <div class="cmp-poi-map__popup-direction">
+                                        <a class="body-text" href="${point.mapLink}" target="_blank">Get Directions</a>
+                                    </div>
+                                </div>
+                            </info-window>
+                        </poi-marker>
+
+                        <div data-sly-test="${item.points.size > 3}" class="cmp-poi-map__showmore">
+                            <button data-panel-id="poi-map-category-panel-${id}"><span class="interactive-text">SHOW MORE ITEMS (${item.showMoreCount})</span></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</poi-map>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=${pageInfo.propertyConfigModel.googleApiKey}"></script>
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,29 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Sep 20 2021 11:56:31 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": ["mix:versionable"],
+        "jcr:createdBy": "admin",
+        "jcr:title": "The Test Collection",
+        "associatedProperties": ["/content/siteconfig/properties/the-eugene"],
+        "jcr:versionHistory": "aa128657-8baf-49a8-a307-15706cc67278",
+        "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-collection-config",
+        "jcr:predecessors": ["04aafcf9-daff-4b5a-bbfd-61014c7d289b"],
+        "jcr:created": "Mon Sep 20 2021 11:56:31 GMT-0700",
+        "cq:lastModified": "Mon Sep 20 2021 12:03:54 GMT-0700",
+        "cq:xfVariantType": "web",
+        "jcr:baseVersion": "04aafcf9-daff-4b5a-bbfd-61014c7d289b",
+        "jcr:isCheckedOut": true,
+        "cq:tags": ["experience-fragments:variation/web"],
+        "jcr:uuid": "f9c75bcc-b66d-4786-bc82-013bba9acfaf",
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-collection-config",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+        }
+    }
+}

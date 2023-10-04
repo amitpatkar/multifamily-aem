@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Portfolio Navigation"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/accordion" variant="quite">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <field3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                jcr:title="Logo">                                                   
+                                                <items
+                                                    jcr:primaryType="nt:unstructured">
+                                                    <logo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        rootPath="/content/dam"
+                                                        fieldLabel="Brookfield Logo Path"
+                                                        name="./brookfieldLogo"/>
+                                                    <logolabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Brookfield Logo Alt Text"
+                                                        name="./brookfieldLogoLabel"/>
+                                                    <logourl
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        rootPath="/content"
+                                                        fieldLabel="Brookfield Click Link"
+                                                        name="./brookfieldLogoUrl"/>
+                                                </items>
+                                            </field3>
+                                        </items>
+                                    </column>                                    
+                                </items>
+                            </columns>
+                        </items>
+                    </general>
+                    <menu
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Global Menu Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">                                            
+                                            <mega-menu-links
+                                                jcr:primaryType="nt:unstructured"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Links"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./menuLinks">
+                                                    <items
+                                                        jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Menu Label"
+                                                            name="./label"/>
+                                                        <url
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            rootPath="/content"
+                                                            fieldLabel="Menu URL"
+                                                            name="./url"/>
+                                                        <openInNewTab
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            uncheckedValue="false"
+                                                            value="true"
+                                                            text="Open Menu Link in new tab"
+                                                            name="./openLinkInNewTab"/>                                                        
+                                                    </items>
+                                                </field>
+                                            </mega-menu-links>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </menu>
+                    <menuLinksRight
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Secondary Menu Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">                                            
+                                            <mega-menu-links
+                                                jcr:primaryType="nt:unstructured"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Links"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./socialLinks">
+                                                    <items
+                                                        jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Menu Label"
+                                                            name="./label"/>
+                                                        <url
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            rootPath="/content"
+                                                            fieldLabel="Menu URL"
+                                                            name="./url"/>
+                                                        <openInNewTab
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            uncheckedValue="false"
+                                                            value="true"
+                                                            text="Open Menu Link in new tab"
+                                                            name="./openLinkInNewTab"/>                                                        
+                                                    </items>
+                                                </field>
+                                            </mega-menu-links>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </menuLinksRight>   
+                    <!--                     
+<contactUs
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Contact Us"
+    sling:resourceType="granite/ui/components/coral/foundation/container"
+    margin="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+        <columns
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+            margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+                <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">                                            
+                        <label
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Label"
+                            name="./label"/>
+                        <url
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            rootPath="/content"
+                            fieldLabel="URL"
+                            name="./url"/>
+                        <openInNewTab
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            uncheckedValue="false"
+                            value="true"
+                            text="Open Link in new tab"
+                            name="./openLinkInNewTab"/>     
+                    </items>
+                </column>
+            </items>
+        </columns>
+    </items>
+</contactUs>
+                    -->
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

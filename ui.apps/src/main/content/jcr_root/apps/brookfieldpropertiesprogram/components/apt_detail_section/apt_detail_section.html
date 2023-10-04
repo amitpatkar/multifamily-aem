@@ -1,0 +1,42 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2019 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+
+<!--Aparment Detail Option A: header (includes the floorplan name and a link to availability search page)-->
+<sly data-sly-test="${wcmmode.edit}">
+    <style>
+        .cmp-apartmentDetail--optionC {visibility:visible !important}
+    </style>
+    <div class="cmp-apartmentDetail__header grid-container">
+        <div class="cmp-apartmentDetail__header-wrapper grid-row">
+            <sly class="cmp-apartmentDetail__header--left" data-sly-resource="${'header_left' @ resourceType='brookfieldpropertiesprogram/components/container'}"></sly>
+            <sly class="cmp-apartmentDetail__header--right" data-sly-resource="${'header_right' @ resourceType='brookfieldpropertiesprogram/components/container'}"></sly>
+        </div>
+    </div>
+    <!--Aparment Detail Option A: header end-->
+    <div class="cmp-apartmentDetail__main" data-sly-resource="${'container_main' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+    <div data-sly-resource="${'container_footer' @ resourceType='brookfieldpropertiesprogram/components/container',cssClassName='cmp-apartmentDetail__footer'}"></div>
+</sly>
+<sly data-sly-test="${!wcmmode.edit}">   
+    <div class="cmp-apartmentDetail__header grid-container">
+        <div class="cmp-apartmentDetail__header-wrapper grid-row">
+            <sly class="cmp-apartmentDetail__header--left" data-sly-resource="${'header_left' @ resourceType='brookfieldpropertiesprogram/components/container'}"></sly>
+            <sly class="cmp-apartmentDetail__header--right" data-sly-resource="${'header_right' @ resourceType='brookfieldpropertiesprogram/components/container'}"></sly>
+        </div>
+    </div>
+    <!--Aparment Detail Option A: header end-->
+    <sly class="cmp-apartmentDetail__main" data-sly-resource="${'container_main' @ resourceType='brookfieldpropertiesprogram/components/container'}"></sly>
+    <sly data-sly-resource="${'container_footer' @ resourceType='brookfieldpropertiesprogram/components/container',cssClassName='cmp-apartmentDetail__footer'}"></sly>
+</sly>

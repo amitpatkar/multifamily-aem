@@ -1,0 +1,6 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     ></sly>
+${updatedProps.properties.text @context='html'}
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root bp-theme-small">
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <main>
+ <div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper">
+        <div class="cmp-hero__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1>Welcome to the you generation</h1>
+        </div>    
+    </div>
+</div>
+ <!--header component is used for page test purpose-->
+
+ 
+
+ <!---locations map component Start-->
+
+<section class="cmp-poi-map cmp-poi-map--locations">
+<div class="temp-grid-container">
+    <poi-map map-id="8cffc6c7c453c49b" zoom="15" data-cmp-component="locationsmap" class="locations-map">
+        <div class="cmp-poi-map__container--map">
+            <div class="map"></div>
+        </div>
+        <div class="cmp-poi-map__container--points">
+            <div class="cmp-poi-map__points">
+                <div class="cmp-poi-map__categories">
+                        <div class="cmp-poi-map__category-item">
+                            <!--add the same uuid to id of button and panel in the same category item-->
+                            <h2 class="cmp-poi-map__category-header">
+                                <button 
+                                    data-property-name="Origin Ballston"
+                                    id="poi-map-category-button-78bc3b842f" 
+                                    class="cmp-poi-map__category-button" 
+                                    aria-controls="poi-map-category-panel-78bc3b842f" 
+                                    aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                    <span class="cmp-poi-map__category-title">Origin Ballston</span>
+                                    <span class="cmp-poi-map__category-text">840 Summer St, Boston, MA 02127</span>
+                                    <span class="cmp-poi-map__category-icon"></span>
+                                </span>
+                                </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-78bc3b842f" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-78bc3b842f" >
+                                    <div class="cmp-poi-map__container--image">
+                                        <!--replace the image src and alt with the dynamic values-->
+                                        <div class="cmp-poi-map__image">
+                                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="Origin Ballston">
+                                        </div>
+                                        <!--add the banner html if there is a promo-->
+                                            <div class="cmp-poi-map__banner">
+                                                <p>Enjoy the first month for free</p>
+                                            </div>
+                                        <!--add the banner html if there is a promo-->
+                                    </div>
+                                    <div class="cmp-poi-map__container--info">
+                                        <div class="cmp-poi-map__apartment-type">
+                                            <span>Studio</span>
+                                            <!--add the following element if more than one floorplans available -->
+                                            <span> - 3 BD</span>
+                                        </div>
+                                        <div class="cmp-poi-map__apartment-price">
+                                            <!--replace "1200" with the min rent-->
+                                            <p>Starting at $<span>1200</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cmp-poi-map__container--amenity">
+                                        <!--display up to 5 amenities as tooltips -->
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-1-tooltip-78bc3b842f">
+                                                <!--replace the image src and alt (if there is a description for image) with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/pet-friendly.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-1-tooltip-78bc3b842f" role="tooltip" hidden>Pet Friendly</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-2-tooltip-78bc3b842f">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/outdoor-terrace.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-2-tooltip-78bc3b842f" role="tooltip" hidden>Balcony/Patio/Terrace*</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-3-tooltip-78bc3b842f">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-storage.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-3-tooltip-78bc3b842f" role="tooltip" hidden>Bike Room/Storage</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-4-tooltip-78bc3b842f">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-share.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-4-tooltip-78bc3b842f" role="tooltip" hidden>Bike Share</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-5-tooltip-78bc3b842f">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/concierge.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-5-tooltip-78bc3b842f" role="tooltip" hidden>Concierge</p>
+                                        </div>
+
+                                        <!--add the following element if there are more than 5 amenities, replace "65" with total number minus 5 -->
+                                        <div class="cmp-poi-map__amenity-additional">+65</div>
+                                    </div>
+                                    <div class="cmp-poi-map__container--cta">
+                                        <a href="#" class="btn btn-primary btn-ghost">Property details</a>
+                                        <a href="#" class="btn btn-primary btn-dark">View availability</a>
+                                    </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                data-property-name="Radiant"
+                                id="poi-map-category-button-96bc4f2c3r" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-96bc4f2c3r" 
+                                aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">Radiant</span>
+                                <span class="cmp-poi-map__category-text">102 Summer St, Boston, MA 02127</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-96bc4f2c3r" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-96bc4f2c3r" >
+                                    <div class="cmp-poi-map__container--image">
+                                        <!--replace the image src and alt with the dynamic values-->
+                                        <div class="cmp-poi-map__image">
+                                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="Origin Ballston">
+                                        </div>
+                                        <!--add the banner html if there is a promo-->
+                                            <div class="cmp-poi-map__banner">
+                                                <p>Enjoy the first month for free</p>
+                                            </div>
+                                        <!--add the banner html if there is a promo-->
+                                    </div>
+                                    <div class="cmp-poi-map__container--info">
+                                        <div class="cmp-poi-map__apartment-type">
+                                            <span>Studio</span>
+                                            <!--add the following element if more than one floorplans available -->
+                                            <span> - 3 BD</span>
+                                        </div>
+                                        <div class="cmp-poi-map__apartment-price">
+                                            <!--replace "1200" with the min rent-->
+                                            <p>Starting at $<span>1200</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cmp-poi-map__container--amenity">
+                                        <!--display up to 5 amenities as tooltips -->
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-1-tooltip-96bc4f2c3r">
+                                                <!--replace the image src and alt (if there is a description for image) with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/pet-friendly.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-1-tooltip-96bc4f2c3r" role="tooltip" hidden>Pet Friendly</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-2-tooltip-96bc4f2c3r">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/outdoor-terrace.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-2-tooltip-96bc4f2c3r" role="tooltip" hidden>Balcony/Patio/Terrace*</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-3-tooltip-96bc4f2c3r">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-storage.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-3-tooltip-96bc4f2c3r" role="tooltip" hidden>Bike Room/Storage</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-4-tooltip-96bc4f2c3r">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-share.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-4-tooltip-96bc4f2c3r" role="tooltip" hidden>Bike Share</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-5-tooltip-96bc4f2c3r">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/concierge.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-5-tooltip-96bc4f2c3r" role="tooltip" hidden>Concierge</p>
+                                        </div>
+
+                                        <!--add the following element if there are more than 5 amenities, replace "65" with total number minus 5 -->
+                                        <div class="cmp-poi-map__amenity-additional">+36</div>
+                                    </div>
+                                    <div class="cmp-poi-map__container--cta">
+                                        <!--replace the href attributes with the property url and availability page url-->
+                                        <a href="#" class="btn btn-primary btn-ghost">Property details</a>
+                                        <a href="#" class="btn btn-primary btn-dark">View availability</a>
+                                    </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                                <button 
+                                    data-property-name="Guild"
+                                    id="poi-map-category-button-99bc3f586h" 
+                                    class="cmp-poi-map__category-button" 
+                                    aria-controls="poi-map-category-panel-99bc3f586h" 
+                                    aria-expanded="false">
+                                    <span class="cmp-poi-map__category-button-inner">
+                                    <span class="cmp-poi-map__category-title">Guild</span>
+                                    <span class="cmp-poi-map__category-text">99 Spring St, Boston, MA 02127</span>
+                                    <span class="cmp-poi-map__category-icon"></span>
+                                </span>
+                                </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-99bc3f586h" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-99bc3f586h" >
+                                    <div class="cmp-poi-map__container--image">
+                                        <!--replace the image src and alt with the dynamic values-->
+                                        <div class="cmp-poi-map__image">
+                                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="Origin Ballston">
+                                        </div>
+                                        <!--add the banner html if there is a promo-->
+                                            <div class="cmp-poi-map__banner">
+                                                <p>Enjoy the first month for free</p>
+                                            </div>
+                                        <!--add the banner html if there is a promo-->
+                                    </div>
+                                    <div class="cmp-poi-map__container--info">
+                                        <div class="cmp-poi-map__apartment-type">
+                                            <span>Studio</span>
+                                            <!--add the following element if more than one floorplans available -->
+                                            <span> - 3 BD</span>
+                                        </div>
+                                        <div class="cmp-poi-map__apartment-price">
+                                            <!--replace "1200" with the min rent-->
+                                            <p>Starting at $<span>1200</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="cmp-poi-map__container--amenity">
+                                        <!--display up to 5 amenities as tooltips -->
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-1-tooltip-99bc3f586h">
+                                                <!--replace the image src and alt (if there is a description for image) with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/pet-friendly.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-1-tooltip-99bc3f586h" role="tooltip" hidden>Pet Friendly</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-2-tooltip-99bc3f586h">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/outdoor-terrace.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-2-tooltip-99bc3f586h" role="tooltip" hidden>Balcony/Patio/Terrace*</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-3-tooltip-99bc3f586h">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-storage.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-3-tooltip-99bc3f586h" role="tooltip" hidden>Bike Room/Storage</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-4-tooltip-99bc3f586h">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/bike-share.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-4-tooltip-99bc3f586h" role="tooltip" hidden>Bike Share</p>
+                                        </div>
+                                        <div class="cmp-poi-map__amenity-tooltip tooltip-container" >
+                                            <button type="button" aria-describedby="amenity-5-tooltip-99bc3f586h">
+                                                <!--replace the image src and alt with dynamic info-->
+                                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/concierge.svg" alt="alt text">
+                                            </button>
+                                            <!--use the index and uuid in tooltip id-->
+                                            <p id="amenity-5-tooltip-99bc3f586h" role="tooltip" hidden>Concierge</p>
+                                        </div>
+
+                                        <!--add the following element if there are more than 5 amenities, replace "65" with total number minus 5 -->
+                                        <div class="cmp-poi-map__amenity-additional">+36</div>
+                                    </div>
+                                    <div class="cmp-poi-map__container--cta">
+                                        <!--replace the href attributes with the property url and availability page url-->
+                                        <a href="#" class="btn btn-primary btn-ghost">Property details</a>
+                                        <a href="#" class="btn btn-primary btn-dark">View availability</a>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </poi-map>
+</div>
+
+</section>
+
+<!---locations map component Start-->
+
+<!--pin popup content html start-->
+    <div class="cmp-poi-map__container--popup">
+        <div class="cmp-poi-map__popup-image">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="Origin Ballston">
+        </div>
+        <div class="cmp-poi-map__popup-title">
+            Radiant
+        </div>
+        <div class="cmp-poi-map__popup-text">
+            840 Summer St, Boston, MA 02127
+        </div>
+    </div>
+
+<!--pin popup content html end-->
+
+
+
+
+
+</main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDriQYOjX8y2A8940HLDJhHwyYxfdHD44I"></script>
+<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

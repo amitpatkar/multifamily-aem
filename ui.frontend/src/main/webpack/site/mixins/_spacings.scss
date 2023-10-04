@@ -1,0 +1,46 @@
+$mobile-spacing-values:("none": 0, "sm": 30px, "md": 60px, "lg": 70px);
+$desktop-spacing-values:("none": 0, "sm": 60px, "md": 90px, "lg": 120px);
+$sizes: none, sm, md, lg;
+$directions: top, bottom;
+$spacing-desktop-lg: map-get($desktop-spacing-values, lg);
+$spacing-mobile-lg: map-get($mobile-spacing-values, lg);
+
+@function if-important($important){
+  @return #{if($important, '!important', '')};
+}
+
+@mixin margin($direction: all, $value, $important: false) {
+  @if ($direction == top) {
+    margin-top: $value if-important($important);
+  } @else if ($direction == bottom) {
+    margin-bottom: $value if-important($important);
+  } @else if ($direction == left) {
+    margin-left: $value if-important($important);
+  } @else if ($direction == right) {
+    margin-right: $value if-important($important);
+  } @else {
+    margin: $value if-important($important);
+  }
+}
+
+ @mixin default-margin {
+   @include margin($direction: top, $value: $spacing-mobile-lg);
+   @include margin($direction: bottom, $value: $spacing-mobile-lg);
+   @include breakpoint-up(desktop) {
+      @include margin($direction: top, $value: $spacing-desktop-lg);
+      @include margin($direction: bottom, $value: $spacing-desktop-lg);
+   }
+}
+ 
+//css classes for component margins: margin-top-none, margin-top-sm, margin-top-md, margin-top-lg, margin-bottom-none, margin-bottom-sm, margin-bottom-md, margin-bottom-lg
+ @each $dir in $directions {
+  @each $size in $sizes {
+    .margin-#{$dir}-#{$size}{
+      @include margin($direction: $dir, $value: map-get($mobile-spacing-values, $size), $important: true);
+      @include breakpoint-up(desktop) {
+        @include margin($direction: $dir, $value: map-get($desktop-spacing-values, $size), $important: true);
+      }
+    }
+
+  }
+}

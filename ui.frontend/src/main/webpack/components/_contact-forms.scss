@@ -1,0 +1,277 @@
+.cmp-get-in-touch,
+.cmp-rentdotContact {
+    padding: 0;
+    margin-top: $spacing-mobile-lg;
+    @include breakpoint-up(desktop) {
+        padding: 120px 0;
+        margin-top: $spacing-desktop-lg;
+    }
+
+    &__contents {
+        color: $universal-salt;
+        padding: 0 $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 0;
+            grid-column: 1/6;
+            grid-row: 1;
+        }
+        @include breakpoint-up(desktop-large) {
+            grid-column: 1/5;
+        }
+    }
+
+    &__title {
+        padding: 60px 0 30px;
+    }
+    &__copy {
+        @include body-text();
+        margin-bottom: 30px;
+    }
+    .contact-info {
+        &--office {
+            margin-top: 30px;
+            p {
+                text-transform: none;
+                margin-top: 10px;
+            }
+        }
+    }
+    &__copy,
+    .contact-info {
+        @include breakpoint-down(tablet) {
+            display: none;
+        }
+    }
+
+    &__form-area {
+        background-color: $universal-salt;
+        color: $universal-alto;
+        padding: 45px 0 60px;
+        @include breakpoint-up(desktop) {
+            grid-column: 7/13;
+            grid-row: 1;
+            padding: 60px 0;
+        }
+
+        .cmp-form {
+            margin: 0;
+        }
+        .text.half-width {
+            display: inline-block;
+            width: 49.2%;
+            &:nth-of-type(odd) {
+                .cmp-form-text {
+                    padding-right: 2%;
+                    padding-left: $padding-small;
+                    @include breakpoint-up(desktop) {
+                        padding-left: 24%;
+                    }
+                    @include breakpoint-between('1024px', '1439px') {
+                        padding-left: 16%;
+                    }
+                }
+                
+            }
+            &:nth-of-type(even) {
+                .cmp-form-text {
+                    padding-left: 2%;
+                    padding-right: $padding-small;
+                    @include breakpoint-up(desktop) {
+                        padding-right: 24%;
+                    }
+                    @include breakpoint-between('1024px', '1439px') {
+                        padding-right: 16%;
+                    }
+                }
+                
+            }
+        }
+
+        .text.move-in-date {
+            padding-top: 15px;
+        }
+
+        .cmp-form-text {
+            padding: 15px $padding-small 17px;
+            @include breakpoint-up(desktop) {
+                padding: 15px 12% 17px;
+            }
+            @include breakpoint-between('1024px', '1439px') {
+                padding: 15px 8% 17px;      
+            }
+        }
+        .cmp-form-error-message {
+            margin: 0;
+            margin-top: 3px;
+            padding-left: 12px;
+            @include form-error-text();
+            @include breakpoint-up(desktop) {
+                padding-left: 20px;
+            }
+        }
+        .cmp-options {
+            padding: 15px $padding-small 17px;
+            @include breakpoint-up(desktop) {
+                padding: 15px 12% 17px;
+            }
+            @include breakpoint-between('1024px', '1439px') {
+                padding: 15px 8% 17px;      
+            }
+            &.home-type {
+                fieldset {
+                    @include breakpoint-up(desktop) {
+                        flex-wrap: wrap;
+                    }
+                    .checkbox-item {
+                        width: 25%;
+                        margin-bottom: 10px;
+                        @include breakpoint-up(desktop) {
+                            width: 33.33%;
+                        }
+                    }
+                    .checkbox-item:nth-of-type(3) {
+                        @include breakpoint-down(tablet) {
+                            margin-right: 50px;
+                        }
+                    }
+                    .checkbox-item:nth-of-type(n+4) {
+                        @include breakpoint-up(desktop) {
+                            width: 50%;
+                        }
+
+                    }
+                }
+            }
+        }
+        .cmp-form-button {
+            margin-top: 20px;
+            margin-left: 32px;
+            @include breakpoint-up(desktop) {
+                margin-left: 12%;
+            }
+            @include breakpoint-between('1024px', '1439px') {
+                margin-left: 8%;      
+            }
+        }
+        #get_in_touch_error,
+        #contact_form_error {
+            padding: 15px $padding-small 10px;
+            @include breakpoint-up(desktop) {
+                padding: 15px 12% 10px;
+            }
+            @include breakpoint-between('1024px', '1439px') {
+                padding: 15px 8% 10px;   
+            }
+        }
+    }
+
+    &__greeting {
+        padding: $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 60px $padding-large 15px;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+            @include breakpoint-up(desktop) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        p {
+            @include body-text();
+        }
+
+    }
+    &__confirmation {
+        padding: 30px $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 15px $padding-large 30px;
+        }
+        h2, h3, h4, h5, h6 {
+            @include large-title();
+            margin-bottom: 20px;
+        }
+        p {
+            @include body-text();
+        }
+        &--name {
+            text-transform: capitalize;
+        }
+    }
+    &__cta {
+        padding: 30px $padding-small;
+        @include breakpoint-up(desktop) {
+            padding: 30px $padding-large 60px;
+        }
+        p + p {
+            margin-top: 12px;
+        }
+    }
+    &__spacer {
+        background-color: var(--bg-dark);
+    }
+    &__links {
+        .btn{
+            &:first-child{
+                margin-top: 40px;
+            }
+            &:not(:first-child) {
+                margin-top:20px;
+            }
+        }
+    }
+    .text,
+    .cmp-options {
+        position: relative;
+        .cmp-form-error-message {
+            position: absolute;
+        }
+    }
+    .cmp-form {
+        .legal-text {
+            color: rgba(var(--universal-black-rgb), 0.7);
+            padding: 15px $padding-small 0;
+            @include breakpoint-up(desktop) {
+                padding: 15px 12% 0;
+            }
+            @include breakpoint-between('1024px', '1439px') {
+                padding: 15px 8% 0;      
+            }
+        }
+
+    }
+}
+.cmp-get-in-touch {
+    &__form-area {
+        .cmp-form {
+            &>.text:nth-child(4) {
+                .cmp-form-text{
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}
+.cmp-rentdotContact {
+    &__form-area {
+        .cmp-options {
+            &.type-of-request {
+                border-bottom: 2px solid $brookfield-nero;
+                padding-bottom: 30px;
+                &+.text .cmp-form-text, 
+                &+.cmp-options {
+                    padding-top: 30px;
+                }
+            }
+        }
+
+
+    }
+    .contact-info--office {
+        margin-top: 80px;
+    }
+
+}

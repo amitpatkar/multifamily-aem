@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          title="World Class Amenities">    
+    <menuLinks jcr:primaryType="nt:unstructured">
+        <item_0 jcr:primaryType="nt:unstructured" url="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" cssClass="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play." label="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play."/>
+        <item_1 jcr:primaryType="nt:unstructured" url="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" cssClass="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play." label="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play."/>
+        <item_2 jcr:primaryType="nt:unstructured" url="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg" cssClass="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play." label="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play."/>
+        <item_3 jcr:primaryType="nt:unstructured" url="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" cssClass="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play." label="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play."/>
+        <item_4 jcr:primaryType="nt:unstructured" url="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" cssClass="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play." label="Dynamic, inviting and stylish layouts to accomodate the way you live, work and play."/>
+    </menuLinks>
+</jcr:root>

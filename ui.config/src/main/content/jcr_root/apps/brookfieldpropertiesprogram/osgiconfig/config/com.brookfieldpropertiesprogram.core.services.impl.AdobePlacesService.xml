@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    apiKey="542e941a7ad14f888e71c9de96f54f44"
+    iss="9BFD16EE60BDE2EE0A495C4E@AdobeOrg"    
+    />

@@ -1,0 +1,97 @@
+.cmp-rentdotSearch {
+    background-color: transparent;
+    @include breakpoint-up(desktop) {
+        margin-top: -85px;
+    }
+    &__wrapper {
+        background-color: $universal-salt;
+        @include breakpoint-down(tablet) {
+            width: 100%;
+            padding: 30px 31px 30px 32px;
+        }
+        @include breakpoint-up(desktop) {
+            padding: 44px 0 40px;
+            z-index: 1;
+        }
+        form {
+            @include breakpoint-up(desktop) {
+                grid-column: 2/12;
+            }
+        }
+    }
+    label.autocomplete-label{
+        display: block;
+        @include breakpoint-down(tablet){
+            margin-bottom: 10px;
+        }
+    }
+    .autocomplete-wrapper {
+        position: relative;
+        @include breakpoint-up(desktop) {
+            margin-top: 34px;
+        }
+        input {
+            width: 100%;
+            height: 50px;
+            background-color: #F1F4F5;
+        }
+        #autocomplete-suggestions {
+            position: absolute;
+            padding: 10px 0 20px;
+            background-color: #F1F4F5;
+            border: 1px solid #F1F4F5;
+            top: 52px;
+            width: 100%;
+            z-index: 10;
+        }
+        ul li {
+            padding: 5px 25px;
+            &[role="presentation"] {
+                @include label-text();
+                color: rgba(var(--universal-black-rgb), 0.6);
+            }
+            &[role="option"] {
+                cursor: pointer;
+                @include form-select-text();
+                text-decoration: underline;
+                color: $universal-alto;
+                &:hover {
+                    background-color: #FFFFFF;
+                }
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+        ul+ul{
+            margin-top: 15px;
+        }
+        .suggestion-noresult {
+            padding: 0 12px;
+            color: rgba(var(--universal-black-rgb), 0.6);
+            @include breakpoint-up(desktop) {
+                padding: 0 20px;
+            }
+        }
+    }
+    // &__submit {
+    //     @include breakpoint-down(tablet) {
+    //         margin-top: 20px;
+    //     }
+    //     @include breakpoint-up(desktop) {
+    //         margin-left: 20px;
+    //         grid-row: 2/3;
+    //         grid-column: 2/3;
+    //         align-self: end;
+    //     }
+    //     .btn-primary {
+    //         width: 100%;
+    //         height: 50px;
+    //         @include breakpoint-up(desktop) {
+    //             width: 200px;
+    //         }
+
+
+    //     }
+    // }
+}

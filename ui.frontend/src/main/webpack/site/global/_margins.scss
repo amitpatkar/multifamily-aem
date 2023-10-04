@@ -1,0 +1,45 @@
+//margins for components
+
+ .cmp-section50--box-left,
+ .cmp-section50--double-cta,
+ .cmp-section50--download-cta,
+ .cmp-section50--info-right,
+ .cmp-section50-carousel,
+ .cmp-notableContents,
+ .cmp-rentdotProperties--spotlight,
+ .cmp-amenityList,
+ .cmp-accordions,
+ .cmp-poi-map,
+ .cmp-gallery,
+ .cmp-crossPromotion { 
+    @include default-margin;
+ }
+
+ 
+  .mgn-t-md {
+    margin-top: 60px !important;
+    @include breakpoint-up(desktop) {
+      margin-top: 90px !important;
+    }
+  }
+  .mgn-b-md {
+    margin-bottom: 60px !important;
+    @include breakpoint-up(desktop) {
+      margin-bottom: 90px !important;
+    }
+  }
+  
+  //margin large 120px for desktop, 30px for mobile;
+  .mgn-t-lg {
+    margin-top: 70px !important;
+    @include breakpoint-up(desktop) {
+      margin-top: 120px !important;
+    }
+  }
+  .mgn-b-lg {
+    margin-bottom: 70px !important;
+    @include breakpoint-up(desktop) {
+      margin-bottom: 120px !important;
+    }
+  }
+  

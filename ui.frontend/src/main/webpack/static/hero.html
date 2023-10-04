@@ -1,0 +1,603 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root index-page theme-eugene cmp-header__logo--fixed">
+
+
+<!--Header for testing only -->
+<header class="cmp-header" data-cmp-component="header">
+    <a class="skip-main" href="#main">Skip To Main Content</a>
+    <nav>
+        <div class="cmp-header__navbar">
+            <!--replace "cmp-header__logo--rectangle" with "cmp-header__logo--square" if author select square shape-->
+            <div class="cmp-header__logo cmp-header__logo--rectangle">
+                <a href="/">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/webster-eleven.svg" alt="home" />
+                </a>
+            </div>
+            <div class="cmp-header__links">
+                <div class="cmp-header__links--left">
+                    <a href="#" class="cmp-header__link">Features & Amenities</a>
+                    <a href="#" class="cmp-header__link">Neighborhood</a>
+                </div>
+                <div class="cmp-header__links--right">
+                    <button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button>
+                    <div class="cmp-header__tabletTriggerWrap">
+                        <button class="cmp-header__tabletTrigger" 
+                        aria-expanded="false"
+                        aria-controls="cmp-header-tabletMenu">
+                        <span class="visually-hidden">open</span>
+                        </button>
+                    </div>
+                    <a href="#" class="cmp-header__link">Lease Online</a>
+                    <a href="#" class="cmp-header__link">Resident Portal</a>
+                    <a href="#" class="cmp-header__link">Get in touch</a>           
+                </div>
+            </div>
+    
+            <div class="cmp-header__mobileTriggerWrap">
+                <button class="cmp-header__mobileTrigger" 
+                aria-expanded="false"
+                aria-controls="cmp-header-mobileMenu">
+                    <span class="cmp-header__mobileTrigger--close">CLOSE</span>
+                    <span class="cmp-header__mobileTrigger--open">MENU</span>
+                </button>
+            </div>
+        </div>
+        <div id="cmp-header-tabletMenu" class="cmp-header__tabletMenu hidden" >
+            <div class="cmp-header__tabletMenu--body">
+                <ul>
+                    <li><a href="#" class="cmp-header__tabletMenu--link">Lease Online</a></li>
+                    <li><a href="#" class="cmp-header__tabletMenu--link">Resident Portal</a></li>
+                    <li><a href="#" class="cmp-header__tabletMenu--link">Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="cmp-header-mobileMenu" class="cmp-header__mobileMenu hidden" >
+            <div class="cmp-header__mobileMenu--body">
+                <ul class="cmp-header__mobileMenu--top">
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Features & Amenities</a></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Neighborhood</a></li>
+                </ul>
+                <ul class="cmp-header__mobileMenu--bottom">
+                    <li><button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Lease Online</a></li>
+                    <li><a href="#" class="cmp-header__mobileMenu--link">Resident Portal</a></li>
+                    <li><a href="#get-in-touch" class="cmp-header__mobileMenu--link">Get in Touch</a></li>
+                </ul>
+                <div class="cmp-header__mobileMenu--divider"></div>
+                <ul class="cmp-header__mobileMenu--info">
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                        <a href="#" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                    </li>
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                        <a href="#" class="cmp-header__mobileMenu--phone">(877) 245-1215</a>
+                    </li>
+                    <li>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt="" />
+                        <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </nav>       
+
+</header>
+<!--Header for testing only  end -->
+
+
+<main>
+    <div class="cmp-hero cmp-hero--logo" >
+        <div class="cmp-hero__wrapper grid-container">
+            <div class="cmp-hero__media ">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+            </div>
+            <div class="cmp-hero__logo">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/webster-eleven.svg" alt=""/>
+            </div>
+        </div>
+    </div>
+    <!--Hero logo, banner off  end -->
+<!--Hero title, banner-badge on-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container animation-on">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+        </div>
+            <div class="cmp-hero__title">
+                <h1 class="hero-title">Welcome to the you generation</h1>
+            </div>    
+            <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+            <div class="cmp-hero__banner cmp-hero__banner--badge">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/banner-medallion-sample.svg" alt="Opening Soon, Opening Soon, Leasing Now Available" />
+            </div>    
+            <div class="cmp-hero__banner cmp-hero__banner--default">
+                <div class="cmp-hero__banner-title">
+                    <h4>Tour Today & get a <a href="#">$250 Whole Foods Gift Card</a></h4>
+                </div>
+                <div class="cmp-hero__banner-cta">
+                    <a class="btn btn-primary-alt">Schedule a Tour</a>
+                </div>
+            </div>  
+
+    </div>
+</div>
+<!--Hero title, banner-badge on  end -->
+
+    <!--Availability Search Filters only -->
+    <!-- <div class="cmp-availability filters-only" data-cmp-component="availabilityfeed">
+        <div class="cmp-availability__title">
+            <h2 class="large-title">Claim Your Space</h2>
+        </div>
+        <div class="cmp-availability__search">
+            <div class="cmp-availability__wrapper grid-container">
+                <div class="cmp-availability__filters">
+                    <form 
+                    method="POST"
+                    action="#"
+                    enctype="multipart/form-data"
+                    class="cmp-form"
+                    id="availability-filters"
+                    name="availability-filters"
+                    novalidate>
+                        <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                            <div class="cmp-form-text">
+                                <label for="availability-filter-move-in-date">Move-in Date</label>
+                                <duet-date-picker required identifier="availability-filter-move-in-date" name="moveindate"></duet-date-picker>                            
+                            </div>
+                            <p class="cmp-form-error-message">Required Field</p>
+                        </div>
+                        <div class="cmp cmp-options home-type">
+                            <fieldset class="form-group checkbox">
+                                <legend>HOME TYPE</legend>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="studio" value="Studio">
+                                        <span>STUDIO</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="onebedroom" value="1 Bed">
+                                        <span>1 BD</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="twobedroom" value="2 Bed">
+                                        <span>2+ BD</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="penthouse" value="Pen">
+                                        <span>PH</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="townhome" value="Town">
+                                        <span>TH</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="cmp cmp-options min-rent">
+                            <div class="form-group drop-down">
+                            <label for="availability-filter-min-rent">Min Rent</label>
+                            <select name="minrent" id="availability-filter-min-rent" class="form-control">
+                                <option value="0">Select</option>
+                                <option value="3000">$3000</option>
+                                <option value="4000">$4000</option>
+                                <option value="5000">$5000</option>
+                                <option value="6000">$6000</option>
+                                <option value="7000">$7000</option>
+                                <option value="8000">$8000</option>
+                                <option value="9000">$9000</option>
+                                <option value="10000">$10000</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="cmp cmp-options max-rent">
+                            <div class="form-group drop-down">
+                            <label for="max_rent">Max Rent</label>
+                            <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                                <option value="Infinity">Select</option>
+                                <option value="3000">$3000</option>
+                                <option value="4000">$4000</option>
+                                <option value="5000">$5000</option>
+                                <option value="6000">$6000</option>
+                                <option value="7000">$7000</option>
+                                <option value="8000">$8000</option>
+                                <option value="9000">$9000</option>
+                                <option value="10000">$10000</option>
+                                <option value="Infinity">$10000+</option>
+                            </select>
+                            </div>
+                        </div>
+                        <button 
+                        type="submit"
+                        id="availability_filter_submit"
+                        class="cmp-form-button btn btn-dark btn-submit"
+                        name="availabilityFilterSubmit">Refine Results</button>
+
+                    </form>
+
+                </div>
+                <div class="cmp-availability__results hidden">
+                    <div class="cmp-availability__results_table">
+                        <table id="availability-result-table">
+                            <caption class="visually-hidden">Availability Search Results</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col" tabindex="0" class="sorting" data-sort-field="name">
+                                        <span>floor plan</span>
+                                    </th>
+                                    <th scope="col" tabindex="0" class="sorting" data-sort-field="type">
+                                        <span>bed | bath</span>
+                                    </th>
+                                    <th scope="col" tabindex="0" class="sorting" data-sort-field="area">
+                                        <span>size</span>
+                                    </th>
+                                    <th scope="col" tabindex="0" class="sorting asc" data-sort-field="minRent">
+                                        <span>rent</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span>availability</span>
+                                    </th>
+                                    <th scope="col">
+                                        <span class="visually-hidden">view apartment</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cmp-availability__results_list">
+                        <div class="cmp-availability__results-sorting">
+                            <label for="availability-sort-field">Sort By</label>
+                            <select name="availability-sort-field" id="availability-sort-field">
+                                <option value="name" selected>Floor Plan</option>
+                                <option value="type">Bed | Bath</option>
+                                <option value="area">Size</option>
+                                <option value="minRent" selected>Rent</option>
+                            </select>
+                        </div>
+                        <ul id="availability-result-list"></ul>
+                    </div>
+                    <div class="cmp-availability__paginate cmp-availability__paginate--table"></div>
+                    <div class="cmp-availability__paginate cmp-availability__paginate--list"></div>
+                    <div class="cmp-availability__disclaimer">
+                        <p class="legal-text">*Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “View Apartment” to see all other rate options.</p>
+                    </div>
+                </div>
+                <div class="cmp-availability__emptyResults hidden">
+                    <p>No Units Available</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div> -->
+    <!--Availability Search end-->
+
+
+
+
+<!--Hero components -->
+<!--Hero title, banner off-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Welcome to the you generation</h1>
+        </div>  
+
+    </div>
+</div>
+<!--Hero title, banner off  end -->
+
+
+
+<!--Hero title, banner-badge on-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Welcome to the you generation</h1>
+        </div>    
+        <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+        <div class="cmp-hero__banner cmp-hero__banner--badge">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/banner-medallion-sample.svg" alt="Opening Soon, Opening Soon, Leasing Now Available" />
+        </div>    
+        <!--Banner badge html --> 
+
+    </div>
+</div>
+<!--Hero title, banner-badge on  end -->
+
+
+
+
+<h3>Hero logo, banner off</h3>
+<!--Hero logo, banner off-->
+<div class="cmp-hero cmp-hero--logo" >
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+        </div>
+        <div class="cmp-hero__logo">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/webster-eleven.svg" alt=""/>
+        </div>
+    </div>
+</div>
+<!--Hero logo, banner off  end -->
+
+<h3> Hero logo, banner-withcta on</h3>
+<!--Hero logo, banner on-->
+<div class="cmp-hero cmp-hero--logo" >
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" />
+        </div>
+        <div class="cmp-hero__logo">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt=""/>
+        </div>
+        <div class="cmp-hero__banner cmp-hero__banner--default">
+            <div class="cmp-hero__banner-title">
+                <h4>Tour Today & get a <a href="#">$250 Whole Foods Gift Card</a></h4>
+            </div>
+            <div class="cmp-hero__banner-cta">
+                <a class="btn btn-primary-alt">Schedule a Tour</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--Hero logo, banner on  end -->
+
+<h3> Hero virtual tour</h3>
+<!--Hero virtual tour-->
+<div class="cmp-hero cmp-hero--virtualtour" >
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovirtualtour">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Apartment 23R</h1>
+        </div>
+        <div class="cmp-hero__cta">
+            <button class="btn btn-submit btn-light" data-virtualtour-src="" data-virtualtour-title="" data-a11y-dialog-show="virtualtour-dialog">Begin Virtual Tour</button>
+        </div>
+    </div>
+</div>
+<!--modal for playing the virtual tour video -->
+    <div
+        class="dialog-container"
+        id="virtualtour-dialog"
+        aria-hidden="true"
+        aria-labelledby="virtualtour-dialog-title"
+        aria-describedby="virtualtour-dialog-description"
+    >
+        <div class="dialog-overlay" data-a11y-dialog-hide></div>
+        <div class="dialog-content" role="document">
+                <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+                    <span>close</span>
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt=""/>              
+                </button>
+
+            <!--dialog title and description are for accessibility purposes.  -->
+                <h1 id="virtualtour-dialog-title" class="visually-hidden">3D virtual tour</h1>
+                <p id="virtualtour-dialog-description" class="visually-hidden">Explore the space seamlessly</p>
+                <div class="dialog-media-wrapper">
+                    <iframe src="https://my.matterport.com/show/?m=51aWK4tRDsH" title="H (5-35)" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+                </div>
+            
+        </div>
+    </div>
+<!--modal for playing the virtual tour video end-->
+<!--Hero virtual tour: end -->
+
+<h3> Hero virtual tour (play in place) Matterport example</h3>
+<!--Hero virtual tour-->
+<div class="cmp-hero cmp-hero--virtualtour-inplace">
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <iframe src="https://my.matterport.com/show/?m=51aWK4tRDsH" title="H (5-35)" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </div>
+    </div>
+</div>
+<!--Hero virtual tour (play in place): end -->
+
+<h3> Hero virtual tour (play in place) googlemap example</h3>
+<!--Hero virtual tour-->
+<div class="cmp-hero cmp-hero--virtualtour-inplace">
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1614022840396!6m8!1m7!1sCAoSLEFGMVFpcE9lSmQ3ZHZTcDNVeWhyWXdCRjZDaG9PSGlxYUNZN0g4WjJuWnpD!2m2!1d39.960178163164!2d-75.167331603475!3f63.19!4f-6.700000000000003!5f0.7820865974627469" title="one franklin town" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </div>
+    </div>
+</div>
+<!--Hero virtual tour (play in place): end -->
+
+<h3> Hero short with title only</h3>
+<!--Hero short-->
+<div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">The Eugene Gallery</h1>
+        </div>
+    </div>
+</div>
+<!--Hero short: end -->
+
+<h3> Hero short with title and virtual tour button</h3>
+<!--Hero short-->
+<div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovirtualtour">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Apartment 23R</h1>
+        </div>
+        <div class="cmp-hero__cta">
+            <button class="btn btn-submit btn-light" data-virtualtour-src="" data-virtualtour-title="" data-a11y-dialog-show="virtualtour-dialog-2">Begin Virtual Tour</button>
+        </div>
+    </div>
+</div>
+<!--modal for playing the virtual tour video -->
+<div
+class="dialog-container"
+id="virtualtour-dialog-2"
+aria-hidden="true"
+aria-labelledby="virtualtour-dialog-title"
+aria-describedby="virtualtour-dialog-description"
+>
+<div class="dialog-overlay" data-a11y-dialog-hide></div>
+<div class="dialog-content" role="document">
+        <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+            <span>close</span>
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt=""/>              
+        </button>
+
+    <!--dialog title and description are for accessibility purposes.  -->
+        <h1 id="virtualtour-dialog-title" class="visually-hidden">3D virtual tour</h1>
+        <p id="virtualtour-dialog-description" class="visually-hidden">Explore the space seamlessly</p>
+        <div class="dialog-media-wrapper">
+            <iframe src="https://my.matterport.com/show/?m=51aWK4tRDsH" title="H (5-35)" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </div>
+    
+</div>
+</div>
+<!--modal for playing the virtual tour video end-->
+<!--Hero short: end -->
+
+<!--Hero title, banner off, video as background-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovideo">
+        <div class="cmp-hero__media  cmp-videoPlayer">
+            <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+            preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Welcome to the you generation</h1>
+        </div>    
+        <div class="cmp-hero__sound-control">
+            <button class="btn-soundControl btn-soundControl--unmute">
+                <span class="visually-hidden">Unmute the video</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!--Hero title, banner off  end -->
+
+<!--Hero title, banner-badge on, video as background-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovideo">
+        <div class="cmp-hero__media  cmp-videoPlayer">
+            <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+            preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">Welcome to the you generation</h1>
+        </div>    
+        <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+        <div class="cmp-hero__banner cmp-hero__banner--badge">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/banner-medallion-sample.svg" alt="Opening Soon, Opening Soon, Leasing Now Available" />
+        </div>    
+        <!--Banner badge html --> 
+        <div class="cmp-hero__sound-control">
+            <button class="btn-soundControl btn-soundControl--unmute">
+                <span class="visually-hidden">Unmute the video</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+<!--Hero title, banner-badge on  end -->
+
+
+<!--Hero logo, banner off, video as background-->
+<div class="cmp-hero cmp-hero--logo" >
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovideo">
+        <div class="cmp-hero__media  cmp-videoPlayer">
+            <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+            preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="cmp-hero__logo">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt=""/>
+        </div>
+        <div class="cmp-hero__sound-control">
+            <button class="btn-soundControl btn-soundControl--unmute">
+                <span class="visually-hidden">Unmute the video</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!--Hero logo, banner off  end -->
+
+<!--Hero logo, banner-withcta on, video as background-->
+<div class="cmp-hero cmp-hero--logo" >
+    <div class="cmp-hero__wrapper grid-container" data-cmp-component="herovideo">
+        <div class="cmp-hero__media  cmp-videoPlayer">
+            <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+            preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="cmp-hero__logo">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt=""/>
+        </div>
+        <div class="cmp-hero__banner cmp-hero__banner--default">
+            <div class="cmp-hero__banner-title">
+                <h4>Tour Today & get a <a href="#">$250 Whole Foods Gift Card</a></h4>
+            </div>
+            <div class="cmp-hero__banner-cta">
+                <a class="btn btn-primary-alt">Schedule a Tour</a>
+            </div>
+        </div>
+        <div class="cmp-hero__sound-control">
+            <button class="btn-soundControl btn-soundControl--unmute">
+                <span class="visually-hidden">Unmute the video</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!--Hero logo, banner-withcta on  end -->
+
+
+</main>
+
+
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

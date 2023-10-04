@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:templateType="/conf/siteconfig/settings/wcm/template-types/xf-collection-config"
+        jcr:description="Collection Configuration"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Collection"
+        status="enabled"/>
+</jcr:root>

@@ -1,0 +1,26 @@
+<div 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+    class="cmp-section100__wrapper ${ ( properties.animationBehavior=='enabled' )  ||   (pageInfo.valueMapFinal['site.animationEnableAll'] && (!properties.animationBehavior || properties.animationBehavior=='disabled')) ? 'animation-on' : ''}"
+    data-layer-section>
+    <div class="cmp-section100__media cmp-videoPlayer">
+        <video src="${properties.videoPath @context='uri'}" 
+               preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="cmp-section100__control">
+        <button class="btn-videoControl btn-videoControl--pause">
+            <span class="visually-hidden">Pause the video</span>
+        </button>
+    </div>
+    <!--/* if the mute/unmute  config is turned on by the author, add the sound control */-->
+    <div data-sly-test="${properties.muteControl}" class="cmp-section100__sound-control">
+        <button class="btn-soundControl btn-soundControl--unmute">
+            <span class="visually-hidden">Unmute the video</span>
+        </button>
+    </div>
+    <!--/* if the mute/unmute  config is turned on by the author, add the sound control */-->
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.lead, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,46 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"    
+    >   
+    
+    <div class="${properties.imageAlignment ? properties.imageAlignment : 'image-beyond'} grid-container"  data-layer-section>
+    <div class="cmp-section50__wrapper grid-row">
+        <div class="cmp-section50__image">
+            <img src="${properties.bgImagePath}" alt="${properties.bgImageLabel ? properties.bgImageLabel : 'Background Image'}"/>
+        </div>
+        <div class="cmp-section50__info">
+            <div class="cmp-section50__info-inner">
+                <div class="cmp-section50__highlight">
+                    <h2><span class="highlight-title">${properties.title}</span></h2>
+                </div>
+                <div class="cmp-section50__description ${properties.hideBodyForMobile ? 'hide-for-mobile' : ''}">
+                    <p><span class="body-text">${properties.body}</span></p>
+                </div>
+                <div class="cmp-section50__paragraphs" data-sly-test="${navigation.paragraphList}">
+                        <ul>
+                            <li data-sly-repeat.paraItem="${navigation.paragraphList}">
+                                <div class="cmp-section50__paragraph-content">
+                                    <h4 class="intermediate-title">${paraItem.title}</h4>
+                                    <p class="body-text">${paraItem.body}</p>
+                                </div>
+                            </li>                            
+                         </ul>
+                </div>
+                <div class="cmp-section50__list">
+                    <ul>
+                        <li data-sly-repeat.cta="${navigation.socialLinks}">${cta.label}</li>
+                    </ul>
+                </div>
+                <div class="cmp-section50__cta" data-sly-test="${!properties.hideCtas}">                    
+                    <a data-sly-repeat.cta="${navigation.menuLinks}" target="${cta.target}" href="${cta.absUrl}" class="btn ${cta.btnStyle} ${cta.btnType} ${cta.cssClass}"
+                       data-sly-attribute.data-a11y-dialog-show="${cta.openVirtualTour ? 'virtualtour-dialog' : ''}">
+                        ${cta.label}
+                    </a>  
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

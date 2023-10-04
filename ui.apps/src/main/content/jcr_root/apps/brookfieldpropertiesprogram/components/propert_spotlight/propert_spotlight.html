@@ -1,0 +1,94 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"    
+     data-sly-use.association="com.brookfieldpropertiesprogram.core.models.AssociationConfigModel" 
+     class="carouselSection__header-wrapper grid-container">
+    <div class="carouselSection__header">
+        <div class="horizontal-divider"></div>
+        <!--replace the content with the authored title and text-->
+        <h2 class="section-title">${properties.subTitle}</h2>
+        <p class="highlight-title">${properties.mainTitle}</p>
+    </div>
+</div>
+<div class="carouselSection__main-wrapper grid-container" data-sly-test="${association.propertyConfigModels}">
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="slide-contain" data-sly-repeat.property="${association.propertyConfigModels}">
+                <a href="/content/portfolio/en/properties/${property.name}.html" class="cmp-rentdotProperties__propertyCard">
+                    <div class="cmp-rentdotProperties__propertyCard-container--image">
+                        <div class="cmp-rentdotProperties__propertyCard-image">
+                            <img src="${property.featuredImage}" alt="${property.title}">
+                        </div>                           
+                        <div data-sly-test="${property.specialsTeaser}" class="cmp-rentdotProperties__propertyCard-banner">
+                            <p>${property.specialsTeaser}</p>
+                        </div>
+                    </div>
+                    <div class="cmp-rentdotProperties__propertyCard-container--text">
+                        <h3 class="cmp-rentdotProperties__propertyCard-name">${property.title}</h3>
+                        <p class="cmp-rentdotProperties__propertyCard-address">${property.address}</p>
+                        <p class="cmp-rentdotProperties__propertyCard-address">${property.stateCode} ${property.zipCode}</p>
+                    </div>
+                    <div class="cmp-rentdotProperties__propertyCard-container--cta">
+                        <p class="cmp-rentdotProperties__propertyCard-cta btn btn-secondary btn-ghost">View Property</p>
+                        <div class="cmp-rentdotProperties__propertyCard-spacer"></div>
+                    </div>
+                </a>
+            </div>                                
+        </div>
+    </div>
+    <div class="cmp-rentdotProperties__propertyList">
+        <div class="slide-contain" data-sly-repeat.property="${association.propertyConfigModels}">
+            <a href="/content/portfolio/en/properties/${property.name}.html" class="cmp-rentdotProperties__propertyCard">
+                <div class="cmp-rentdotProperties__propertyCard-container--image">
+                    <div class="cmp-rentdotProperties__propertyCard-image">
+                        <img src="${property.featuredImage}" alt="${property.title}">
+                    </div>                           
+                    <div data-sly-test="${property.specialsTeaser}" class="cmp-rentdotProperties__propertyCard-banner">
+                        <p>${property.specialsTeaser}</p>
+                    </div>
+                </div>
+                <div class="cmp-rentdotProperties__propertyCard-container--text">
+                    <h3 class="cmp-rentdotProperties__propertyCard-name">${property.title}</h3>
+                    <p class="cmp-rentdotProperties__propertyCard-address">${property.address}</p>
+                    <p class="cmp-rentdotProperties__propertyCard-address">${property.stateCode} ${property.zipCode}</p>
+                </div>
+                <div class="cmp-rentdotProperties__propertyCard-container--cta">
+                    <p class="cmp-rentdotProperties__propertyCard-cta btn btn-secondary btn-ghost">View Property</p>
+                    <div class="cmp-rentdotProperties__propertyCard-spacer"></div>
+                </div>
+            </a>
+        </div>                                
+    </div>
+</div>
+<div class="carouselSection__control-wrapper grid-container">
+    <div class="carouselSection__control">
+        <div class="carouselSection__status">
+            <p class="label-text">
+                <span class="current-page">1</span> of ${association.propertyConfigModels.size} properties
+            </p>
+        </div>
+        <div class="carouselSection__buttons">
+            <button class="carouselSection__btn carouselSection__btn--prev">
+                <span class="visually-hidden">Previous</span>
+                <span class="carouselSection__btn-icon">
+                    <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </button>
+            <button class="carouselSection__btn carouselSection__btn--next">
+                <span class="visually-hidden">Next</span>
+                <span class="carouselSection__btn-icon">
+                    <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 31L16 16L1 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="carouselSection__footer-wrapper grid-container">
+    <div class="carouselSection__footer">
+        <!--replace the link text and href with the authored values-->
+        <a href="/content/portfolio/en/properties.html" class="btn btn-primary btn-dark">All Properties</a>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = (!association.propertyConfigModels || association.propertyConfigModels.size > 0), classAppend='cmp-text'}"></sly>

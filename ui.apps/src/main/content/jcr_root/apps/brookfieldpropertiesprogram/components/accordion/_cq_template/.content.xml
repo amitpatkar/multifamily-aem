@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    title="World Class Amenities">    
+     <menuLinks jcr:primaryType="nt:unstructured">
+        <menu_0 jcr:primaryType="nt:unstructured" 
+            label="One-Stop Dining &amp; Leisure"
+            url="/"
+            openLinkInNewTab="false"/>
+        <menu_1 jcr:primaryType="nt:unstructured" 
+            label="24/7 Concierge Services"
+            url="/"
+            openLinkInNewTab="false"/>  
+         <menu_2 jcr:primaryType="nt:unstructured" 
+            label="More Amenities"
+            url="/"
+            openLinkInNewTab="false"/>   
+    </menuLinks>
+    <container_0 jcr:primaryType="nt:unstructured">
+        <text jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/text" textIsRich="true" text="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.&lt;/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.&lt;/p&gt;"/>
+    </container_0>
+     <container_1 jcr:primaryType="nt:unstructured">
+        <text jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/text" textIsRich="true" text="&lt;p&gt;Sweet roll pudding cake cake cheesecake candy canes. Gummies tart marshmallow apple pie sweet sweet fruitcake. Jelly-o chocolate pie danish. Candy sweet roll jelly chocolate cake pastry wafer jelly-o tiramisu sweet. Caramels wafer cotton candy powder oat cake biscuit bonbon. Macaroon apple pie soufflé bonbon cheesecake marshmallow. Oat cake chupa chups danish. Toffee halvah muffin cake danish wafer. Caramels topping pudding cookie bear claw soufflé cotton candy cupcake. Chocolate cake dragée croissant cupcake tiramisu cake topping cake. Jelly apple pie muffin gummies. Chocolate cake jujubes ice cream dessert pudding gummi bears tiramisu ice cream. Fruitcake sweet roll sugar plum jujubes chocolate jelly-o ice cream chocolate pudding. Toffee biscuit chocolate candy canes.&lt;/p&gt;&lt;p&gt;Caramels cake dragée pie dragée donut pastry chocolate bar jelly. Muffin bear claw croissant bear claw sugar plum chocolate carrot cake carrot cake. Candy cake sesame snaps pie sesame snaps sweet roll ice cream tiramisu cake. Powder carrot cake marshmallow. Powder cotton candy wafer topping brownie icing. Fruitcake carrot cake brownie donut jelly icing chocolate bar ice cream. Sesame snaps lemon drops sugar plum croissant. Topping danish bear claw tootsie roll cupcake bear claw marzipan liquorice wafer. Bonbon ice cream chocolate bar liquorice. Pastry chocolate cake cake donut. Cotton candy cake donut liquorice tiramisu. Fruitcake brownie caramels pie powder cake liquorice chocolate cake gummies. Cotton candy croissant marzipan cupcake jelly-o. Cheesecake liquorice sweet chocolate bar lemon drops icing soufflé.&lt;/p&gt;"/>
+    </container_1>
+     <container_2 jcr:primaryType="nt:unstructured">
+        <text jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/text" textIsRich="true" text="&lt;ul class=&quot;amenity-list&quot;&gt;&lt;li&gt;Doorperson&lt;/li&gt;&lt;li&gt;Children&apos;s Play Area&lt;/li&gt;&lt;li&gt;Live-in Building Manager&lt;/li&gt;&lt;li&gt;Business Facilities&lt;/li&gt;&lt;li&gt;Additional Storage&lt;/li&gt;&lt;li&gt;Smoke Free Property&lt;/li&gt;&lt;li&gt;Laundry Services&lt;/li&gt;&lt;li&gt;Secure Package Room&lt;/li&gt;&lt;li&gt;And any more...&lt;/li&gt;&lt;/ul&gt;"/>
+    </container_2>
+   </jcr:root>

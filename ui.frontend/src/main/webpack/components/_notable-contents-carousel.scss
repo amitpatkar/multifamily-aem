@@ -1,0 +1,151 @@
+.cmp-notableContents {
+    &__slide {
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 90px 1fr;
+        @include breakpoint-up(desktop) {
+            width: 100%;
+            height: 669px;
+            grid-template-columns: 60px 1fr 60px;
+            grid-template-rows: 669px;
+        }
+        @include breakpoint-up(desktop-large) {
+            width: 1190px;
+        }
+    }
+    &__slide-image {
+        grid-column: 1;
+        grid-row: 1/3;
+        @include breakpoint-down(tablet) {
+            width: calc(100vw - 79px);
+            height: calc(103vw + 90px);
+        }
+        @include breakpoint-up(desktop) {
+            grid-column: 1/4;
+            grid-row: 1;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+    &__slide-textBox {
+        color: $universal-salt;
+        z-index: 1;
+        grid-column: 1;
+        grid-row: 2/4;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint-down(tablet) { 
+            padding: 0 22px 80px 22px;
+        }
+        @include breakpoint-up(desktop) { 
+            width: 470px;
+            height: 549px;
+            padding: 45px 54px;
+            grid-column: 2/3;
+            grid-row: 1;
+            justify-self: end;
+            align-self: center;
+            justify-content: center;
+        }
+        .link-text {
+            color: $universal-salt;
+        }
+    }
+    &__slide-title {
+        @include breakpoint-down(tablet) { 
+            display: flex;
+            align-items: center;
+            height: 90px;
+            .medium-title {
+                font-size: rem(24);
+                line-height: 1.25;
+                letter-spacing: 0.02em;
+            }
+        }
+        @include breakpoint-up(desktop) { 
+            margin-bottom: 10px;
+        }
+    }
+    &__slide-paragraph {
+        @include breakpoint-up(desktop) { 
+            margin-bottom: 30px;
+        }
+    }
+    &__slide-subtitle { 
+        margin-top: 30px;
+        margin-bottom: 20px;
+        @include breakpoint-up(desktop) { 
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__slide-list {
+        @include breakpoint-up(desktop) { 
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        ul li {
+            padding: 10px 0;
+        }
+    }
+    &__slide-cta {
+        margin-top: 30px;
+        @include breakpoint-up(desktop) { 
+            margin-top: 20px;
+        }
+    }
+
+    .carouselSection {
+        &__main {
+            width: 100%;
+            display: grid;
+            overflow: hidden;
+            grid-template-columns: 32px 1fr 31px;
+            grid-template-rows: auto;
+            @include breakpoint-up(desktop){
+                grid-template-columns: 32px repeat(11, 1fr 15px) 1fr 32px;
+            }
+            @include breakpoint-up(desktop-medium){
+                grid-template-columns: 70px repeat(11, 1fr 20px) 1fr 70px;
+            }
+            @include breakpoint-up(desktop-large){
+                grid-template-columns: 1fr repeat(11, 90px 20px) 90px 1fr;
+            }
+
+            .slider-contain {
+                grid-row: 1;
+                grid-column: 2/3;
+                overflow-x: visible;
+                @include breakpoint-down(tablet){
+                    width: calc(100vw - 63px);
+                }
+                @include breakpoint-up(desktop){
+                    grid-column: 2/24;
+                }
+            }
+            .slider {
+                display: flex;
+            }
+            .slide-contain {
+                flex: 1;
+                width: 100%;
+                padding-right: 16px;
+                @include breakpoint-up(desktop){
+                    padding-right: 15px;
+                }
+                @include breakpoint-up(desktop-large){
+                    padding-right: 20px;
+                }
+            }
+
+
+        }
+    }
+    
+}

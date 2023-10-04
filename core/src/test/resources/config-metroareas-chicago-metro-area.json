@@ -1,0 +1,24 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Sat Aug 21 2021 18:47:19 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Chicago Metro Area",
+        "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-metroarea-config",
+        "jcr:created": "Sat Aug 21 2021 18:47:19 GMT-0700",
+        "cq:lastModified": "Sat Aug 21 2021 18:47:19 GMT-0700",
+        "cq:xfVariantType": "web",
+        "theme":"theme-eugene",
+        "activeVariation": "back_to_school",
+        "cq:tags": ["experience-fragments:variation/web"],
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-metroarea-config",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+        }
+    }
+}

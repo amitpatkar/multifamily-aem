@@ -1,0 +1,159 @@
+<body class="page basicpage root index-page root bp-theme-1">
+<!--Hero short-->
+<!-- <div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1 class="hero-title">The Eugene Gallery</h1>
+        </div>
+    </div>
+</div> -->
+<!--Hero short: end -->
+    
+     <!--Header and Hero components are for testing only-->
+    
+ 
+    <section class="cmp-rentdotContact" data-cmp-component="rentdotcontact" id="contact-us">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="cmp-rentdotContact__contents animation-on">
+                <div class="cmp-rentdotContact__contents-inner">
+                    <h2 class="cmp-rentdotContact__title large-title">Didn’t find what you are looking for?</h2>
+                    <div class="cmp-rentdotContact__copy">
+                        We’re waiting to hear from you and answer any of your questions about our great services.
+                    </div>
+                    <div class="contact-info contact-info--address">
+                        <p>127 Public Square, Suite 2400</p>
+                        <p>Cleveland, OH 44114</p>
+                    </div>
+                    <!--add the contact-info--phone if phone exists-->
+                    <div class="contact-info contact-info--phone"> 
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                        <a href="tel:+01-216-621-6060" >(216) 621-6060</a>
+                    </div>
+                    <!--add the contact-info--phone if direction exists-->
+                    <div class="contact-info contact-info--direction">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                        <a href="#" >Get Directions</a>
+                    </div>
+                    <!--add the contact-info--phone if chat exists-->
+                    <div class="contact-info contact-info--chat">
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt="" />
+                        <a href="#" >Chat Now</a>
+                    </div>
+                    <div class="contact-info contact-info--office">
+                        <h4>OFFICE HOURS</h4>
+                        <p>Monday-Friday: 9am-6pm</p>
+                        <p>Saturday & Sunday: 10am-5pm</p>     
+                    </div>
+                    <div class="cmp-rentdotContact__links">
+                        <!--it is better to use <button> element for schedule a tour since the href attrbuite is empty-->
+                            <button class="schedule-tour-popup-button btn btn-primary btn-light" >Schedule a Tour</button>
+                        <!--use <a> for links with href attribute, replace the link text and url from author dialog-->
+                            <a href="" class="btn btn-primary btn-light">link text</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-rentdotContact__form-area">
+                <form 
+                    method="POST"
+                    action="#"
+                    enctype="multipart/form-data"
+                    class="cmp-form"
+                    id="rentdot_contact_form"
+                    name="rentdot_contact_form">
+                    <div class="text half-width">
+                        <div class="cmp-form-text">
+                            <label for="first_name">FIRST NAME<sup>*</sup></label>
+                            <input class="cmp-form-text__text" type="text" id="first_name" placeholder="First Name" name="first_name">
+                            <p class="cmp-form-error-message hidden" data-element-id="first_name">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text half-width">
+                        <div class="cmp-form-text">
+                            <label for="last_name">LAST NAME<sup>*</sup></label>
+                            <input class="cmp-form-text__text" type="text" id="last_name" placeholder="Last Name" name="last_name">
+                            <p class="cmp-form-error-message hidden" data-element-id="last_name">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="cmp-form-text">
+                            <label for="email_address">EMAIL ADDRESS<sup>*</sup></label>
+                            <input class="cmp-form-text__text" type="email" id="email_address" placeholder="Email Address" name="email">
+                            <p class="cmp-form-error-message hidden" data-element-id="email_address">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="cmp-form-text">
+                            <label for="phone_number">PHONE NUMBER<sup>*</sup></label>
+                            <input class="cmp-form-text__text" type="tel" id="phone_number" placeholder="Phone Number" name="phone_number">
+                            <p class="cmp-form-error-message hidden" data-element-id="phone_number">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="cmp cmp-options type-of-request">
+                        <div class="form-group drop-down">
+                        <label for="type_of_request">TYPE OF REQUEST<sup>*</sup></label>
+                        <select id="type_of_request" class="form-control" name="type_of_request">
+                            <option value="current-resident">Current resident</option>
+                            <option value="new-home">Find new home</option>
+                            <option value="general-inquiry" selected>General question</option>
+                        </select>
+                        <p class="cmp-form-error-message hidden" data-element-id="type_of_request">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text move-in-date hidden" data-cmp-component="duetdatepicker">
+                        <div class="cmp-form-text">
+                            <label for="move_in_date">Desired Move-in Date</label>
+                            <duet-date-picker identifier="move_in_date" name="move_in_date"></duet-date-picker>                            
+                        </div>
+                    </div>
+                    <div class="cmp cmp-options building hidden">
+                        <div class="form-group drop-down">
+                        <label for="buidling">Building<sup>*</sup></label>
+                        <select id="building" class="form-control" name="building" >
+                            <option value="">Select building</option>
+                            <option value="eugene">Eugene</option>
+                        </select>
+                        <p class="cmp-form-error-message hidden" data-element-id="building">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="cmp-form-text">
+                        <label for="message">Message<sup>*</sup></label>
+                        <textarea class="cmp-form-text__textarea"  id="message" placeholder="Your message ..." name="message"></textarea>
+                        <p class="cmp-form-error-message hidden" data-element-id="message">Required Field</p>
+                        </div>
+                    </div>
+
+                    <p id="contact_form_error" class="cmp-form-error-message hidden">Please correct the noted errors above before attempting to submit the form again.</p>
+                    <button 
+                    type="submit"
+                    id="rentdot_contact_form_submit"
+                    class="cmp-form-button btn btn-dark btn-primary"
+                    name="rentdotContactFormSubmit">Say Hello</button>
+                    <p class="legal-text">*Mandatory fields</p>
+                </form>
+                <div class="cmp-rentdotContact__postsubmission hidden">
+                    <div class="cmp-rentdotContact__greeting">
+                        <p><img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/confirmation_dark.svg" alt="" />Thank you, <span class="cmp-rentdotContact__confirmation--name">Andrew</span>!</p>
+                    </div>
+                    <div class="cmp-rentdotContact__confirmation">
+                        <h6>We’ll be in touch soon.</h6>
+                        <p>One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.</p>
+                    </div>
+                    <div class="cmp-rentdotContact__spacer"></div>
+                    <div class="cmp-rentdotContact__cta">
+                        <p class="cmp-rentdotContact__cta--intro">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</p>
+                        <p><a href="" class="btn btn-primary btn-dark">Schedule a tour</a></p>
+                        <p><a href="" class="btn btn-primary btn-ghost">Experience in 3D</a></p>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    </section>
+    </body>

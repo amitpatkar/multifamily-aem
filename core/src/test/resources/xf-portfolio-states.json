@@ -1,0 +1,52 @@
+{
+    "jcr:primaryType": "sling:OrderedFolder",
+    "jcr:createdBy": "admin",
+    "jcr:title": "States",
+    "cq:adobeTargetExportFormat": "html",
+    "jcr:created": "Tue Nov 02 2021 10:31:45 GMT+0530",
+    "cq:allowedTemplates": ["/conf/siteconfig/settings/wcm/templates/xf-state-config"],
+    "NY": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Tue Nov 02 2021 13:57:10 GMT+0530",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "New York",
+            "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-state-config",
+            "jcr:created": "Tue Nov 02 2021 13:57:10 GMT+0530",
+            "cq:lastModified": "Tue Nov 02 2021 13:57:10 GMT+0530",
+            "cq:xfVariantType": "web",
+            "cq:tags": ["experience-fragments:variation/web"],
+            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-state-config",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+            }
+        }
+    },
+    "ca": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Tue Nov 02 2021 14:05:34 GMT+0530",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "California",
+            "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-state-config",
+            "jcr:created": "Tue Nov 02 2021 14:05:34 GMT+0530",
+            "cq:lastModified": "Tue Nov 02 2021 14:05:34 GMT+0530",
+            "cq:xfVariantType": "web",
+            "cq:tags": ["experience-fragments:variation/web"],
+            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-state-config",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.root {
+    &.theme-nashvilletheplace,
+    &.theme-nashvilletheplace-small {
+        --brand-primary: #{$nashvilletheplace-primary};
+        --brand-secondary: #{$nashvilletheplace-secondary};
+        --brand-tertiary: #{$nashvilletheplace-tertiary};
+        --brand-primary-rgb: #{hexToRGB($nashvilletheplace-primary)};
+        --brand-secondary-rgb: #{hexToRGB($nashvilletheplace-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($nashvilletheplace-tertiary)};
+        --section50-border: #{$nashvilletheplace-primary};
+        --navlink-border: #{$nashvilletheplace-primary};
+        --apt-detail-promo-bg: #{$nashvilletheplace-secondary};
+    }
+}

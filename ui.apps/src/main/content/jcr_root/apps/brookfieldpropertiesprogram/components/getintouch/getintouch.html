@@ -1,0 +1,128 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+    data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"/>
+<div class="grid-container">
+    <div class="grid-row">
+        <div class="cmp-get-in-touch__contents ${ ( properties.animationBehavior=='enabled' )  ||   (pageInfo.valueMapFinal['site.animationEnableAll'] && (!properties.animationBehavior || properties.animationBehavior=='disabled')) ? 'animation-on' : ''}">
+            <div class="cmp-get-in-touch__contents-inner">
+                <h2 class="cmp-get-in-touch__title large-title">${properties.headline ? properties.headline : 'Get in Touch'}</h2>
+                <div class="cmp-get-in-touch__copy">
+                    ${properties.subHeadline ? properties.subHeadline : "We’re waiting to hear from you and answer any of your questions about our great services."}
+                </div>
+                ${updatedProps.getProperties.getInTouch @context='html'}
+                <div data-sly-test="${pageInfo.propertyConfigModel.officeHours}" class="contact-info contact-info--office">
+                    <h4>OFFICE HOURS</h4>
+                    <p data-sly-repeat="${pageInfo.propertyConfigModel.officeHours}">${item}</p>
+                </div>
+            </div>
+        </div>
+        <div class="cmp-get-in-touch__form-area">
+            <form
+                novalidate
+                action="#"
+                class="cmp-form"
+                id="contact_form"
+                name="contact_form"
+                data-layer-viewed="Form Viewed"
+                data-layer-form-form_name="Contact Us"
+                data-layer-form-form_type="Contact"
+                data-layer-auto-product="true">
+                <div class="text half-width">
+                    <div class="cmp-form-text">
+                        <label for="first_name">FIRST NAME<sup>*</sup></label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="first_name" placeholder="First Name" name="first_name">
+                        <p class="cmp-form-error-message hidden">Required Field</p>
+                    </div>
+                </div>
+                <div class="text half-width">
+                    <div class="cmp-form-text">
+                        <label for="last_name">LAST NAME<sup>*</sup></label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="last_name" placeholder="Last Name" name="last_name">
+                        <p class="cmp-form-error-message hidden">Required Field</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="cmp-form-text">
+                        <label for="email_address">EMAIL ADDRESS<sup>*</sup></label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="email" id="email_address" placeholder="Email Address" name="email">
+                        <p class="cmp-form-error-message hidden">Required Field</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="cmp-form-text">
+                        <label for="phone_number">PHONE NUMBER<sup>*</sup></label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="tel" id="phone_number" placeholder="Phone Number" name="phone_number">
+                        <p class="cmp-form-error-message hidden">Required Field</p>
+                    </div>
+                </div>
+                <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                            <div class="cmp-form-text">
+                                <label for="move-in-date">MOVE-IN DATE<sup>*</sup></label>
+                                <duet-date-picker identifier="move_in_date" name="moveindate"></duet-date-picker>
+                                <p class="cmp-form-error-message hidden">Required Field</p>
+                            </div>
+                </div>
+                <div class="cmp cmp-options home-type">
+                    <fieldset class="form-group checkbox">
+                        <legend>HOME TYPE</legend>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="studio" value="Studio">
+                                <span>STUDIO</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="onebedroom" value="1 Bed">
+                                <span>1 BD</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="twobedroom" value="2 Bed">
+                                <span>2+ BD</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="penthouse" value="Pent">
+                                <span>PH</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="townhome" value="Town">
+                                <span>TH</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <p id="get_in_touch_error" class="cmp-form-error-message hidden">${currentStyle.errorMessage ? currentStyle.errorMessage : 'Please correct the noted errors above before attempting to submit the form again.'}</p>
+                <button
+                    type="submit"
+                    id="get_in_touch_submit"
+                    class="cmp-form-button btn btn-dark btn-primary"
+                    name="getInTouchSubmit">${currentStyle.btnLabel ? currentStyle.btnLabel : 'Say Hello'}</button>
+                <p class="legal-text">*Mandatory fields</p>
+            </form>
+            <div class="cmp-get-in-touch__postsubmission hidden">
+                <div class="cmp-get-in-touch__greeting">
+                    <p><img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/confirmation_dark.svg" alt="Confirmation" />Thank you, <span class="cmp-get-in-touch__confirmation--name">Andrew</span>!</p>
+                </div>
+                <div class="cmp-get-in-touch__confirmation">
+                    ${currentStyle.confirmationMessage ? currentStyle.confirmationMessage : '&lt;h6&gt;We’ll be in touch soon.&lt;/h6&gt;&lt;p&gt;One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.&lt;/p&gt;' @context='html'}
+                </div>
+                <div class="cmp-get-in-touch__spacer"></div>
+                <div class="cmp-get-in-touch__cta">
+                    <p class="cmp-get-in-touch__cta--intro">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</p>
+                    <p data-sly-repeat.cta="${navigation.menuLinks}"><a href="${cta.url @context='uri'}" class="btn btn-primary btn-dark ${cta.cssClass @context='attribute'}"
+                                                                        data-sly-attribute.data-a11y-dialog-show="${cta.openVirtualTour ? 'virtualtour-dialog' : ''}">${cta.label}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="col-md-6" data-sly-resource="${'contactus'@resourceType='brookfieldpropertiesprogram/components/form/container'}"></div>-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

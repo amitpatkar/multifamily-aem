@@ -1,0 +1,56 @@
+#
+# This file contains the rewrite rules, and can be customized.
+#
+# By default, it includes just the rewrite rules. You can
+# add rewrite rules to this file but you should still include
+# the default rewrite rules.
+
+#Switch to WWW for the real domains
+RewriteCond %{HTTP_HOST} ^(bpapartments|theburnhamnashville|theedmund|theeugenenyc|theolivianyc|nashvilletheplace|thirdbankside|webstereleven|thegeorgesf).com [NC] 
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}$1 [L,R=301]
+
+
+# rewrite for root redirect
+RewriteRule ^/?$ /content/%{ENV:CONTENT_DIR}/index.html [PT,L]
+
+# rewrite for sitemap redirect
+#Remember xml extension is handled by SiteMapServlet
+RewriteRule ^/sitemap.xml$ /content/%{ENV:CONTENT_DIR}/index.xml.html [PT,L]
+# rewrite for robots redirect
+#Remember txt extension is handled by RobotsServlet
+RewriteRule ^/robots.txt$ /content/%{ENV:CONTENT_DIR}/index.txt.html [PT,L]
+
+
+#Serve the Favico file from the /content/dam/standalone/<<propertyId>> folder
+RewriteRule ^/favicon.ico$ /content/dam/%{ENV:CONTENT_DIR}/favicon.ico [NC,PT]
+RewriteRule ^/favicon.png$ /content/dam/%{ENV:CONTENT_DIR}/favicon.png [NC,PT]
+
+#Enabling Vanity URLs, they must be enabled through the filter.any file
+#Extension Less URLs
+RewriteCond %{REQUEST_URI} !/(.*?)\.(.*?)
+RewriteRule ^/(.*)/?$ /content/%{ENV:SITE_CONFIG_DIR}.rewrite.html/$1 [PT,L]
+
+#Goal is to match /common/<<page>>.html to <<CONTENT_DIR>>/commoncontent.<<page>>.html
+RewriteCond %{REQUEST_URI} ^(/properties/.*?/|/collections/.*?/|/neighborhoods/.*?/|/cities/.*?/|/states/.*?/|/)?common/
+RewriteCond %{REQUEST_URI} (.html)
+RewriteRule ^(/properties/.*?/|/collections/.*?/|/neighborhoods/.*?/|/cities/.*?/|/states/.*?/|/)?common/(.*)\.html(.*?)$ /content/%{ENV:CONTENT_DIR}$1commoncontent.$2.html$3 [PT,L]
+
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+#Custom Condition to ensure none of the configuration is exposed to outside world via URL
+RewriteCond %{REQUEST_URI} !^/content/siteconfig/   
+#Even though we are alolowing xml for sitemap.xml and txt for robots, remember the actual allow happens in filter
+RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.xml|.txt|.ico|.mp4)
+RewriteRule ^/(.*)$ /content/%{ENV:CONTENT_DIR}/$1 [PT,L]
+
+
+
+#Include conf.d/rewrites/default_rewrite.rules

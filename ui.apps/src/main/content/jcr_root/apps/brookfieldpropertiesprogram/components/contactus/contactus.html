@@ -1,0 +1,136 @@
+<sly
+        data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+        data-sly-use.propertyList="com.brookfieldpropertiesprogram.core.models.PropertyConfigListModel"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.updatedProps="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"/>
+        <div class="grid-container" data-layer-section="contact-us">
+            <div class="grid-row">    
+                <div class="cmp-rentdotContact__contents ${ ( properties.animationBehavior=='enabled' )  ||   (pageInfo.valueMapFinal['site.animationEnableAll'] && (!properties.animationBehavior || properties.animationBehavior=='disabled')) ? 'animation-on' : ''}">
+                    <div class="cmp-rentdotContact__contents-inner">
+                        <h2 class="cmp-rentdotContact__title large-title">${properties.headline ? properties.headline : 'Get in Touch'}</h2>
+                        <div class="cmp-rentdotContact__copy">
+                            ${properties.details @ context="html"}
+                        </div>
+                    </div>
+                </div>
+                <div class="cmp-rentdotContact__form-area">
+                    <form
+                            action="#"
+                            class="cmp-form"
+                            enctype="multipart/form-data"
+                            id="rentdot_contact_form"
+                            method="POST"
+                            name="rentdot_contact_form"
+                            data-layer-viewed="Form Viewed"
+                            data-layer-form-form_name="Contact Us"
+                            data-layer-form-form_type="Contact"
+                            data-layer-auto-product="true">
+                        <div class="text half-width">
+                            <div class="cmp-form-text">
+                                <label for="first_name">FIRST NAME<sup>*</sup></label>
+                                <input class="cmp-form-text__text" id="first_name" name="first_name" placeholder="First Name"
+                                    type="text">
+                                <p class="cmp-form-error-message hidden">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="text half-width">
+                            <div class="cmp-form-text">
+                                <label for="last_name">LAST NAME<sup>*</sup></label>
+                                <input class="cmp-form-text__text" id="last_name" name="last_name" placeholder="Last Name" type="text">
+                                <p class="cmp-form-error-message hidden">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="cmp-form-text">
+                                <label for="email_address">EMAIL ADDRESS<sup>*</sup></label>
+                                <input class="cmp-form-text__text" id="email_address" name="email" placeholder="Email Address"
+                                    type="email">
+                                <p class="cmp-form-error-message hidden">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="cmp-form-text">
+                                <label for="phone_number">PHONE NUMBER<sup>*</sup></label>
+                                <input class="cmp-form-text__text" id="phone_number" name="phone_number" placeholder="Phone Number"
+                                    type="tel">
+                                <p class="cmp-form-error-message hidden" data-element-id="phone_number">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="cmp cmp-options type-of-request">
+                            <div class="form-group drop-down">
+                                <label for="type_of_request">TYPE OF REQUEST<sup>*</sup></label>
+                                <select class="form-control" id="type_of_request" name="type_of_request">
+                                    <option value="current-resident">Current resident</option>
+                                    <option value="new-home">Find new home</option>
+                                    <option selected value="general-inquiry">General question</option>
+                                </select>
+                                <p class="cmp-form-error-message hidden" data-element-id="type_of_request">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="text move-in-date hidden" data-cmp-component="duetdatepicker">
+                            <div class="cmp-form-text">
+                                <label for="move_in_date">Desired Move-in Date</label>
+                                <duet-date-picker identifier="move_in_date" name="move_in_date"></duet-date-picker>
+                            </div>
+                        </div>
+                        <div class="cmp cmp-options building hidden">
+                            <div class="form-group drop-down">
+                                <label for="buidling">Building<sup>*</sup></label>
+                                <select class="form-control" id="building" name="building">
+                                    <option value="">Select building</option>
+                                    <option data-sly-repeat.property="${propertyList.propertyConfigModels}" value="${property.title}" data-email="${property.anyoneHomeEmailAddress}" data-address="${property.address}">${property.title}</option>
+                                </select>
+                                <p class="cmp-form-error-message hidden" data-element-id="building">Required Field</p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="cmp-form-text">
+                                <label for="message">Message<sup>*</sup></label>
+                                <textarea class="cmp-form-text__textarea" id="message" name="comments"
+                                        placeholder="Your message ..."></textarea>
+                                <p class="cmp-form-error-message hidden" data-element-id="message">Required Field</p>
+                            </div>
+                        </div>
+
+                        <p class="cmp-form-error-message hidden" id="contact_form_error">${currentStyle.errorMessage ?
+                            currentStyle.errorMessage : 'Please correct the noted errors above before attempting to submit the form
+                            again.'}</p>
+                        <button
+                                class="cmp-form-button btn btn-dark btn-primary"
+                                id="rentdot_contact_form_submit"
+                                name="rentdotContactFormSubmit"
+                                type="submit">${currentStyle.btnLabel ? currentStyle.btnLabel : 'Say Hello'}
+                        </button>
+                        <p class="legal-text">*Mandatory fields</p>
+                    </form>
+                    <div class="cmp-rentdotContact__postsubmission hidden">
+                        <div class="cmp-rentdotContact__greeting">
+                            <p>
+                                <img alt="Confirmation"
+                                    src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/confirmation_dark.svg"/>Thank you, <span class="cmp-rentdotContact__confirmation--name">Andrew</span>!</p>
+                        </div>
+                        <div class="cmp-rentdotContact__confirmation">
+                            <sly data-sly-test.confirmationMessage="${currentStyle.confirmationMessage}">
+                                ${confirmationMessage @context='html'}
+                            </sly>
+                            <sly data-sly-test="${!confirmationMessage}">
+                                <h6>We’ll be in touch soon.</h6>
+                                <p>One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.</p>
+                            </sly>
+                        </div>
+                        <div class="cmp-rentdotContact__spacer"></div>
+                        <div class="cmp-rentdotContact__cta">
+                            <p class="cmp-rentdotContact__cta--intro">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</p>
+                            <p data-sly-repeat.cta="${navigation.menuLinks}"><a class="btn btn-primary btn-dark ${cta.cssClass @context='attribute'}"
+                                                                                data-sly-attribute.data-a11y-dialog-show="${cta.openVirtualTour ? 'virtualtour-dialog' : ''}"
+                                                                                href="${cta.url @context='uri'}">${cta.label}</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!--<div class="col-md-6" data-sly-resource="${'contactus'@resourceType='brookfieldpropertiesprogram/components/form/container'}"></div>-->
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

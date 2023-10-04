@@ -1,0 +1,28 @@
+//mixins
+@import './mixins/fontface';
+@import './mixins/typography';
+@import './mixins/breakpoints';
+@import './mixins/spacings';
+@import './mixins/aspect-ratio-box';
+@import './mixins/visually-hidden';
+@import './mixins/hex-to-rgb';
+
+//global
+@import './global/variables';
+@import './global/base';
+@import './global/grid';
+@import './global/colors';
+@import './global/fonts';
+@import './global/buttons';
+@import './global/margins';
+@import './global/custom';
+@import './global/glider';
+@import './global/modal';
+@import './global/choices';
+
+//components
+@import '../components/**/*.scss';
+
+//site specific themes
+/* @import './styles/*.scss'; Commented by Amit*/
+@import './themes/*.scss'; /* Added by Amit as an experiement */

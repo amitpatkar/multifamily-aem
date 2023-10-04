@@ -1,0 +1,19 @@
+.cmp-sectionTitle {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    @include breakpoint-up(desktop) {
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+    &__wrapper {
+        @include breakpoint-down(tablet) {
+            padding: 0 31px 0 32px;
+        }
+    }
+    &__headline {
+        padding-top: 30px;
+        @include breakpoint-up(desktop) {
+            padding-top: 60px;
+        }
+    }
+}

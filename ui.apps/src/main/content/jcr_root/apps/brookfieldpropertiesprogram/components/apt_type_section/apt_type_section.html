@@ -1,0 +1,60 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2019 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.urlInfo="com.brookfieldpropertiesprogram.core.models.UrlInfoRequestModel"/>
+<style data-sly-test="${wcmmode.edit}">
+    .cmp-apartmentDetail {visibility:visible}
+</style>
+<!--Aparment Detail Option A: header (includes the floorplan name and a link to availability search page)-->
+<div class="cmp-apartmentDetail__header grid-container">
+    <div class="cmp-apartmentDetail__header-wrapper">
+        <div class="cmp-apartmentDetail__header-link">
+            <a href="${urlInfo.aptAvailabilityMapped}">
+                <span class="visually-hidden">link to Aailability Search</span>
+                <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                </svg>                    
+            </a>
+        </div>
+        <div class="cmp-apartmentDetail__header-title">
+            <h1 class="hero-title">{{group.name}}</h1>
+        </div>
+    </div>
+</div>
+<!--Aparment Detail Option A: header end-->
+<div data-sly-test="${wcmmode.edit}" class="cmp-apartmentDetail__main grid-container">
+    <div class="cmp-apartmentDetail__main-wrapper grid-row">
+        <div class="cmp-apartmentDetail__container--virtualtour" data-sly-resource="${'container_virtualtour' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+        <div class="cmp-apartmentDetail__container--promo" data-sly-resource="${'container_promo' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+        <div class="cmp-apartmentDetail__container--floorplan" data-sly-resource="${'container_floorplan' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+        <div class="cmp-apartmentDetail__container--available" data-sly-resource="${'container_available' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+<!--        <div class="cmp-apartmentDetail__container&#45;&#45;gallery" data-sly-resource="${'container_gallery' @ resourceType='brookfieldpropertiesprogram/components/container'}"></div>-->
+    </div>
+</div>
+<!--/*
+For Publish Server we don't want additional DIV, but remember if we don't add DIV on author we can't drag and drop, hence two separate sections one for authoring one for publish
+*/-->
+<div data-sly-test="${!wcmmode.edit}" class="cmp-apartmentDetail__main grid-container">
+    <div class="cmp-apartmentDetail__main-wrapper grid-row">
+        <sly  data-sly-resource="${'container_virtualtour'  @ resourceType='brookfieldpropertiesprogram/components/container', cssClassName='cmp-apartmentDetail__container--virtualtour'}"></sly>
+        <sly  data-sly-resource="${'container_promo' @ resourceType='brookfieldpropertiesprogram/components/container', cssClassName='cmp-apartmentDetail__container--promo'}"></sly>
+        <sly  data-sly-resource="${'container_floorplan'  @ resourceType='brookfieldpropertiesprogram/components/container', cssClassName='cmp-apartmentDetail__container--floorplan'}"></sly>
+        <sly  data-sly-resource="${'container_available' @ resourceType='brookfieldpropertiesprogram/components/container', cssClassName='cmp-apartmentDetail__container--available'}"></sly>
+<!--        <sly  data-sly-resource="${'container_gallery' @ resourceType='brookfieldpropertiesprogram/components/container', cssClassName='cmp-apartmentDetail__container&#45;&#45;gallery'}"></sly>-->
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.root {
+    &.theme-olivia,
+    &.theme-olivia-small {
+        --brand-primary: #{$olivia-primary};
+        --brand-secondary: #{$olivia-secondary};
+        --brand-tertiary: #{$olivia-tertiary};
+        --brand-primary-rgb: #{hexToRGB($olivia-primary)};
+        --brand-secondary-rgb: #{hexToRGB($olivia-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($olivia-tertiary)};
+        --section50-border: #{$olivia-primary};
+        --navlink-border: #{$olivia-primary};
+        --apt-detail-promo-bg: #{$olivia-secondary};
+        --duet-font: "Montserrat";
+        .cmp-header {
+            .btn {
+              font-size: rem(14);
+            }
+        }
+    }
+}

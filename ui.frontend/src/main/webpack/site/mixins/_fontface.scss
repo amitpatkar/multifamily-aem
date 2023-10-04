@@ -1,0 +1,97 @@
+@use "sass:math";
+
+//from bourbon
+// Convert pixels to rems
+// eg. for a relational value of 12px write rem(12)
+// Assumes $em-base is the font-size of <html>
+$em-base: 16;
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return math.div($pxval, $base) * 1rem;
+}
+
+//string replace
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+
+//font face
+@mixin font-face($fontname, $filepath, $weight: null, $style: normal, $exts: eot woff2 woff ttf svg) {
+  $base-font-path :'/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/fonts/';
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($fontname, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($base-font-path + $fontname + "/" + $filepath + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($fontname);
+		@if($weight){
+			font-weight: $weight;
+		}
+		font-style: $style;
+        font-display: swap;
+		src: $src;
+	}
+}
+
+//default font: CerebriSans
+@include font-face(CerebriSans, CerebriSans-Light, 300, normal, woff2 woff ttf);
+@include font-face(CerebriSans, CerebriSans-Regular, 400, normal, woff2 woff ttf);
+@include font-face(CerebriSans, CerebriSans-Book, 450, normal, woff2 woff ttf);
+@include font-face(CerebriSans, CerebriSans-Medium, 500, normal, woff2 woff ttf);
+@include font-face(CerebriSans, CerebriSans-Bold, 700, normal, woff2 woff ttf);
+@include font-face(CerebriSans, CerebriSans-LightItalic, 300, italic, woff2 woff ttf);
+
+//Edmund font: SangBleuSunrise
+@include font-face(SangBleuSunrise, SangBleuSunrise-Light, 300, normal, otf);
+@include font-face(SangBleuSunrise, SangBleuSunrise-Regular, 400, normal, otf);
+@include font-face(SangBleuSunrise, SangBleuSunrise-Livre, 450, normal, otf);
+@include font-face(SangBleuSunrise, SangBleuSunrise-Medium, 500, normal, otf);
+@include font-face(SangBleuSunrise, SangBleuSunrise-Bold, 700, normal, otf);
+
+//IvyMode
+@include font-face(IvyMode, IvyMode-Light, 300, normal, otf);
+@include font-face(IvyMode, IvyMode-Regular, 400, normal, otf);
+@include font-face(IvyMode, IvyMode-SemiBold, 600, normal, otf);
+@include font-face(IvyMode, IvyMode-Bold, 700, normal, otf);
+
+//NimbusSans
+@include font-face(NimbusSans, NimbusSan-Light, 300, normal, otf);
+@include font-face(NimbusSans, NimbusSan-Regular, 400, normal, otf);
+@include font-face(NimbusSans, NimbusSan-Bold, 700, normal, otf);
+
+
+//Montserrat
+@include font-face($fontname: Montserrat, $filepath: Montserrat-VariableFont_wght, $style: normal, $exts: ttf);
+@include font-face($fontname: MontserratItalic, $filepath: Montserrat-Italic-VariableFont_wght, $style: italic, $exts: ttf);
+
+//Oswald
+@include font-face($fontname: Oswald, $filepath: Oswald-VariableFont_wght, $style: normal, $exts: ttf);

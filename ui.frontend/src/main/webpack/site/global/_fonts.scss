@@ -1,0 +1,648 @@
+.hero-title {
+    @include hero-title();
+}
+  .large-title,
+  .card33-headline {
+    @include large-title();
+  }
+  .medium-title,
+  .card33-propText{
+    @include medium-title();
+  }
+  .small-title {
+    @include small-title()
+  }
+  .intermediate-title {
+    @include intermediate-title();
+  }
+  .section-title {
+    @include section-title();
+  }
+  .stat-number,
+  .card33-propStat {
+    @include stat-number();
+  }
+  .highlight-title {
+    @include highlight-title();
+  }
+  .interactive-title{
+    @include interactive-text();
+    text-transform: uppercase;
+  }
+  .body-text {
+    @include body-text();
+  }
+  .contacts-text{
+    @include contacts-text();
+  }
+  .label-text{
+    @include label-text();
+    &.floor-number {
+        color: rgba(var(--universal-black-rgb), 0.5);
+    }
+  }
+  .interactive-text{
+    @include interactive-text();
+  }
+  .link-text {
+    @include link-text();
+  }
+  .legal-text{
+    @include legal-text();
+  }
+  .caption-title {
+    @include caption-title();
+  }
+  .accordion-headline {
+    @include desktop-small-title();
+  }
+  .propertyCard-banner-text{
+    @include propertyCard-banner-text();
+  } 
+  
+  label.autocomplete-label{
+    @include autocomplete-label();
+  }
+
+
+$fontthemes: 'edmund', 'george', 'olivia';
+@each $fonttheme in $fontthemes {
+  .theme-#{$fonttheme},
+  .theme-#{$fonttheme}-small {
+    &.root {
+      @include font-book($fonttheme);
+    }
+    .hero-title {
+      @include hero-title($fonttheme);
+    }
+    .large-title,
+    .card33-headline {
+      @include large-title($fonttheme);
+    }
+    .medium-title,
+    .card33-propText{
+      @include medium-title($fonttheme);
+    }
+    .small-title {
+      @include small-title($fonttheme)
+    }
+    .accordion-headline {
+      @include desktop-small-title($fonttheme)
+    }
+    .intermediate-title {
+      @include intermediate-title($fonttheme);
+    }
+    .section-title {
+      @include section-title($fonttheme);
+    }
+    .stat-number,
+    .card33-propStat {
+      @include stat-number($fonttheme);
+    }
+    .highlight-title {
+      @include highlight-title($fonttheme);
+    }
+    .interactive-title{
+      @include interactive-text($fonttheme);
+    }
+    .body-text {
+      @include body-text($fonttheme);
+    }
+    .contacts-text{
+      @include contacts-text($fonttheme);
+    }
+    .label-text{
+      @include label-text($fonttheme);
+    }
+    .interactive-text{
+      @include interactive-text($fonttheme);
+    }
+    .link-text {
+      @include link-text($fonttheme);
+    }
+    .legal-text{
+      @include legal-text($fonttheme);
+    }
+    .caption-title {
+      @include caption-title($fonttheme);
+    }
+    
+    .propertyCard-banner-text{
+      @include propertyCard-banner-text($fonttheme);
+    } 
+    
+    label.autocomplete-label{
+      @include autocomplete-label($fonttheme);
+    }
+    .contact-info {
+      p, a, span{
+        @include contacts-text($fonttheme);
+      }
+      &--office {
+        h4 {
+          @include intermediate-title($fonttheme);
+        }
+      }
+    }
+
+    .duet-date{
+      &__table-header{
+        @include font-medium($fonttheme);
+      }
+      &__select-label{
+        @include font-book($fonttheme);
+      }
+      &__input {
+          @include form-input($fonttheme);
+      }
+    }
+    .cmp-rentdotHeader-variation {
+      &__propertyLink{
+        @include font-light($fonttheme);
+      }
+      &__propertyName{
+        @include font-book($fonttheme);
+      }
+    }
+    .cmp-header{
+      &__mobileTriggerWrap {
+        button {
+          @include intermediate-title($fonttheme);
+        }
+      }
+      &__mobileMenu {
+        &--info {
+          li>a {
+            @include font-light($fonttheme);
+          }
+        }
+        &--link:not(.btn), &--direction, &--phone, &--chat {
+          @include link-text($fonttheme);
+        }
+      }
+      &__link:not(.btn){
+        @include interactive-text($fonttheme);
+      }
+      &__tabletMenu--link {
+          @include link-text($fonttheme);
+      }
+    }
+    .cmp-footer {
+      @include font-light($fonttheme);
+      &__ctaTitle{
+        @include font-book($fonttheme);
+      }
+    }
+    .cmp-poi-map {
+      &__category-title {
+        @include font-light($fonttheme);
+        @include breakpoint-up(desktop) {
+          @include font-book($fonttheme);
+        }
+      }
+      &__category-text,
+      &__amenity-additional,
+      &__popup-text { 
+        @include body-text($fonttheme);
+      }
+
+      &__apartment-type,
+      &__apartment-price,
+      &__popup-title{
+        @include font-light($fonttheme);
+      }
+      .poi-marker {
+        &--name {
+          @include font-book($fonttheme);
+        }
+        &--address,
+        &--direction {
+          @include body-text($fonttheme);
+        }
+      }
+    }
+    .cmp-section50 {
+      &--info-right {
+        .cmp-section50 {
+          &__list, &__links {
+            ul li {
+              @include font-book($fonttheme);
+            }
+          }
+        }
+      }
+    }
+    .cmp-gallery {
+      &__caption {
+        @include breakpoint-up(desktop) {
+          &--text,
+          &--index {
+              @include font-regular($fonttheme);
+          }
+        }
+      }
+    }
+
+    .cmp-get-in-touch,
+    .cmp-rentdotContact {
+      &__confirmation {
+        h2, h3, h4, h5, h6 {
+          @include large-title($fonttheme);
+        }
+        p {
+          @include body-text($fonttheme);
+        }
+      }
+      &__copy {
+        @include body-text($fonttheme);
+      }
+      &__greeting {
+        p {
+            @include body-text($fonttheme);
+        }
+      }
+      &__form-area {
+        .cmp-form-error-message {
+            @include form-error-text($fonttheme);
+        }
+      }
+    }
+    .tab-buttons button[role="tab"],
+    .cmp-availability__tabs button {
+        @include breakpoint-down(tablet) { 
+          @include interactive-text($fonttheme);
+        }
+        @include breakpoint-up(desktop) { 
+          @include link-text($fonttheme);
+          &[aria-selected="true"]{
+            @include medium-title($fonttheme);
+          }
+        }
+    }
+
+    .cmp-apartmentDetail {
+        &__promo-headline {
+            @include interactive-text($fonttheme);
+        }
+        &__promo-subhead {
+          @include intermediate-title($fonttheme);
+        }
+        &__promo-highlight {
+            @include small-title($fonttheme);
+        }
+        &__available-title,
+        &__accordion-title {
+            @include interactive-text($fonttheme);
+        }
+        &__disclaimer {
+          p {
+              @include legal-text($fonttheme);
+          }
+        }
+        &__unitPagination {
+          &-status {
+              @include body-text($fonttheme);
+          }
+        }
+    }
+
+    .cmp-rentdotProperties {
+      &__propertyCard {
+        &-name {
+            @include small-title($fonttheme);
+        }
+        &-address {
+            @include label-text($fonttheme);
+        }
+        &-banner {
+          p, h2, h3, h4, h5, h6 {
+              @include propertyCard-banner-text($fonttheme);
+          }
+        }
+      }
+      #properties-filters-toggle {
+        @include link-text($fonttheme);
+      }
+    }
+    .cmp-errorPage {
+      &__body {
+        h6, p {
+            @include highlight-title($fonttheme);
+        }
+      }
+      &__cta {
+        p, h4 {
+          @include intermediate-title($fonttheme);
+        }
+      }
+    }
+    .cmp-hero {
+      &__banner--default {
+        .cmp-hero__banner-title {
+          h2, h3, h4, h5, h6, p, a {
+              @include intermediate-title($fonttheme);
+          }
+        }
+      }
+    }
+    .cmp-section33{
+      &__card--copy66 {
+        h2, h3, h4, h5, h6 {
+            @include highlight-title($fonttheme);
+        }
+        p {
+            @include body-text($fonttheme);
+        }
+
+      }
+    }
+    .cmp-section100 {
+      &--text {
+        .cmp-section100 {
+          &__lead {
+              @include highlight-title($fonttheme); 
+              h1, h2, h3, h4, h5, h6, p {
+                 @include highlight-title($fonttheme);  
+              }
+          }
+          &__copy {
+              @include body-text($fonttheme); 
+              p {
+                  @include body-text($fonttheme);  
+              }
+          }
+        }
+      }
+      &--visual {
+        &.info-left, &.info-right {
+          .cmp-section100 {
+            &__text { 
+              @include body-text($fonttheme);
+            }
+          }
+        }
+      }
+
+    }
+    .cmp-rentdotSearch {
+      .autocomplete-wrapper {
+        ul li {
+          &[role="presentation"] {
+              @include label-text($fonttheme);
+          }
+          &[role="option"] {
+              @include form-select-text($fonttheme);
+          }
+        }
+      }
+    }
+    .cmp-rentdotHeader {
+      &__global-navLink {
+        @include label-text($fonttheme);
+      }
+    }
+    .cmp-rentdotHeader--combined {
+      .cmp-rentdotHeader {
+        &__specific-navLink {
+          @include label-text($fonttheme);
+          &.contact-us {
+              @include breakpoint-up(desktop) {
+                  @include interactive-text($fonttheme);
+              }
+          }
+        }
+        &__specific-currentPage {
+          @include label-text($fonttheme);
+        }
+      }
+    }
+
+    .dialog-close {
+      @include label-text($fonttheme);
+    }
+    .btn {
+      @include interactive-text($fonttheme);
+    }
+    a.skip-main:focus,
+    .btn-download {
+      @include link-text($fonttheme);
+    }
+    .paginate-button {
+      @include body-text($fonttheme);
+    }
+    .tooltip-container {
+      [role="tooltip"] {
+        @include legal-text($fonttheme);
+      }
+    }
+    .gallery-dialog {
+      .slide-contents.schedule-tour  {
+          .schedule-tour {
+              &--disclaimer {
+                p {
+                  @include legal-text($fonttheme);
+                }
+              }
+              &--specials {
+                & > h4 {
+                    &:nth-child(n+2) {
+                        @include breakpoint-down(tablet) { 
+                            @include body-text($fonttheme);
+                        }
+                    }
+                }
+              }
+              &--description {
+                  p {
+                      @include body-text($fonttheme);
+                  }
+              }
+
+          }
+      }
+      .slide-caption {
+        &--body {
+            @include body-text($fonttheme);
+        }
+        &--title {
+            @include caption-title($fonttheme);
+        }
+      }
+    }
+    .cmp-availability {
+      &__disclaimer {
+        p {
+          @include legal-text($fonttheme);
+        }
+      }
+      &__paginate-status {
+          @include body-text($fonttheme);
+      }
+      &__results-sorting {
+        label {
+            @include form-label($fonttheme);
+        }
+        select {
+            @include form-select-text($fonttheme);
+            option {
+                @include form-select-text($fonttheme);
+            }
+            option:disabled {
+                @include form-placeholder($fonttheme);
+            }
+        }
+
+      }
+      #availability-filters {
+        .text {
+            &.move-in-date {
+                label:not(.duet-date__mobile-heading){
+                    @include form-label($fonttheme);
+                }
+                input[type="date"] {
+                    @include form-input-date($fonttheme);
+                }
+
+            }
+        }
+      }
+    }
+    ul.amenity-list,
+    .amenity-list > ul,
+    .cmp-amenityList__items {
+      li {
+        @include amenity-list-text($fonttheme);
+      }
+    }
+    ul.bulleted-list {
+      li {
+        @include body-text($fonttheme);
+      }
+    }
+    .cmp-accordions {
+      &__panel{
+        @include body-text($fonttheme);
+        p {
+          @include body-text($fonttheme);
+        }
+      }
+    }
+    .cmp-options {
+      fieldset {
+        legend {
+          @include form-label($fonttheme);
+        }
+        .checkbox-item, .radio-item {
+          label {
+            span {
+              @include form-option-selectable($fonttheme);
+            }
+          }
+        }
+      }
+      &.max-rent, 
+      &.min-rent,
+      &.type-of-request,
+      &.property,
+      &.building,
+      &.state,
+      &.city,
+      &.neighborhood{
+        .drop-down {
+          label{
+              @include form-label($fonttheme);
+          }
+          select {
+              @include form-select-text($fonttheme);
+              option {
+                  @include form-select-text($fonttheme);
+              }
+              option:disabled {
+                  @include form-placeholder($fonttheme);
+              }
+
+          }
+        }
+      }
+    }
+    .cmp-form-text {
+      label {
+          @include form-label($fonttheme);
+      }
+      &__text,
+      &__textarea {
+          @include form-input($fonttheme);
+          &:placeholder-shown {
+            @include form-placeholder($fonttheme);
+        }
+      }
+    }
+
+    .choices[data-type*='select-one'] .choices__inner,
+    .choices__list--dropdown .choices__item,
+    .choices__input{
+        @include form-select-text($fonttheme);
+    }
+
+    .filter-toggle-btn {
+      @include link-text($fonttheme);
+    }
+
+
+  }
+
+}
+//styles for Section33 card
+span.card33-headline,
+span.card33-propStat,
+span.card33-propText {
+  display: block;
+}
+
+
+
+// basic styles for contact info (addresses, phone, direction, chat, office)
+
+.contact-info {
+    p, a, span{
+      @include contacts-text();
+      text-transform: uppercase;
+      color: inherit;
+    }
+    a, span {
+      text-decoration: underline;
+    }
+    img, a , span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      margin-right: 15px;
+    }
+    &--address {
+      margin-bottom: 22px;
+      @include breakpoint-up(desktop) {
+          margin-bottom: 30px;
+      }
+      p + p {
+        margin-top: 20px;
+      }
+    }
+    &--phone, &--direction, &--chat{
+      padding: 12px 0;
+    }
+    &--office {
+      h4 {
+        @include intermediate-title();
+        margin-bottom: 20px;
+      }
+      p {
+        text-transform: none;
+      }
+      p + p {
+        margin-top: 10px;
+      }
+    }
+
+}
+

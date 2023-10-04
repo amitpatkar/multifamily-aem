@@ -1,0 +1,14 @@
+.root {
+    &.theme-radian,
+    &.theme-radian-small {
+        --brand-primary: #{$radian-primary};
+        --brand-secondary: #{$radian-secondary};
+        --brand-tertiary: #{$radian-tertiary};
+        --brand-primary-rgb: #{hexToRGB($radian-primary)};
+        --brand-secondary-rgb: #{hexToRGB($radian-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($radian-tertiary)};
+        --section50-border: #{$radian-primary};
+        --navlink-border: #{$radian-primary};
+        --apt-detail-promo-bg: #{$radian-secondary};
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-21T15:41:31.481-07:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/siteconfig/settings/wcm/templates/xf-site-config"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Master Configuration"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage-site-config"
+        feature_disable_amenities="{Boolean}false"
+        feature_disable_neighborhood="{Boolean}false"
+        footer_cta_heading="Features &amp; Amenities"
+        footer_cta_label="Explore"
+        footer_cta_openLinkInNewTab="false"
+        footer_cta_url="/"
+        getInTouch="&lt;div class=&quot;contact-info contact-info--address&quot;>&#xd;&#xa;                &lt;p>${address}&lt;/p>&#xd;&#xa;                &lt;p>${city}, ${stateCode} ${zipCode}&lt;/p>&#xd;&#xa;            &lt;/div>&#xd;&#xa;            &lt;div class=&quot;contact-info contact-info--direction&quot;>&#xd;&#xa;                &lt;img src=&quot;/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg&quot; alt=&quot;&quot; aria-hidden=&quot;true&quot;/>&#xd;&#xa;                &lt;a href=&quot;${mapLink}&quot; >Get Directions&lt;/a>&#xd;&#xa;            &lt;/div>&#xd;&#xa;            &lt;div class=&quot;contact-info contact-info--phone&quot;> &#xd;&#xa;                &lt;img src=&quot;/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg&quot; alt=&quot;&quot; aria-hidden=&quot;true&quot;/>&#xd;&#xa;                &lt;a href=&quot;tel:+01-877-245-1215&quot; >${phoneNumberFormatted}&lt;/a>&#xd;&#xa;            &lt;/div>&#xd;&#xa;            &lt;div class=&quot;contact-info contact-info--chat&quot;> &#xd;&#xa;                &lt;img src=&quot;/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg&quot; alt=&quot;&quot; aria-hidden=&quot;true&quot;/>&#xd;&#xa;                &lt;a href=&quot;#&quot; >Chat Now&lt;/a>&#xd;&#xa;            &lt;/div>"
+        reportSuiteBaseName="brookfieldpropertiesportfolio"
+        theme="theme-eugene">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid"/>
+    </jcr:content>
+</jcr:root>

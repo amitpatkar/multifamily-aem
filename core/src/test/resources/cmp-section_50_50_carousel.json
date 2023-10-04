@@ -1,0 +1,28 @@
+{
+    "jcr:created": "Wed Dec 01 2021 07:28:22 GMT+0000",
+    "jcr:lastModifiedBy": "shivakumar.chandrappa@toptal.com",
+    "jcr:createdBy": "shivakumar.chandrappa@toptal.com",
+    "sling:resourceType": "brookfieldpropertiesprogram/components/section_50_50_carousel",
+    "sliderType": "Destinations",
+    "subTitle": "primer collections",
+    "mainTitle": "This is a SEO text about collections explaining how many cities there are and so on.",
+    "jcr:lastModified": "Thu Dec 02 2021 16:22:23 GMT+0000",
+    "jcr:primaryType": "nt:unstructured",
+    "associatedCollections":["/content/siteconfig/collections/mercantile-place","/content/siteconfig/collections/the-test-collection","/content/siteconfig/collections/the-test-collection"],
+    "sliderList": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "collectionsPath": "/content/siteconfig/collections/mercantile-place",
+            "jcr:primaryType": "nt:unstructured"
+        },
+        "item1": {
+            "collectionsPath": "/content/siteconfig/collections/the-test-collection",
+            "jcr:primaryType": "nt:unstructured"
+        },
+        "item2": {
+            "collectionsPath": "/content/siteconfig/collections/the-test-collection",
+            "jcr:primaryType": "nt:unstructured"
+        }
+    }
+}
+          

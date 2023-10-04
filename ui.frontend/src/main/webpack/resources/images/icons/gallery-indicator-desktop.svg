@@ -1,0 +1,13 @@
+
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="none"/>
+<line x1="1" y1="-1" x2="36.6567" y2="-1" transform="matrix(0.71353 -0.691434 -0.71353 -0.691434 106.123 93.0938)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M133.7 73.2241V67.7405H128.041" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="1" y1="-1" x2="36.6571" y2="-1" transform="matrix(0.713535 0.691426 0.713535 -0.691426 107.538 104.849)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M128.044 131.572H133.701V126.09" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="1" y1="-1" x2="36.657" y2="-1" transform="matrix(-0.713524 -0.691442 0.713524 -0.691442 94.4082 93.0938)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M66.8311 73.2241V67.7405H72.4899" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="1" y1="-1" x2="36.657" y2="-1" transform="matrix(-0.713535 0.691428 -0.713535 -0.691428 92.9932 104.849)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M72.4873 131.572H66.8298V126.09" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+

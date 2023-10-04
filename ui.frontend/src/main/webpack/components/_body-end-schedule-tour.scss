@@ -1,0 +1,166 @@
+/* The Modal (background) */
+.schedule-tour-modal  {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 10vh;/*padding-top: 100px;  Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.schedule-tour-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    /*border: 1px solid #888;*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    width:98%;
+    max-width: 450px;
+    border-radius: 6px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.self_schedule_popup_close {
+    float: right;
+    position: absolute;
+    text-align: right;
+    width: 95%;
+}
+
+.schedule-tour-modal .modal-body {padding: 0px;}
+.schedule_popup_close{
+    color: #FFFFFF;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    /*margin-right: 4%;*/
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    margin-top: 4px;
+}
+.schedule-tour-modal-body{
+    height: 540px;
+    background: url('https://www.myshowing.com/img/loader.gif') no-repeat;
+    background-size: 48px 48px;
+    background-position: center;
+}
+#selfATourDateSlider{
+    padding: 0px 15px !important;
+}
+.schedule-tour-modal  .embed-container
+{ position: relative; /*padding-bottom: 26.00%;*/ border-radius: 6px;height:100%;max-height: 540px; overflow: hidden; max-width: 100%; /*border:1px solid #ccc;*/}
+.schedule-tour-modal .embed-container iframe, .schedule-tour-modal .embed-container object, .schedule-tour-modal .embed-container embed
+{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+@media (min-width:1900px) {
+    .schedule-tour-modal .modal-content {
+     width: 30%;
+    }
+    
+}
+
+@media (min-width:1600px) AND (max-width:1899px) {
+    .schedule-tour-modal .modal-content {
+     width: 35%;
+    }
+    
+}
+
+@media (min-width:1200px) AND (max-width:1599px) {
+    .schedule-tour-modal .modal-content {
+     width: 42%;
+    }
+    
+}
+
+@media (min-width: 1024px) AND (max-width:1199px) {
+    .schedule-tour-modal .modal-content {
+     width: 52%;
+    }
+    
+}
+
+@media (min-width: 769px) AND (max-width:1023px) {
+    .schedule-tour-modal .modal-content {
+     width: 60%;
+    }
+    
+}
+
+@media (min-width: 511px) AND (max-width:768px) {
+    .schedule-tour-modal .modal-content {
+     width: 80%;
+    }
+
+}
+
+@media (min-width: 100px) AND (max-width:320px){
+    .schedule_popup_close{
+        /*margin-right: 4%;*/
+        
+    }
+}
+
+// @media (min-width: 320px) AND (max-width:374px) {
+    
+//    .schedule-tour-modal-body{
+//         height: 350px;
+//     }
+
+// }
+
+// @media (min-width: 375px) AND (max-width:435px) {
+    
+//     .schedule-tour-modal-body{
+//         height: 370px;
+//     }
+    
+// }
+
+// @media (min-width: 176px) AND (max-width:320px) {
+//       .schedule-tour-modal-body{
+//         height: 340px;
+//     }
+    
+
+// }
+
+@media (min-width: 100px) AND (max-width:510px) {
+    .schedule-tour-modal .modal-content {
+     width: 94%;
+    }
+
+}
+
+.schedule_popup_close_link{
+    color: #2B78E4;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.clearboth{
+    clear: both;
+}

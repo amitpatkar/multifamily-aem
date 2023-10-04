@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Panel"
+          jcr:title="Engrain Configuration">       
+    <columns
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+        jcr:title="Engrain Configuration"
+        margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <field3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                jcr:title="Configuration">                                                   
+                <items
+                    jcr:primaryType="nt:unstructured">                                                     
+                    <btnType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Hide UI Elements"
+                        multiple="{Boolean}true"
+                        name="./engrain_hideUI">
+                        <items jcr:primaryType="nt:unstructured">                                               
+                            <filters jcr:primaryType="nt:unstructured" text="Filters" value="filters"/>
+                            <unitList jcr:primaryType="nt:unstructured" text="Unit List" value="unitList"/>
+                            <floorSelection jcr:primaryType="nt:unstructured" text="Floor Selection" value="floorSelection"/>
+                            <unitToolTip jcr:primaryType="nt:unstructured" text="Unit ToolTip" value="unitToolTip"/>
+                            <unitDetails jcr:primaryType="nt:unstructured" text="Unit Details" value="unitDetails"/>
+                        </items>
+                    </btnType>                                                                                                                                                                                                                                                   
+                </items>
+            </field3>                                                                      
+        </items>
+    </columns>            
+</jcr:root>

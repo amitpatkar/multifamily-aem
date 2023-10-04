@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-21T18:35:24.801-07:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/common/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2021-08-10T23:16:02.522-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            cssClasses="cmp-footer--combined"
+            layout="simple">
+            <footer_standalone
+                jcr:created="{Date}2021-08-05T18:42:19.795-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-10T23:25:42.818-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/footer_standalone">
+                <menuLinksRight jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_availability"
+                        label="Availability"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_experience"
+                        label="Experience"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_gallery"
+                        label="Gallery"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_neighborhood"
+                        label="Neighborhood"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        cssClass="schedule-tour-popup-button"
+                        id="footer_schedule_a_tour"
+                        label="Schedule a Tour"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_lease_online"
+                        label="Lease Online"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        id="footer_resident_portal"
+                        label="Resident Portal"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item7
+                        jcr:primaryType="nt:unstructured"
+                        cssClass="standalone-get-in-touch"
+                        id="footer_get_in_touch"
+                        label="Get In Touch"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </menuLinksRight>
+            </footer_standalone>
+            <footer_standalone_bl
+                jcr:created="{Date}2021-08-05T18:41:57.928-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-05T18:41:57.928-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/footer_standalone_block"/>
+            <footer_portfolio_1280813375
+                jcr:created="{Date}2021-08-05T18:42:07.681-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-10T23:18:55.175-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/footer_portfolio"
+                logoLabel="Brookfield Properties"
+                logoPath="/content/dam/common/logos/logo_Brookfield.svg"
+                logoUrl="/"
+                subTitle="Properties"
+                title="Brookfield">
+                <menuLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="Test1"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="test3"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </menuLinks>
+                <socialLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        icon="/content/dam/common/icons/equal-housing.svg"
+                        label="Equal Housing Opportunity"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        icon="/content/dam/common/icons/accessibility.svg"
+                        label="Brookfield Properties Accessibility"
+                        openLinkInNewTab="false"/>
+                </socialLinks>
+                <menuLinksLeft jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        id="privacy_policy"
+                        label="Privacy Policy"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="Terms of Use"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        label="Do Not Sell My Info"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </menuLinksLeft>
+                <menuLinksRight jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="NY Fair Housing Notice"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="Brookfield Properties Customer Service"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </menuLinksRight>
+            </footer_portfolio_1280813375>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,143 @@
+<div
+        data-sly-use.globalConfig="com.brookfieldpropertiesprogram.core.models.GlobalConfigRequestModel"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+        data-sly-use.propertyList="com.brookfieldpropertiesprogram.core.models.PropertyConfigListModel"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.updatedProps="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}">
+</div>
+<!--/* This statement will add a request attribute and the js will be printed at the end of the page */-->
+<sly data-sly-use.bodyJavascripts="${'com.brookfieldpropertiesprogram.core.models.BodyJavaScriptRequestModel' @scriptKeys=['PropertyConfigListModel']}"/>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.lead, classAppend='cmp-text'}"></sly>
+
+<!--propertyList component static html copied from rentdot-properties-->
+<div class="cmp-rentdotProperties" data-cmp-component="rentdotproperties">
+    <div class="cmp-rentdotProperties__wrapper tab-component" data-cmp-component="tabcomponent">
+        <div class="cmp-rentdotProperties__header tab-header">
+            <div aria-label="Properties Search" class="cmp-rentdotProperties__tabs tab-buttons" role="tablist">
+                <h2>
+                    <button aria-controls="list-panel" aria-selected="true" data-tab-index=0 id="list-tab" role="tab">
+                        List View
+                    </button>
+                </h2>
+                <h2>
+                    <button aria-controls="map-panel" aria-selected="false" data-tab-index=1 id="map-tab" role="tab"
+                            tabindex="-1">Map View
+                    </button>
+                </h2>
+            </div>
+        </div>
+
+        <div aria-labelledby="list-tab" class="tab-panel current" data-tab-index=0 id="list-panel" role='tabpanel'
+             tabindex="0">
+            <div class="cmp-rentdotProperties__listViewWrapper grid-container">
+                <div class="cmp-rentdotProperties__listView">
+                    <div class="cmp-rentdotProperties__filters">
+                        <h3 class="cmp-rentdotProperties__filterToggle">
+                            <button
+                                    aria-controls="properties-filters-panel"
+                                    aria-expanded="false"
+                                    id="properties-filters-toggle">
+                                <span class="text--open">Open Filter</span>
+                                <span class="text--collapse">Collapse Filter</span>
+                            </button>
+                        </h3>
+                        <div class="cmp-rentdotProperties__filterPanel" id="properties-filters-panel">
+                            <form class="cmp-form"
+                                  id="properties-filters"
+                                  name="properties-filters">
+                                <div class="cmp cmp-options property">
+                                    <div class="form-group drop-down">
+                                        <label for="filter-property">Property Name</label>
+                                        <select name="property" id="filter-property" class="form-control">
+                                            <option value="all">SELECT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cmp cmp-options state">
+                                    <div class="form-group drop-down">
+                                        <label for="filter-state">State</label>
+                                        <select class="form-control" id="filter-state" name="state">
+                                            <option value="">SELECT</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cmp cmp-options city">
+                                    <div class="form-group drop-down">
+                                        <label for="filter-city">City</label>
+                                        <select class="form-control" id="filter-city" name="city">
+                                            <option value="">SELECT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cmp cmp-options neighborhood">
+                                    <div class="form-group drop-down">
+                                        <label for="filter-neighborhood">Neighborhood</label>
+                                        <select class="form-control" id="filter-neighborhood" name="neighborhood">
+                                            <option value="">SELECT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button
+                                        class="cmp-form-button btn btn-dark btn-ghost"
+                                        id="properties-filters-reset"
+                                        name="propertiesFiltersReset"
+                                        type="submit">Reset Selections
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="cmp-rentdotProperties__propertyList" id="property-list">
+
+                        <!-- <div class="cmp-rentdotProperties__propertyCard">
+                            <div class="cmp-rentdotProperties__propertyCard-container--image">
+                                <div class="cmp-rentdotProperties__propertyCard-image">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="alt text">
+                                </div>
+                            </div>
+                            <div class="cmp-rentdotProperties__propertyCard-container--text">
+                                <h3 class="cmp-rentdotProperties__propertyCard-name">The River Lofts at Tobacco Row</h3>
+                                <p class="cmp-rentdotProperties__propertyCard-address">Cambridge,Massachusetts</p>
+                                <p class="cmp-rentdotProperties__propertyCard-address">23 Sidney Street</p>
+                            </div>
+                            <div class="cmp-rentdotProperties__propertyCard-container--cta">
+                                <a href="#" class="cmp-rentdotProperties__propertyCard-cta btn btn-secondary btn-ghost">View Property</a>
+                                <hr class="cmp-rentdotProperties__propertyCard-spacer">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="cmp-rentdotProperties__loadMore" id="load-more-container"></div>
+
+                    <!-- <button id="back-to-top" class="btn btn-dark">
+                        <span>Back to Top</span>
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/select_arrow.svg" alt="">
+                    </button> -->
+                </div>
+            </div>
+        </div>
+        <div aria-labelledby="map-tab" class="tab-panel hidden" data-tab-index=1 id="map-panel" role='tabpanel'
+             tabindex="0">
+            <div class="cmp-rentdotProperties__mapView">
+
+                <section class="cmp-destination-map" data-cmp-component="destinationmap">
+                    <poi-map autocenter map-id="${properties.mapId}">
+                        <div class="map"></div>
+                        <sly data-sly-list.property="${propertyList.propertyConfigModels}">
+                            <poi-marker color="${properties.markerColor}"
+                                        data-sly-test="${property.latitude && property.longitude}" href="/content/portfolio/en/properties/${property.name}.html"
+                                        lat="${property.latitude}"
+                                        lng="${property.longitude}"></poi-marker>
+                        </sly>
+                    </poi-map>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=${globalConfig.googleMapsAPIKey}"></script>
+                    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+                    <sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>

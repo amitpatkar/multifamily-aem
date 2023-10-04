@@ -1,0 +1,14 @@
+.root {
+    &.theme-burnham,
+    &.theme-burnham-small {
+        --brand-primary: #{$burnham-primary};
+        --brand-secondary: #{$burnham-secondary};
+        --brand-tertiary: #{$burnham-tertiary};
+        --brand-primary-rgb: #{hexToRGB($burnham-primary)};
+        --brand-secondary-rgb: #{hexToRGB($burnham-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($burnham-tertiary)};
+        --section50-border: #{$burnham-primary};
+        --navlink-border: #{$burnham-primary};
+        --apt-detail-promo-bg: #{$burnham-secondary};
+    }
+}

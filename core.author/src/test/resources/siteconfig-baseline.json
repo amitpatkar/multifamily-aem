@@ -1,0 +1,49 @@
+{
+    "jcr:primaryType": "sling:OrderedFolder",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Standalone",
+    "cq:adobeTargetExportFormat": "html",
+    "jcr:created": "Mon Jul 05 2021 13:29:53 GMT-0700",
+    "baseline": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Jul 05 2021 13:29:53 GMT-0700",
+        "reportSuiteBaseName": "brookfield-baseline",
+        "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:createdBy": "admin",
+            "jcr:title": "baseline",
+            "cq:template": "/conf/config/settings/wcm/templates/xf-site-config",
+            "jcr:created": "Mon Jul 05 2021 13:29:53 GMT-0700",
+            "isRequiredMetaData": "inherit",
+            "cq:lastModified": "Mon Jul 05 2021 15:39:39 GMT-0700",
+            "loadAsInternalCSS": "false",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-site-config",
+            "reportSuiteBaseName": "brookfield-baseline",
+            "selectedIndex": "inherit",
+            "cq:lastModifiedBy": "admin",
+            "cq:featuredimage": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Mon Jul 05 2021 15:39:39 GMT-0700",
+                "sling:resourceType": "core/wcm/components/image"
+            }
+        },
+        "master": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Mon Jul 05 2021 13:29:53 GMT-0700",
+            "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:createdBy": "admin",
+                "jcr:title": "baseline",
+                "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-site-config",
+                "cq:xfMasterVariation": true,
+                "jcr:created": "Mon Jul 05 2021 13:29:53 GMT-0700",
+                "cq:xfVariantType": "web",
+                "cq:tags": [],
+                "sling:resourceType": "brookfieldpropertiesprogram/components/xf-site-config"
+            }
+        }
+    }
+}

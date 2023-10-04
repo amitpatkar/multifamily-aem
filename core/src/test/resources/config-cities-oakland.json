@@ -1,0 +1,26 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Tue Aug 17 2021 20:58:44 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Oakland-2",
+        "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-city-config",
+        "jcr:created": "Tue Aug 17 2021 20:58:44 GMT-0700",
+        "cq:lastModified": "Sat Aug 21 2021 18:11:54 GMT-0700",
+        "cq:xfVariantType": "web",
+        "amit":"patkar",
+        "theme":"theme-eugene",
+        "activeVariation": "back_to_school",
+        "cq:tags": ["experience-fragments:variation/web"],
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-city-config",
+        "textIsRich": "true",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+        }
+    }
+}

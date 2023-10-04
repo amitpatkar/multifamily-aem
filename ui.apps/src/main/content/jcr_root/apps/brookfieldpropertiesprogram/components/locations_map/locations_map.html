@@ -1,0 +1,184 @@
+<sly
+        data-sly-use.globalConfig="com.brookfieldpropertiesprogram.core.models.GlobalConfigRequestModel"
+        data-sly-use.pageInfo ="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+        data-sly-use.aList="${'availabilitylist.js'}"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/*  data-sly-use.propertyList="com.brookfieldpropertiesprogram.core.models.PropertyConfigListModel" */-->
+<div class="cmp-availability__title">
+    <h2 class="large-title">Claim Your Space</h2>
+</div>
+<div class="cmp-availability__search">
+    <div class="cmp-availability__wrapper grid-container">
+        <div class="cmp-availability__filters">
+            <form
+                    class="cmp-form"
+                    id="availability-filters"
+                    name="availability-filters"
+                    novalidate>
+                <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                    <div class="cmp-form-text">
+                        <label for="availability-filter-move-in-date">${currentStyle.lblMoveInDate || 'MOVE-IN DATE'}</label>
+                        <duet-date-picker required identifier="availability-filter-move-in-date" name="moveindate"></duet-date-picker>
+                    </div>
+                    <p class="cmp-form-error-message">Required Field</p>
+                </div>
+                <div class="cmp cmp-options home-type">
+                    <fieldset class="form-group checkbox">
+                        <legend>${currentStyle.lblHomeType ? currentStyle.lblHomeType : 'HOME TYPE'}</legend>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="studio">
+                                <span>${currentStyle.lblStudio ? currentStyle.lblStudio : 'STUDIO'}</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="1bedroom">
+                                <span>${currentStyle.lbl1Bd ? currentStyle.lbl1Bd : '1 BD'}</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="2bedroom+">
+                                <span>${currentStyle.lbl2Bd ? currentStyle.lbl2Bd : '2+ BD'}</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="pent">
+                                <span>${currentStyle.lblPH ? currentStyle.lblPH : 'PH'}</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label>
+                                <input type="checkbox" name="hometype" value="town">
+                                <span>${currentStyle.lblTH ? currentStyle.lblTH : 'TH'}</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="cmp cmp-options min-rent">
+                    <div class="form-group drop-down">
+                        <label for="availability-filter-min-rent">${currentStyle.lblMinRent ? currentStyle.lblMinRent : 'Min Rent'}</label>
+                        <select name="minrent" id="availability-filter-min-rent" class="form-control">
+                            <option value="0">Select</option>
+                            <option data-sly-repeat="${aList.rentOptList}" value="${item}">$${item}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cmp cmp-options max-rent">
+                    <div class="form-group drop-down">
+                        <label for="availability-filter-max-rent">${currentStyle.lblMaxRent ? currentStyle.lblMaxRent : 'Max Rent'}</label>
+                        <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                            <option value="Infinity">Select</option>
+                            <option data-sly-repeat="${aList.rentOptList}" value="${item}">$${item}</option>
+                            <option value="Infinity">$${aList.maxRent}+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cmp-availability__buttons">
+                    <button
+                            type="button"
+                            id="availability_filter_clear"
+                            class="cmp-form-button btn btn-ghost btn-submit"
+                            name="availabilityFilterClear">Clear All Filters</button>
+                    <button
+                            data-sly-test='${!properties.linkToAvailability}'
+                            type="submit"
+                            id="availability_filter_submit"
+                            class="cmp-form-button btn btn-dark btn-submit"
+                            name="availabilityFilterSubmit">${currentStyle.lblRefineResults ? currentStyle.lblRefineResults : 'Refine Results'}</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="temp-grid-container">
+<poi-map map-id="${properties.mapId}" autocenter class="locations-map">
+    <div class="cmp-poi-map__container--map">
+        <div class="map"></div>
+    </div>
+    <div class="cmp-poi-map__container--points">
+        <div class="cmp-poi-map__points">
+            <div class="cmp-poi-map__categories">
+
+                <sly data-sly-list.property="${pageInfo.getLocationSpecificPropertyConfigModels}">
+                    <locations-marker data-sly-test="${property.latitude && property.longitude}" one-site-id="${property.onesiteID @ context='unsafe'}" lat="${property.latitude}" lng="${property.longitude}" color="${properties.markerColor}" zoom="${properties.markerZoomLevel}" class="cmp-poi-map__category-item">
+
+                        <sly data-sly-use.id="random.js" />
+                        <h2 class="cmp-poi-map__category-header">
+                            <button
+                                    data-property-name="${property.title}"
+                                    id="poi-map-category-button-${id}"
+                                    class="cmp-poi-map__category-button"
+                                    aria-controls="poi-map-category-panel-${id}"
+                                    aria-expanded="false">
+                            <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">${property.title}</span>
+                                <span class="cmp-poi-map__category-text">${property.address}, ${property.stateCode} ${property.zipCode}</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                        </h2>
+                        <div
+                                id="poi-map-category-panel-${id}"
+                                class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden"
+                                role="region"
+                                aria-labelledby="poi-map-category-button-${id}">
+                                <div class="cmp-poi-map__container--image">
+                                    <div class="cmp-poi-map__image">
+                                        <img src="${property.featuredImage}" alt="${property.title}">
+                                    </div>
+                                    <!--/*add the banner html if there is a promo*/-->
+                                    <div data-sly-test="${property.specialsTeaser}" class="cmp-poi-map__banner">
+                                        <p>${property.specialsTeaser}</p>
+                                    </div>
+                                    <!--/*add the banner html if there is a promo*/-->
+                                </div>
+                                <div class="cmp-poi-map__container--info">
+                                    <div class="cmp-poi-map__apartment-type">
+                                        <span></span>
+                                    </div>
+                                    <div class="cmp-poi-map__apartment-price">
+                                        <p>Starting at $<span></span></p>
+                                    </div>
+
+                                </div>
+                                <div class="cmp-poi-map__container--amenity">
+                                    <!--/*display up to 5 amenities as tooltips */-->
+                                    <div class="cmp-poi-map__amenity-tooltip tooltip-container" data-sly-repeat.amenity="${property.amenities}" >
+                                        <sly data-sly-use.amenitiesData="${'amenities-data.js' @total=property.amenities.size, capAt=5}" data-sly-test="${amenityList.count <= 5}">
+                                            <button type="button" aria-describedby="amenity-${amenityList.count}-tooltip-${id}">
+                                                <!--/*replace the image src and alt (if there is a description for image) with dynamic info*/-->
+                                                <img src="/content/dam/common/icons/${amenity}.svg" alt="${property.amenities[amenity]}">
+                                            </button>
+                                            <!--/*use the index and uuid in tooltip id*/-->
+                                            <p id="amenity-${amenityList.count}-tooltip-${id}" role="tooltip" hidden>${property.amenities[amenity]}</p>
+                                        </sly>
+                                    </div>                                    
+                                    <!--/*add the following element if there are more than 5 amenities, replace "65" with total number minus 5 */-->
+                                    <div data-sly-test="${amenitiesData.isRemainder}" class="cmp-poi-map__amenity-additional">+${amenitiesData.remainder}</div>
+                                </div>
+                                <div class="cmp-poi-map__container--cta">
+                                    <a href="/content/portfolio/en/properties/${property.name}.html" class="btn btn-primary btn-ghost">Property details</a>
+                                    <a href="/content/portfolio/en/properties/${property.name}/commoncontent.apartment-availability.html" class="btn btn-primary btn-dark" target="_blank">View availability</a>
+                                </div>
+                        </div>
+                    </locations-marker>
+                </sly>
+
+            </div>
+        </div>
+    </div>
+</poi-map>
+<div class="cmp-poi-map--locations--empty-result hidden">
+    No apartments were found. Try <a href="#">resetting</a> the filters.
+</div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=${globalConfig.googleMapsAPIKey}"></script>
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>

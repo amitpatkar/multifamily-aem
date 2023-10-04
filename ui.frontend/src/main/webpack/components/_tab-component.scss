@@ -1,0 +1,88 @@
+
+.tab-header {
+    @include breakpoint-up(desktop){
+        position: relative;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 32px 1fr 32px;
+        >* {
+          grid-row: 1;
+          grid-column: 2/3;
+          width: 100%;
+          position: absolute;
+          top: -80px;
+        }
+    }
+    @include breakpoint-up(desktop-medium){
+        grid-template-columns: 70px 1fr 70px;
+    }
+    @include breakpoint-up(desktop-large) {
+        grid-template-columns: 1fr 1380px 1fr;
+    }
+}
+.tab-buttons {
+    @include breakpoint-down(tablet) { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    @include breakpoint-up(desktop) { 
+        height: 80px;
+        background-color: rgba(var(--bg-dark-rgb), 0.9);
+    }
+    h2 {
+        display: inline-block;
+        @include breakpoint-down(tablet) { 
+            flex-basis: 50%;
+        }
+        @include breakpoint-up(desktop) { 
+            vertical-align: middle;
+        }
+    }
+    button[role="tab"]{
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: $universal-salt;
+       
+        text-transform: uppercase;
+        &[aria-selected="true"]{
+            background: $universal-salt;
+            color: $universal-alto;
+        }
+        @include breakpoint-down(tablet) { 
+            @include interactive-text();
+            margin: 0;
+            width: 100%;
+            background-color: rgba(var(--bg-dark-rgb), 0.9);
+            text-align: left;
+            &:first-of-type {
+                padding: 19px 20px 18px 30px;
+            }
+            &:nth-of-type(2) {
+                padding: 19px 30px 18px 20px;
+            }
+        }
+
+        @include breakpoint-up(desktop) { 
+            padding: 27px 40px 28px;
+            height: 80px;
+            @include link-text();
+            text-decoration: underline;
+            &[aria-selected="true"]{
+                @include medium-title();
+                text-decoration: none;
+                padding: 25px 40px 20px;
+            }
+        }
+
+    }
+}
+.tab-panel {
+    &.current {
+        display: block;
+    }
+    &.hidden {
+        display: none;
+    }
+}

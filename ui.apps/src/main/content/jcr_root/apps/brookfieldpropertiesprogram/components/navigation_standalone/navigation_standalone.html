@@ -1,0 +1,82 @@
+<sly
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+>
+
+    <div class="cmp-header__navbar" data-cmp-header-element="navbar">
+        <div class="cmp-header__logo ${pageInfo.propertyConfigModel.standaloneLogoType == 'square' ? 'cmp-header__logo--square' : 'cmp-header__logo--rectangle'}" data-sly-test="${!pageInfo.siteConfigModel.hideLogo}">
+            <a href="/content/standalone/${pageInfo.propertyConfigModel.name}/index.html">
+                <img src="${pageInfo.propertyConfigModel.logo @context='uri'}" alt="${pageInfo.propertyConfigModel.title}" />
+            </a>
+        </div>
+        <div class="cmp-header__links" data-cmp-header-element="desktopMenu">
+            <div class="cmp-header__links--left" data-cmp-header-element="desktopMenuLeft">
+                <a data-sly-repeat="${pageInfo.siteConfigModel.headerMenuLinksLeft}" id="${item.id}" href="${item.absUrl}" target="${item.target}" class="cmp-header__link ${item.cssClass}"  data-cmp-clickable="true">${item.label}</a>
+            </div>
+            <div class="cmp-header__links--right" data-cmp-header-element="desktopMenuRight">
+                <button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button>
+                <div class="cmp-header__tabletTriggerWrap">
+                    <button class="cmp-header__tabletTrigger"
+                            aria-expanded="false"
+                            aria-controls="cmp-header-tabletMenu">
+                        <span class="visually-hidden">open</span>
+                    </button>
+                </div>
+                <sly data-sly-list="${pageInfo.siteConfigModel.headerMenuLinksRight}">
+                        <a id="${item.id}" href="${item.absUrl}" target="${item.target}" class="cmp-header__link ${item.cssClass}"  data-cmp-clickable="true">${item.label}</a>
+                </sly>
+            </div>
+        </div>
+
+        <div class="cmp-header__mobileTriggerWrap">
+            <button class="cmp-header__mobileTrigger"
+                    data-cmp-header-element="menuTrigger"
+                    aria-expanded="false"
+                    aria-controls="cmp-header-mobileMenu">
+                <span class="cmp-header__mobileTrigger--close">CLOSE</span>
+                <span class="cmp-header__mobileTrigger--open">MENU</span>
+            </button>
+        </div>
+    </div>
+    <div id="cmp-header-tabletMenu" class="cmp-header__tabletMenu hidden">
+        <div class="cmp-header__tabletMenu--body">
+            <ul>
+                <sly data-sly-list="${pageInfo.siteConfigModel.headerMenuLinksRight}">
+                        <li><a id="${item.id}" href="${item.absUrl}" target="${item.target}" class="cmp-header__link ${item.cssClass}"  data-cmp-clickable="true">${item.label}</a></li>
+                </sly>
+            </ul>
+        </div>
+    </div>
+    <div id="cmp-header-mobileMenu" class="cmp-header__mobileMenu hidden">
+        <div class="cmp-header__mobileMenu--body">
+            <ul class="cmp-header__mobileMenu--top">
+                <li data-sly-repeat="${pageInfo.siteConfigModel.headerMenuLinksLeft}"><a href="${item.absUrl}" target="${item.target}" class="cmp-header__mobileMenu--link ${item.cssClass}" data-cmp-clickable="true">${item.label}</a></li>
+            </ul>
+            <ul class="cmp-header__mobileMenu--bottom">
+                <li><button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button></li>
+                <sly data-sly-list="${pageInfo.siteConfigModel.headerMenuLinksRight}">
+                    <!--<sly data-sly-test="${item.isButton}">
+                        <li><button id="${item.id}" class="schedule-tour-popup-button btn btn-secondary btn-light" >${item.label}</button></li>
+                    </sly>-->
+                        <li><a id="${item.id}" href="${item.absUrl}" target="${item.target}" class="cmp-header__mobileMenu--link ${item.cssClass}"  data-cmp-clickable="true">${item.label}</a></li>
+                </sly>
+            </ul>
+            <div class="cmp-header__mobileMenu--divider"></div>
+            <ul class="cmp-header__mobileMenu--info">
+                <li>
+                    <img src="/content/dam/common/icons/map_light.svg" alt="Map" />
+                    <a target="_blank" href="${pageInfo.propertyConfigModel.getMapLink}" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                </li>
+                <li>
+                    <img src="/content/dam/common/icons/phone_light.svg" alt="Phone"/>
+                    <a href="tel:${pageInfo.propertyConfigModel.phoneNumber}" class="cmp-header__mobileMenu--phone">${pageInfo.propertyConfigModel.getPhoneNumberFormatted}</a>
+                </li>
+                <!--/*
+                <li>
+                    <img src="/content/dam/common/icons/chat_light.svg" alt=""/>
+                    <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                </li>
+                */-->
+            </ul>
+        </div>
+    </div>
+</sly> 

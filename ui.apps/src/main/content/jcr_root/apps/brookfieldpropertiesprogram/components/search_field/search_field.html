@@ -1,0 +1,36 @@
+<sly
+        data-sly-use.globalConfig="com.brookfieldpropertiesprogram.core.models.GlobalConfigRequestModel"
+        data-sly-use.propertyList="com.brookfieldpropertiesprogram.core.models.PropertyConfigListModel"
+         data-sly-use.searchInputFieldModel="com.brookfieldpropertiesprogram.core.models.SearchInputFieldModel"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<div class="cmp-rentdotSearch__wrapper grid-row">
+    <form id="autocomplete-form" autocomplete="off">
+        <label for="autocomplete-input" id="autocomplete-label" class="autocomplete-label">
+            ${properties.label}
+        </label>
+        <div class="autocomplete-wrapper">
+            <div role="combobox"
+                 aria-expanded="false"
+                 aria-owns="autocomplete-suggestions"
+                 aria-haspopup="listbox"
+                 id="autocomplete-combobox">
+                <input type="text"
+                       class="cmp-form-text__text"
+                       placeholder="${properties.placeholder}"
+                       aria-autocomplete="list"
+                       aria-controls="autocomplete-suggestions"
+                       id="autocomplete-input">
+            </div>
+            <div
+                    role="listbox"
+                    aria-labelledby="autocomplete-label"
+                    class="autocomplete-suggestions hidden"
+                    id="autocomplete-suggestions">
+            </div>
+        </div>
+    </form>
+</div>
+<!--/* This will add the json at the body */-->
+<sly data-sly-use.bodyJavascripts="${'com.brookfieldpropertiesprogram.core.models.BodyJavaScriptRequestModel' @scriptKeys=['SearchInputFieldModel'], scriptKeyValues=[searchInputFieldModel.data]}"/>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>

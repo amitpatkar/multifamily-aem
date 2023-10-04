@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    videoPath="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4">
+   </jcr:root>

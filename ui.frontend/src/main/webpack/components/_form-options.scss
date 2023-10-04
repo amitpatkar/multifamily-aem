@@ -1,0 +1,230 @@
+.cmp-form-options {}
+.cmp-form-options__legend {}
+.cmp-form-options__field-label {}
+.cmp-form-options__field {}
+.cmp-form-options__field--checkbox {}
+.cmp-form-options__field--radio {}
+.cmp-form-options__field-description {}
+.cmp-form-options__label {}
+.cmp-form-options__drop-down-field {}
+.cmp-form-options__multi-drop-down-field {}
+.cmp-form-options__help-message {}
+
+.cmp-options {
+    fieldset {
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include breakpoint-up(desktop) { 
+            flex-wrap: nowrap;
+        }
+        legend {
+            width: 100%;
+            margin-bottom: 10px;
+            @include form-label;
+            @include breakpoint-up(desktop) { 
+                margin-bottom: 14px;
+            }
+        }
+        .checkbox-item, .radio-item {
+            height: 50px;
+            background: var(--form-input-bg);
+            &:hover {
+                label {
+                    input[type="checkbox"],
+                    input[type="radio"] {
+                        &:not(:disabled) { 
+                            &+span {
+                                border: 2px solid rgba(var(--universal-black-rgb), 0.35);
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+            label {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                height: 50px;
+                input, span, &::after {
+                    grid-column: 1;
+                    grid-row: 1;
+                    align-self: center;
+                    justify-self: center;
+                }
+                span {
+                    @include form-option-selectable;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 84%;
+                    border: 2px solid transparent;
+                    border-radius: 2px;
+                    text-decoration: underline;
+                }
+                input[type="checkbox"],
+                input[type="radio"]{
+                   @include visually-hidden;
+                   &:not(:disabled) {
+                        &:checked + span  {
+                            border: 2px solid $universal-alto;
+                            text-decoration: none;
+                        }
+                        &:focus + span,
+                        &:focus-visible + span  {
+                            outline: 1px solid var(--focus-outline);
+                            outline-offset: 1px;
+                        }   
+                   }
+
+                }
+                input[type="checkbox"][disabled] {
+                    &+span {
+                        text-decoration: none;
+                        color: rgba(var(--universal-black-rgb), 0.4);
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+    &.move-in-date {
+        fieldset {
+            .radio-item {
+                width: 25%;
+                &:nth-of-type(1) {
+                    border-radius: 6px 0 0 6px;
+                    padding-left: 4px;
+                }
+                &:nth-of-type(4) {
+                    border-radius: 0 6px 6px 0;
+                    padding-right: 4px;
+                }
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3){
+                    label {
+                        position: relative;
+                    }
+                    label::after {
+                        content: "";
+                        background-color: $universal-salt;
+                        display: inline-block;
+                        width: 2px;
+                        height: 14px;
+                        position: absolute;
+                        right: 0;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.checked {
+                        label::after {
+                            background-color: transparent;
+                        }
+                    }                  
+                }
+
+            }
+
+        }
+    }
+    &.home-type {
+        fieldset {
+            .checkbox-item {
+                &:nth-of-type(1),
+                &:nth-of-type(4) {
+                    border-radius: 6px 0 0 6px;
+                    padding-left: 4px;
+                }
+                &:nth-of-type(3),
+                &:nth-of-type(5) {
+                    border-radius: 0 6px 6px 0;
+                    padding-right: 4px;
+                }
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(4){
+                    label {
+                        position: relative;
+                    }
+                    label::after {
+                        content: "";
+                        background-color: $universal-salt;
+                        display: inline-block;
+                        width: 2px;
+                        height: 14px;
+                        position: absolute;
+                        right: 0;
+                    }
+
+                    &:not(.checked):hover,
+                    &:focus,
+                    &.checked:not(.border-right-removed) {
+                        label::after {
+                            background-color: transparent;
+                        }
+                    }                   
+                }
+                &:not(:nth-of-type(3)) {
+                    &.checked.border-right-removed {
+                        label span {
+                            border-right:0;
+                            border-radius: 2px 0 0 2px;
+                        }
+
+                    }
+                }
+                &:not(:nth-of-type(4)) {
+                    &.checked.border-left-removed {
+                        label span {
+                            border-left: 0;
+                            border-radius: 0 2px 2px 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    &.max-rent, 
+    &.min-rent,
+    &.type-of-request,
+    &.property,
+    &.building,
+    &.state,
+    &.city,
+    &.neighborhood{
+        .drop-down {
+            label{
+                display: block;
+                margin-bottom: 10px;
+                @include form-label;
+                @include breakpoint-up(desktop) { 
+                    margin-bottom: 14px;
+                }
+            }
+            select {
+                @include form-select-box;
+                @include form-select-text;
+                option {
+                    @include form-select-text;
+                }
+                option:disabled {
+                    @include form-placeholder;
+                }
+
+            }
+        }
+
+    }
+}

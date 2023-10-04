@@ -1,0 +1,123 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2019 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<sly 
+    data-sly-use.images="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+    data-sly-use.gallery="${'gallery_uuid.js'}"    ></sly>
+<div class="cmp-gallery__inner--desktop grid-container" data-sly-test.hasImages="${images.menuLinks.size > 0}" data-layer-section="gallery">
+    <div class="grid-row">
+        <div class="glider-contain">
+            <div class="glider">
+                <div class="slide-contain" data-sly-repeat="${images.menuLinks}">
+                    <div class="slide-contents">
+                        <img src="${item.url}" 
+                            alt="${item.cssClass}" 
+                            data-image-caption="${item.label}">
+                    </div>
+                </div>           
+            </div>
+        </div>    
+        <div class="cmp-gallery__desktop-controls">
+            <div class="cmp-gallery__prev">
+                <button class="glider-prev-btn">
+                    <span class="visually-hidden">previous</span>
+                    <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 31L2 16L17 1" stroke="white" stroke-width="2"/>
+                    </svg>                                                      
+                </button>
+            </div>
+            <div class="cmp-gallery__caption">
+                <sly data-sly-list="${images.menuLinks}">
+                    <sly data-sly-test="${itemList.first}">
+                        <p class="cmp-gallery__caption--text">${item.label}</p>
+                        <p class="cmp-gallery__caption--index">
+                            <span class="image-current">1</span> of <span class="image-counts">${images.menuLinks.size}</span> Images
+                            <!--Replace the "5" to use the size/count/length of the image List/Array-->
+                        </p>
+                    </sly>
+                </sly>
+            </div>
+            <div class="cmp-gallery__next">
+                <button class="glider-next-btn">
+                    <span class="visually-hidden">next</span>
+                    <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 31L16 16L1 1" stroke="white" stroke-width="2"/>
+                    </svg>                                                   
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cmp-gallery__inner--mobile" data-sly-test="${hasImages}" data-layer-section="gallery">
+    <div class="cmp-gallery__mobile-wrapper">
+        <div class="cmp-gallery__mobile-image">
+            <!--update the "src" and "alt" to use the attributes of the first image-->
+            <sly data-sly-list="${images.menuLinks}">
+                <sly data-sly-test="${itemList.first}">
+                    <img src="${item.url}" 
+                         alt="${item.cssClass}" 
+                         data-image-caption="${item.label}">
+                </sly>
+        </div>
+        <div class="cmp-gallery__mobile-controls">
+            <h2>
+                <button data-a11y-dialog-show="gallery-dialog-${gallery.uuid}">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/images.svg" alt="Open Gallery">
+                        <span class="visually-hidden">Open the gallery of</span>
+                        <!--update the "5" to be total counts of images-->
+                        <span class="medium-title">${images.menuLinks.size} IMAGES</span>
+                </button>
+            </h2>
+        </div>
+    </div>
+    <div id="gallery-dialog-${gallery.uuid}" 
+         class="dialog-container gallery-dialog" 
+         aria-hidden="true"
+         aria-labelledby="gallery-title-${gallery.uuid}" 
+         aria-describedby="gallery-description-${gallery.uuid}">
+        <div class="dialog-overlay" data-a11y-dialog-hide></div>
+        <div class="dialog-content" role="document">
+            <button data-a11y-dialog-hide class="dialog-close">
+                <span>close</span>
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt="Close Lightbox"/>              
+            </button>
+            <!---for accessibility purpose, "gallery-title" and  "gallery-description" are used on the gallery dialog. Author should be able to edit them-->
+            <h1 id="gallery-title-${gallery.uuid}" class="visually-hidden">Gallery of ...</h1>
+            <p id="gallery-description-${gallery.uuid}" class="visually-hidden">Explore ...</p>
+            <div class="dialog-gallery-wrapper">
+                <div class="glider-contain">
+                    <div class="glider">
+                        <!--create html for each image, update the "src", "alt" of the <img> element; update the numbers in "slide-caption--title"; update the contents in "slide-caption--body -->
+                        <div class="slide-contain" data-sly-repeat="${images.menuLinks}">
+                            <div class="slide-contents">
+                                <div class="slide-imageWrap">
+                                    <div class="slide-image">
+                                        <img src="${item.url}" alt="Gallery Image ${itemList.count}">
+                                    </div>
+                                </div>
+                                <!--update the "5" to be total counts of images-->
+                                <!--update the "1" to be index( or index+1) of images-->
+                                <h3 class="slide-caption--title">${itemList.count}/${images.menuLinks.size} Images</h3>
+                                <p class="slide-caption--body">${item.label}</p>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>        
+            </div>            
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !hasImages, classAppend='cmp-text'}"></sly>

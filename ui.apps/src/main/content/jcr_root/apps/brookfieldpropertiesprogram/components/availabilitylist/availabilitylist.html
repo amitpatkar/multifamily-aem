@@ -1,0 +1,316 @@
+<sly
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.urlInfo="com.brookfieldpropertiesprogram.core.models.UrlInfoRequestModel"    
+    data-sly-use.aList="${'availabilitylist.js' @pageInfo=pageInfo}"/>
+<div id="availability" class="cmp-availability ${!properties.linkToAvailability ? '' : 'filters-only'}" data-cmp-component="availabilityfeed" data-layer-section="availability-feed">
+     <!--/* Search Result with a Tab of engrain */-->
+    <div data-sly-test.isNotWidgetAndHasEngrain="${!properties.linkToAvailability && pageInfo.propertyConfigModel.engrainSightMapID}" class="cmp-availability__header">       
+        <div data-sly-test.hasEngrain='${pageInfo.propertyConfigModel.engrainSightMapID}' class="cmp-availability__tabs" role="tablist" aria-label="Availability Search">
+            <h2><button role="tab" id="search-tab" aria-controls="search-panel"  aria-selected="true" data-tab-index=0>${currentStyle.lblTabTitle ? currentStyle.lblTabTitle : 'Claim Your Space'}</button></h2>
+            <h2><button role="tab" id="engrain-tab" aria-controls="engrain-panel"  aria-selected="false" tabindex="-1" data-tab-index=1>${currentStyle.lblTabTitleInteract @format=[pageInfo.propertyConfigModel.title]}</button></h2>
+        </div>
+        <!--/* Search Result without a Tab of engrain */-->
+    </div>
+    <!--/* Search Entry Widget */-->
+    <div data-sly-test="${!isNotWidgetAndHasEngrain}" class="cmp-availability__title">
+        <h2 class="large-title">${currentStyle.lblTabTitle ? currentStyle.lblTabTitle : 'Claim Your Space'}</h2>
+    </div>
+    <div class="cmp-availability__search ${!properties.linkToAvailability ? 'current' : ''}" role="${!properties.linkToAvailability ? 'tabpanel' : ''}" 
+         id="${!properties.linkToAvailability ? 'search-panel' : ''}" 
+         aria-labelledby="${!properties.linkToAvailability ? 'search-tab' : ''}" 
+         tabindex="${!properties.linkToAvailability ? '0':''}" data-tab-index="${!properties.linkToAvailability ? '0':''}">
+            <div class="cmp-availability__wrapper grid-container">
+                <div class="cmp-availability__filters">
+                    <div data-sly-test='${!properties.linkToAvailability}' class="cmp-availability__filterToggle">
+                        <button 
+                        class="filter-toggle-btn"
+                        id="availability-filter-toggle" 
+                        aria-controls="availability-filters"
+                        aria-expanded="false">
+                            <span class="text--open">Open Filter</span>
+                            <span class="text--collapse">Collapse Filter</span>
+                        </button>
+                    </div>
+                    <form
+                        class="cmp-form ${!properties.linkToAvailability ? 'availability-page-form' : ''}"
+                        id="availability-filters"
+                        data-sly-attribute.action="${urlInfo.aptAvailabilityMapped}"
+                        method="get"
+                        name="availability-filters ${pageInfo.siteConfigModel.rootContentPath}"
+                        novalidate>
+                        <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                            <div class="cmp-form-text">
+                                <label for="availability-filter-move-in-date">${currentStyle.lblMoveInDate}</label>
+                                <duet-date-picker required identifier="availability-filter-move-in-date" name="moveindate"></duet-date-picker>
+                            </div>
+                            <p class="cmp-form-error-message">Required Field</p>
+                        </div>
+                        <div class="cmp cmp-options home-type">
+                            <fieldset class="form-group checkbox">
+                                <legend>${currentStyle.lblHomeType ? currentStyle.lblHomeType : 'HOME TYPE'}</legend>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="hometype" value="studio">
+                                        <span>${currentStyle.lblStudio ? currentStyle.lblStudio : 'STUDIO'}</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="hometype" value="1bedroom">
+                                        <span>${currentStyle.lbl1Bd ? currentStyle.lbl1Bd : '1 BD'}</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="hometype" value="2bedroom+">
+                                        <span>${currentStyle.lbl2Bd ? currentStyle.lbl2Bd : '2+ BD'}</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="hometype" value="pent">
+                                        <span>${currentStyle.lblPh ? currentStyle.lblPh : 'PH'}</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label>
+                                        <input type="checkbox" name="hometype" value="town">
+                                        <span>${currentStyle.lblTh ? currentStyle.lblTh : 'TH'}</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="cmp cmp-options min-rent">
+                            <div class="form-group drop-down">
+                                <label for="availability-filter-min-rent">${currentStyle.lblMinRent ? currentStyle.lblMinRent : 'Min Rent'}</label>
+                                <select name="minrent" id="availability-filter-min-rent" class="form-control">
+                                    <option value="0">SELECT</option>
+                                    <option data-sly-repeat="${aList.rentOptList}" value="${item}">$${item}</option>
+        <!--                            <option value="3000">$3000</option>-->
+        <!--                            <option value="4000">$4000</option>-->
+        <!--                            <option value="5000">$5000</option>-->
+        <!--                            <option value="6000">$6000</option>-->
+        <!--                            <option value="7000">$7000</option>-->
+        <!--                            <option value="8000">$8000</option>-->
+        <!--                            <option value="9000">$9000</option>-->
+        <!--                            <option value="10000">$10000</option>-->
+        <!--                            <option value="Infinity">$10000+</option>-->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cmp cmp-options max-rent">
+                            <div class="form-group drop-down">
+                                <label for="availability-filter-max-rent">${currentStyle.lblMaxRent ? currentStyle.lblMaxRent : 'Max Rent'}</label>
+                                <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                                    <option value="Infinity">SELECT</option>                                                       
+                                    <option data-sly-repeat="${aList.rentOptList}" value="${item}">$${item}</option>
+                                    <option value="Infinity">$${currentStyle.rentMax}+</option>
+                                    <!--/*
+                                    <option value="3000">$3000</option>
+                                    <option value="4000">$4000</option>
+                                    <option value="5000">$5000</option>
+                                    <option value="6000">$6000</option>
+                                    <option value="7000">$7000</option>
+                                    <option value="8000">$8000</option>
+                                    <option value="9000">$9000</option>
+                                    <option value="10000">$10000</option>
+                                    <option value="Infinity">$10000+</option>
+                                    */-->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cmp-availability__buttons">
+                            <button
+                                    type="button"
+                                    id="availability_filter_clear"
+                                    class="cmp-form-button btn btn-ghost btn-submit"
+                                    name="availabilityFilterClear">Clear All Filters</button>
+                            <button
+                                    data-sly-test='${!properties.linkToAvailability}'
+                                    type="submit"
+                                    id="availability_filter_submit"
+                                    class="cmp-form-button btn btn-dark btn-submit"
+                                    name="availabilityFilterSubmit">${currentStyle.lblRefineResults ? currentStyle.lblRefineResults : 'Refine Results'}</button>
+                            <button
+                                    data-sly-test='${properties.linkToAvailability}'
+                                    data-sly-use.viewResultsDataLayer="${'com.brookfieldpropertiesprogram.core.models.NavigationLink' @label='View Results',id='btn_view_results',injectedName='availabilityFilterSubmit'}"
+                                    type="submit"
+                                    id="btn_view_results"
+                                    class="cmp-form-button btn btn-dark btn-submit"
+                                    name="availabilityFilterSubmit" data-cmp-data-layer='${viewResultsDataLayer.getDataLayer}' data-cmp-clickable="true">${currentStyle.lblViewResults ? currentStyle.lblViewResults : 'View Results'}</button>
+                        </div>
+                    </form>
+
+                </div>
+                
+                <!--skeleton loader html start-->
+                <div class="cmp-availability__loader hidden" data-sly-test='${!properties.linkToAvailability}'>
+                    <p class="visually-hidden">Loading search results</p>
+                    <div class="cmp-availability__loader-inner" aria-hidden="true">
+                        <ul>
+                            <li class="first-line">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                            <li>
+                                <span class="floor-col"></span>
+                                <span class="type-col"></span>
+                                <span class="size-col"></span>
+                                <span class="rent-col"></span>
+                                <span class="availability-col"></span>
+                                <span class="cta-col"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--skeleton loader html end-->
+                
+                <div class="cmp-availability__result-wrapper" data-sly-test='${!properties.linkToAvailability}'>
+                    <div class="cmp-availability__results" >
+                        <div class="cmp-availability__results_table">
+                            <table id="availability-result-table">
+                                <caption class="visually-hidden">${currentStyle.lblSearchResults ? currentStyle.lblSearchResults : 'Availability Search Results'}</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" tabindex="0" class="sorting" data-sort-field="name">
+                                            <span>${currentStyle.lblFloorPlan ? currentStyle.lblFloorPlan : 'Floor Plan'}</span>
+                                        </th>
+                                        <th scope="col" tabindex="0" class="sorting" data-sort-field="type">
+                                            <span>${currentStyle.lblBedBath ? currentStyle.lblBedBath : 'Bed | Bath'}</span>
+                                        </th>
+                                        <th scope="col" tabindex="0" class="sorting" data-col="area" data-sort-field="area">
+                                            <span>${currentStyle.lblSize ? currentStyle.lblSize : 'Size'}</span>
+                                        </th>
+                                        <th scope="col" tabindex="0" class="sorting asc" data-sort-field="minRent">
+                                            <span>${currentStyle.lblRent ? currentStyle.lblRent : 'Rent'}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span>${currentStyle.lblAvailability ? currentStyle.lblAvailability : 'availability'}</span>
+                                        </th>
+                                        <th scope="col">
+                                            <span class="visually-hidden">${currentStyle.lblViewApartment ? currentStyle.lblViewApartment : 'view apartment'}</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody data-view-apartment-link="${urlInfo.aptTypeMapped}" data-property-standalone-base-mapped="${urlInfo.propertyStandaloneBaseMapped}" data-is-collection="${aList.isCollection}">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cmp-availability__results_list">
+                            <div class="cmp-availability__results-sorting">
+                                <label for="availability-sort-field">Sort By</label>
+                                <select name="availability-sort-field" id="availability-sort-field">
+                                    <option value="name" selected>${currentStyle.lblFloorPlan ? currentStyle.lblFloorPlan : 'Floor Plan'}</option>
+                                    <option value="type">${currentStyle.lblBedBath ? currentStyle.lblBedBath : 'Bed | Bath'}</option>
+                                    <option value="area">${currentStyle.lblSize ? currentStyle.lblSize : 'Size'}</option>
+                                    <option value="minRent" selected>${currentStyle.lblRent ? currentStyle.lblRent : 'Rent'}</option>
+                                </select>
+                            </div>
+                            <ul id="availability-result-list" data-view-apartment-link="${urlInfo.aptTypeMapped}"  data-property-standalone-base-mapped="${urlInfo.propertyStandaloneBaseMapped}" data-is-collection="${aList.isCollection}"></ul>
+                        </div>
+                        <div class="cmp-availability__paginate cmp-availability__paginate--table"></div>
+                        <div class="cmp-availability__paginate cmp-availability__paginate--list"></div>
+                        <div class="cmp-availability__disclaimer">
+                            <p class="legal-text">${pageInfo.propertyConfigModel.specialsDisclaimer ? pageInfo.propertyConfigModel.specialsDisclaimer : '*Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select "View Apartment" to see all other rate options.' @context='html'}</p>
+                        </div>
+                    </div>
+                    <div data-sly-test='${!properties.linkToAvailability}' class="cmp-availability__emptyResults hidden">
+                        <p>${currentStyle.lblNoUnits ? currentStyle.lblNoUnits :'No Units Available'}</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div data-sly-test="${hasEngrain && !properties.linkToAvailability}" class="cmp-availability__engrain hidden" role='tabpanel' id="engrain-panel" aria-labelledby="engrain-tab" tabindex="0" data-tab-index=1>
+        <div class="cmp-availability__iframe">
+            <div class="engrain__wrapper" data-cmp-component="engrain">
+                <iframe id="engrain-sightmap"
+                        data-sightmap-hide-ui="${properties.hideUI}"
+                        data-sightmap-id="${pageInfo.propertyConfigModel.engrainSightMapID}"
+                        frameborder="0"></iframe>
+            </div>
+        </div>
+        <!--/* Below Statement will inject javascripts configured in the Policy at the end of the page */-->
+        <sly data-sly-use.bodyJavascripts="${'com.brookfieldpropertiesprogram.core.models.BodyJavaScriptRequestModel' @scriptKeys=['engrainSightMap','engrainSightMapInit']}"/>
+    </div>
+
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

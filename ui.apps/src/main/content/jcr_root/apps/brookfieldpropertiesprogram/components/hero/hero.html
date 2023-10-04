@@ -1,0 +1,51 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"     
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     data-sly-use.hero="${'hero.js' @ title=updatedProps.properties.title, pageInfo=pageInfo, bgImagePath=updatedProps.properties.bgImagePath}"
+     class="cmp-hero__wrapper grid-container ${ ( properties.animationBehavior=='enabled' )  ||   (pageInfo.valueMapFinal['site.animationEnableAll'] && (!properties.animationBehavior || properties.animationBehavior=='disabled')) ? 'animation-on' : ''}" data-sly-attribute.data-cmp-component="${hero.data_cmp_class}">
+    <div data-sly-test="${hero.showImage}" class="cmp-hero__media">
+        <img src="${hero.bgImagePath @context='uri'}" alt="${hero.bgImageLabel}"/>
+    </div>
+    <div data-sly-test="${hero.showVideo}" class="cmp-hero__media cmp-videoPlayer">
+        <video src="${properties.bgImagePath @context='uri'}" 
+               preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+            Your browser does not support the video tag.
+        </video>
+    </div>    
+    <div data-sly-test="${properties.iFrame && properties.isPlayInPlace}" class="cmp-hero__media">
+        ${properties.iFrame @context='unsafe'}
+    </div>    
+    <div data-sly-test="${updatedProps.getProperties.logoImagePath}" class="cmp-hero__logo">
+        <img src="${updatedProps.getProperties.logoImagePath @context='uri'}" alt="${updatedProps.getProperties.logoImageLabel ? updatedProps.getProperties.logoImageLabel : 'Banner Logo'}"/>
+    </div>
+    <div data-sly-test="${hero.title}" class="cmp-hero__title">
+        <h1 class="hero-title">${hero.title}</h1>
+    </div>    
+    <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+    <div data-sly-test.hasBannerBadge="${properties.bannerBadgeImagePath}" class="cmp-hero__banner cmp-hero__banner--badge">
+        <img src="${updatedProps.properties.bannerBadgeImagePath @context='uri'}" alt="${properties.bannerBadgeImageLabel ? properties.bannerBadgeImageLabel : 'Banner Badge Image'}" />
+    </div>    
+    <!--Banner badge html --> 
+    <div data-sly-test.hasBannerTitle="${!hasBannerBadge && properties.bannerTitle}" class="cmp-hero__banner cmp-hero__banner--default">
+        <div class="cmp-hero__banner-title">
+            ${properties.bannerTitle @context='html'}
+        </div>
+        <div data-sly-test="${cta && cta.label}"  class="cmp-hero__banner-cta">
+            <a href="${cta.absUrl @context='uri'}" target="${cta.target}" class="btn btn-primary-alt">${cta.label}</a>
+        </div>
+    </div>	
+
+    <div data-sly-test="${!hasBannerTitle && !hasBannerBadge }" class="cmp-hero__cta">
+        <button data-sly-test.isVirtualTourCTA="${hero.isVirtualTour && (properties.iFrame || pageInfo.propertyConfigModel.matterportID || pageInfo.propertyConfigModel.panoskinTourID || hero.peekURL || hero.tourId) && !properties.isPlayInPlace}" class="btn btn-submit btn-light" data-virtualtour-src="" data-virtualtour-title="" data-a11y-dialog-show="virtualtour-dialog">Begin Virtual Tour</button>
+        <a data-sly-test="${!properties.isVirtualTour && cta && cta.label}" target="${cta.target}" href="${cta.absUrl @context='uri'}" class="btn btn-submit btn-light">${cta.label}</a>
+    </div>
+
+    <div data-sly-test="${hero.showVideo && !properties.hideMuteForVideo}" class="cmp-hero__sound-control">
+        <button class="btn-soundControl btn-soundControl--unmute">
+            <span class="visually-hidden">Unmute the video</span>
+        </button>
+    </div>    
+    <!--modal for playing the virtual tour video end-->
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.bgImageLabel, classAppend='cmp-text'}"></sly>

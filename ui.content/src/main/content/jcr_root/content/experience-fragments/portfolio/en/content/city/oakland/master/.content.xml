@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-18T20:16:57.127-07:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/common/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Oakland"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid">
+            <section_100
+                cq:styleIds="[678000,668000]"
+                jcr:created="{Date}2021-08-18T16:27:34.205-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-18T16:30:12.762-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                btnType="[btn-primary,btn-primary]"
+                copy="&lt;p>Testsdfinsdf&lt;/p>&#xd;&#xa;"
+                displayAddress="false"
+                label="[,]"
+                lead="&lt;p>Testsdfinsdf&lt;/p>&#xd;&#xa;"
+                textIsRich="[true,true,true]"
+                url="[,]"/>
+            <section_100_video
+                jcr:created="{Date}2021-08-18T20:16:30.489-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-18T20:16:30.489-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/section_100_video"
+                videoPath="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,32 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.urlInfo="com.brookfieldpropertiesprogram.core.models.UrlInfoRequestModel"
+     >
+    <div class="grid-container">        
+        <ul class="cmp-apartmentDetail__unit-list">
+            {{#if group.units}}
+            {{#eachWithLimit group.units 3}}                    
+            <li>
+                <div class="cmp-apartmentDetail__unit">                
+                    <p class="label-text floor-number">${address.unitNumber}</p>
+                    <h3><span class="small-title">{{floorPlan.name}}</span></h3>
+                    <p><span class="label-text">{{@root.group.type}} | {{@root.group.area}} sq. ft.</span></p>
+                    <p><span class="label-text">Starting at \${{rent}}/month**</span></p>
+                    <p><a href="{{olLink}}"  x-cq-linkchecker="skip" class="schedule-tour-popup-button btn btn-secondary btn-dark">Apply Now</a></p>
+                </div>
+            </li>                           
+            {{/eachWithLimit}}
+            {{/if}}
+            <li>
+                <div class="cmp-apartmentDetail__search">
+                    <h4 class="intermediate-title">Not finding the apartment of your dreams?</h4>
+                    <p><a href="${urlInfo.aptAvailabilityMapped}" class="btn btn-primary btn-light">Return to search</a></p>
+                </div>
+            </li>
+        </ul>        
+        <div class="cmp-apartmentDetail__disclaimer">
+            ${currentStyle.apartmentDisclaimer ? currentStyle.apartmentDisclaimer : '<p>*Select units only. Restrictions apply; inquire for details.</p><p>**Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select "Apply Now" to see all other rate options.</p>' @context='html'}
+        </div> 
+    </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

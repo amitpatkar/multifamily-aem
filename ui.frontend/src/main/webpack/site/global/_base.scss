@@ -1,0 +1,137 @@
+@import "./colors";
+@import "./fonts";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+*{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: $universal-alto;
+
+}
+.root {
+  @include font-book();
+}
+main, 
+footer {
+  max-width: $max-cotent-width;
+  margin: 0 auto;
+}
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+li {
+  list-style-type: none;
+}
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(tablet){
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(desktop){
+    display: none;
+  }
+}
+button {
+  cursor: pointer;
+}
+button, a {
+  font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  font-weight: normal;
+}
+
+
+.max-content-width {
+  max-width: $max-cotent-width;
+  margin: 0 auto;
+}
+
+//force upper case
+.upper-case {
+  text-transform: uppercase !important;
+  h1, h2, h3, h4, h5, h6, p {
+    text-transform: uppercase !important;
+  }
+}
+
+//force natural case
+.natural-case {
+  text-transform: none !important;
+  h1, h2, h3, h4, h5, h6, p {
+    text-transform: none !important;
+  }
+}
+
+
+/* Image lazy loading fade in*/
+img.lazy {
+    &:not([src]){
+      opacity: 0;
+    }
+  -webkit-transition: opacity .5s linear 0.2s;
+  -moz-transition: opacity .5s linear 0.2s;
+  transition: opacity .5s linear 0.2s;
+  opacity: 1;
+}
+
+.horizontal-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--divider-color);
+}
+
+a.skip-main {
+  left:-999px;
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+  transition: transform 0.3s ease-out;
+}
+a.skip-main:focus {
+  color: $universal-alto;
+  @include link-text();
+  background-color: $universal-salt;
+  left: auto;
+  right: 20px;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  margin-top: 15px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 2px solid var(--brand-primary);
+  text-align: center;
+  z-index: 999;
+}
+
+

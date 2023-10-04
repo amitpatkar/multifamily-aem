@@ -1,0 +1,53 @@
+.cmp-form-text {}
+.cmp-form-text__help-block {}
+.cmp-form-text__textarea {}
+.cmp-form-text__text {}
+
+
+.cmp-form-text {
+    label {
+        display: block;
+        margin-bottom: 10px;
+        @include form-label;
+    }
+    &__text,
+    &__textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: 2px solid transparent;
+        background-color: var(--form-input-bg); 
+        @include form-input;
+        color: $universal-alto;
+        @include breakpoint-up(desktop) {
+            padding: 12px 20px;
+        }
+        &:placeholder-shown {
+            color: rgba(var(--universal-black-rgb), 0.5) !important;
+            @include form-placeholder;
+        }
+    }
+    &__textarea {
+        height: 100px;
+        resize: none;
+        overflow-y: auto;
+    }
+    &__text {
+        height: 50px;
+    }
+
+}
+.cmp-form-text__text,
+.cmp-form-text__textarea,
+.cmp-options select {
+    &.invalid {
+        background-color: rgba(var(--error-red-rgb), 0.05) !important; 
+        border-color: $utility-red !important;
+    }
+}
+duet-date-picker.invalid input {
+    background-color: rgba(var(--error-red-rgb), 0.05) !important;
+    border-color: $utility-red !important;
+    border-width: 2px;
+    border-style: solid;
+}

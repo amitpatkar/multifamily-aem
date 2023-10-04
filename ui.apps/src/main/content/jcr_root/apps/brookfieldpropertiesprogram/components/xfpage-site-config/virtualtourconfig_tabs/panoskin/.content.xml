@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Panel"
+          jcr:title="Panoskin Configuration">    
+    <columns
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+        jcr:title="Panoskin Configuration"
+        margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <field3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                jcr:title="Configuration">                                                   
+                <items
+                    jcr:primaryType="nt:unstructured">      
+                    <hideFullscreen
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldDescription="Check to disable fullscreen button on the start screen"
+                        name="./panoskin_hideFullscreen"
+                        text="Hide Fullscreen"
+                        checked="{Boolean}false"
+                        uncheckedValue="false"
+                        value="true"/>       
+                    <btnType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="hideButtons"
+                        multiple="{Boolean}true"
+                        name="./panoskin_hideButtons">
+                        <items jcr:primaryType="nt:unstructured">                                                   
+                            <primary
+                                jcr:primaryType="nt:unstructured"
+                                text="Info"
+                                value="info"/>
+                            <secondary_1
+                                jcr:primaryType="nt:unstructured"
+                                text="CTA"
+                                value="callToAction"/>
+                            <secondary
+                                jcr:primaryType="nt:unstructured"
+                                text="Share"
+                                value="share"/>
+                            <tertiary
+                                jcr:primaryType="nt:unstructured"
+                                text="Contact"
+                                value="contact"/>
+                            <tertiary_1
+                                jcr:primaryType="nt:unstructured"
+                                text="Map"
+                                value="map"/>
+                            <tertiary_2
+                                jcr:primaryType="nt:unstructured"
+                                text="Full Screen"
+                                value="fullscreen"/>
+                        </items>
+                    </btnType>                                                                                                                                                                                                                                                   
+                </items>
+            </field3>                                                                      
+        </items>
+    </columns>        
+</jcr:root>

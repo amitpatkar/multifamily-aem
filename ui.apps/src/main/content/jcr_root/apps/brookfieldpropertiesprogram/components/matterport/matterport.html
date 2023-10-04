@@ -1,0 +1,11 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"/>
+<div data-sly-test.isConfigured="${pageInfo.propertyConfigModel.matterportID}" class="matterport__wrapper" data-cmp-component="matterport">
+    <iframe src="https://my.matterport.com/show/?m=${pageInfo.propertyConfigModel.matterportID}" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+</div>
+<div data-sly-test="${!isConfigured}">
+    You must configure Matterport Space ID on the property
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

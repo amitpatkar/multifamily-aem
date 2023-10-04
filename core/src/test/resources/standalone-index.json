@@ -1,0 +1,36 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+    "title":"Testing",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Home",
+        "cq:template": "/conf/common/settings/wcm/templates/page-standalone",
+        "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+        "cq:lastModified": "Mon Aug 09 2021 17:02:17 GMT-0700",
+        "sling:resourceType": "brookfieldpropertiesprogram/components/page",
+        "cq:lastModifiedBy": "admin",
+        "jcr:title":"This is test",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+            "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "brookfieldpropertiesprogram/components/container",
+                "title": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "brookfieldpropertiesprogram/components/title"
+                },
+                "container": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "layout": "responsiveGrid",
+                    "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.amenities="${'amenities_list.js' @ amenities=properties.amenitiesList}" 
+     class="cmp-amenityList__wrapper temp-grid-row">
+    <div class="cmp-amenityList__header col-2-11">
+        <!--replace "Features" with the authored title-->
+        <h3 class="intermediate-title">${properties.title}</h3>
+        <div class="horizontal-divider"></div>
+    </div>
+    <div class="cmp-amenityList__items amenity-list col-2-11">
+        <!--could the following <ul> list html enteted from rich text editor? author can add italic font style from there-->       
+        <ul data-sly-test.isManual="${!properties.fetchValuesFromProperties}">
+            <li data-sly-repeat="${amenities.amenitiesList}">${item}</li>            
+            <li data-sly-test='${properties.italicizeManyMore}'><i>${properties.lblManyMore}</i></li>
+            <li data-sly-test='${!properties.italicizeManyMore}'>${properties.lblManyMore}</li>
+        </ul>
+        <ul data-sly-test="${!isManual}">
+            <li data-sly-repeat.amenity="${pageInfo.propertyConfigModel.amenities}">${pageInfo.propertyConfigModel.amenities[amenity]}</li>            
+            <li data-sly-test='${properties.italicizeManyMore}'><i>${properties.lblManyMore}</i></li>
+            <li data-sly-test='${!properties.italicizeManyMore}'>${properties.lblManyMore}</li>
+        </ul>
+    </div>
+</div>    
+<sly data-sly-call="${templates.placeholder @ isEmpty = false, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,32 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"/>
+
+<div id="panoskin-tour"
+     data-tour-id="${pageInfo.propertyConfigModel.panoskinTourID}"
+     data-tour-hide-buttons="${properties.hideButtons}"
+     data-tour-hide-fullscreen="${properties.hideFullscreen}"
+     data-cmp-component="panoskin-tour"
+     class="panoskin-tour__wrapper"></div>
+
+
+<script src="//lcp360.cachefly.net/panoskin.js"></script>
+<script>
+    (function () {
+        var id = 'panoskin-tour';
+        var elem = document.getElementById(id);
+
+        var tourId = elem.getAttribute("data-tour-id");
+        var hideButtonsStr = elem.getAttribute("data-tour-hide-buttons");
+        var hideButtonsArr = hideButtonsStr ? hideButtonsStr.split(",").map(function(e) { return e.trim(); }) : [];
+        var hideFullscreen = elem.getAttribute("data-tour-hide-fullscreen") === "true";
+        var attrs = {
+            id: id,
+            tour: tourId,
+            hideFullScreen: hideFullscreen,
+            hideButtons: hideButtonsArr
+        };
+        PANOSKIN.createViewer(attrs);
+    })();
+</script>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>

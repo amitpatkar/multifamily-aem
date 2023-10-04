@@ -1,0 +1,47 @@
+<div class="grid-container ${properties.collapseall == 'true' ? 'collapse-all' :''}">
+    <div data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+     data-sly-use.accordion="${'accordion_uuid.js'}"
+     class="cmp-accordions__headline">
+     <div class="temp-grid-row">
+    <h2 data-sly-test="${properties.title}" class="col-2-11 small-title">${properties.title}</h2>
+    </div>
+</div>
+<div class="cmp-accordions__main">
+    <div class="temp-grid-row">
+    <div id="accordion-${accordion.uuid}" class="cmp-accordions__group col-2-11" >
+        <div data-sly-repeat.link="${navigation.componentModel.menuLinks}"
+             class="cmp-accordions__item" 
+             id="accordion-${accordion.uuid}-item-${linkList.index}">
+            <h3 class="cmp-accordions__header">
+                <button 
+                    id="accordion-${accordion.uuid}-item-${linkList.index}-button" 
+                    class="cmp-accordions__button ${(!properties.collapseall || properties.collapseall == 'false' )? 'cmp-accordions__button--expanded' : ''}"
+                    aria-controls="accordion-${accordion.uuid}-item-${linkList.index}-panel" 
+                    aria-expanded="${(!properties.collapseall || properties.collapseall == 'false' ) ? 'true' : 'false'}">
+                    <span class="cmp-accordions__title large-title">${link.label}</span>
+                    <span class="cmp-accordions__icon"></span>
+                </button>
+            </h3>
+            <!--/* Visible while preview or publish */-->
+            <div data-sly-test="${wcmmode.preview || wcmmode.disabled}"
+                id="accordion-${accordion.uuid}-item-${linkList.index}-panel" 
+                class="cmp-accordions__panel ${(!properties.collapseall || properties.collapseall == 'false' ) ? 'cmp-accordions__panel--expanded' : 'cmp-accordions__panel--hidden'}"
+                role="region" 
+                aria-labelledby="accordion-${accordion.uuid}-item-${linkList.index}-button">
+                <div class="text"  data-sly-use.hNav="${'accordion.js' @list=linkList}">
+                    <div id="text-${linkList.index}" class="cmp-text" data-sly-resource="${@path=hNav.contentResourcePath ,resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+                </div>                
+            </div>
+            <!--/* Visible while authoring */-->
+            <div data-sly-test="${wcmmode.edit}">
+                <div class="text" data-sly-use.hNav="${'accordion.js' @list=linkList}">
+                    <div id="text-${linkList.index}" class="cmp-text" data-sly-resource="${@path=hNav.contentResourcePath ,resourceType='brookfieldpropertiesprogram/components/container'}"></div>
+                </div>                
+            </div>          
+        </div>
+    </div>
+    </div>
+</div> 
+</div>   
+<sly data-sly-call="${templates.placeholder @ isEmpty = !navigation.componentModel.menuLinks, classAppend='cmp-text'}"></sly>

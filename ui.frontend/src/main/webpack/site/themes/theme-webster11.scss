@@ -1,0 +1,12 @@
+.root {
+    &.theme-webster11,
+    &.theme-webster11-small {
+        --brand-primary: #{$webster11-primary};
+        --brand-secondary: #{$webster11-secondary};
+        --brand-tertiary: #{$webster11-tertiary};
+        --brand-primary-rgb: #{hexToRGB($webster11-primary)};
+        --brand-secondary-rgb: #{hexToRGB($webster11-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($webster11-tertiary)};
+        --apt-detail-promo-bg: #{$webster11-secondary};
+    }
+}

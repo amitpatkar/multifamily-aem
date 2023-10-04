@@ -1,0 +1,15 @@
+.root {
+    &.bp-theme-1,
+    &.bp-theme-small { 
+        --brand-primary: #{$brookfield-primary};
+        --navlink-border: #{$brookfield-chartreuse};
+        --section50-border: #{$brookfield-chartreuse};
+        .cmp-hero__banner--default {
+            .btn-primary-alt {
+                @include btn-themes($universal-salt, $transparent, $brookfield-chartreuse, $chevron-green);
+            }
+        }
+    }
+}
+
+

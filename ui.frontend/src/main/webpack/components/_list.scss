@@ -1,0 +1,77 @@
+.cmp-amenityList {
+    padding: 0 31px 0 32px;
+    @include breakpoint-up(desktop) {
+        @include grid-container;
+    }
+    .horizontal-divider {
+        --divider-color: #{rgba(var(--universal-black-rgb), 0.1)};
+        margin-top: 25px;
+        @include breakpoint-up(desktop) {
+            margin-top: 30px;
+        }
+    }
+    &__header {
+        padding-bottom: 10px;
+    }
+    &__items {
+        li {
+            @include amenity-list-text();
+        }
+    }
+
+}
+ul.amenity-list,
+.amenity-list > ul {
+    @include breakpoint-up(desktop) {
+        -webkit-column-count: 2; 
+        -moz-column-count: 2; 
+        column-count: 2;
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid; 
+        break-inside: avoid;
+    }
+
+    li {
+        padding: 12px 0;
+        @include amenity-list-text();
+        @include breakpoint-up(desktop) {
+            padding: 22.5px 0;
+            display: inline-block;
+            width: 100%;
+        }
+        @include breakpoint-down(tablet) {
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+
+    
+    }
+
+}
+p +.bulleted-list {
+    margin-top: 20px;
+}
+ul.bulleted-list,
+.bulleted-list>ul{
+    padding-left: 30px;
+    li {
+        @include body-text();
+        line-height: 1.33 !important;
+        list-style-type: disc;
+        padding: 10px 0;
+        &:first-child{
+            padding-top: 0;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+
+}

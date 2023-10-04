@@ -1,0 +1,97 @@
+
+
+
+//customized accordion for brookfield
+.cmp-accordions {
+    &__headline {
+        // h2, h3 {
+        //     @include small-title;
+        // }
+        margin-bottom: 20px;
+        @include breakpoint-up(desktop) {
+            margin-bottom: 40px;
+        }
+    }
+    &__item {
+        padding: 40px 0 30px;
+        border-bottom: 2px solid rgba(var(--universal-black-rgb), 0.1);
+        scroll-margin-top: 100px;
+        @include breakpoint-up(desktop) {
+            padding: 40px 0 40px;
+        }
+        
+    }
+    &__button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        background: none;
+        border: none;
+        color: $universal-alto;
+        &--expanded {
+            .cmp-accordions__icon {
+                &:before {
+                    background-image: url($accordion-minus);
+                }
+            }
+        }
+    }
+    &__title {
+        text-align: left;
+        padding-right: 10px;
+        @include breakpoint-up(desktop){
+            padding-right: 0;
+            flex-basis: 83.33%;
+        }
+    }
+    &__icon {
+        @include breakpoint-up(desktop) {
+            margin-right: 30px;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url($accordion-plus) no-repeat center;
+            background-size: cover;
+            @include breakpoint-up(desktop) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    }
+    &__panel {
+        margin-top: 20px;
+        @include breakpoint-up(desktop) {
+            margin-top: 30px; 
+        }
+        &--expanded {
+            display: block;
+        }
+        &--hidden {
+            display: none;
+        }
+        @include body-text();
+        p {
+            @include body-text();
+            @include breakpoint-up(desktop) {
+                max-width: calc(83.33% + 0px);
+            }
+
+        }
+        p + p {
+            margin-top: 20px;
+        }
+    }
+    .amenity-list {
+        @include breakpoint-up(desktop) {
+            margin-top: -12.5px;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"
+     >
+
+        <div data-sly-test="${updatedProps.properties.topImagePath || properties.videoPath}" class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--100">
+            <div data-sly-test.isImage="${!properties.videoPath}" class="cmp-apartmentDetail__gallery-col">
+                <div class="cmp-apartmentDetail__image">
+                    <img src="${updatedProps.properties.topImagePath @context='uri'}" alt="${updatedProps.properties.topImageLabel}">
+                </div>
+            </div>
+            <div data-sly-test="${!isImage}" class="cmp-apartmentDetail__gallery-col">
+                <!--use the html of cmp-apartmentDetail__video-player if there is a video-->
+                <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                    <div class="cmp-apartmentDetail__video">
+                        <video src="${properties.videoPath}"
+                               preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="cmp-apartmentDetail__play-control">
+                            <button class="btn-videoControl btn-videoControl--pause">
+                                <span class="visually-hidden">Pause the video</span>
+                            </button>
+                        </div>
+                        <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                        <div data-sly-test="${properties.videoMuteUnMute == 'true'}"  class="cmp-apartmentDetail__sound-control">
+                            <button class="btn-soundControl btn-soundControl--unmute">
+                                <span class="visually-hidden">Unmute the video</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  data-sly-test="${(!properties.hide && (updatedProps.properties.leftImagePath && updatedProps.properties.rightImagePath)) || (properties.leftVideoPath && properties.rightVideoPath)}"  class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+            <div data-sly-test.isImage="${!properties.leftVideoPath}" class="cmp-apartmentDetail__gallery-col">
+                <div class="cmp-apartmentDetail__image">
+                    <img src="${updatedProps.properties.leftImagePath @context='uri'}" alt="${updatedProps.properties.leftImageLabel ? updatedProps.properties.leftImageLabel : 'Gallery Top Image'}">
+                </div>
+            </div>
+            <div data-sly-test="${isImage}" class="cmp-apartmentDetail__gallery-col">
+                <div class="cmp-apartmentDetail__image">
+                    <img src="${updatedProps.properties.rightImagePath @context='uri'}" alt="${updatedProps.properties.rightImageLabel ? updatedProps.properties.rightImageLabel : 'Gallery Right Image'}">
+                </div>
+            </div>
+            <div data-sly-test="${!isImage}" class="cmp-apartmentDetail__gallery-col">
+                <!--use the html of cmp-apartmentDetail__video-player if the media is a video-->
+                <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                    <div class="cmp-apartmentDetail__video">
+                        <video src="${properties.leftVideoPath}"
+                               preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="cmp-apartmentDetail__play-control">
+                            <button class="btn-videoControl btn-videoControl--pause">
+                                <span class="visually-hidden">Pause the video</span>
+                            </button>
+                        </div>
+                        <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                        <div data-sly-test="${properties.videoMuteUnMute == 'true'}" class="cmp-apartmentDetail__sound-control">
+                            <button class="btn-soundControl btn-soundControl--unmute">
+                                <span class="visually-hidden">Unmute the video</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-sly-test="${!isImage}" class="cmp-apartmentDetail__gallery-col">
+                <!--use the html of cmp-apartmentDetail__video-player if the media is a video-->
+                <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                    <div class="cmp-apartmentDetail__video">
+                        <video src="${properties.rightVideoPath}"
+                               preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="cmp-apartmentDetail__play-control">
+                            <button class="btn-videoControl btn-videoControl--pause">
+                                <span class="visually-hidden">Pause the video</span>
+                            </button>
+                        </div>
+                        <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                        <div data-sly-test="${properties.videoMuteUnMute == 'true'}" class="cmp-apartmentDetail__sound-control">
+                            <button class="btn-soundControl btn-soundControl--unmute">
+                                <span class="visually-hidden">Unmute the video</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--/*
+    <div data-sly-test="${!properties.hide && pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-src-1']}"  class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--100">
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image">
+                <img src="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-src-1'] @context='uri'}" alt="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-title-1']}">
+            </div>
+        </div>
+    </div>
+    <div  data-sly-test="${!properties.hide}" class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image">
+                <img src="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-src-2'] @context='uri'}" alt="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-title-2']}">
+            </div>
+        </div>
+        <div class="cmp-apartmentDetail__gallery-col">
+            <div class="cmp-apartmentDetail__image">
+                <img src="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-src-3'] @context='uri'}" alt="${pageInfo.unitTypeImagesModel.galleryImagePaths['unitType-gallery-title-3']}">
+            </div>
+        </div>
+    </div>  
+    */-->
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

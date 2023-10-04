@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-21T18:36:14.270-07:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/common/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2021-08-21T18:32:45.468-07:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="simple">
+            <navigation_standalon
+                jcr:created="{Date}2021-08-09T17:05:39.220-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-11T20:07:08.668-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/navigation_standalone">
+                <menuLinksLeft jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        id="features_amenities"
+                        label="Features &amp; Amenities"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        id="neighborhood"
+                        label="Neighborhood"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                </menuLinksLeft>
+                <menuLinksRight jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        cssClass="schedule-tour-popup-button btn btn-primary btn-light"
+                        id="schedule-tour-popup-button"
+                        label="Schedule a Tour"
+                        openLinkInNewTab="false"
+                        url="javascript:void(0)"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        id="lease_online"
+                        label="Lease Online"
+                        openLinkInNewTab="false"
+                        url="/"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        cssClass="standalone-get-in-touch"
+                        id="get_in_touch"
+                        label="Get in touch"
+                        openLinkInNewTab="false"
+                        url="/content/experience-fragments/standalone/en/site/get-in-touch/master.content.html"/>
+                </menuLinksRight>
+            </navigation_standalon>
+        </root>
+    </jcr:content>
+</jcr:root>

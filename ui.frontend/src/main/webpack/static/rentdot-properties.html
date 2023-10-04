@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root bp-theme-1">
+
+    <main>
+        <div class="cmp-hero cmp-hero--logo" >
+            <div class="cmp-hero__wrapper grid-container">
+                <div class="cmp-hero__media ">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+                </div>
+                <div class="cmp-hero__logo">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <!--Code above are used only for testing purpose-->
+
+
+
+        <!--propertyList component start-->
+        <div class="cmp-rentdotProperties" data-cmp-component="rentdotproperties">
+            <div class="cmp-rentdotProperties__wrapper tab-component" data-cmp-component="tabcomponent">
+                <div class="cmp-rentdotProperties__header tab-header">
+                    <div class="cmp-rentdotProperties__tabs tab-buttons" role="tablist" aria-label="Properties Search">
+                        <h2><button role="tab" id="list-tab" aria-controls="list-panel"  aria-selected="true" data-tab-index=0>List View</button></h2>
+                        <h2><button role="tab" id="map-tab" aria-controls="map-panel"  aria-selected="false" tabindex="-1" data-tab-index=1>Map View</button></h2>
+                    </div>
+                </div>
+
+                <div class="tab-panel current" role='tabpanel' id="list-panel" aria-labelledby="list-tab" tabindex="0" data-tab-index=0>
+                    <div class="cmp-rentdotProperties__listViewWrapper grid-container">
+                        <div class="cmp-rentdotProperties__listView">
+                            <div class="cmp-rentdotProperties__filters">
+                                <h3 class="cmp-rentdotProperties__filterToggle">
+                                    <button 
+                                    id="properties-filters-toggle" 
+                                    aria-controls="properties-filters-panel"
+                                    aria-expanded="false">
+                                        <span class="text--open">Open Filter</span>
+                                        <span class="text--collapse">Collapse Filter</span>
+                                    </button>
+                                </h3>
+                                <div class="cmp-rentdotProperties__filterPanel" id="properties-filters-panel">
+                                    <form 
+                                        id="properties-filters" 
+                                        name="properties-filters"                
+                                        class="cmp-form">
+                                        <div class="cmp cmp-options property">
+                                            <div class="form-group drop-down">
+                                            <label for="filter-property">Property Name</label>
+                                            <select name="property" id="filter-property" class="form-control">
+                                                <option value="all">SELECT</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="cmp cmp-options state">
+                                            <div class="form-group drop-down">
+                                            <label for="filter-state">State</label>
+                                            <select name="state" id="filter-state" class="form-control">
+                                                <option value="all">SELECT</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="cmp cmp-options city">
+                                            <div class="form-group drop-down">
+                                            <label for="filter-city">City</label>
+                                            <select name="city" id="filter-city" class="form-control">
+                                                <option value="all">SELECT</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="cmp cmp-options neighborhood">
+                                            <div class="form-group drop-down">
+                                            <label for="filter-neighborhood">Neighborhood</label>
+                                            <select name="neighborhood" id="filter-neighborhood" class="form-control">
+                                                <option value="all">SELECT</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <button 
+                                        type="submit"
+                                        id="properties-filters-reset"
+                                        class="btn btn-ghost"
+                                        name="propertiesFiltersReset">Reset Selections</button>
+            
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="cmp-rentdotProperties__propertyList" id="property-list">
+
+                                <!-- <div class="cmp-rentdotProperties__propertyCard">
+                                    <div class="cmp-rentdotProperties__propertyCard-container--image">
+                                        <div class="cmp-rentdotProperties__propertyCard-image">
+                                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/propertycover-sample-01.png" alt="alt text">
+                                        </div>
+                                    </div>
+                                    <div class="cmp-rentdotProperties__propertyCard-container--text">
+                                        <h3 class="cmp-rentdotProperties__propertyCard-name">The River Lofts at Tobacco Row</h3>
+                                        <p class="cmp-rentdotProperties__propertyCard-address">Cambridge,Massachusetts</p>
+                                        <p class="cmp-rentdotProperties__propertyCard-address">23 Sidney Street</p>
+                                    </div>
+                                    <div class="cmp-rentdotProperties__propertyCard-container--cta">
+                                        <a href="#" class="cmp-rentdotProperties__propertyCard-cta btn btn-secondary btn-ghost">View Property</a>
+                                        <hr class="cmp-rentdotProperties__propertyCard-spacer">
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="cmp-rentdotProperties__loadMore" id="load-more-container"></div>
+
+                            <!-- <button id="back-to-top" class="btn btn-dark">
+                                <span>Back to Top</span>
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/select_arrow.svg" alt="">
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel hidden" role='tabpanel' id="map-panel" aria-labelledby="map-tab" tabindex="0" data-tab-index=1>
+                        <div class="cmp-rentdotProperties__mapView">
+
+                        </div>
+
+                </div>
+        </div>
+
+        <!--propertyList component end-->
+
+    </main>
+
+
+
+
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

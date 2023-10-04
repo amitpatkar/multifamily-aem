@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          title="Built to fit your lifestyle, The Eugene is a modern, spectacular residential collection, located in the heart of New York City."
+          body="The Eugene is an integral piece of New York City’s most anticipated neighborhood, Hudson Yards. It’s just minutes away from Chelsea, The High Line, Madison Square Garden and transportation."
+          bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg"
+            bgImageLabel="Virtually Tour our amenities">
+    
+    <menuLinks jcr:primaryType="nt:unstructured">
+        <item0 jcr:primaryType="nt:unstructured" label="Begin Tour" btnType="btn-dark" cssClass="schedule-tour-popup-button" url="#"/>
+    </menuLinks>
+    <socialLinks jcr:primaryType="nt:unstructured">
+        <item0 jcr:primaryType="nt:unstructured" label="Minutes to Subway lines &amp; Penn Station" btnType="btn-light" cssClass="schedule-tour-popup-button" url="#"/>
+        <item1 jcr:primaryType="nt:unstructured" label="240,000 sq. ft. of curated retail, restaurants and pop-up events" btnType="btn-light" cssClass="schedule-tour-popup-button" url="#"/>
+        <item2 jcr:primaryType="nt:unstructured" label="2-Acre Public Plaza" btnType="btn-light" cssClass="schedule-tour-popup-button" url="#"/>
+    </socialLinks>
+</jcr:root>

@@ -1,0 +1,76 @@
+<sly 
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.globalMenu="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+    data-sly-use.navigation="${'navigation_portfolio.js' @pageInfo=pageInfo,globalMenu=globalMenu}"
+    data-sly-use.contactus="com.brookfieldpropertiesprogram.core.models.NavigationLink"    
+    >
+    <div class="cmp-rentdotHeader__wrapper max-content-width ${navigation.isCombinedHeader ? 'cmp-rentdotHeader--combined' : 'cmp-rentdotHeader--global'}">
+        <div class="cmp-rentdotHeader__inner">
+            <nav class="cmp-rentdotHeader__global" aria-label="Global">
+                <div class="cmp-rentdotHeader__global--left">
+                    <div class="cmp-rentdotHeader__global-logo">
+                        <a href="${properties.brookfieldLogoUrl ? properties.brookfieldLogoUrl : '/content/portfolio/en/index'}.html" aria-label="Go to home">
+                            <img src="${properties.brookfieldLogo ? properties.brookfieldLogo : '/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Brookfield.svg'}" alt="${properties.brookfieldLogoLabel ? properties.brookfieldLogoLabel :'Go to home'}" />
+                        </a>
+                    </div>
+                    <div class="cmp-rentdotHeader__global-menuToggle">
+                        <button id="globalmenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="rentdot-global-navigation">
+                            <span class="visually-hidden">Toggle the global navigation menu</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="cmp-rentdotHeader__global--right">
+                    <div class="cmp-rentdotHeader__global-nav">
+                        <ul id="rentdot-global-navigation">
+                            <!--use target="__blank" for external links-->
+                            <li data-sly-repeat="${globalMenu.menuLinks}"><a href="${item.absUrl}" class="cmp-rentdotHeader__global-navLink" target="${item.target}">${item.label}</a></li>                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <sly data-sly-test="${navigation.isCombinedHeader}">
+                <div class="cmp-rentdotHeader__spacer"></div> 
+                <nav class="cmp-rentdotHeader__specific" aria-label="Specific">
+                    <div class="cmp-rentdotHeader__specific-inner">
+                        <div class="cmp-rentdotHeader__specific-logo">
+                            <!--please relace the "property site" in the aria-label to use the correct property/collection name-->                                  
+                            <a data-sly-test.isCollection="${pageInfo.getCollectionConfigModel}" href="#_topofthepage" aria-label="Go to ${pageInfo.getCollectionConfigModel.getTitle}">
+                                <img data-sly-test.hasLogo="${pageInfo.getCollectionConfigModel.logo}" src="${pageInfo.getCollectionConfigModel.logo}" alt="${pageInfo.getCollectionConfigModel.title ? pageInfo.getCollectionConfigModel.title : 'Go to Home'}"/>
+                                <span data-sly-test="${!hasLogo}" class="cmp-rentdotHeader__specific-navLink">${pageInfo.getCollectionConfigModel.title}</span>
+                            </a>
+                            <a data-sly-test.isProperty="${pageInfo.propertyConfigModel}" href="#_topofthepage" aria-label="Go to ${pageInfo.propertyConfigModel.getTitle}">
+                                <img data-sly-test.hasLogo="${pageInfo.propertyConfigModel.logoPortfolio}" src="${pageInfo.propertyConfigModel.logoPortfolio}" alt="${pageInfo.propertyConfigModel.title ? pageInfo.propertyConfigModel.title : 'Go to Home'}"/>
+                                <span data-sly-test="${!hasLogo}" class="cmp-rentdotHeader__specific-navLink">${pageInfo.propertyConfigModel.title}</span>
+                            </a>
+                        </div>
+                        <div class="cmp-rentdotHeader__specific-divider"></div>
+                        <div class="cmp-rentdotHeader__specific-menuToggle">
+                            <button id="specificmenu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="rentdot-specific-navigation">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/select_arrow.svg" alt="Select">
+                                <span class="visually-hidden">Toggle the in-page navigation menu</span>
+                            </button>
+                        </div>
+                        <div class="cmp-rentdotHeader__specific-nav">
+                            <!--By default the currentPage uses the first link text??-->
+                            <sly data-sly-list="${navigation.menuLinksRight}"> 
+                                <p data-sly-test="${itemList.first}" class="cmp-rentdotHeader__specific-currentPage">${item.label}</p>
+                            </sly>                        
+                            <ul id="rentdot-specific-navigation">
+                                <!--the "href" attribute of the in-page menu should be "id" of the corresponding html element-->                            
+                                <sly   data-sly-list="${navigation.menuLinksRight}">
+                                    <li class="cmp-rentdotHeader__specific-navDivider" role="separator"><span></span></li>
+                                    <li class="cmp-rentdotHeader__specific-navItem">                                         
+                                        <a href="${item.absUrl}" target="${item.target}" class="cmp-rentdotHeader__specific-navLink">${item.label}</a>
+                                    </li>
+                                </sly>
+                                <li data-sly-test="${pageInfo.propertyConfigModel && pageInfo.valueMapFinal['site.lastcta_label']}"><a href="${pageInfo.valueMapFinal['site.lastcta_url']}" class="cmp-rentdotHeader__specific-navLink ${pageInfo.valueMapFinal['site.lastcta_btnType']}" >${pageInfo.valueMapFinal['site.lastcta_label']}</a></li>
+                                <li data-sly-test="${pageInfo.getCollectionConfigModel && pageInfo.valueMapFinal['site.collection_lastcta_label']}"><a href="${pageInfo.valueMapFinal['site.collection_lastcta_url']}" class="cmp-rentdotHeader__specific-navLink ${pageInfo.valueMapFinal['site.collection_lastcta_btnType']}" >${pageInfo.valueMapFinal['site.collection_lastcta_label']}</a></li>
+                            </ul>
+                        </div>                     
+                    </div>
+                </nav>      
+            </sly>
+        </div>
+    </div>
+    <div class="cmp-rentdotHeader__overlay"></div>    
+</sly> 

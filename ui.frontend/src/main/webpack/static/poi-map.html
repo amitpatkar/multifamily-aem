@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root bp-theme-1">
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <main>
+ <div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper">
+        <div class="cmp-hero__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1>Welcome to the you generation</h1>
+        </div>    
+    </div>
+</div>
+ <!--header component is used for page test purpose-->
+
+
+<!---poi-map component Start-->
+<section class="cmp-poi-map">
+    <div class="temp-grid-container">
+        <poi-map map-id="8cffc6c7c453c49b" zoom="15"
+                data-cmp-component="poimap">
+            <div class="cmp-poi-map__container--map">
+                <div class="map"></div>
+            </div>
+            <div class="cmp-poi-map__container--points">
+                <div class="cmp-poi-map__points">
+                    <!--do not see the Property title in the design-->
+                    <div class="cmp-poi-map__property">
+                        <poi-marker lat="40.827348" lng="-73.9438067" zoom="19" color="#00FF00" center>
+                            <h2>The Eugene</h2>
+                        </poi-marker>
+                    </div>
+                    
+                    <div class="cmp-poi-map__categories">
+
+                        <div class="cmp-poi-map__category-item">
+                            <!--add the same uuid to id of button and panel in the same category item-->
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                id="poi-map-category-button-78bc3b842e" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-78bc3b842e" 
+                                aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                    <span class="cmp-poi-map__category-title">restaurant</span>
+                                    <span class="cmp-poi-map__category-icon"></span>
+                                </span>
+                            </button>
+                            </h2>
+
+                            <!--add "show-less" css class only if the size of points is larger than 3-->
+                            <div 
+                            id="poi-map-category-panel-78bc3b842e" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden show-less" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-78bc3b842e" >
+                                <poi-marker lat="40.825338" lng="-73.9428057" zoom="18">
+                                    <h3 class="poi-marker--name">The Eugene</h3>
+                                    <p class="poi-marker--address">Addr Line 1</p>
+                                    <p class="poi-marker--address">Addr Line 2</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.825338,-73.9428057" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8234288" lng="-73.9426086" zoom="18">
+                                    <h3 class="poi-marker--name">Other prop</h3>
+                                    <p class="poi-marker--address">3612 Broadway, New Jersey</p>
+                                    <p class="poi-marker--address">NJ 10121, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8234288,-73.9426086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8234288" lng="-73.9426086" zoom="18">
+                                    <h3 class="poi-marker--name">Other prop</h3>
+                                    <p class="poi-marker--address">3612 Broadway, New Jersey</p>
+                                    <p class="poi-marker--address">NJ 10121, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8234288,-73.9426086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8234288" lng="-73.9426086" zoom="18">
+                                    <h3 class="poi-marker--name">Other prop</h3>
+                                    <p class="poi-marker--address">3612 Broadway, New Jersey</p>
+                                    <p class="poi-marker--address">NJ 10121, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8234288,-73.9426086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8234288" lng="-73.9426086" zoom="18">
+                                    <h3 class="poi-marker--name">Other prop</h3>
+                                    <p class="poi-marker--address">3612 Broadway, New Jersey</p>
+                                    <p class="poi-marker--address">NJ 10121, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8234288,-73.9426086" target="_blank">Get Directions</a>
+                                </poi-marker>
+
+                                <!--add the following html onlyif the size of the points is larger than 3-->
+                                <!--update the number "2"  in the parenthese to be the size of points minus 3-->
+                                <!--The button element has "data-panel-id" attribute, its value is the same as the id of the belonging category panel -->
+                                <div class="cmp-poi-map__showmore">
+                                    <button data-panel-id="poi-map-category-panel-78bc3b842e"><span class="interactive-text">SHOW MORE ITEMS (2)</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                id="poi-map-category-button-96bc4f2c3g" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-96bc4f2c3g" 
+                                aria-expanded="false">
+                            <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">entertainment</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-96bc4f2c3g" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-96bc4f2c3g">
+                                    <poi-marker lat="40.8224788" lng="-73.9436186" zoom="18">
+                                        <h3 class="poi-marker--name">Temp Prop</h3>
+                                        <p class="poi-marker--address">3612 Broadway, New York</p>
+                                        <p class="poi-marker--address">NY 10031, United States</p>
+                                        <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8224788,-73.9436186" target="_blank">Get Directions</a>
+                                    </poi-marker>
+                            </div>
+                        </div>
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                id="poi-map-category-button-99bc3f586d" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-99bc3f586d" 
+                                aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">health</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-99bc3f586d" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden show-less" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-99bc3f586d" >
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                                <!--add the following html if the size of the points is larger than 3-->
+                                <!--update the number "2"  in the parenthese to be the size of points minus 3-->
+                                <!--The button element has "data-panel-id" attribute, its value is the same as the id of the belonging category panel -->
+                                <div class="cmp-poi-map__showmore">
+                                    <button data-panel-id="poi-map-category-panel-99bc3f586d"><span class="interactive-text">SHOW MORE ITEMS (4)</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                id="poi-map-category-button-99bc3f586g" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-99bc3f586g" 
+                                aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">health</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-99bc3f586g" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-99bc3f586g" >
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                            </div>
+                        </div>
+                        <div class="cmp-poi-map__category-item">
+                            <h2 class="cmp-poi-map__category-header">
+                            <button 
+                                id="poi-map-category-button-99bc3f586z" 
+                                class="cmp-poi-map__category-button" 
+                                aria-controls="poi-map-category-panel-99bc3f586z" 
+                                aria-expanded="false">
+                                <span class="cmp-poi-map__category-button-inner">
+                                <span class="cmp-poi-map__category-title">health</span>
+                                <span class="cmp-poi-map__category-icon"></span>
+                            </span>
+                            </button>
+                            </h2>
+                            <div 
+                            id="poi-map-category-panel-99bc3f586z" 
+                            class="cmp-poi-map__category-panel cmp-poi-map__category-panel--hidden" 
+                            role="region" 
+                            aria-labelledby="poi-map-category-button-99bc3f586z">
+                                <poi-marker lat="40.8231288" lng="-73.9428086" zoom="18">
+                                    <h3 class="poi-marker--name">Some restaurant</h3>
+                                    <p class="poi-marker--address">3642 Broadway, New York</p>
+                                    <p class="poi-marker--address">NY 1111, United States</p>
+                                    <a class="poi-marker--direction" href="https://www.google.com/maps/search/?api=1&amp;query=40.8231288,-73.9428086" target="_blank">Get Directions</a>
+                                </poi-marker>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </poi-map>
+    </div>
+</section>
+<!---poi-map component End-->
+
+<!--pin popup content html start-->
+<div class="cmp-poi-map__container--popup--address">
+    <div class="cmp-poi-map__popup-address">
+        <p class="body-text">400 west 33rd street</p>
+        <p class="body-text">New York, NY 10001</p>
+    </div>
+    <div class="cmp-poi-map__popup-direction">
+        <a class="body-text" href="#">Get Directions</a>
+    </div>
+</div>
+<!--pin popup content html end-->
+
+
+
+</main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDriQYOjX8y2A8940HLDJhHwyYxfdHD44I"></script>
+<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

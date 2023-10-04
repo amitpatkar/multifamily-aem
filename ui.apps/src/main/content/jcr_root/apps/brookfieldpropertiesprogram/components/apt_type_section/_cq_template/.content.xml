@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          cq:styleIds="[5671290001]">
+    <container_virtualtour cssClasses="cmp-apartmentDetail__container--virtualtour" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_type_section_fragment_1 jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_type_section_fragment" sectionName="virtual-tour"/>
+    </container_virtualtour>    
+    <container_promo cssClasses="cmp-apartmentDetail__container--promo" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_promo jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_promo" text="${specials}" textIsRich="true"/>
+    </container_promo>    
+    <container_floorplan cssClasses="cmp-apartmentDetail__container--floorplan" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_type_section_fragment_2 jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_type_section_fragment" sectionName="floorplan"/>    
+    </container_floorplan>   
+    <container_available cssClasses="cmp-apartmentDetail__container--available" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_type_available jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_type_available"/>  
+    </container_available>   
+    <container_gallery cssClasses="cmp-apartmentDetail__container--gallery" jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">                                     
+        <apt_type_section_fragment_3 jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_type_section_fragment" sectionName="gallery"/>
+    </container_gallery> 
+</jcr:root>

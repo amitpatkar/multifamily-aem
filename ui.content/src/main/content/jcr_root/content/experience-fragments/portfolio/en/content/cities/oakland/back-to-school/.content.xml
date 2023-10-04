@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-21T17:42:15.868-07:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2021-08-21T17:40:42.496-07:00"
+        cq:lastRolledoutBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/common/settings/wcm/templates/xf-web-variation"
+        cq:xfVariantType="web"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Back To School"
+        sling:resourceType="brookfieldpropertiesprogram/components/xfpage">
+        <root
+            cq:lastRolledout="{Date}2021-08-21T17:40:42.480-07:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid">
+            <hero
+                cq:lastRolledout="{Date}2021-08-21T17:40:42.496-07:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2021-08-21T17:39:26.735-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-21T17:40:42.492-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                bgImagePath="/content/dam/portfolio/cities/oakland.jpeg"
+                btnType="btn-primary"
+                openLinkInNewTab="false"
+                textIsRich="true"/>
+            <section_100
+                cq:styleIds="[678000,668001]"
+                jcr:created="{Date}2021-08-21T17:41:53.829-07:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-08-21T17:42:09.661-07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                btnType="btn-primary"
+                copy="&lt;p>Copy Text&lt;/p>&#xd;&#xa;"
+                displayAddress="false"
+                lead="&lt;p>Lead Text&lt;/p>&#xd;&#xa;"
+                openLinkInNewTab="false"
+                textIsRich="[true,true,true]"/>
+        </root>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/experience-fragments/portfolio/en/content/cities/oakland/master"
+            cq:rolloutConfigs="[]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,13 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+        data-sly-use.urlInfo="com.brookfieldpropertiesprogram.core.models.UrlInfoRequestModel"
+        data-sly-use.params="${'leaseonline.js' @ pageInfo=pageInfo, urlInfo=urlInfo}"/>
+<div data-sly-test.isConfigured="${params.oneSiteID}" id="OllrDiv" data-cmp-component="leaseonline"></div>
+<div data-sly-test="${!isConfigured}">
+    You must configure One Site ID on the property to use Lease Online feature
+</div>
+
+<script src="https://property.onesite.realpage.com/ollr/widgetLoader.js?siteId=${params.oneSiteID}&ContainerId=OllrDiv" defer async></script>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

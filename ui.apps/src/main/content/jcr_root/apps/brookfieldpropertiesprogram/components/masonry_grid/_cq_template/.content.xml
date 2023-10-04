@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          title="Masonry Gallery" subtitle="Explore the space seamlessly">    
+    <container  jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container_nodiv">
+        <section_33_1  numberOfCols="cols-33-33-33" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33">
+            <container_1  jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"       
+                />
+            </container_1>
+            <container_2  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"         
+                />
+            </container_2>
+            <container_3  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"                                 
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"          
+                />
+            </container_3>
+        </section_33_1>  
+        <section_33_2  numberOfCols="cols-33-33-33" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33">
+            <container_1  jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"                  
+                />
+            </container_1>
+            <container_2  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"                   
+                />
+            </container_2>
+            <container_3  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+                <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                                       cq:styleIds="[5327944212]"
+                                       bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg"
+                                       bgImageCaption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"                   
+                />
+            </container_3>
+        </section_33_2>             
+    </container>
+</jcr:root>

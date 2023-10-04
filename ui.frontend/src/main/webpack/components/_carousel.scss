@@ -1,0 +1,77 @@
+
+//Carousel section
+.contentSection,
+.carouselSection {
+    &__header-wrapper {
+        padding-bottom: 30px;
+        @include breakpoint-up(desktop) { 
+            padding-bottom: 60px;
+        }
+    }
+    &__header {
+        .section-title,
+        .horizontal-divider {
+            margin-bottom: 30px;
+            @include breakpoint-up(desktop) { 
+                margin-bottom: 60px;
+            }
+        }
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+    }
+}
+.carouselSection {
+    &__control-wrapper {
+        padding-top: 30px;
+    }
+
+    &__control {
+        display: grid;
+        grid-template-columns: 1fr 100px;
+        @include breakpoint-down(mobile-tiny) { 
+            grid-template-columns: 1fr 85px;
+        }
+        @include breakpoint-up(desktop) { 
+            grid-column: 1/12;
+        }
+    }
+    &__status {
+        grid-column: 1/2;
+        align-self: center;
+    }
+    &__buttons {
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: end;
+    }
+    &__btn {
+        background: none;
+        border: none;
+        padding: 0;
+        &:first-child {
+            margin-right: 40px;
+            @include breakpoint-up(desktop) { 
+                margin-right: 60px;
+            }
+        }
+        &.disabled {
+            svg path {
+                stroke-opacity: 0.5;
+            }
+        }
+        svg{
+            width: 15px;
+            height: 30px;
+        }
+
+    }
+    &__status {
+        .label-text {
+            text-transform: uppercase;
+        }
+    }
+}
+
+

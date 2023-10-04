@@ -1,0 +1,17 @@
+<!--/*
+* Find the provider for unit type virtual tour
+* Ensure there is a unitTypeTourId provided by the pageInfo class
+* if both parameters are present pass it on to the template to get the inline representation of the virtual tour
+*/-->
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel">
+
+        <div data-sly-test.hasPeekURL="${pageInfo.peekURL}" class="cmp-apartmentDetail__virtualtour">
+            <iframe  loading="lazy" src="${pageInfo.peekURL}" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </div>
+
+        <div data-sly-test="${!hasPeekURL && (properties.tourId || pageInfo.unitTypeTourId)}" class="cmp-apartmentDetail__virtualtour">
+            <iframe  loading="lazy" src="https://my.matterport.com/show/?m=${properties.tourId ? properties.tourId : pageInfo.unitTypeTourId}" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+        </div>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

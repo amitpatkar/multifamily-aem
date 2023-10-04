@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    imsHost="https://ims-na1.adobelogin.com"
+    apiKey="542e941a7ad14f888e71c9de96f54f44"
+    iss="9BFD16EE60BDE2EE0A495C4E@AdobeOrg"
+    sub="0BAE4F81612BFD980A495CE5@techacct.adobe.com"
+    metascopes="[https://ims-na1.adobelogin.com/s/ent_places_sdk,https://ims-na1.adobelogin.com/s/ent_marketing_sdk]"
+    clientSecret="p8e-YDe2hs3e8rDdfEv2xNNanBXxDU1P9Bm2"
+    />

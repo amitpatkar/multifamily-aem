@@ -1,0 +1,14 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "portfolio",
+        "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-site-config",
+        "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+        "cq:tags": [],
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-site-config"
+    }
+}

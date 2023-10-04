@@ -1,0 +1,7 @@
+@import "../mixins/breakpoints";
+
+:export {
+  breakpointDesktop: $breakpoint-desktop;
+  breakpointDesktopMedium: $breakpoint-desktop-md;
+  breakpointDesktopLarge: $breakpoint-desktop-lg;
+}

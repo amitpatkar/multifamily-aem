@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root bp-theme-1">
+
+    <main>
+<!--Hero short-->
+<!-- <div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1>Welcome to the you generation</h1>
+        </div>
+    </div>
+</div> -->
+<!--Hero short: end -->
+<!--Hero short, banner off, video as background-->
+<div class="cmp-hero cmp-hero--title" >
+    <div class="cmp-hero__wrapper grid-container">
+        <div class="cmp-hero__media ">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1099"/>
+        </div>
+            <div class="cmp-hero__title">
+                <h1 class="hero-title">Welcome to the you generation</h1>
+            </div>    
+            <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+            <div class="cmp-hero__banner cmp-hero__banner--badge">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/banner-medallion-sample.svg" alt="Opening Soon, Opening Soon, Leasing Now Available" />
+            </div>    
+
+    </div>
+</div>
+<!--Hero short, banner off  end -->
+
+        <!--Code above are used only for testing purpose-->
+
+
+
+        <!--Search component start-->
+        <div class="cmp-rentdotSearch grid-container" data-cmp-component="rentdotsearch">
+            <div class="cmp-rentdotSearch__wrapper grid-row">
+                <form autocomplete="off" id="autocomplete-form">
+                    <label for="autocomplete-input" id="autocomplete-label" class="autocomplete-label">
+                        Where are you looking to move?
+                    </label>
+                    <div class="autocomplete-wrapper">
+                        <div role="combobox"
+                            aria-expanded="false"
+                            aria-owns="autocomplete-suggestions"
+                            aria-haspopup="listbox"
+                            id="autocomplete-combobox">
+                            <input type="text"
+                                class="cmp-form-text__text" 
+                                placeholder="City, Neighborhood or Property name"
+                                aria-autocomplete="list"
+                                aria-controls="autocomplete-suggestions"
+                                id="autocomplete-input">
+                        </div>
+                        <div 
+                            role="listbox"
+                            aria-labelledby="autocomplete-label"
+                            class="autocomplete-suggestions hidden" 
+                            id="autocomplete-suggestions">
+                        </div>
+                    </div>
+                    <!-- <div class="cmp-rentdotSearch__submit">
+                        <button class="btn btn-primary btn-dark">Search</button>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+        <!--Search component end-->
+
+    </main>
+
+
+
+
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

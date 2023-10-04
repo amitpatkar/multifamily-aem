@@ -1,0 +1,89 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2019 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+
+<div    class="cmp-masonry ${!properties.disableGallery ? 'gallery-on': ''}" 
+        data-cmp-component="section33"             
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel" 
+        data-sly-use.masonryuuid="${'masonry_uuid.js' @specials=pageInfo.propertyConfigModel.specials}"    
+        data-dialog-id="masonary-dialog-${masonryuuid.uuid}" 
+        data-sly-resource="${'container' @ resourceType='brookfieldpropertiesprogram/components/container_nodiv'}">             
+</div>
+<div data-sly-test="${!properties.disableGallery}"
+     id="masonary-dialog-${masonryuuid.uuid}" 
+     class="dialog-container gallery-dialog" 
+     aria-hidden="true"
+     aria-labelledby="gallery-title-${masonryuuid.uuid}" 
+     aria-describedby="gallery-description-${masonryuuid.uuid}">
+    <div class="dialog-overlay" data-a11y-dialog-hide></div>
+    <div class="dialog-content" role="document">
+    <div class="grid-container">
+        <div class="grid-row">
+        <button data-a11y-dialog-hide class="dialog-close">
+            <span>close</span>
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt="Close Lightbox"/>              
+        </button>
+        <!--include the following button if the Schedule a Tour feature is turned on in the config-->
+        <button data-sly-test="${!properties.hideScheduleTour}" class="schedule-tour-popup-button dialog-schedule-tour btn btn-primary btn-light">
+            Schedule a tour
+        </button>
+        <!---for accessibility purpose, "gallery-title" and  "gallery-description" are used on the gallery dialog. Author should be able to edit them-->
+        <h1 id="gallery-title-${masonryuuid.uuid}" class="visually-hidden">${properties.title ? properties.title : 'Masonry Gallery'}</h1>
+        <p id="gallery-description-${masonryuuid.uuid}" class="visually-hidden">${properties.subTitle ? properties.subTitle : 'Explore the space seamlessly'}</p>
+        <div class="dialog-gallery-wrapper">
+            <div class="glider-contain">
+                <div class="glider">
+                    <!--include the following slide html (last slide in the gallery) if the Schedule a Tour feature is turned on in the config-->
+                    <!--???Contents on this slide should be configurable, either entered by the content author in the component config or pulled from property config??? -->
+                    <div data-sly-test="${!properties.hideScheduleTour}" class="slide-contain">                        
+                        <div class="slide-contents schedule-tour">
+                            <div class="schedule-tour--inner">
+                                <h2 class="large-title">Schedule a tour</h2>
+                                <div class="schedule-tour--specials" data-sly-test="${masonryuuid.specials}">
+                                    ${masonryuuid.specials @context='html'}
+                                </div>
+                                <div data-sly-test="${currentStyle.scheduleTourDescription}" class="schedule-tour--description">
+                                    <p>${currentStyle.scheduleTourDescription}</p>
+                                </div>
+                                <div class="schedule-tour--cta">
+                                    <button  class="schedule-tour-popup-button btn btn-primary btn-dark" onclick="openScheduleTourPopup()">Schedule a tour</button>
+                                </div>
+                                <div data-sly-test="${currentStyle.scheduleTourDisclaimer}" class="schedule-tour--disclaimer">
+                                    ${pageInfo.propertyConfigModel.specialsDisclaimer ? pageInfo.propertyConfigModel.specialsDisclaimer : '<p>*Select units only. Restrictions apply; inquire for details.</p><p>**Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “Apply Now” to see all other rate options.</p>' @context='html'}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--include the above slide html if the Schedule a Tour feature is turned on in the config-->
+                </div>
+                <button class="glider-prev">
+                    <span class="visually-hidden">previous</span>
+                    <svg width="33" height="62" viewBox="0 0 33 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 61L2 31L32 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                </button>
+                <button class="glider-next">
+                    <span class="visually-hidden">next</span>
+                    <svg width="33" height="62" viewBox="0 0 33 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 61L31 31L1 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                </button>
+            </div>        
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<div data-sly-test="${wcmmode.edit}">Bookmark: ${properties.name}</div>
+<a data-sly-test="${wcmmode.preview || wcmmode.disabled}" id="${properties.name}"></a>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.name, classAppend='cmp-text'}"></sly>

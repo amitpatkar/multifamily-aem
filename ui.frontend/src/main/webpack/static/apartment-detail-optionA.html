@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage root home-page theme-eugene">
+
+    
+<!--Header Variation for View availability, apartment type page, and Single apartment page -->
+<header class="cmp-rentdotHeader-variation">
+    <div class="cmp-rentdotHeader-variation__wrapper max-content-width">
+        <div class="cmp-rentdotHeader-variation__navbar grid-container">
+            <nav>
+                <a href="#" target="_self" class="cmp-rentdotHeader-variation__propertyLink">
+                    <span class="cmp-rentdotHeader-variation__arrow">
+                        <svg id="desktop-arrow-icon" aria-hidden="true" width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1" y1="-1" x2="29" y2="-1" transform="matrix(-1 8.74228e-08 8.74228e-08 1 32 6)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 9L2 5L6 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg id="mobile-arrow-icon" aria-hidden="true" width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="17" y1="5" x2="3" y2="5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 9L2 5L6 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span>Return to </span>
+                    <span class="cmp-rentdotHeader-variation__propertyName">The Eugene</span>
+                </a>
+            </nav>  
+        </div> 
+    </div>
+</header>
+<!--Header Variation for View availability, apartment type page, and Single apartment page-->
+
+
+
+
+<!--Aparment Detail Option A-->
+<section class="cmp-apartmentDetail cmp-apartmentDetail--optionA" data-cmp-component="apartmentdetail">
+    <!--Aparment Detail Option A: header (includes the floorplan name and a link to availability search page)-->
+    <div class="cmp-apartmentDetail__header grid-container">
+        <div class="cmp-apartmentDetail__header-wrapper">
+            <div class="cmp-apartmentDetail__header-link">
+                <a href="#">
+                    <span class="visually-hidden">link to Aailability Search</span>
+                    <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                    
+                </a>
+            </div>
+            <div class="cmp-apartmentDetail__header-title">
+                <h1 class="hero-title">Studio R</h1>
+            </div>
+        </div>
+    </div>
+    <!--Aparment Detail Option A: header end-->
+
+    <div class="cmp-apartmentDetail__main grid-container">
+        <div class="cmp-apartmentDetail__main-wrapper grid-row">
+            <div class="cmp-apartmentDetail__main-left">
+                <!-- Add the following html if there is  a promo -->
+                <!--Aparment Detail Option A: promo-->
+                <div class="cmp-apartmentDetail__promo">
+                    <div class="cmp-apartmentDetail__promo-wrap">
+                        <div class="cmp-apartmentDetail__promo-inner">
+                            <h3><span class="cmp-apartmentDetail__promo-headline">Limited-time Offer</span></h3>
+                            <h4><span class="cmp-apartmentDetail__promo-subhead">Apply by May 31 for a June move-in and...</span></h4>
+                            <h3><span class="cmp-apartmentDetail__promo-highlight">July is free!*</span></h3>                 
+                        </div>
+                    </div>
+                </div>
+                <!--Aparment Detail Option A: promo end-->
+                <!--Aparment Detail Option A: available units-->
+                <div class="cmp-apartmentDetail__available">
+                    <!--Replace the "7" with the number of available units-->
+                    <h3 class="cmp-apartmentDetail__available-title">7 Currently Available</h3>
+                    <h3 class="cmp-apartmentDetail__accordion-header">
+                        <button 
+                        class="cmp-apartmentDetail__accordion-button cmp-apartmentDetail__accordion-button--expanded" 
+                        id="apartmentDetail__accordion-button"
+                        aria-control="available-accordion-panel"
+                        aria-expanded="true">
+                            <!--Replace the "7" with the number of available units-->
+                            <span class="cmp-apartmentDetail__accordion-title">7 Currently Available</span>
+                            <span class="cmp-apartmentDetail__accordion-icon"></span>
+                        </button>
+                    </h3>
+                    <div class="cmp-apartmentDetail__accordion-panel cmp-apartmentDetail__accordion-panel--expanded" 
+                    id="apartmentDetail__accordion-panel"
+                    role="region"
+                    aria-labelledby="apartmentDetail__accordion-button"
+                    >
+                        <ul class="cmp-apartmentDetail__unitList">
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                            <li class="cmp-apartmentDetail__unit">
+                                <p class="label-text floor-number">Tower West | 23rd Floor</p>
+                                <h3 class="small-title">Apartment 23R</h3>
+                                <p class="label-text">Studio | 1 Bath | 424 sq. ft.</p>
+                                <p class="label-text">Starting at $3400/month**</p>
+                                <p><a href="#" class="btn btn-secondary btn-dark">Apply Now</a></p>
+                            </li>
+                        </ul>
+                        <div class="cmp-apartmentDetail__disclaimer">
+                            <p>*Select units only. Restrictions apply; inquire for details.</p>
+                            <p>**Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “Apply Now” to see all other rate options.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Aparment Detail Option A: available units end-->
+
+            </div>
+            <div class="cmp-apartmentDetail__main-right">
+                <!--Aparment Detail Option A: virtual tour-->
+                <div class="cmp-apartmentDetail__virtualtour">
+                    <iframe src="https://my.matterport.com/show/?m=92HC4wJZWLy" title="Studio R (0B/1B)" frameborder="0" allowfullscreen allow="xr-spatial-tracking"></iframe>
+                </div>
+                <!--Aparment Detail Option A: virtual tour end-->
+                <!--Aparment Detail Option A: floor plan-->
+                <div class="cmp-apartmentDetail__floorplan">
+                     <!--If there is a floorplan image start-->
+                        <div class="cmp-apartmentDetail__floorplan--large">
+                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/A1_JR.jpg" alt="floorplan of Studio R"/>
+                        </div>
+                    <!--If there is a floorplan image end-->
+                    
+                    <!--If there is no floorplan start-->
+                    <div class="cmp-apartmentDetail__floorplan--emptyMessage"> 
+                        <p class="intermediate-title">there is No floor plan available for this appartment</p> 
+                     </div>
+                    <!--If there is no floorplan end-->
+                </div>
+                <!--Aparment Detail Option A: floor plan end-->
+
+
+
+                <!--Aparment Detail: gallery-->
+
+                <!--Add "with-padding" css class if author select padding from configuration-->
+                <!--<div class="cmp-apartmentDetail__gallery">-->
+                <div class="cmp-apartmentDetail__gallery with-padding">
+                    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--100">
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__image if there is an image-->
+                            <div class="cmp-apartmentDetail__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image alt">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__image if there is an image-->
+                            <div class="cmp-apartmentDetail__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image alt">
+                            </div>
+                        </div>
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__image if there is an image-->
+                            <div class="cmp-apartmentDetail__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image alt">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--100">
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__video-player if there is a video-->
+                            <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                                <div class="cmp-apartmentDetail__video">
+                                    <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+                                    preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="cmp-apartmentDetail__play-control">
+                                        <button class="btn-videoControl btn-videoControl--pause">
+                                            <span class="visually-hidden">Pause the video</span>
+                                        </button>
+                                    </div>
+                                    <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                                    <div class="cmp-apartmentDetail__sound-control">
+                                        <button class="btn-soundControl btn-soundControl--unmute">
+                                            <span class="visually-hidden">Unmute the video</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+                        <div class="cmp-apartmentDetail__gallery-col">
+                             <!--use the html of cmp-apartmentDetail__video-player if the media is a video-->
+                            <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                                <div class="cmp-apartmentDetail__video">
+                                    <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+                                    preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="cmp-apartmentDetail__play-control">
+                                        <button class="btn-videoControl btn-videoControl--pause">
+                                            <span class="visually-hidden">Pause the video</span>
+                                        </button>
+                                    </div>
+                                    <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                                    <div class="cmp-apartmentDetail__sound-control">
+                                        <button class="btn-soundControl btn-soundControl--unmute">
+                                            <span class="visually-hidden">Unmute the video</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__image if there is an image-->
+                            <div class="cmp-apartmentDetail__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image alt">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-apartmentDetail__gallery-row cmp-apartmentDetail__gallery-row--50-50">
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__image if there is an image-->
+                            <div class="cmp-apartmentDetail__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image alt">
+                            </div>
+                        </div>
+                        <div class="cmp-apartmentDetail__gallery-col">
+                            <!--use the html of cmp-apartmentDetail__video-player if there is a video-->
+                            <div class="cmp-apartmentDetail__video-player" data-cmp-component="videoplayer">
+                                <div class="cmp-apartmentDetail__video">
+                                    <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+                                    preload="true" muted loop playsinline webkit-playsinline x5-playsinline>
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="cmp-apartmentDetail__play-control">
+                                        <button class="btn-videoControl btn-videoControl--pause">
+                                            <span class="visually-hidden">Pause the video</span>
+                                        </button>
+                                    </div>
+                                    <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+                                    <div class="cmp-apartmentDetail__sound-control">
+                                        <button class="btn-soundControl btn-soundControl--unmute">
+                                            <span class="visually-hidden">Unmute the video</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Aparment Detail: gallery end-->
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--Aparment Details Option A end-->
+
+
+
+
+
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

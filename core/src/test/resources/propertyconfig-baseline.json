@@ -1,0 +1,59 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "specials": "<p>test</p>\r\n",
+        "residentPortalURL": "http://theeugenenyc.activebuilding.com/",
+        "jcr:createdBy": "admin",
+        "jcr:title": "The Eugene",
+        "onesiteID": "4545111",
+        "description": "Located in Midtown West, Manhattan, residents of The Eugene have a haven in the middle of one of the most dynamic cities in the world. Each penthouse apartment boasts floor-to-ceiling views of New York’s iconic skyline. An NBA-size basketball court, climbing wall, yoga room, and game room are just a few of many ways to unwind without putting on a coat. There’s a library lounge ideal for distraction-free reading or working. There’s even a rooftop club sixty-two stories above the city complete with a sunroom, bar, and outdoor grilling stations. Pets get love, too, thanks to an on-site grooming station. And when residents want to explore, there are dining and shopping options, galore at nearby Hudson Yards. ",
+        "cq:template": "/conf/siteconfig/settings/wcm/templates/xf-propesiteconfignfig",
+        "phoneNumber": "8443966697",
+        "address": "435 West 31st Street BLAH",
+        "headline": "IT'S TIME TO DISCOVER THE EUGENE",
+        "featuredImage": "/content/dam/properties/the-eugune/logo.svg",
+        "anyoneHomeEmailAddress": "amitpatkar@gmail.com",
+        "googleAddress": "407 W 31st St, New York, NY 10001, USA",
+        "tourInfo": "<p>test</p>\r\n",
+        "specialsExpiry": "Tue Aug 17 2021 00:00:00 GMT-0700",
+        "metaName": "The Eugene | Luxury Manhattan Apartments for Rent near Hudson Yards",
+        "jcr:created": "Mon Aug 09 2021 18:00:36 GMT-0700",
+        "cq:lastModified": "Mon Aug 09 2021 20:09:26 GMT-0700",
+        "cq:xfVariantType": "web",
+        "twitterURL": "test",
+        "affordableDisclaimer": "Test",
+        "city": "Sunnyvale",
+        "logo": "/content/dam/properties/the-eugune/logo.svg",
+        "custServiceEmailAddress": "RS@TheEugeneNYC.com",
+        "metaKeywords": "test",
+        "specialsDisclaimer": "<p>test</p>\r\n",
+        "scheduleTourURL": "test",
+        "facebookURL": "test",
+        "cq:tags": ["experience-fragments:variation/web"],
+        "sling:resourceType": "brookfieldpropertiesprogram/components/xfpage-property-config",
+        "websiteURL": "https://www.theeugenenyc.com",
+        "metaDescription": "The Eugene is a spectacular high-rise residential tower at Hudson Yards, with expansive lifestyle and recreational amenities. Click to see available apartments.",
+        "textIsRich": ["true", "true", "true"],
+        "scheduleTourJavaScriptSnippet": "test",
+        "lroPricing": "yes",
+        "cq:lastModifiedBy": "admin",
+        "preferredLeaseTerm": "test",
+        "instagramURL": "https://www.instagram.com/theeugenenyc/",
+        "selfGuidedTourURL": "test",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "brookfieldpropertiesprogram/components/container"
+        },
+        "nestioBuildingIds": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "nestioBuildingId": "1421640"
+            }
+        }
+    }
+}

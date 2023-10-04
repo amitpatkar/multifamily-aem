@@ -1,0 +1,2008 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage home-page root theme-olivia-small">
+    <div id="turnon-grid-container">
+        <input id="turnon-grid" type="checkbox" name="turnongrid" value="turnongrid"/>
+        <label for="turnon-grid">Turn on grid</label>
+    </div>
+    <div id="sample-page-grid" class="grid-container hidden">
+        <div class="grid-row">
+            <div class="col col-1"></div>
+            <div class="col col-2"></div>
+            <div class="col col-3"></div>
+            <div class="col col-4"></div>
+            <div class="col col-5"></div>
+            <div class="col col-6"></div>
+            <div class="col col-7"></div>
+            <div class="col col-8"></div>
+            <div class="col col-9"></div>
+            <div class="col col-10"></div>
+            <div class="col col-11"></div>
+            <div class="col col-12"></div>
+        </div>
+    </div>
+    <main>
+        <!--Header start-->
+        <!--Note: "theme-eugene" uses Eugene brand primary color; "theme-2" uses Third branch primary color-->
+        <header class="cmp-header" data-cmp-component="header">
+            <a class="skip-main" href="#main-content">Skip To Main Content</a>
+            <nav>
+                <div class="cmp-header__navbar">
+                    <!--replace "cmp-header__logo--rectangle" with "cmp-header__logo--square" if author select square shape-->
+                    <div class="cmp-header__logo cmp-header__logo--rectangle">
+                        <a href="/">
+                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt="home" />
+                        </a>
+                    </div>
+                    <div class="cmp-header__links">
+                        <div class="cmp-header__links--left">
+                            <a href="#" class="cmp-header__link">Features & Amenities</a>
+                            <a href="#" class="cmp-header__link">Neighborhood</a>
+                        </div>
+                        <div class="cmp-header__links--right">
+                            <button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button>
+                            <div class="cmp-header__tabletTriggerWrap">
+                                <button class="cmp-header__tabletTrigger" 
+                                aria-expanded="false"
+                                aria-controls="cmp-header-tabletMenu">
+                                <span class="visually-hidden">open</span>
+                                </button>
+                            </div>
+                            <a href="#" class="cmp-header__link">Lease Online</a>
+                            <a href="#" class="cmp-header__link">Resident Portal</a>
+                            <a href="#" class="cmp-header__link">Get in touch</a>           
+                        </div>
+                    </div>
+            
+                    <div class="cmp-header__mobileTriggerWrap">
+                        <button class="cmp-header__mobileTrigger" 
+                        aria-expanded="false"
+                        aria-controls="cmp-header-mobileMenu">
+                            <span class="cmp-header__mobileTrigger--close">CLOSE</span>
+                            <span class="cmp-header__mobileTrigger--open">MENU</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="cmp-header-tabletMenu" class="cmp-header__tabletMenu hidden" >
+                    <div class="cmp-header__tabletMenu--body">
+                        <ul>
+                            <li><a href="#" class="cmp-header__tabletMenu--link">Lease Online</a></li>
+                            <li><a href="#" class="cmp-header__tabletMenu--link">Resident Portal</a></li>
+                            <li><a href="#" class="cmp-header__tabletMenu--link">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="cmp-header-mobileMenu" class="cmp-header__mobileMenu hidden" >
+                    <div class="cmp-header__mobileMenu--body">
+                        <ul class="cmp-header__mobileMenu--top">
+                            <li><a href="#" class="cmp-header__mobileMenu--link">Features & Amenities</a></li>
+                            <li><a href="#" class="cmp-header__mobileMenu--link">Neighborhood</a></li>
+                        </ul>
+                        <ul class="cmp-header__mobileMenu--bottom">
+                            <li><button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button></li>
+                            <li><a href="#" class="cmp-header__mobileMenu--link">Lease Online</a></li>
+                            <li><a href="#" class="cmp-header__mobileMenu--link">Resident Portal</a></li>
+                            <li><a href="#get-in-touch" class="cmp-header__mobileMenu--link">Get in Touch</a></li>
+                        </ul>
+                        <div class="cmp-header__mobileMenu--divider"></div>
+                        <ul class="cmp-header__mobileMenu--info">
+                            <li>
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                                <a href="#" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                            </li>
+                            <li>
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                                <a href="#" class="cmp-header__mobileMenu--phone">(877) 245-1215</a>
+                            </li>
+                            <li>
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt=""/>
+                                <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+        
+        
+            </nav>       
+        
+        </header>
+        <!--Hero title, banner off-->
+        <div class="cmp-hero cmp-hero--title" >
+            <div class="cmp-hero__wrapper grid-container">
+                <div class="cmp-hero__media ">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image"/>
+                </div>
+                <div class="cmp-hero__title">
+                    <h1 class="hero-title">Welcome to the you generation</h1>
+                </div>  
+                <!--Banner badge html: The content inside is to be a SVG created in Illustrator or some vector program. Author should be able to upload a svg file for the banner -->
+                <div class="cmp-hero__banner cmp-hero__banner--badge">
+                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/banner-medallion-sample.svg" alt="Opening Soon, Opening Soon, Leasing Now Available" />
+                </div>    
+                <!--Banner badge html --> 
+
+
+            </div>
+        </div>
+        <!--Hero title, banner off  end -->
+            <!--Availability Search -->
+            <div class="availabilitylist">
+                <div id="availability" class="cmp-availability filters-only" data-cmp-component="availabilityfeed">
+                    <div class="cmp-availability__title">
+                        <h2 class="large-title">Claim Your Space</h2>
+                    </div>
+                    <div class="cmp-availability__search">
+                        <div class="cmp-availability__wrapper grid-container">
+                            <div class="cmp-availability__filters">
+                                <form 
+                                method="POST"
+                                action="#"
+                                enctype="multipart/form-data"
+                                class="cmp-form"
+                                id="availability-filters"
+                                name="availability-filters"
+                                novalidate>
+                                    <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                                        <div class="cmp-form-text">
+                                            <label for="availability-filter-move-in-date">Move-in Date</label>
+                                            <duet-date-picker required identifier="availability-filter-move-in-date" name="moveindate"></duet-date-picker>                            
+                                        </div>
+                                        <p class="cmp-form-error-message">Required Field</p>
+                                    </div>
+                                    <div class="cmp cmp-options home-type">
+                                        <fieldset class="form-group checkbox">
+                                            <legend>HOME TYPE</legend>
+                                            <div class="checkbox-item">
+                                                <label>
+                                                    <input type="checkbox" name="studio" value="Studio">
+                                                    <span>STUDIO</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <label>
+                                                    <input type="checkbox" name="onebedroom" value="1 Bed">
+                                                    <span>1 BD</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <label>
+                                                    <input type="checkbox" name="twobedroom" value="2 Bed">
+                                                    <span>2+ BD</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <label>
+                                                    <input type="checkbox" name="penthouse" value="Pen">
+                                                    <span>PH</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <label>
+                                                    <input type="checkbox" name="townhome" value="Town">
+                                                    <span>TH</span>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="cmp cmp-options min-rent">
+                                        <div class="form-group drop-down">
+                                        <label for="availability-filter-min-rent">Min Rent</label>
+                                        <select name="minrent" id="availability-filter-min-rent" class="form-control">
+                                            <option value="0">SELECT</option>
+                                            <option value="3000">$3000</option>
+                                            <option value="4000">$4000</option>
+                                            <option value="5000">$5000</option>
+                                            <option value="6000">$6000</option>
+                                            <option value="7000">$7000</option>
+                                            <option value="8000">$8000</option>
+                                            <option value="9000">$9000</option>
+                                            <option value="10000">$10000</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="cmp cmp-options max-rent">
+                                        <div class="form-group drop-down">
+                                        <label for="max_rent">Max Rent</label>
+                                        <select name="maxrent" id="availability-filter-max-rent" class="form-control">
+                                            <option value="Infinity">SELECT</option>
+                                            <option value="3000">$3000</option>
+                                            <option value="4000">$4000</option>
+                                            <option value="5000">$5000</option>
+                                            <option value="6000">$6000</option>
+                                            <option value="7000">$7000</option>
+                                            <option value="8000">$8000</option>
+                                            <option value="9000">$9000</option>
+                                            <option value="10000">$10000</option>
+                                            <option value="Infinity">$10000+</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-availability__buttons">
+                                        <button 
+                                        type="button"
+                                        id="availability_filter_clear"
+                                        class="cmp-form-button btn btn-ghost btn-submit"
+                                        name="availabilityFilterClear">Clear All Filters</button>
+                                        <button 
+                                        type="submit"
+                                        id="availability_filter_submit"
+                                        class="cmp-form-button btn btn-dark btn-submit"
+                                        name="availabilityFilterSubmit">Refine Results</button>
+                                    </div>
+            
+                                </form>
+            
+                            </div>
+            
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--Availability Search end-->
+        <div class="cmp-section50 cmp-section50--double-cta" >
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="cmp-section50__wrapper">
+                        <!-- <div class="cmp-section50__divider"></div> -->
+                        <div class="cmp-section50__title">
+                            <h4><span class="intermediate-title">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</span></h4>
+                        </div>
+                        <div class="cmp-section50__cta">
+                            <a href="#" class="btn btn-primary btn-dark"> 
+                                Schedule a Tour
+                            </a>
+                            <a href="#" class="btn btn-primary btn-ghost">
+                                Experience In 3d
+                            </a>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cmp-section33 cols-66-33" data-cmp-component="section33">
+            <div class="temp-grid-container">
+                <div class="cmp-section33__row">
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--copy66">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__text-container">
+                                    <h2>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--image33 priority">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__image-container">
+                                    <img class="lazy" data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" alt="image alt">
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section33_33_33">
+            <!---add the "gallery-on" css class if the gallery is turned on in the config-->
+            <div class="cmp-masonry gallery-on" 
+                data-cmp-component="section33" 
+                data-dialog-id="masonary-dialog-78bc3b842e">
+        
+               <!--Need to add "data-image-caption" attribute to each <img> element in the image cards-->
+                <div class="cmp-section33 cols-33-33-33">
+                    <div class="temp-grid-container">
+                        <div class="cmp-section33__row">
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--image33 priority">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__image-container">
+                                        <img 
+                                        class="lazy" 
+                                        data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" 
+                                        alt="image alt"
+                                        data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam">
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--image33">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__image-container">
+                                        <img 
+                                        class="lazy"
+                                        data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg"
+                                        alt="image alt"
+                                        data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam">
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--text33">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__text-container">
+                                        <h3><span class="card33-propStat">690</span></h3>
+                                        <h4><span class="card33-propText">Unique Floorplans</span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="cmp-section33 cols-33-66">
+                    <div class="temp-grid-container">
+                        <div class="cmp-section33__row">
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--cta33">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__text-container">
+                                        <h3><span class="card33-headline">CLAIM YOUR SPACE</span></h3>
+                                        </div>
+                                        <div class="cmp-section33__cta-container">
+                                        <a href="#" class="btn btn-light btn-primary">
+                                            Schedule a Tour
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--image66">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__image-container">
+                                        <img 
+                                        class="lazy"
+                                        data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg" 
+                                        alt="image alt"
+                                        data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="cmp-section33 cols-33-33-33">
+                    <div class="temp-grid-container">
+                        <div class="cmp-section33__row">
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--image33 priority">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__image-container">
+                                        <img 
+                                        class="lazy" 
+                                        data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" 
+                                        alt="image alt"
+                                        data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam">
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--image33">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__image-container">
+                                        <img 
+                                        class="lazy" 
+                                        data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg"
+                                        alt="image alt"
+                                        data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam">
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="cmp-section33__col">
+                                <div class="cmp-section33__card cmp-section33__card--logo33">
+                                    <div class="cmp-section33__cardContent">
+                                        <div class="cmp-section33__pattern-container">
+                                        <img class="cmp-section33__pattern lazy" data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_pattern.svg" alt="image alt">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--include the following dialog html if the gallery feature is turned on in the config-->
+            <div id="masonary-dialog-78bc3b842e" 
+                class="dialog-container gallery-dialog" 
+                aria-hidden="true"
+                aria-labelledby="gallery-title-78bc3b842e" 
+                aria-describedby="gallery-description-78bc3b842e">
+                <div class="dialog-overlay" data-a11y-dialog-hide></div>
+                <div class="dialog-content" role="document">
+                    <div class="grid-container">
+                        <div class="grid-row">
+                        <button data-a11y-dialog-hide class="dialog-close">
+                            <span>close</span>
+                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt=""/>              
+                        </button>
+        
+                        <!--include the following button if the Schedule a Tour feature is turned on in the config-->
+                        <button class="dialog-schedule-tour btn btn-primary btn-light">
+                            Schedule a tour
+                        </button>
+        
+                        <!---for accessibility purpose, "gallery-title" and  "gallery-description" are used on the gallery dialog. Author should be able to edit them-->
+                        <h1 id="gallery-title-78bc3b842e" class="visually-hidden">Masonry Gallery</h1>
+                        <p id="gallery-description-78bc3b842e" class="visually-hidden">Explore the space seamlessly</p>
+                        <div class="dialog-gallery-wrapper">
+                            <div class="glider-contain">
+                                <div class="glider">
+                                    <!--include the following slide html (last slide in the gallery) if the Schedule a Tour feature is turned on in the config-->
+                                    <!--???Contents on this slide should be configurable, either entered by the content author in the component config or pulled from property config??? -->
+                                        <div class="slide-contain">
+                                            <div class="slide-contents schedule-tour">
+                                                <div class="schedule-tour--inner">
+                                                    <h2 class="large-title">Schedule a tour</h2>
+                                                    <div class="schedule-tour--specials">
+                                                        <h3 class="interactive-title">limited time offer</h3>
+                                                        <h4 class="small-title">Get a $250 Whole Foods Gift Card when you submit your rental application.</h4>
+                                                        <p class="legal-text">See leasing office for details. Terms and conditions apply. </p>
+                                                    </div>
+                                                    <div class="schedule-tour--description">
+                                                        <p>Suspendisse a enim sit amet ipsum accumsan* fringilla. Nulla nec ante euismod, aliquet eros id, lacinia purus. Sed interdum quam ullamcorper ac, hendrerit eros.</p>
+                                                    </div>
+                                                    <div class="schedule-tour--cta">
+                                                        <a href="#" class="btn btn-primary btn-dark">Schedule a tour</a>
+                                                    </div>
+                                                    <div class="schedule-tour--disclaimer">
+                                                        <p>*Nec ante euismod, aliquet eros id, lacinia purus. Sed interdum quam ullamcorper ac, hendrerit eros. Aenean at elitu.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <!--include the above slide html if the Schedule a Tour feature is turned on in the config-->
+                                </div>
+                                <button class="glider-prev">
+                                    <span class="visually-hidden">previous</span>
+                                    <svg width="33" height="62" viewBox="0 0 33 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 61L2 31L32 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>                        
+                                </button>
+                                <button class="glider-next">
+                                    <span class="visually-hidden">next</span>
+                                    <svg width="33" height="62" viewBox="0 0 33 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 61L31 31L1 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>                        
+                                </button>
+                            </div>        
+                        </div>
+                        </div>
+            
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!--Section50-50: info-right -->
+        <!--add "image-beyond" css class if the author choose image beyond config -->
+        <div class="cmp-section50 cmp-section50--info-right" >
+            <div class="image-beyond temp-grid-container">
+                <div class="cmp-section50__wrapper grid-row">
+                    <div class="cmp-section50__image">
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg" alt="image description"/>
+                    </div>
+                    <div class="cmp-section50__info">
+                        <div class="cmp-section50__info-inner">
+                            <!--title html start: add the following html if highlight title is authored-->
+                                <div class="cmp-section50__highlight">
+                                    <h2 class="small-title">Built to fit your lifestyle, The Eugene is a modern, spectacular residential collection, located in the heart of New York City.</h2>
+                                </div>
+                            <!--title html end-->
+
+                            <!--description html start: add the following html if description is authored-->
+                                <div class="cmp-section50__description">
+                                    <p class="body-text">The Eugene is an integral piece of New York City’s most anticipated neighborhood, Hudson Yards. It’s just minutes away from Chelsea, The High Line, Madison Square Garden and transportation.</p>
+                                </div>
+                            <!--description html end-->
+
+                            <!--paragraph  list html start: add the following html if paragraph list is authored-->
+                            <!-- <div class="cmp-section50__paragraphs">
+                                <ul>
+                                    <li>
+                                        <div class="cmp-section50__paragraph-content">
+                                            <h4 class="intermediate-title">Competitive Compensation</h4>
+                                            <p class="body-text">We are proud to offer our associates what they value most: competitive pay, fulsome health benefits, and much more.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cmp-section50__paragraph-content"> 
+                                            <h4 class="intermediate-title">World-class Benefits</h4>
+                                            <p class="body-text">From 401k matching to on-the-job training. From education reimbursement to leadership development and charitable matching.</p>                              
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cmp-section50__paragraph-content">
+                                            <h4 class="intermediate-title">Unparalleled Opportunities</h4>
+                                            <p class="body-text">We believe that performance is synonymous with advancement. That’s why we reward top-tier work by promoting from within.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cmp-section50__paragraph-content">
+                                            <h4 class="intermediate-title">All in a values-driven organization</h4>
+                                            <p class="body-text">We emphasize an inclusive, transparent work environment with collaboration and work/life balance at the forefront.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <!--paragraph list html end-->
+
+                            <!--item list html start: add the following html if item list is authored-->
+                                <div class="cmp-section50__list">
+                                    <ul>
+                                        <li>Minutes to Subway lines & Penn Station</li>
+                                        <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                        <li>2-Acre Public Plaza</li>
+                                    </ul>
+                                </div>
+                            <!--item list html end-->
+
+                            <!--cta html start: add the following cta html if cta is configured-->
+                                <div class="cmp-section50__cta">
+                                    <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                                </div>
+                            <!--cta html end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Section50-50: info-right end-->
+        <!--Section50-50: info-right -->
+<!--add "image-above" css class if the author choose image above config -->
+<div class="cmp-section50 cmp-section50--info-right" >
+    <div class="image-above temp-grid-container">
+        <div class="cmp-section50__wrapper grid-row">
+            <div class="cmp-section50__image">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg" alt="image description"/>
+            </div>
+            <div class="cmp-section50__info">
+                <div class="cmp-section50__info-inner">
+                    <!--add highlight html if there is a highlight title-->
+                        <div class="cmp-section50__highlight">
+                            <h2 class="highlight-title">Mercantile Place</h2>
+                        </div>
+                    <!---->
+
+                    <!--add description html if there is a description-->
+                    <!--add "hide-for-mobile" css class if hiding description on mobile-->
+                        <div class="cmp-section50__description hide-for-mobile">
+                            <p class="body-text">With over 700 apartments and penthouses in its four communities, Mercantile Place is home to hundreds of urban dwellers who bring vitality and excitement to the city streets. New restaurants, shops, and boutiques are opening their doors and the Main Street Park has become a gathering spot for dog owners and outdoor lovers alike.</p>
+                        </div>
+                    <!---->
+
+                    <!--add address html if there is an address-->
+                        <div class="cmp-section50__address">
+                            <p class="link-text">1810 commerce STREET</p>
+                            <p class="link-text">Dallas Texas</p>
+                        </div>
+                    <!---->
+
+                    <!--add the list html if there is a text/link list, replace the 'href' with configured values, add open to new/same window-->
+                    <div class="cmp-section50__links">
+                        <!--add title html if there is a title for the text/link list-->
+                            <p class="medium-title">Featured Properties</p>
+                        <!---->
+                        <ul>
+                            <li><a class="link-text" href="#">The Continental</a></li>
+                            <li><a class="link-text" href="#">The Element</a></li>
+                            <li><a class="link-text" href="#">The Merc</a></li>
+                            <li><a class="link-text" href="#">The Wilson</a></li>
+                        </ul>
+                         <!--do not use the <a> if there is no link, usse the following <ul> html for plain text list-->
+                        <!-- 
+                            <ul>
+                                <li>Minutes to Subway lines & Penn Station</li>
+                                <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                <li>2-Acre Public Plaza</li>
+                            </ul>  
+                        -->
+                    </div>
+                    <!---->
+
+                    <!--add cta html if there is a cta-->
+                        <div class="cmp-section50__cta">
+                            <a href="#" class="btn btn-tertiary btn-dark">Explore collection</a>
+                        </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Section50-50: info-right end-->
+        <div class="cmp-section33 cols-33-33-33" data-cmp-component="section33">
+            <div class="temp-grid-container">
+                <div class="cmp-section33__row">
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--text33">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__text-container">
+                                <h3><span class="card33-propStat">62</span></h3>
+                                <h4><span class="card33-propText">Stories of Amenities</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--image33">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__image-container">
+                                <img class="lazy" data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" alt="image alt">
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--image33">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__image-container">
+                                <img class="lazy" data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" alt="image alt">
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---container type: cols-66-33 image-cta-->
+        <div class="cmp-section33 cols-66-33" data-cmp-component="section33">
+            <div class="temp-grid-container">
+                <div class="cmp-section33__row">
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--image66">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__image-container">
+                                <img class="lazy" data-src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg" alt="image alt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-section33__col">
+                        <div class="cmp-section33__card cmp-section33__card--cta33 priority">
+                            <div class="cmp-section33__cardContent">
+                                <div class="cmp-section33__text-container">
+                                <h3><span class="card33-headline">Get a Glimpse</span></h3>
+                                </div>
+                                <div class="cmp-section33__cta-container">
+                                <a href="#" class="btn btn-light btn-primary">
+                                    Schedule a Tour
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---container type: cols-66-33  image-cta end -->
+        <!--Section50-50: box-left-->
+        <div class="cmp-section50 cmp-section50--box-left" >
+            <div class="grid-container">
+                <div class="cmp-section50__wrapper grid-row">
+                    <div class="cmp-section50__box">
+                        <div class="cmp-section50__box-inner">
+                            <h4><span class="large-title">Virtually Tour our amenities</span></h4>
+                            <a href="#" class="btn btn-primary btn-light">Begin Tour</a>
+                        </div>
+                        
+                    </div>
+                    <div class="cmp-section50__image">
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-box-left-sample.jpg" alt="image description"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Section50-50: box-left end-->
+
+
+        <!--Gallery start-->
+
+        <div class="cmp-gallery" data-cmp-component="gallery">
+            <div class="cmp-gallery__inner--desktop grid-container">
+                <div class="grid-row">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <div class="slide-contain">
+                                <div class="slide-contents">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" 
+                                        alt="image alt text" 
+                                        data-image-caption="caption1: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.">
+                                </div>
+                            </div>
+                            <div class="slide-contain">
+                                <div class="slide-contents">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" 
+                                        alt="image alt text" 
+                                        data-image-caption="caption2: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.">
+                                </div>
+                            </div>
+                            <div class="slide-contain">
+                                <div class="slide-contents">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg" 
+                                        alt="image alt text" 
+                                        data-image-caption="caption3: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.">
+                                </div>
+                            </div>
+                            <div class="slide-contain">
+                                <div class="slide-contents">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" 
+                                        alt="image alt text" 
+                                        data-image-caption="caption4: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.">
+                                </div>
+                            </div>
+                            <div class="slide-contain">
+                                <div class="slide-contents">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" 
+                                        alt="image alt text" 
+                                        data-image-caption="caption5: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmp-gallery__desktop-controls">
+                        <div class="cmp-gallery__prev">
+                            <button class="glider-prev-btn">
+                                <span class="visually-hidden">previous</span>
+                                <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 31L2 16L17 1" stroke="white" stroke-width="2"/>
+                                </svg>                                                      
+                            </button>
+                        </div>
+                        <div class="cmp-gallery__caption">
+                            <p class="cmp-gallery__caption--text">caption1: Dynamic, inviting and stylish layouts to accomodate the way you live, work and play.</p>
+                            <p class="cmp-gallery__caption--index">
+                                <span class="image-current">1</span> of <span class="image-counts">5</span> images
+                                <!--Replace the "5" to use the size/count/length of the image List/Array-->
+                            </p>
+                        </div>
+                        <div class="cmp-gallery__next">
+                            <button class="glider-next-btn">
+                                <span class="visually-hidden">next</span>
+                                <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 31L16 16L1 1" stroke="white" stroke-width="2"/>
+                                </svg>                                                   
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="cmp-gallery__inner--mobile">
+                    <div class="cmp-gallery__mobile-wrapper">
+                        <div class="cmp-gallery__mobile-image">
+                            <!--update the "src" and "alt" to use the attributes of the first image-->
+                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" 
+                            alt="image alt text" >
+                        </div>
+                        <div class="cmp-gallery__mobile-controls">
+                            <h2>
+                                <button data-a11y-dialog-show="gallery-dialog-78bc3b842f">
+                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/images.svg" alt="">
+                                    <span class="visually-hidden">Open the gallery of</span>
+                                    <!--update the "5" to be total counts of images-->
+                                    <span class="medium-title">5 IMAGES</span>
+                                </button>
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="gallery-dialog-78bc3b842f" 
+                        class="dialog-container gallery-dialog" 
+                        aria-hidden="true"
+                        aria-labelledby="gallery-title-78bc3b842f" 
+                        aria-describedby="gallery-description-78bc3b842f">
+                        <div class="dialog-overlay" data-a11y-dialog-hide></div>
+                        <div class="dialog-content" role="document">
+                            <button data-a11y-dialog-hide class="dialog-close">
+                                <span>close</span>
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/close_light.svg" alt=""/>              
+                            </button>
+                            <!---for accessibility purpose, "gallery-title" and  "gallery-description" are used on the gallery dialog. Author should be able to edit them-->
+                            <h1 id="gallery-title-78bc3b842f" class="visually-hidden">Gallery of ...</h1>
+                            <p id="gallery-description-78bc3b842f" class="visually-hidden">Explore ...</p>
+                            <div class="dialog-gallery-wrapper">
+                                <div class="glider-contain">
+                                    <div class="glider">
+                                        <!--create html for each image, update the "src", "alt" of the <img> element; update the numbers in "slide-caption--title"; update the contents in "slide-caption--body -->
+                                            <div class="slide-contain">
+                                                <div class="slide-contents">
+                                                    <div class="slide-imageWrap">
+                                                        <div class="slide-image">
+                                                            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" alt="image alt">
+                                                        </div>
+                                                    </div>
+
+                                                    <!--update the "5" to be total counts of images-->
+                                                    <!--update the "1" to be index( or index+1) of images-->
+                                                    <h3 class="slide-caption--title">1/5 Images</h3>
+                                                    <p class="slide-caption--body">caption1: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                                                </div>
+                                            </div>
+                                        <!--create html for each image end-->
+                                        <div class="slide-contain">
+                                            <div class="slide-contents">
+                                            <div class="slide-imageWrap">
+                                                <div class="slide-image">
+                                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" alt="image alt">
+                                                </div>
+                                            </div>
+                                                <h3 class="slide-caption--title">2/5 Images</h3>
+                                                <p class="slide-caption--body">caption2: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                                            </div>
+                                        </div>
+                                        <div class="slide-contain">
+                                            <div class="slide-contents">
+                                                <div class="slide-imageWrap">
+                                                <div class="slide-image">
+                                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-03.jpg" alt="image alt">
+                                                </div></div>
+                                                <h3 class="slide-caption--title">3/5 Images</h3>
+                                                <p class="slide-caption--body">caption3: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                                            </div>
+                                        </div>
+                                        <div class="slide-contain">
+                                            <div class="slide-contents">
+                                                <div class="slide-imageWrap">
+                                                <div class="slide-image">
+                                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-01.jpg" alt="image alt">
+                                                </div></div>
+                                                <h3 class="slide-caption--title">4/5 Images</h3>
+                                                <p class="slide-caption--body">caption4: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                                            </div>
+                                        </div>
+                                        <div class="slide-contain">
+                                            <div class="slide-contents">
+                                            <div class="slide-imageWrap">
+                                                <div class="slide-image">
+                                                    <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/gallery-sample-02.jpg" alt="image alt">
+                                                </div>
+                                            </div>
+                                                <h3 class="slide-caption--title">5/5 Images</h3>
+                                                <p class="slide-caption--body">caption5: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--Gallery end-->
+
+        <!--Accordion Component-->
+        <!--First item is expanded by default; single expansion: expanding one item collapses all other items-->
+        <div class="cmp-accordions" data-cmp-component="accordions">
+        <div class="grid-container">
+
+            <div class="cmp-accordions__headline ">
+                <div class="temp-grid-row"><h2 class="col-2-11 accordion-headline">World Class Amenities</h2></div>
+            </div>
+            <div class="cmp-accordions__main">
+                <div class="temp-grid-row">
+                    <div id="accordion-78bc3b842e" class="cmp-accordions__group col-2-11" >
+                    <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-0b936d3b6c">
+                        <h3 class="cmp-accordions__header">
+                        <button 
+                            id="accordion-78bc3b842e-item-0b936d3b6c-button" 
+                            class="cmp-accordions__button cmp-accordions__button--expanded" 
+                            aria-controls="accordion-78bc3b842e-item-0b936d3b6c-panel" 
+                            aria-expanded="true">
+                            <span class="cmp-accordions__title large-title">one-stop Dining & Leisure</span>
+                            <span class="cmp-accordions__icon"></span>
+                        </button>
+                        </h3>
+                        <div 
+                        id="accordion-78bc3b842e-item-0b936d3b6c-panel" 
+                        class="cmp-accordions__panel cmp-accordions__panel--expanded" 
+                        role="region" 
+                        aria-labelledby="accordion-78bc3b842e-item-0b936d3b6c-button" >
+                        <div class="text">
+                            <div id="text-0b936d3b6c" class="cmp-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-273d53765b">
+                        <h3 class="cmp-accordions__header">
+                        <button 
+                        id="accordion-78bc3b842e-item-273d53765b-button" 
+                        class="cmp-accordions__button" 
+                        aria-controls="accordion-78bc3b842e-item-273d53765b-panel"
+                        aria-expanded="false">
+                            <span class="cmp-accordions__title large-title">24/7 Concierge Services</span>
+                            <span class="cmp-accordions__icon"></span>
+                        </button>
+                        </h3>
+                        <div id="accordion-78bc3b842e-item-273d53765b-panel" 
+                        class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+                        role="region" 
+                        aria-labelledby="accordion-78bc3b842e-item-273d53765b-button" 
+                        aria-hidden="true">
+                        <div class="text">
+                            <div id="text-273d53765b" class="cmp-text">
+                            <p>Nulla scelerisque diam eget turpis lacinia, consectetur efficitur purus pulvinar. In at velit bibendum, ullamcorper tellus pellentesque, vulputate ex. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-7a1ad04f9b">
+                        <h3 class="cmp-accordions__header">
+                        <button id="accordion-78bc3b842e-item-7a1ad04f9b-button" 
+                        class="cmp-accordions__button" 
+                        aria-controls="accordion-78bc3b842e-item-7a1ad04f9b-panel"
+                        aria-expanded="false">
+                            <span class="cmp-accordions__title large-title">More Amenities</span>
+                            <span class="cmp-accordions__icon"></span>
+                        </button>
+                        </h3>
+                        <div 
+                        id="accordion-78bc3b842e-item-7a1ad04f9b-panel" 
+                        class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+                        role="region" 
+                        aria-labelledby="accordion-78bc3b842e-item-7a1ad04f9b-button">
+                        <div class="text">
+                            <div id="text-7a1ad04f9b" class="cmp-text">
+                            <ul class="amenity-list">
+                                <li>Doorperson</li>
+                                <li>Children's Play Area</li>
+                                <li>Live-in Building Manager</li>
+                                <li>Business Facilities</li>
+                                <li>Additional Storage</li>
+                                <li>Smoke Free Property</li>
+                                <li>Laundry Services</li>
+                                <li>Secure Package Room</li>
+                                <li>And any more...</li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!--Accordion Component end-->
+
+
+<!--Type Visual: info-right-->
+<div class="cmp-section100 cmp-section100--visual info-right">
+    <div class="cmp-section100__wrapper">
+        <div class="cmp-section100__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="description of the image" width="1920" height="1022"/>
+        </div>
+    <div class="cmp-section100__info-box grid-row">
+        <div class="cmp-section100__info">
+            <div class="cmp-section100__info-inner">
+                <div class="cmp-section100__title"><h3 class="large-title">Rooftop Lounge</h3></div>
+                <div class="cmp-section100__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</div>
+                <div class="cmp-section100__cta">
+                    <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<!--Type Visual: info-right - end-->
+<!--Type Visual: info-right-->
+<div class="cmp-section100 cmp-section100--visual info-left">
+    <div class="cmp-section100__wrapper">
+        <div class="cmp-section100__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="description of the image" width="1920" height="1022"/>
+        </div>
+    <div class="cmp-section100__info-box grid-row">
+        <div class="cmp-section100__info">
+            <div class="cmp-section100__info-inner">
+                <div class="cmp-section100__title"><h3 class="large-title">Rooftop Lounge</h3></div>
+                <div class="cmp-section100__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</div>
+                <div class="cmp-section100__cta">
+                    <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<!--Type Visual: info-right - end-->
+
+        <!--Type Text: lead-only-->
+<div class="cmp-section100 cmp-section100--text lead-only" >
+    <div class="cmp-section100__wrapper animation-on">
+            <div class="cmp-section100__lead">
+                <h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.</h3>
+            </div>
+    </div>
+</div>
+
+
+<!--Type Visual: info-left-->
+<div class="cmp-section100 cmp-section100--visual info-left">
+    <div class="cmp-section100__wrapper animation-on">
+        <div class="cmp-section100__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="description of the image" width="1920" height="1022"/>
+        </div>
+        <div class="cmp-section100__info-box grid-row">
+            <div class="cmp-section100__info">
+                <div class="cmp-section100__info-inner">
+                    <div class="cmp-section100__title"><h3 class="large-title">The Hudson Room</h3></div>
+                    <div class="cmp-section100__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</div>
+                    <div class="cmp-section100__cta">
+                        <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Type Visual: info-left - end-->
+
+<!--Type Text: lead-n-copy-->
+<div class="cmp-section100 cmp-section100--text lead-n-copy">
+    <div class="cmp-section100__wrapper animation-on">
+        <div class="cmp-section100__lead">
+            <h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.</h3>
+        </div>
+        <div class="cmp-section100__copy">
+            <p>The Eugene is an integral piece of New York City’s most anticipated neighborhood, Hudson Yards. Just minutes away from Chelsea, The High Line and transportation.</p>
+            <a href="#" class="btn btn-tertiary btn-light">Explore</a>
+        </div>
+    </div>
+</div>
+<!--Type Text: lead-n-copy end-->
+
+<!--Type Visual: no-info-->
+<div class="cmp-section100 cmp-section100--visual no-info">
+    <div class="cmp-section100__wrapper">
+        <div class="cmp-section100__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="description of the image" width="1920" height="1022"/>
+        </div>
+    </div>
+</div>
+
+<!--Type Visual: no-info - end-->
+
+
+        <div class="cmp-section100 cmp-section100--text lead-n-contacts">
+            <div class="cmp-section100__wrapper animation-on">
+                <div class="cmp-section100__lead">
+                    <h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.</h3>
+                </div>
+                <div class="cmp-section100__contacts">
+                    <div class="contact-info contact-info--address">
+                        <p>435 WEST 31ST STREET</p>
+                        <p>NEW YORK, NY 10001</p>
+                    </div>
+                    <div class="contact-info contact-info--direction">
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                        <a href="#" >Get Directions</a>
+                    </div>
+                    <div class="contact-info contact-info--phone"> 
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                        <a href="tel:+01-877-245-1215" >(877) 245-1215</a>
+                    </div>
+                    <div class="contact-info contact-info--chat"> 
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt="" />
+                        <a href="#" >Chat Now</a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+
+<!--Type Visual: video-->
+<div class="cmp-section100 cmp-section100--visual video" data-cmp-component="videoplayer">
+        <div class="cmp-section100__wrapper">
+            <div class="cmp-section100__media cmp-videoPlayer">
+                <video src="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4" 
+                preload="true" muted autoplay loop playsinline webkit-playsinline x5-playsinline>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="cmp-section100__control">
+                <button class="btn-videoControl btn-videoControl--pause">
+                    <span class="visually-hidden">Pause the video</span>
+                </button>
+            </div>
+            
+            <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+            <div class="cmp-section100__sound-control">
+                <button class="btn-soundControl btn-soundControl--unmute">
+                    <span class="visually-hidden">Unmute the video</span>
+                </button>
+            </div>
+            <!--if the mute/unmute  config is turned on by the author, add the sound control-->
+        </div>
+</div>
+
+<!--Type Visual: video - end-->
+
+
+
+
+
+<!--Section50-50-carousel component-->
+<div class="cmp-section50-carousel" data-cmp-component="section50carousel">
+    <div class="carouselSection__header-wrapper grid-container">
+        <div class="carouselSection__header">
+            <!--replace the content with the title and seo text-->
+            <div class="horizontal-divider"></div>
+            <h2 class="section-title">primer collections</h2>
+            <p class="highlight-title">This is a SEO text about collections explaining how many cities there are and so on.</p>
+        </div>
+    </div>
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="slide-contain">
+                <div class="cmp-section50 cmp-section50--info-right" >
+                    <div class="image-above temp-grid-container">
+                        <div class="cmp-section50__wrapper grid-row">
+                            <div class="cmp-section50__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg" alt="image description"/>
+                            </div>
+                            <div class="cmp-section50__info">
+                                <div class="cmp-section50__info-inner">
+                                    <!--add highlight html if there is a highlight title-->
+                                        <div class="cmp-section50__highlight">
+                                            <h2 class="highlight-title">Mercantile Place</h2>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add description html if there is a description-->
+                                    <!--add "hide-for-mobile" css class if hiding description on mobile-->
+                                        <div class="cmp-section50__description hide-for-mobile">
+                                            <p class="body-text">With over 700 apartments and penthouses in its four communities, Mercantile Place is home to hundreds of urban dwellers who bring vitality and excitement to the city streets. New restaurants, shops, and boutiques are opening their doors and the Main Street Park has become a gathering spot for dog owners and outdoor lovers alike.</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add address html if there is an address-->
+                                        <div class="cmp-section50__address">
+                                            <p class="link-text">1810 commerce STREET</p>
+                                            <p class="link-text">Dallas Texas</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add the link/list html if there is a link/text list, replace the 'href' with configured link values, add open to new/same window-->
+                                    <div class="cmp-section50__list">
+                                        <!--add title html if there is a title for link/text list-->
+                                            <p class="medium-title">Featured Properties</p>
+                                        <!---->
+                                        <ul>
+                                            <li><a class="link-text" href="#">The Continental</a></li>
+                                            <li><a class="link-text" href="#">The Element</a></li>
+                                            <li><a class="link-text" href="#">The Merc</a></li>
+                                            <li><a class="link-text" href="#">The Wilson</a></li>
+                                        </ul>
+                                        <!--do not use the <a> if there is no link, usse the following <ul> html for plain text list-->
+                                            <!-- 
+                                                <ul>
+                                                    <li>Minutes to Subway lines & Penn Station</li>
+                                                    <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                                    <li>2-Acre Public Plaza</li>
+                                                </ul> 
+                                            -->
+                                    </div>
+                                    <!---->
+                
+                                    <!--add cta html if there is a cta-->
+                                        <div class="cmp-section50__cta">
+                                            <a href="#" class="btn btn-tertiary btn-dark">Explore collection</a>
+                                        </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-contain">
+                <div class="cmp-section50 cmp-section50--info-right" >
+                    <div class="image-above  temp-grid-container">
+                        <div class="cmp-section50__wrapper grid-row">
+                            <div class="cmp-section50__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg" alt="image description"/>
+                            </div>
+                            <div class="cmp-section50__info">
+                                <div class="cmp-section50__info-inner">
+                                    <!--add highlight html if there is a highlight title-->
+                                        <div class="cmp-section50__highlight">
+                                            <h2 class="highlight-title">Mercantile Place</h2>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add description html if there is a description-->
+                                    <!--add "hide-for-mobile" css class if hiding description on mobile-->
+                                        <div class="cmp-section50__description hide-for-mobile">
+                                            <p class="body-text">With over 700 apartments and penthouses in its four communities, Mercantile Place is home to hundreds of urban dwellers who bring vitality and excitement to the city streets. New restaurants, shops, and boutiques are opening their doors and the Main Street Park has become a gathering spot for dog owners and outdoor lovers alike.</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add address html if there is an address-->
+                                        <div class="cmp-section50__address">
+                                            <p class="link-text">1810 commerce STREET</p>
+                                            <p class="link-text">Dallas Texas</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add the link/list html if there is a link/text list, replace the 'href' with configured link values, add open to new/same window-->
+                                    <div class="cmp-section50__list">
+                                        <!--add title html if there is a title for link/text list-->
+                                            <p class="medium-title">Featured Properties</p>
+                                        <!---->
+                                    <!--
+                                        <ul>
+                                            <li><a class="link-text" href="#">The Continental</a></li>
+                                            <li><a class="link-text" href="#">The Element</a></li>
+                                            <li><a class="link-text" href="#">The Merc</a></li>
+                                            <li><a class="link-text" href="#">The Wilson</a></li>
+                                        </ul> 
+                                    -->
+                                        <!--do not use the <a> if there is no link, usse the following <ul> html for plain text list-->
+                                            <ul>
+                                                <li>Minutes to Subway lines & Penn Station</li>
+                                                <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                                <li>2-Acre Public Plaza</li>
+                                            </ul> 
+                                    </div>
+                                    <!---->
+                
+                                    <!--add cta html if there is a cta-->
+                                        <div class="cmp-section50__cta">
+                                            <a href="#" class="btn btn-tertiary btn-dark">Explore collection</a>
+                                        </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-contain">
+                <div class="cmp-section50 cmp-section50--info-right" >
+                    <div class="image-above temp-grid-container">
+                        <div class="cmp-section50__wrapper grid-row">
+                            <div class="cmp-section50__image">
+                                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-info-right-sample.jpg" alt="image description"/>
+                            </div>
+                            <div class="cmp-section50__info">
+                                <div class="cmp-section50__info-inner">
+                                    <!--add highlight html if there is a highlight title-->
+                                        <div class="cmp-section50__highlight">
+                                            <h2 class="highlight-title">Mercantile Place</h2>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add description html if there is a description-->
+                                    <!--add "hide-for-mobile" css class if hiding description on mobile-->
+                                        <div class="cmp-section50__description hide-for-mobile">
+                                            <p class="body-text">With over 700 apartments and penthouses in its four communities, Mercantile Place is home to hundreds of urban dwellers who bring vitality and excitement to the city streets. New restaurants, shops, and boutiques are opening their doors and the Main Street Park has become a gathering spot for dog owners and outdoor lovers alike.</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add address html if there is an address-->
+                                        <div class="cmp-section50__address">
+                                            <p class="link-text">1810 commerce STREET</p>
+                                            <p class="link-text">Dallas Texas</p>
+                                        </div>
+                                    <!---->
+                
+                                    <!--add the link/list html if there is a link/text list, replace the 'href' with configured link values, add open to new/same window-->
+                                    <div class="cmp-section50__list">
+                                        <!--add title html if there is a title for link/text list-->
+                                            <p class="medium-title">Featured Properties</p>
+                                        <!---->
+
+                                        <ul>
+                                            <li><a class="link-text" href="#">The Continental</a></li>
+                                            <li><a class="link-text" href="#">The Element</a></li>
+                                            <li><a class="link-text" href="#">The Merc</a></li>
+                                            <li><a class="link-text" href="#">The Wilson</a></li>
+                                        </ul> 
+
+                                        <!--do not use the <a> if there is no link, usse the following <ul> html for plain text list-->
+
+                                        <!-- 
+                                            <ul>
+                                                <li>Minutes to Subway lines & Penn Station</li>
+                                                <li>240,000 sq. ft. of curated retail, restaurants and pop-up events</li>
+                                                <li>2-Acre Public Plaza</li>
+                                            </ul>  
+                                        -->
+
+                                    </div>
+                                    <!---->
+                
+                                    <!--add cta html if there is a cta-->
+                                        <div class="cmp-section50__cta">
+                                            <a href="#" class="btn btn-tertiary btn-dark">Explore collection</a>
+                                        </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carouselSection__control-wrapper grid-container">
+        <div class="grid-row">
+            <div class="carouselSection__control">
+                <div class="carouselSection__status">
+                    <p class="label-text">
+                        <!--replace the number "3" with the total number of slides; replace the "collections" with the NAME of carousel -->
+                        <span class="current-page">1</span> of 3 collections
+                    </p>
+                </div>
+                <div class="carouselSection__buttons">
+                    <button class="carouselSection__btn carouselSection__btn--prev">
+                        <span class="visually-hidden">Previous</span>
+                        <span class="carouselSection__btn-icon">
+                            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="carouselSection__btn carouselSection__btn--next">
+                        <span class="visually-hidden">Next</span>
+                        <span class="carouselSection__btn-icon">
+                            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M1 31L16 16L1 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Section50-50-carousel component end-->
+
+
+ <!--Notable Contents Carousel Start-->
+ <section class="cmp-notableContents" data-cmp-component="notablecontentscarousel">
+    <div class="carouselSection__header-wrapper grid-container">
+        <div class="carouselSection__header">
+           <div class="horizontal-divider"></div>
+           <!--replace the content with the title and seo text-->
+           <h2 class="section-title">Notable destinations</h2>
+           <p class="highlight-title">Our catalog of properties extends well over 70 properties in 8 regions, across 13 states–in all major markets.</p>
+        </div>
+    </div>
+   <div role="region" aria-label="Notable destinations carousel">
+       <div class="carouselSection__main">
+           <div class="slider-contain">
+               <div class="slider">
+                   <!--html of one slide-->
+                   <div class="slide-contain" data-slide-index=0 role="group" aria-label="slide 1">
+                       <div class="cmp-notableContents__slide">
+                           <div class="cmp-notableContents__slide-image">
+                               <!--replace the "src" and "alt" with the real image data-->
+                               <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image description text">
+                           </div>
+                           <div class="cmp-notableContents__slide-textBox">
+
+                               <!--Add the following html if paragraph is configured-->
+                               <div class="cmp-notableContents__slide-title">
+                                   <!--Replace the text with Title-->
+                                   <h3 class="medium-title">1 Nashville</h3>
+                               </div>
+
+                               <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                               <div class="cmp-notableContents__slide-paragraph hide-for-mobile">
+                                   <!--Replace the text with paragraph-->
+                                   <p class="body-text">Known for its music industry, live performance venues abound, enjoying a thriving country, rock and blues scene.</p>
+                               </div>
+
+                               <!--add the following html if there is a sub title -->
+                               <div class="cmp-notableContents__slide-subtitle">
+                                   <!--Replace the text with subTitle-->
+                                   <h4 class="interactive-title">Featured Properties</h4>
+                               </div>
+
+                               <!--add the following html if there is a list -->
+                               <div class="cmp-notableContents__slide-list">
+                                   <ul>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE BURNHAM NASHVILLE</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <!--Add the following html if cta is configured-->
+                               <div class="cmp-notableContents__slide-cta">
+                                   <!--replace the href with url data, add open in same/new window-->
+                                   <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                               </div>
+                               
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slide-contain" data-slide-index=1 role="group" aria-label="slide 2">
+                       <div class="cmp-notableContents__slide">
+                           <div class="cmp-notableContents__slide-image">
+                               <!--replace the "src" and "alt" with the real image data-->
+                               <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image description text">
+                           </div>
+                           <div class="cmp-notableContents__slide-textBox">
+
+                               <!--Add the following html if paragraph is configured-->
+                               <div class="cmp-notableContents__slide-title">
+                                   <!--Replace the text with Title-->
+                                   <h3 class="medium-title">2 Nashville</h3>
+                               </div>
+
+                               <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                               <div class="cmp-notableContents__slide-paragraph hide-for-mobile">
+                                   <!--Replace the text with paragraph-->
+                                   <p class="body-text">Known for its music industry, live performance venues abound, enjoying a thriving country, rock and blues scene.</p>
+                               </div>
+
+                               <!--add the following html if there is a sub title -->
+                               <div class="cmp-notableContents__slide-subtitle">
+                                   <!--Replace the text with subTitle-->
+                                   <h4 class="interactive-title">Featured Properties</h4>
+                               </div>
+
+                               <!--add the following html if there is a list -->
+                               <div class="cmp-notableContents__slide-list">
+                                   <ul>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE BURNHAM NASHVILLE</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <!--Add the following html if cta is configured-->
+                               <div class="cmp-notableContents__slide-cta">
+                                   <!--replace the href with url data, add open in same/new window-->
+                                   <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                               </div>
+                               
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slide-contain" data-slide-index=2 role="group" aria-label="slide 3">
+                       <div class="cmp-notableContents__slide">
+                           <div class="cmp-notableContents__slide-image">
+                               <!--replace the "src" and "alt" with the real image data-->
+                               <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image description text">
+                           </div>
+                           <div class="cmp-notableContents__slide-textBox">
+
+                               <!--Add the following html if paragraph is configured-->
+                               <div class="cmp-notableContents__slide-title">
+                                   <!--Replace the text with Title-->
+                                   <h3 class="medium-title">3 Nashville</h3>
+                               </div>
+
+                               <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                               <div class="cmp-notableContents__slide-paragraph hide-for-mobile">
+                                   <!--Replace the text with paragraph-->
+                                   <p class="body-text">Known for its music industry, live performance venues abound, enjoying a thriving country, rock and blues scene.</p>
+                               </div>
+
+                               <!--add the following html if there is a sub title -->
+                               <div class="cmp-notableContents__slide-subtitle">
+                                   <!--Replace the text with subTitle-->
+                                   <h4 class="interactive-title">Featured Properties</h4>
+                               </div>
+
+                               <!--add the following html if there is a list -->
+                               <div class="cmp-notableContents__slide-list">
+                                   <ul>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE BURNHAM NASHVILLE</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <!--Add the following html if cta is configured-->
+                               <div class="cmp-notableContents__slide-cta">
+                                   <!--replace the href with url data, add open in same/new window-->
+                                   <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                               </div>
+                               
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slide-contain" data-slide-index=3 role="group" aria-label="slide 4">
+                       <div class="cmp-notableContents__slide">
+                           <div class="cmp-notableContents__slide-image">
+                               <!--replace the "src" and "alt" with the real image data-->
+                               <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image description text">
+                           </div>
+                           <div class="cmp-notableContents__slide-textBox">
+
+                               <!--Add the following html if paragraph is configured-->
+                               <div class="cmp-notableContents__slide-title">
+                                   <!--Replace the text with Title-->
+                                   <h3 class="medium-title">4 Nashville</h3>
+                               </div>
+
+                               <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                               <div class="cmp-notableContents__slide-paragraph hide-for-mobile">
+                                   <!--Replace the text with paragraph-->
+                                   <p class="body-text">Known for its music industry, live performance venues abound, enjoying a thriving country, rock and blues scene.</p>
+                               </div>
+
+                               <!--add the following html if there is a sub title -->
+                               <div class="cmp-notableContents__slide-subtitle">
+                                   <!--Replace the text with subTitle-->
+                                   <h4 class="interactive-title">Featured Properties</h4>
+                               </div>
+
+                               <!--add the following html if there is a list -->
+                               <div class="cmp-notableContents__slide-list">
+                                   <ul>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE BURNHAM NASHVILLE</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <!--Add the following html if cta is configured-->
+                               <div class="cmp-notableContents__slide-cta">
+                                   <!--replace the href with url data, add open in same/new window-->
+                                   <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                               </div>
+                               
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slide-contain" data-slide-index=4 role="group" aria-label="slide 5">
+                       <div class="cmp-notableContents__slide">
+                           <div class="cmp-notableContents__slide-image">
+                               <!--replace the "src" and "alt" with the real image data-->
+                               <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" alt="image description text">
+                           </div>
+                           <div class="cmp-notableContents__slide-textBox">
+
+                               <!--Add the following html if paragraph is configured-->
+                               <div class="cmp-notableContents__slide-title">
+                                   <!--Replace the text with Title-->
+                                   <h3 class="medium-title">5 Nashville</h3>
+                               </div>
+
+                               <!--Add the following html if there is paragraph configured, add "hide-for-mobile" css class if author select "hide paragraph on mobile" -->
+                               <div class="cmp-notableContents__slide-paragraph hide-for-mobile">
+                                   <!--Replace the text with paragraph-->
+                                   <p class="body-text">Known for its music industry, live performance venues abound, enjoying a thriving country, rock and blues scene.</p>
+                               </div>
+
+                               <!--add the following html if there is a sub title -->
+                               <div class="cmp-notableContents__slide-subtitle">
+                                   <!--Replace the text with subTitle-->
+                                   <h4 class="interactive-title">Featured Properties</h4>
+                               </div>
+
+                               <!--add the following html if there is a list -->
+                               <div class="cmp-notableContents__slide-list">
+                                   <ul>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE BURNHAM NASHVILLE</a>
+                                       </li>
+                                       <li>
+                                           <!--use <a> tag if the link url is configured, replace the href with url data, add open in same/new window-->
+                                           <a href="#" class="link-text">THE PLACE AT FIFTH + BROADWAY</a>
+                                       </li>
+                                   </ul>
+                               </div>
+
+                               <!--Add the following html if cta is configured-->
+                               <div class="cmp-notableContents__slide-cta">
+                                   <!--replace the href with url data, add open in same/new window-->
+                                   <a href="#" class="btn btn-tertiary btn-dark">Explore</a>
+                               </div>
+                               
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div> 
+       </div>
+       <div class="carouselSection__control-wrapper grid-container">
+           <div class="grid-row">
+               <div class="carouselSection__control">
+                   <div class="carouselSection__status">
+                       <p class="label-text">
+                           <!--replace the number "5" with the total number of slides; replace the "destinations" with the NAME of carousel -->
+                           <span class="current-page">1</span> of 5 destinations
+                       </p>
+                   </div>
+                   <div class="carouselSection__buttons">
+                       <button class="carouselSection__btn carouselSection__btn--prev">
+                           <span class="visually-hidden">Previous</span>
+                           <span class="carouselSection__btn-icon">
+                               <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                   <path d="M17 31L2 16L17 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                               </svg>
+                           </span>
+                       </button>
+                       <button class="carouselSection__btn carouselSection__btn--next">
+                           <span class="visually-hidden">Next</span>
+                           <span class="carouselSection__btn-icon">
+                               <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                   <path d="M1 31L16 16L1 1" stroke="#191919" stroke-width="2" stroke-linecap="round"/>
+                               </svg>
+                           </span>
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+</section>
+
+
+<!--Notable Contents Carousel End-->
+<div class="cmp-section50 cmp-section50--double-cta" >
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="cmp-section50__wrapper">
+                <div class="cmp-section50__divider"></div>
+                <div class="cmp-section50__title">
+                    <h4><span class="intermediate-title">Interested? check out our available apartments</span></h4>
+                </div>
+                <div class="cmp-section50__cta">
+                    <a href="#" class="btn btn-primary btn-dark"> 
+                        VIEW AVAILABILITIES
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="cmp-amenityList">
+    <div class="cmp-amenityList__wrapper temp-grid-row">
+        <div class="cmp-amenityList__header col-2-11">
+            <!--replace "Features" with the authored title-->
+            <h3 class="intermediate-title">Features</h3>
+            <div class="horizontal-divider"></div>
+        </div>
+        <div class="cmp-amenityList__items amenity-list col-2-11">
+            <!--could the following <ul> list html enteted from rich text editor? author can add italic font style from there-->
+            <ul>
+                <li>Balcony/Patio/Terrace</li>
+                <li>In-Home Washer/Dryer</li>
+                <li>Linen Closet</li>
+                <li>Plank-style flooring</li>
+                <li>Walk-in Closet</li>
+                <li>Fully-Equipped Kitchen</li>
+                <li>Granite/Quartz Countertops</li>
+                <li>Stainless-Steel Appliances</li>
+                <li><i>And many more...</i></li>
+            </ul>
+        </div>
+    </div>
+ </div>
+
+
+
+
+
+
+<section class="cmp-get-in-touch" data-cmp-component="getintouch" id="get-in-touch">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="cmp-get-in-touch__contents animation-on">
+                <div class="cmp-get-in-touch__contents-inner">
+                    <h2 class="cmp-get-in-touch__title">Get in Touch</h2>
+                    <div class="cmp-get-in-touch__copy">
+                        We're waiting to hear from you and answer any of your questions about our great services.
+                    </div>
+                    <div class="contact-info contact-info--address">
+                        <p>435 WEST 31ST STREET</p>
+                        <p>NEW YORK, NY 10001</p>
+                    </div>
+                    <div class="contact-info contact-info--phone"> 
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                        <a href="tel:+01-877-245-1215" >(877) 245-1215</a>
+                    </div>
+                    <div class="contact-info contact-info--direction">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                        <a href="#" >Get Directions</a>
+                    </div>
+                    <div class="contact-info contact-info--chat">
+                        <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt="" />
+                        <a href="#" >Chat Now</a>
+                    </div>
+                    <div class="contact-info contact-info--office">
+                        <h4>OFFICE HOURS</h4>
+                        <p>Monday-Friday: 9am-6pm</p>
+                        <p>Saturday & Sunday: 10am-5pm</p>     
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-get-in-touch__form-area">
+                <form 
+                    method="POST"
+                    action="#"
+                    enctype="multipart/form-data"
+                    class="cmp-form"
+                    id="contact_form"
+                    name="contact_form">
+                    <div class="text half-width">
+                        <div class="cmp-form-text">
+                            <label for="first_name">FIRST NAME</label>
+                            <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="first_name" placeholder="First Name" name="first_name">
+                            <p class="cmp-form-error-message hidden">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text half-width">
+                        <div class="cmp-form-text">
+                            <label for="last_name">LAST NAME</label>
+                            <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="text" id="last_name" placeholder="Last Name" name="last_name">
+                            <p class="cmp-form-error-message hidden">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="cmp-form-text">
+                            <label for="email_address">EMAIL ADDRESS</label>
+                            <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="email" id="email_address" placeholder="Email Address" name="email">
+                            <p class="cmp-form-error-message hidden">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="cmp-form-text">
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input class="cmp-form-text__text" data-cmp-hook-form-text="input" type="tel" id="phone_number" placeholder="Phone Number" name="phone_number">
+                        <p class="cmp-form-error-message hidden">Required Field</p>
+                        </div>
+                    </div>
+                    <div class="text move-in-date" data-cmp-component="duetdatepicker">
+                        <div class="cmp-form-text">
+                            <label for="move_in_date">Desired Move-in Date</label>
+                            <duet-date-picker identifier="move_in_date" name="moveindate"></duet-date-picker>                            
+                        </div>
+                    </div>
+                    <div class="cmp cmp-options home-type">
+                        <fieldset class="form-group checkbox">
+                            <legend>HOME TYPE</legend>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="studio" value="studio">
+                                    <span>STUDIO</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="onebedroom" value="1bedroom">
+                                    <span>1 BD</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="twobedroom" value="2bedroom">
+                                    <span>2+ BD</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="penthouse" value="penthouse">
+                                    <span>PH</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label>
+                                    <input type="checkbox" name="townhome" value="townhome">
+                                    <span>TH</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <p id="get_in_touch_error" class="cmp-form-error-message hidden">Please correct the noted errors above before attempting to submit the form again.</p>
+                    <button 
+                    type="submit"
+                    id="get_in_touch_submit"
+                    class="cmp-form-button btn btn-dark btn-primary"
+                    name="getInTouchSubmit">Say Hello</button>
+                </form>
+                <div class="cmp-get-in-touch__postsubmission hidden">
+                    <div class="cmp-get-in-touch__greeting">
+                        <p><img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/confirmation_dark.svg" alt="" />Thank you, <span class="cmp-get-in-touch__confirmation--name">Andrew</span>!</p>
+                    </div>
+                    <div class="cmp-get-in-touch__confirmation">
+                        <h6>We’ll be in touch soon.</h6>
+                        <p>One of our associates will reach out at our earliest convenience to help answer any additional questions that you may have. Before then, please feel free to contact us directly.</p>
+                    </div>
+                    <div class="cmp-get-in-touch__spacer"></div>
+                    <div class="cmp-get-in-touch__cta">
+                        <p class="cmp-get-in-touch__cta--intro">IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.</p>
+                        <p><a href="" class="btn btn-primary btn-dark">Schedule a tour</a></p>
+                        <p></p><a href="" class="btn btn-primary btn-dark">Experience in 3D</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- combined footer start-->
+<footer class="cmp-footer cmp-footer--combined" data-cmp-component="footer">
+    <section class="cmp-footer__section cmp-footer__section--property">
+        <nav class="cmp-footer__navigation "> 
+            <div class="cmp-footer__col1">
+                <div class="cmp-footer__logo">
+                    <a href="#" class="cmp-footer__logoLink" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt="Eugene" />
+                    </a>
+                </div>
+                <div class="cmp-footer__copyright">
+                    © 2021 The Eugene, All Rights Reserved.
+                </div>
+                <div class="cmp-footer__social">
+                    <a href="#" class="cmp-footer__iconLink cmp-footer__iconLink--social" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/instagram.svg" alt="Eugene on Facebook" />
+                    </a>
+                    <a href="#" class="cmp-footer__iconLink cmp-footer__iconLink--social" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/facebook.svg" alt="Eugene on Instagram" />
+                    </a>
+                </div>
+            </div>
+            <div class="cmp-footer__col2">
+                <div class="contact-info contact-info--address">
+                    <p>435 WEST 31ST STREET</p>
+                    <p>NEW YORK, NY 10001</p>
+                </div>
+                <div class="contact-info contact-info--phone"> 
+                    <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt="" />
+                    <a href="tel:+01-877-245-1215" >(877) 245-1215</a>
+                </div>
+                <div class="contact-info contact-info--direction">
+                    <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                    <a href="#">Get Directions</a>
+                </div>
+            </div>
+            <div class="cmp-footer__col3">
+                <ul>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Availability <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Experience <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">gallery <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Neighborhood <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">schedule a tour <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">lease online <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">resident portal <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">get in touch <span class="visually-hidden">opens in new window</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="cmp-footer__section cmp-footer__section--cta">
+        <div class="cmp-footer__ctaWrap">
+            <h2 class="cmp-footer__ctaTitle">
+                Features & Amenities
+            </h2>
+            <div class="cmp-footer__cta">
+                <a href="#" class="btn btn-primary btn-dark">Explore</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="cmp-footer__section cmp-footer__section--brookfield">
+        <nav class="cmp-footer__navigation "> 
+            <div class="cmp-footer__col1">
+                <div class="cmp-footer__logo">
+                    <a href="https://www.brookfieldproperties.com/" class="cmp-footer__logoLink" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_brookfield_white.svg" alt="Brookfield Properties" />
+                    </a>
+                </div>
+                <div class="cmp-footer__icons">
+                    <a href="https://www.hud.gov/program_offices/fair_housing_equal_opp" class="cmp-footer__iconLink" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/equal-housing.svg" alt="Equal Housing Opportunity" />
+                    </a>
+                    <a href="https://www.brookfieldproperties.com/accessibility/" class="cmp-footer__iconLink" target="_blank">
+                        <img src="/etc.clientlibs//brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/accessibility.svg" alt="Brookfield Properties Accessibility" />
+                    </a>
+                </div>
+            </div>
+            <div class="cmp-footer__col2">
+                <ul>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Privacy Policy <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Terms of Use <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Do Not Sell My Info <span class="visually-hidden">opens in new window</span></a></li>
+                </ul>
+            </div>
+            <div class="cmp-footer__col3">
+                <ul>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">NY Fair Housing Notice <span class="visually-hidden">opens in new window</span></a></li>
+                    <li><a href="#" target="_blank" class="cmp-footer__link">Brookfield Properties Customer Service <span class="visually-hidden">opens in new window</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</footer>
+<!-- combined footer end -->
+<script>
+    const turnOnGrid = document.getElementById("turnon-grid");
+    const samplePageGrid = document.getElementById("sample-page-grid");
+    turnOnGrid.addEventListener('change', function(event){
+        if(event.target.checked){
+            samplePageGrid.classList.remove('hidden');
+        } else {
+            samplePageGrid.classList.add('hidden');
+        }
+
+    });
+</script>
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

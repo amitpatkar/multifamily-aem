@@ -1,0 +1,17 @@
+<div 
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"    
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"     
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"     
+     class="cmp-errorPage__contents grid-container">
+    <div class="cmp-errorPage__title">
+        <h1 class="hero-title">${properties.title ? properties.title : 'Sorry, this page doesn\'t exist.'}</h1>
+    </div>
+    <div class="cmp-errorPage__body">
+        <h6>${properties.body ? properties.body : 'The link you followed may be broken, or the page may have been removed. But have no fear, your new home is still just a click away.'}</h6>
+    </div>
+    <div class="cmp-errorPage__cta">
+        <h4>${properties.ctaTeaser ? properties.ctaTeaser :'IN-PERSON AND VIRTUAL TOURS ARE Currently AVAILABLE.'}</h4>
+        <a data-sly-repeat="${ctas.menuLinks}" href="${item.absUrl}" target="${item.target}" class="${item.btnType}">${item.label}</a>
+    </div>
+</div>  
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

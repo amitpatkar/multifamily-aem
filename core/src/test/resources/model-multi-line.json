@@ -1,0 +1,42 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "subTitle": "Properties ${title}",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Thu Aug 05 2021 18:42:07 GMT-0700",
+    "title": "Brookfield",
+    "jcr:lastModified": "Thu Aug 05 2021 20:45:52 GMT-0700",
+    "sling:resourceType": "brookfieldpropertiesprogram/components/footer_portfolio",
+    "socialLinks": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "url": "/",
+            "icon": "icon2",
+            "label": "social"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "url": "test",
+            "icon": "test",
+            "label": "icon"
+        }
+    },
+    "menuLinks": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "url": "/",
+            "label": "Test1"
+        },
+        "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "openLinkInNewTab": "false",
+            "url": "/",
+            "label": "test3"
+        }
+    }
+}

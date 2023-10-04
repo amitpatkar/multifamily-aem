@@ -1,0 +1,31 @@
+<nav class="cmp-footer__navigation" 
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.navigation="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"     
+     data-sly-use.updatedProps ="${'com.brookfieldpropertiesprogram.core.models.UpdatedPropRequestModel'}"> 
+    <div class="cmp-footer__col1">
+        <div class="cmp-footer__logo">
+            <a class="cmp-footer__logoLink" target="_blank">
+                <img src="${pageInfo.propertyConfigModel.logo @context='uri'}" alt="${pageInfo.propertyConfigModel.title ? pageInfo.propertyConfigModel.title : 'Property Logo'}" />
+            </a>
+        </div>
+        <div class="cmp-footer__copyright">
+            ${pageInfo.propertyConfigModel.legalText @context='html'}
+        </div>
+        <div class="cmp-footer__social">                    
+            <a data-sly-test="${pageInfo.propertyConfigModel.instagramURL}" href="${pageInfo.propertyConfigModel.instagramURL}" class="cmp-footer__iconLink cmp-footer__iconLink--social" target="_blank" data-layer-clicked="Social Brand Followed" data-layer-social-social_network="Instagram">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/instagram.svg" alt="${pageInfo.propertyConfigModel.title} on Instagram" />
+            </a>
+            <a data-sly-test="${pageInfo.propertyConfigModel.facebookURL}" href="${pageInfo.propertyConfigModel.facebookURL}" class="cmp-footer__iconLink cmp-footer__iconLink--social" target="_blank" data-layer-clicked="Social Brand Followed" data-layer-social-social_network="Facebook">
+                <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/facebook.svg" alt="${pageInfo.propertyConfigModel.title} on Facebook" />
+            </a>       
+        </div>
+    </div>
+    <div class="cmp-footer__col2">        
+        ${updatedProps.getProperties.getInTouch @context='html'}
+    </div>
+    <div class="cmp-footer__col3">
+        <ul>
+            <li data-sly-repeat="${pageInfo.siteConfigModel.footerMenuLinksRight}"><a href="${item.absUrl}" target="${item.target}" class="cmp-footer__link ${item.cssClass @context='attribute'}" data-cmp-clickable="true">${item.label} <span class="visually-hidden">opens in new window</span></a></li>
+        </ul>
+    </div>
+</nav>

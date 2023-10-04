@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="nt:unstructured"
+    details="We're waiting to hear from you and answer any of your questions about our great services.&lt;br&gt;&lt;br&gt;435 WEST 31ST STREET&lt;br&gt;NEW YORK, NY 10001&lt;br&gt;&lt;br&gt;&lt;b&gt;OFFICE HOURS&lt;/b&gt;&lt;br&gt;Monday-Friday: 9am-6pm&lt;br&gt;Saturday &amp; Sunday: 10am-5pm">
+    <menuLinks jcr:primaryType="nt:unstructured">
+        <item0 jcr:primaryType="nt:unstructured" cssClass="schedule-tour-popup-button" label="Schedule a tour" url="#"/>
+        <item1 jcr:primaryType="nt:unstructured" cssClass="" label="Experience in 3D" url="#"/>
+    </menuLinks>
+</jcr:root>

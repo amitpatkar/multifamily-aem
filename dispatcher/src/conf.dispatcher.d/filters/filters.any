@@ -1,0 +1,35 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+# Allow components JSON model
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+# Allow manifest.webmanifest files located in the content
+/0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
+
+/0103 { /type "allow" /method "POST" /url "/*.contactus.html" }  # allow POSTs to form selectors under content
+/0104 { /type "allow" /method "POST" /url "/content/portfolio/en/contactus.html" }  # allow POSTs to form selectors under content
+
+/0105 { /type "allow" /extension '(ico|html)' /path "/*" }  # disable this rule to allow mapped content only
+
+#Search Availability filter
+/0106 { /type "allow" /extension "json" /selectors "availability" /path "/content/*" }
+
+
+# Allow components JSON model
+/0107 { /type "allow" /extension "xml"  /path "/sitemap" }
+/0108 { /type "deny" /extension "html"  /path "/sitemap" }
+# Allow Robots
+/0109 { /type "allow" /extension "txt"  /path "/robots" }
+/0110 { /type "deny" /extension "html"  /path "/robots" }
+
+/0111 { /type "allow" /extension "ico"  /path "/favicon" }
+/0112 { /type "allow" /extension "png"  /path "/favicon" }
+
+/0113 { /type "allow" /method "GET" /path "/content/siteconfig/sites/portfolio/master" }
+/0114 { /type "allow" /method "GET" /path "/content/siteconfig/sites/standalone/*" }

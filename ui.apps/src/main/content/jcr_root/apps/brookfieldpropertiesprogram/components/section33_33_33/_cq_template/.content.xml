@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          numberOfCols="cols-33-33-33">
+    <container_1  jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"
+                               cq:styleIds="[5327944215]"
+                               text="&lt;h3 class=&quot;cmp-section33__headline&quot;&gt;CLAIM YOUR SPACE&lt;/h3&gt;"> 
+            <menuLinks        jcr:primaryType="nt:unstructured" >
+                <item0  jcr:primaryType="nt:unstructured" label="Schedule a Tour"
+                       url="/"
+                       cssClass="btn-light"
+                       btnType="btn btn-primary"/>
+            </menuLinks>       
+        </section_33_33_33_card>
+    </container_1>
+    <container_2  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                               cq:styleIds="[5327944212]"
+                               bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg"        
+                               data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"
+        />
+    </container_2>
+    <container_3  jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <section_33_33_33_card jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/section33_33_33_card"        
+                               cq:styleIds="[5327944212]"
+                               bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section100_sample_image.jpg" 
+                               data-image-caption="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"       
+        />
+    </container_3>
+</jcr:root>

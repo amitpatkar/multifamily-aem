@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/brookfieldpropertiesprogram/clientlibs"/>
+    <filter root="/apps/brookfieldpropertiesprogram/components"/>
+    <filter root="/apps/brookfieldpropertiesprogram/i18n"/>
+</workspaceFilter>

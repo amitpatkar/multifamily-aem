@@ -1,0 +1,52 @@
+.root {
+    &.theme-george,
+    &.theme-george-small {
+        --brand-primary: #{$george-primary};
+        --brand-secondary: #{$george-secondary};
+        --brand-tertiary: #{$george-tertiary};
+        --brand-primary-rgb: #{hexToRGB($george-primary)};
+        --brand-secondary-rgb: #{hexToRGB($george-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($george-tertiary)};
+        --apt-detail-promo-bg: #{$george-secondary};
+        --duet-font: "NimbusSans";
+
+        .cmp-header {
+            .btn {
+              font-size: rem(15);
+            }
+        }
+        .btn-primary {
+            padding: 10px 50px 6px 15px;
+            &.btn-ghost {
+                padding: 8px 48px 4px 13px;
+            }
+        }
+        .btn-primary-alt {
+            padding: 10px 30px 6px 15px;
+            &.btn-ghost,
+            &.btn-ghost-green,
+            &.btn-ghost-white {
+                padding: 8px 58px 4px 18px;
+            }
+        }  
+        .btn-secondary {
+            padding: 10px 30px 6px 15px;
+            &.btn-ghost {
+                padding: 8px 28px 4px 13px;
+            }
+        }
+        .btn-primary,
+        .btn-primary-alt,
+        .btn-secondary {
+            &:after {
+                top: calc(50% + 2px);
+            }
+        }
+        .cmp-availability__buttons button.btn-submit{
+            padding: 10px 18px 6px;
+            &.btn-ghost {
+                padding: 8px 18px 4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description=""
+    jcr:primaryType="cq:Tag"
+    jcr:title="Amenities"
+    sling:resourceType="cq/tagging/components/tag">
+    <central-a-c-and-heat/>
+    <elevated-ceilings/>
+    <designer-finish-packages/>
+    <expansive-windows/>
+    <high-speed-internet-available/>
+    <in-home-washer-dryer/>
+</jcr:root>

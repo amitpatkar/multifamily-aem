@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-08-23T16:04:29.174-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/common/settings/wcm/templates/page-standalone"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Section 100%"
+        sling:resourceType="brookfieldpropertiesprogram/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="brookfieldpropertiesprogram/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brookfieldpropertiesprogram/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="brookfieldpropertiesprogram/components/container">
+                    <hero
+                        cq:styleIds="[8467799]"
+                        jcr:created="{Date}2021-08-23T15:55:55.195-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:55:55.195-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/hero"
+                        bannerBadgeImagePath="/content/dam/common/components/hero/banner-medallion-sample.svg"
+                        bgImagePath="/content/dam/common/components/hero/hero_sample_image.jpg"
+                        title="Welcome to the you generation"/>
+                    <text
+                        jcr:created="{Date}2021-08-23T15:59:26.002-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:59:39.472-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Lead&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100
+                        cq:styleIds="[678000,668000]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:00:10.841-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        btnType="btn-primary"
+                        displayAddress="false"
+                        lead="&lt;h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.&lt;/h3>"
+                        openLinkInNewTab="false"
+                        textIsRich="[true,true,true]"/>
+                    <text_941641702
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:59:54.130-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Lead and Copy&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_copy
+                        cq:styleIds="[678000,668001]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        copy="&lt;p>The Eugene is an integral piece of New York City’s most anticipated neighborhood, Hudson Yards. Just minutes away from Chelsea, The High Line and transportation.&lt;/p>&lt;a href=&quot;#&quot; class=&quot;btn btn-tertiary btn-light&quot;>Explore&lt;/a>"
+                        lead="&lt;h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.&lt;/h3>"/>
+                    <text_941641702_copy
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:00:51.439-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Lead and Address&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_copy_cop
+                        cq:styleIds="[678000,668002]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:00:39.594-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        btnType="btn-primary"
+                        displayAddress="true"
+                        lead="&lt;h3>The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It's forward-thinking sensibility can be found throughout.&lt;/h3>"
+                        openLinkInNewTab="false"
+                        textIsRich="[true,true,true]"/>
+                    <text_941641702_copy_
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:01:07.009-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Visual: no-info&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_copy_cop_2035472512
+                        cq:styleIds="[678001,668003]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:01:40.383-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        bgImagePath="/content/dam/common/components/section-100/section100_sample_image.jpg"
+                        btnType="btn-primary"
+                        displayAddress="true"
+                        openLinkInNewTab="false"
+                        textIsRich="[true,true,true]"/>
+                    <text_941641702_copy__1014815345
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:02:13.751-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Visual: no-info-left&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_copy_cop_1823825802
+                        cq:styleIds="[678001,668004]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:03:02.098-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        bgImagePath="/content/dam/common/components/section-100/section100_sample_image.jpg"
+                        btnType="btn-primary"
+                        displayAddress="true"
+                        label="Explore"
+                        openLinkInNewTab="false"
+                        text="&lt;p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.&lt;/p>&#xd;&#xa;"
+                        textIsRich="[true,true,true]"
+                        title="The Hudson Room"/>
+                    <text_941641702_copy__846026488
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:03:58.187-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Visual: no-info-right&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_copy_cop_809579389
+                        cq:styleIds="[678001,668005]"
+                        jcr:created="{Date}2021-08-23T15:59:09.955-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:03:02.098-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100"
+                        bgImagePath="/content/dam/common/components/section-100/section100_sample_image.jpg"
+                        btnType="btn-primary"
+                        displayAddress="true"
+                        label="Explore"
+                        openLinkInNewTab="false"
+                        text="&lt;p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.&lt;/p>&#xd;&#xa;"
+                        textIsRich="[true,true,true]"
+                        title="The Hudson Room"/>
+                    <text_941641702_copy__758680580
+                        jcr:created="{Date}2021-08-23T15:59:44.956-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:04:24.753-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/text"
+                        text="&lt;h3>Visual: Video&lt;/h3>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <section_100_video
+                        jcr:created="{Date}2021-08-23T16:04:29.168-07:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2021-08-23T16:04:29.168-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brookfieldpropertiesprogram/components/section_100_video"
+                        videoPath="https://videos.ctfassets.net/b5jqlzwlg71p/c6cJgMIK1nDOxC4TdWRyl/1e4049a1d8d1b875294113d35c043ad6/New_York_City_Metro_Area.mp4"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

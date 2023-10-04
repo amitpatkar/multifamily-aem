@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured">
+    <header_left cssClasses="cmp-apartmentDetail__header--left" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_detail_promo jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_promo" text="${specials}" textIsRich="true"/>
+    </header_left>
+    <header_right cssClasses="cmp-apartmentDetail__header--right" jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/container">        
+        <apt_detail_cta jcr:primaryType="nt:unstructured" 
+                              sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_cta"
+                              cssClass="cmp-apartmentDetail__cta"                              
+                              btnType="btn btn-secondary btn-dark"
+                              textIsRich="true"
+                              text="&lt;p class=&quot;cmp-apartmentDetail__info medium-title&quot;&gt;{{@root.group.name}} | {{@root.group.area}} sq. ft. |  ${{@root.unit.rent}}/month**&lt;/p&gt;"
+                              label="Apply Now"/>
+    </header_right>     
+    <container_main cssClasses="cmp-apartmentDetail__main" jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container_nodiv">
+        <apt_detail_section_fragment_1 jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_section_fragment" sectionName="floorplan" cssClass="cmp-apartmentDetail__floorplan"/>
+        <apt_detail_section_fragment_2 jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_section_fragment" sectionName="gallery" cssClass="cmp-apartmentDetail__gallery"/>        
+    </container_main>     
+    <container_footer cssClasses="cmp-apartmentDetail__footer" jcr:primaryType="nt:unstructured"  sling:resourceType="brookfieldpropertiesprogram/components/container">
+        <apt_detail_footer jcr:primaryType="nt:unstructured" sling:resourceType="brookfieldpropertiesprogram/components/apt_detail_footer"/>         
+    </container_footer>
+</jcr:root>

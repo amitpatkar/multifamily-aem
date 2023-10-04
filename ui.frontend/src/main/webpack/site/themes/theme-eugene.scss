@@ -1,0 +1,14 @@
+.root {
+    &.theme-eugene,
+    &.theme-eugene-small {
+        --brand-primary: #{$eugene-primary};
+        --brand-secondary: #{$eugene-secondary};
+        --brand-tertiary: #{$eugene-tertiary};
+        --brand-primary-rgb: #{hexToRGB($eugene-primary)};
+        --brand-secondary-rgb: #{hexToRGB($eugene-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($eugene-tertiary)};
+        --section50-border: #{$eugene-primary};
+        --navlink-border: #{$eugene-primary};
+        --apt-detail-promo-bg: #{$eugene-secondary};
+    }
+}

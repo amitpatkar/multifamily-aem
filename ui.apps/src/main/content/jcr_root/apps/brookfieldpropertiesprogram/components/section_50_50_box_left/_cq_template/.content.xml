@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          title="Virtually Tour our amenities"
+          bgImagePath="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/section50-box-left-sample.jpg"
+            bgImageLabel="Virtually Tour our amenities">
+    <menuLinks jcr:primaryType="nt:unstructured">
+        <item0 jcr:primaryType="nt:unstructured" label="Begin Tour" btnType="btn-light" cssClass="schedule-tour-popup-button" url="#"/>
+    </menuLinks>
+</jcr:root>

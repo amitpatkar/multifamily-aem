@@ -1,0 +1,79 @@
+// max content width
+
+$max-cotent-width: 1920px;
+
+
+//padding 
+
+$padding-large: 15%;
+$padding-medium: 10%;
+$padding-small: 30px;
+
+//Button Size
+$btn-pr-width: 250px;
+$btn-sec-width: 200px;
+$btn-submit-width-mobile: 310px;
+$btn-submit-width: 350px;
+$btn-height: 40px;
+$btn-submit-height: 60px;
+$btn-submit-height-mobile: 50px;
+$btn-radius: 2px;
+
+//Nav bar height
+$navbar-desktop: 75px;
+$navbar-mobile: 68px;
+
+
+//Icon paths
+$icon-base-path: '/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/';
+$arrow-light: '#{$icon-base-path}arrow_light.svg';
+$arrow-dark: '#{$icon-base-path}arrow_dark.svg';
+$arrow-blue: '#{$icon-base-path}arrow_blue.svg';
+$short-arrow-light: '#{$icon-base-path}short_arrow_light.svg';
+$short-arrow-blue: '#{$icon-base-path}short_arrow_blue.svg';
+$chevron-light: '#{$icon-base-path}chevron_light.svg';
+$chevron-dark: '#{$icon-base-path}chevron_dark.svg';
+$chevron-green: '#{$icon-base-path}chevron_green.svg';
+$select-arrow: '#{$icon-base-path}select_arrow.svg';
+$sort-arrows: '#{$icon-base-path}sort_arrows.svg';
+$sort-arrows-asc: '#{$icon-base-path}sort_arrows_asc.svg';
+$sort-arrows-desc: '#{$icon-base-path}sort_arrows_desc.svg';
+$accordion-plus: '#{$icon-base-path}accordion_plus.svg';
+$accordion-minus: '#{$icon-base-path}accordion_minus.svg';
+$gallery-indicator-desktop: '#{$icon-base-path}gallery-indicator-desktop.svg';
+$gallery-indicator-mobile: '#{$icon-base-path}gallery-indicator-mobile.svg';
+$video-play:'#{$icon-base-path}video_play.svg';
+$video-pause:'#{$icon-base-path}video_pause.svg';
+$video-mute:'#{$icon-base-path}sound_on.svg';
+$video-unmute:'#{$icon-base-path}sound_off.svg';
+$hamburger-dark: '#{$icon-base-path}hamburger_dark.svg';
+$hamburger-light: '#{$icon-base-path}hamburger_light.svg';
+$close-dark: '#{$icon-base-path}close_dark.svg';
+$close-light: '#{$icon-base-path}close_light.svg';
+$download-light: '#{$icon-base-path}download_light.svg';
+$calendar: '#{$icon-base-path}calendar.svg';
+
+
+//spacing between components
+$desktop-spacing: 120px;
+$mobile-spacing: 70px;
+
+
+//== Font
+
+$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size:             16px;
+$font-height:           1.5;
+
+//== Color
+
+// Normal mode
+$color-foreground:      #202020;
+$color-background:      #ECECEC;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark:       invert($color-link);
+

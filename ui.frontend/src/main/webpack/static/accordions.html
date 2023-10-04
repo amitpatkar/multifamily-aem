@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.css" type="text/css">
+    <script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-dependencies.css" type="text/css">
+</head>
+<body class="page basicpage home-page root theme-eugene">
+<!--Header for testing only -->
+<header class="cmp-header" data-cmp-component="header">
+  <a class="skip-main" href="#main">Skip To Main Content</a>
+  <nav>
+      <div class="cmp-header__navbar">
+          <!--replace "cmp-header__logo--rectangle" with "cmp-header__logo--square" if author select square shape-->
+          <div class="cmp-header__logo cmp-header__logo--rectangle">
+              <a href="/">
+                  <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Eugene.svg" alt="home" />
+              </a>
+          </div>
+          <div class="cmp-header__links">
+              <div class="cmp-header__links--left">
+                  <a href="#" class="cmp-header__link">Features & Amenities</a>
+                  <a href="#" class="cmp-header__link">Neighborhood</a>
+              </div>
+              <div class="cmp-header__links--right">
+                  <button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button>
+                  <div class="cmp-header__tabletTriggerWrap">
+                      <button class="cmp-header__tabletTrigger" 
+                      aria-expanded="false"
+                      aria-controls="cmp-header-tabletMenu">
+                      <span class="visually-hidden">open</span>
+                      </button>
+                  </div>
+                  <a href="#" class="cmp-header__link">Lease Online</a>
+                  <a href="#" class="cmp-header__link">Resident Portal</a>
+                  <a href="#" class="cmp-header__link">Get in touch</a>           
+              </div>
+          </div>
+  
+          <div class="cmp-header__mobileTriggerWrap">
+              <button class="cmp-header__mobileTrigger" 
+              aria-expanded="false"
+              aria-controls="cmp-header-mobileMenu">
+                  <span class="cmp-header__mobileTrigger--close">CLOSE</span>
+                  <span class="cmp-header__mobileTrigger--open">MENU</span>
+              </button>
+          </div>
+      </div>
+      <div id="cmp-header-tabletMenu" class="cmp-header__tabletMenu hidden" >
+          <div class="cmp-header__tabletMenu--body">
+              <ul>
+                  <li><a href="#" class="cmp-header__tabletMenu--link">Lease Online</a></li>
+                  <li><a href="#" class="cmp-header__tabletMenu--link">Resident Portal</a></li>
+                  <li><a href="#" class="cmp-header__tabletMenu--link">Get in Touch</a></li>
+              </ul>
+          </div>
+      </div>
+      <div id="cmp-header-mobileMenu" class="cmp-header__mobileMenu hidden">
+          <div class="cmp-header__mobileMenu--body">
+              <ul class="cmp-header__mobileMenu--top">
+                  <li><a href="#" class="cmp-header__mobileMenu--link">Features & Amenities</a></li>
+                  <li><a href="#" class="cmp-header__mobileMenu--link">Neighborhood</a></li>
+              </ul>
+              <ul class="cmp-header__mobileMenu--bottom">
+                  <li><button id="schedule-tour-popup-button" class="schedule-tour-popup-button btn btn-secondary btn-light" >Schedule a Tour</button></li>
+                  <li><a href="#" class="cmp-header__mobileMenu--link">Lease Online</a></li>
+                  <li><a href="#" class="cmp-header__mobileMenu--link">Resident Portal</a></li>
+                  <li><a href="#get-in-touch" class="cmp-header__mobileMenu--link">Get in Touch</a></li>
+              </ul>
+              <div class="cmp-header__mobileMenu--divider"></div>
+              <ul class="cmp-header__mobileMenu--info">
+                  <li>
+                      <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/map_light.svg" alt="" />
+                      <a href="#" class="cmp-header__mobileMenu--direction">Get Directions</a>
+                  </li>
+                  <li>
+                      <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/phone_light.svg" alt=""/>
+                      <a href="#" class="cmp-header__mobileMenu--phone">(877) 245-1215</a>
+                  </li>
+                  <li>
+                      <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/icons/chat_light.svg" alt=""/>
+                      <a href="#" class="cmp-header__mobileMenu--chat">Chat Now</a>
+                  </li>
+              </ul>
+
+          </div>
+      </div>
+
+
+  </nav>       
+
+</header>
+<!--Header for testing only  end -->
+<main id="main">
+    <!--Hero short-->
+<div class="cmp-hero cmp-hero--short">
+    <div class="cmp-hero__wrapper">
+        <div class="cmp-hero__media">
+            <img src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/hero_sample_image.jpg" alt="description of the image" width="1920" height="1095"/>
+        </div>
+        <div class="cmp-hero__title">
+            <h1>Available Apartments</h1>
+        </div>
+    </div>
+</div>
+<!--Hero short: end -->
+
+ <!--Header and Hero components are for testing only-->
+
+
+ <h2>Accordion Component</h2>
+ <br>
+ <!--Accordion Component-->
+ <!--First item is expanded by default; single expansion: expanding one item collapses all other items-->
+ <div class="cmp-accordions" data-cmp-component="accordions">
+   <div class="grid-container collapse-all">
+     <div class="cmp-accordions__headline">
+         <h2 class="accordion-headline">World Class Amenities</h2>
+     </div>
+     <div class="cmp-accordions__main">
+          <div id="accordion-78bc3b842e" class="cmp-accordions__group" >
+            <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-0b936d3b6c">
+              <h3 class="cmp-accordions__header">
+                <button 
+                  id="accordion-78bc3b842e-item-0b936d3b6c-button" 
+                  class="cmp-accordions__button" 
+                  aria-controls="accordion-78bc3b842e-item-0b936d3b6c-panel" 
+                  aria-expanded="false">
+                    <span class="cmp-accordions__title large-title">one-stop Dining & Leisure</span>
+                    <span class="cmp-accordions__icon"></span>
+                </button>
+              </h3>
+              <div 
+                id="accordion-78bc3b842e-item-0b936d3b6c-panel" 
+                class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+                role="region" 
+                aria-labelledby="accordion-78bc3b842e-item-0b936d3b6c-button" 
+                >
+                <div class="text">
+                  <div id="text-0b936d3b6c" class="cmp-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+                    <p>Caramels cake dragée pie dragée donut pastry chocolate bar jelly. Muffin bear claw croissant bear claw sugar plum chocolate carrot cake carrot cake. Candy cake sesame snaps pie sesame snaps sweet roll ice cream tiramisu cake. Powder carrot cake marshmallow. Powder cotton candy wafer topping brownie icing. Fruitcake carrot cake brownie donut jelly icing chocolate bar ice cream. Sesame snaps lemon drops sugar plum croissant. Topping danish bear claw tootsie roll cupcake bear claw marzipan liquorice wafer. Bonbon ice cream chocolate bar liquorice. Pastry chocolate cake cake donut. Cotton candy cake donut liquorice tiramisu. Fruitcake brownie caramels pie powder cake liquorice chocolate cake gummies. Cotton candy croissant marzipan cupcake jelly-o. Cheesecake liquorice sweet chocolate bar lemon drops icing soufflé.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-273d53765b">
+              <h3 class="cmp-accordions__header">
+                <button 
+                id="accordion-78bc3b842e-item-273d53765b-button" 
+                class="cmp-accordions__button" 
+                aria-controls="accordion-78bc3b842e-item-273d53765b-panel"
+                aria-expanded="false">
+                  <span class="cmp-accordions__title large-title">24/7 Concierge Services</span>
+                  <span class="cmp-accordions__icon"></span>
+                </button>
+              </h3>
+              <div id="accordion-78bc3b842e-item-273d53765b-panel" 
+              class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+              role="region" 
+              aria-labelledby="accordion-78bc3b842e-item-273d53765b-button" 
+             >
+                <div class="text">
+                  <div id="text-273d53765b" class="cmp-text">
+                    <p>Nulla scelerisque diam eget turpis lacinia, consectetur efficitur purus pulvinar. In at velit bibendum, ullamcorper tellus pellentesque, vulputate ex. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Caramels cake dragée pie dragée donut pastry chocolate bar jelly. Muffin bear claw croissant bear claw sugar plum chocolate carrot cake carrot cake. Candy cake sesame snaps pie sesame snaps sweet roll ice cream tiramisu cake. Powder carrot cake marshmallow. Powder cotton candy wafer topping brownie icing. Fruitcake carrot cake brownie donut jelly icing chocolate bar ice cream. Sesame snaps lemon drops sugar plum croissant. Topping danish bear claw tootsie roll cupcake bear claw marzipan liquorice wafer. Bonbon ice cream chocolate bar liquorice. Pastry chocolate cake cake donut. Cotton candy cake donut liquorice tiramisu. Fruitcake brownie caramels pie powder cake liquorice chocolate cake gummies. Cotton candy croissant marzipan cupcake jelly-o. Cheesecake liquorice sweet chocolate bar lemon drops icing soufflé.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-273d53765u">
+              <h3 class="cmp-accordions__header">
+                <button 
+                id="accordion-78bc3b842e-item-273d53765u-button" 
+                class="cmp-accordions__button" 
+                aria-controls="accordion-78bc3b842e-item-273d53765u-panel"
+                aria-expanded="false">
+                  <span class="cmp-accordions__title large-title">REFINED ART & ENTERTAINMENT</span>
+                  <span class="cmp-accordions__icon"></span>
+                </button>
+              </h3>
+              <div id="accordion-78bc3b842e-item-273d53765u-panel" 
+              class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+              role="region" 
+              aria-labelledby="accordion-78bc3b842e-item-273d53765u-button" 
+              >
+                <div class="text">
+                  <div id="text-273d53765u" class="cmp-text">
+                    <p>Sweet roll pudding cake cake cheesecake candy canes. Gummies tart marshmallow apple pie sweet sweet fruitcake. Jelly-o chocolate pie danish. Candy sweet roll jelly chocolate cake pastry wafer jelly-o tiramisu sweet. Caramels wafer cotton candy powder oat cake biscuit bonbon. Macaroon apple pie soufflé bonbon cheesecake marshmallow. Oat cake chupa chups danish. Toffee halvah muffin cake danish wafer. Caramels topping pudding cookie bear claw soufflé cotton candy cupcake. Chocolate cake dragée croissant cupcake tiramisu cake topping cake. Jelly apple pie muffin gummies. Chocolate cake jujubes ice cream dessert pudding gummi bears tiramisu ice cream. Fruitcake sweet roll sugar plum jujubes chocolate jelly-o ice cream chocolate pudding. Toffee biscuit chocolate candy canes.</p>
+                    <p>Caramels cake dragée pie dragée donut pastry chocolate bar jelly. Muffin bear claw croissant bear claw sugar plum chocolate carrot cake carrot cake. Candy cake sesame snaps pie sesame snaps sweet roll ice cream tiramisu cake. Powder carrot cake marshmallow. Powder cotton candy wafer topping brownie icing. Fruitcake carrot cake brownie donut jelly icing chocolate bar ice cream. Sesame snaps lemon drops sugar plum croissant. Topping danish bear claw tootsie roll cupcake bear claw marzipan liquorice wafer. Bonbon ice cream chocolate bar liquorice. Pastry chocolate cake cake donut. Cotton candy cake donut liquorice tiramisu. Fruitcake brownie caramels pie powder cake liquorice chocolate cake gummies. Cotton candy croissant marzipan cupcake jelly-o. Cheesecake liquorice sweet chocolate bar lemon drops icing soufflé.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cmp-accordions__item" id="accordion-78bc3b842e-item-7a1ad04f9b">
+              <h3 class="cmp-accordions__header">
+                <button id="accordion-78bc3b842e-item-7a1ad04f9b-button" 
+                class="cmp-accordions__button" 
+                aria-controls="accordion-78bc3b842e-item-7a1ad04f9b-panel"
+                aria-expanded="false">
+                  <span class="cmp-accordions__title large-title">More Amenities</span>
+                  <span class="cmp-accordions__icon"></span>
+                </button>
+              </h3>
+              <div 
+                id="accordion-78bc3b842e-item-7a1ad04f9b-panel" 
+                class="cmp-accordions__panel cmp-accordions__panel--hidden" 
+                role="region" 
+                aria-labelledby="accordion-78bc3b842e-item-7a1ad04f9b-button" 
+                >
+                <div class="text">
+                  <div id="text-7a1ad04f9b" class="cmp-text">
+                    <ul class="amenity-list">
+                      <li>Doorperson</li>
+                      <li>Children's Play Area</li>
+                      <li>Live-in Building Manager</li>
+                      <li>Business Facilities</li>
+                      <li>Additional Storage</li>
+                      <li>Smoke Free Property</li>
+                      <li>Laundry Services</li>
+                      <li>Secure Package Room</li>
+                      <li>And any more...</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
+     </div>
+ </div>
+  <!--Accordion Component end-->
+
+</main>
+<script type="text/javascript" src="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-base.js"></script>
+</body>
+</html>

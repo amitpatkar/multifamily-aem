@@ -1,0 +1,11 @@
+<sly
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+        data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"/>
+<div class="engrain__wrapper" data-cmp-component="engrain">
+    <iframe id="engrain-sightmap"
+            data-sightmap-hide-ui="${properties.hideUI}"
+            data-sightmap-id="${pageInfo.collectionConfigModel ? pageInfo.collectionConfigModel.engrainSightMapID : pageInfo.propertyConfigModel.engrainSightMapID}"
+            frameborder="0"></iframe>
+</div>
+<sly data-sly-use.bodyJavascripts="${'com.brookfieldpropertiesprogram.core.models.BodyJavaScriptRequestModel' @scriptKeys=['engrainSightMap','engrainSightMapInit']}"/>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    brookfieldLogo="/etc.clientlibs/brookfieldpropertiesprogram/clientlibs/clientlib-site/resources/images/logos/logo_Brookfield.svg"
+    brookfieldLogoLabel=""
+    brookfieldLogoUrl=""
+    label="Contact Us"
+    url="/">
+    <menuLinks jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            label="Properties"
+            url="/"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            label="About Brookfield"
+            url="/"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            label="Careers"
+            url="/"/>
+    </menuLinks>
+    <socialLinks jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            label="Availability"
+            url="/"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            label="Features &amp; Amenities"
+            url="/"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            label="Neighborhood"
+            url="/"/>
+        <item3
+            jcr:primaryType="nt:unstructured"
+            label="Gallery"
+            url="/"/>
+    </socialLinks>
+</jcr:root>

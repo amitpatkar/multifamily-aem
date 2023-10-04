@@ -1,0 +1,47 @@
+.cmp-errorPage {
+    margin-top: 140px;
+    margin-bottom: 70px;
+    @include breakpoint-up(desktop) {
+        margin-top: 220px;
+        margin-bottom: 120px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        @include breakpoint-up(desktop) {
+            margin-bottom: 80px;
+        }
+    }
+    &__body {
+        margin-bottom: 45px;
+        @include breakpoint-up(desktop) {
+            margin-bottom: 70px;
+        }
+        h6, p {
+            @include highlight-title();
+        }
+    }
+
+    &__cta {
+        border-top: 2px solid rgba(var(--universal-black-rgb), 0.1);
+        padding-top: 30px;
+        @include breakpoint-up(desktop) {
+            padding-top: 40px;
+            text-align: center;
+        }
+        p, h4 {
+            @include intermediate-title();
+        }
+        a {
+            margin-top: 20px;
+            @include breakpoint-up(desktop) {
+                margin-top: 30px;
+            }
+        }
+        a + a {
+            margin-top: 10px;
+            @include breakpoint-up(desktop) {
+                margin-left: 15px;
+            }
+        }
+    }
+}

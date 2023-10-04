@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    lead="&lt;h3&gt;The Eugene is a modern, spectacular residential collection, located in the heart of New York City. It&apos;s forward-thinking sensibility can be found throughout.&lt;/h3&gt;"
+    copy="&lt;p&gt;The Eugene is an integral piece of New York City’s most anticipated neighborhood, Hudson Yards. Just minutes away from Chelsea, The High Line and transportation.&lt;/p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-tertiary btn-light&quot;&gt;Explore&lt;/a&gt;"
+    cq:styleIds="[678000,668001]">
+   </jcr:root>

@@ -1,0 +1,16 @@
+<sly
+        data-sly-use.globalConfig="com.brookfieldpropertiesprogram.core.models.GlobalConfigRequestModel"
+        data-sly-use.propertyList="com.brookfieldpropertiesprogram.core.models.PropertyConfigListModel"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<poi-map map-id="${properties.mapId}" autocenter>
+    <div class="map"></div>
+    <sly data-sly-list.property="${propertyList.propertyConfigModels}">
+        <poi-marker data-sly-test="${property.latitude && property.longitude}" lat="${property.latitude}" lng="${property.longitude}" href="/properties/${property.name}.html" color="${properties.markerColor}" zoom="${properties.markerZoomLevel}"></poi-marker>
+    </sly>
+</poi-map>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=${globalConfig.googleMapsAPIKey}"></script>
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.hideFullscreen, classAppend='cmp-text'}"></sly>

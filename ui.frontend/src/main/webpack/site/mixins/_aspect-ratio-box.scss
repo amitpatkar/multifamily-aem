@@ -1,0 +1,64 @@
+@use "sass:math";
+
+    //aspect ratio box
+    @mixin aspect-ratio-box-dynamic($ratio: 1920 1022) {
+      $paddingTop: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
+      //font-size: 1px;
+      overflow: hidden;
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: $paddingTop;
+      }
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      img, video {
+        object-fit: cover;
+        max-width: 100%;
+      }
+      
+    }
+
+    @mixin aspect-ratio-box-fixed($ratio: 1920 1022) {
+      $paddingTop: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
+      position: relative;
+      //font-size: 1px;
+      height: 0;
+      overflow: hidden;
+      padding-top: $paddingTop;
+      >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      img, video {
+        object-fit: cover;
+      }
+      img, video, iframe {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+
+
+    @mixin btn-themes($btnTextColor, $btnBgColor, $btnBorderColor, $iconUrl) {
+      background-color: $btnBgColor;
+      color: $btnTextColor;
+      border: 2px solid $btnBorderColor;
+      &:after {
+        content: url($iconUrl);
+      }
+    }
+
+

@@ -1,0 +1,41 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" 
+     data-sly-use.cta="com.brookfieldpropertiesprogram.core.models.NavigationLink"
+     data-sly-use.ctas="com.brookfieldpropertiesprogram.core.models.NavigationRequestModel"
+     data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+     data-sly-use.urlInfo="com.brookfieldpropertiesprogram.core.models.UrlInfoRequestModel"
+     >
+
+        <h3 class="cmp-apartmentDetail__available-title">Available**</h3>
+        <h3 class="cmp-apartmentDetail__accordion-header">
+            <button
+                class="cmp-apartmentDetail__accordion-button cmp-apartmentDetail__accordion-button--expanded"
+                id="apartmentDetail__accordion-button"
+                aria-control="available-accordion-panel"
+                aria-expanded="true">
+                <span class="cmp-apartmentDetail__accordion-title">Available</span>
+                <span class="cmp-apartmentDetail__accordion-icon"></span>
+            </button>
+        </h3>
+        <div class="cmp-apartmentDetail__accordion-panel cmp-apartmentDetail__accordion-panel--expanded"
+             id="apartmentDetail__accordion-panel"
+             role="region"
+             aria-labelledby="apartmentDetail__accordion-button">
+            <ul class="cmp-apartmentDetail__unitList">
+                {{#each group.units}}
+                <li class="cmp-apartmentDetail__unit">
+                    <p class="label-text floor-number">{{@root.group.name}} - {{address.unitNumber}}</p>
+                    <h3 class="small-title">{{floorPlan.name}}</h3>
+                    <p class="label-text">{{@root.group.type}} | {{@root.group.area}} sq. ft.</p>
+                    <p class="label-text">Starting at \${{rent}}/month</p>
+                    <p><a href="{{olLink}}" x-cq-linkchecker="skip" class="btn btn-secondary btn-dark"
+                          data-pk="{{pk}}">Lease Online</a></p>
+                </li>
+                {{/each}}
+            </ul>
+            <div class="cmp-apartmentDetail__disclaimer">
+                ${pageInfo.propertyConfigModel.specialsDisclaimer ? pageInfo.propertyConfigModel.specialsDisclaimer : '<p>*Select units only. Restrictions apply; inquire for details.</p><p>**Rent displayed is for the best-priced term. Rates vary by lease term and move-in date. Select “Apply Now” to see all other rate options.</p>' @context='html'}
+            </div>
+        </div>
+
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.text, classAppend='cmp-text'}"></sly>

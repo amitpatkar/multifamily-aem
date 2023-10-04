@@ -1,0 +1,14 @@
+.root {
+    &.theme-third,
+    &.theme-third-small {
+        --brand-primary: #{$third-primary};
+        --brand-secondary: #{$third-secondary};
+        --brand-tertiary: #{$third-tertiary};
+        --brand-primary-rgb: #{hexToRGB($third-primary)};
+        --brand-secondary-rgb: #{hexToRGB($third-secondary)};
+        --brand-tertiary-rgb: #{hexToRGB($third-tertiary)};
+        --section50-border: #{$third-primary};
+        --navlink-border: #{$third-primary};
+        --apt-detail-promo-bg: #{$third-secondary};
+    }
+}

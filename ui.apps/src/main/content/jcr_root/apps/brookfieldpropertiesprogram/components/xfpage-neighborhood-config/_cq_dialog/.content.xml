@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Neighborhood"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,granite.contexthub.configuration,cq.siteadmin.admin.properties]"
+          helpPath="https://www.adobe.com/go/aem_cmp_page_v2"
+          mode="edit">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideChildren="[thumbnail,advanced,pwa,cloudservices,permissions,personalization,socialmedia]">
+                    <brand
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Brand"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">         
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Details"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <headline
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Headline"
+                                        name="./headline"/>       
+                                    <featuredImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        rootPath="/content/dam"
+                                        fieldLabel="Featured Image"
+                                        name="./featuredImage"/>
+                                    <logo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        rootPath="/content/dam"
+                                        fieldLabel="Logo"
+                                        name="./logo"/>      
+                                     <description
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Description"
+                                        name="./description"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins jcr:primaryType="nt:unstructured" sling:resourceSuperType="brookfieldpropertiesprogram/components/utilities/rteconfig/rtePlugins"/>                                                    
+                                                <uiSettings jcr:primaryType="nt:unstructured" sling:resourceSuperType="brookfieldpropertiesprogram/components/utilities/rteconfig/uiSettings"/>
+                                    </description>  
+                                    <associatedProperties
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Associated Properties"
+                                        multiple="{Boolean}true"
+                                        name="./associatedProperties">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="brookfieldpropertiesprogram/components/utilities/datasources/config-list"
+                                            value="value"
+                                            text="jcr:title"
+                                            path="/content/siteconfig/properties" />
+                                    </associatedProperties>      
+                                    <associatedCity
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="City"
+                                        multiple="{Boolean}false"
+                                        name="./associatedCity">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="brookfieldpropertiesprogram/components/utilities/datasources/config-list"
+                                            value="value"
+                                            text="jcr:title"
+                                            path="/content/siteconfig/cities" />
+                                    </associatedCity> 
+                                    <associatedState
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="State"
+                                        multiple="{Boolean}false"
+                                        name="./associatedState">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="brookfieldpropertiesprogram/components/utilities/datasources/config-list"
+                                            value="value"
+                                            text="jcr:title"
+                                            path="/content/siteconfig/states" />
+                                    </associatedState> 
+                                    <destinationPage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        rootPath="/content/portfolio/en"
+                                        fieldDescription="${destinationPageh}"
+                                        fieldLabel="Destination Page (Leave blank for default)"
+                                        name="./destinationPage"/>        
+                                </items>
+                            </section>
+                        </items>
+                    </brand>                    
+                    <seo
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SEO"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <section
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Email Addresses"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <metaName
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Meta Name"
+                                        name="./metaName"/>
+                                    <metaDescription
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                        fieldLabel="Meta Description"
+                                        name="./metaDescription"/>
+                                    <metaKeywords
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Meta Keywords"
+                                        name="./metaKeywords"/>
+                                </items>
+                            </section>
+                        </items>
+                    </seo>     
+                    <!--              
+                    <content
+                        cq:showOnCreate="{Boolean}true"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content"
+                        sling:orderBefore="cloudservices"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <section
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Content"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <mega-menu-links
+                                                jcr:primaryType="nt:unstructured"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Associate Content To Page Type"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./menuLinks">
+                                                    <items
+                                                        jcr:primaryType="nt:unstructured">                                                    
+                                                        <pageType
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Page Type"
+                                                            name="./pageType"/>
+                                                        <contentVariantPath                                                 
+                                                            jcr:primaryType="nt:unstructured" 
+                                                            name="./pageContent"
+                                                            filter="folderOrVariant" 
+                                                            fieldLabel="Page Content" 
+                                                            renderReadOnly="{Boolean}true"
+                                                            sling:resourceType="cq/experience-fragments/editor/components/xffield"
+                                                            variant="sm"
+                                                            translateOptions="{Boolean}false">                                                
+                                                        </contentVariantPath>
+                                                    </items>
+                                                </field>
+                                            </mega-menu-links>
+                                        </items>                                        
+                                    </section>
+                                </items>
+                            </column>
+                        </items>
+                    </content>    
+-->                                                        
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

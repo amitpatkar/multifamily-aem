@@ -1,0 +1,30 @@
+<sly 
+    data-sly-use.pageInfo="com.brookfieldpropertiesprogram.core.models.PageInfoRequestModel"
+    data-sly-use.globalMenu="com.brookfieldpropertiesprogram.core.models.NavigationComponentModel"
+    data-sly-use.navigation="${'navigation_portfolio.js' @pageInfo=pageInfo,globalMenu=globalMenu}"
+    data-sly-use.contactus="com.brookfieldpropertiesprogram.core.models.NavigationLink"    
+    >
+    <div class="cmp-rentdotHeader-variation__wrapper max-content-width">
+        <div class="cmp-rentdotHeader-variation__navbar grid-container">
+            <nav>
+                <!--replace the "#" in href with property url-->
+                <a href="${pageInfo.propertyConfigModel ? '/content/portfolio/en/properties/' : 'javascript:history.back()'}${pageInfo.propertyConfigModel ? pageInfo.propertyConfigModel.name : ''}${pageInfo.propertyConfigModel ? '.html' : ''}" target="_self" class="cmp-rentdotHeader-variation__propertyLink">
+                    <span class="cmp-rentdotHeader-variation__arrow">
+                        <svg id="desktop-arrow-icon" aria-hidden="true" width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1" y1="-1" x2="29" y2="-1" transform="matrix(-1 8.74228e-08 8.74228e-08 1 32 6)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 9L2 5L6 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg id="mobile-arrow-icon" aria-hidden="true" width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="17" y1="5" x2="3" y2="5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M6 9L2 5L6 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span>Back ${pageInfo.propertyConfigModel.title ? ' to ' : ''}</span>
+                    <span class="cmp-rentdotHeader-variation__propertyName">${pageInfo.propertyConfigModel.title ? pageInfo.propertyConfigModel.title : ''}</span>
+                    <!--replace "The Eugene" with property name-->
+                </a>
+            </nav>  
+        </div> 
+    </div>
+    <div class="cmp-rentdotHeader__overlay"></div>
+</sly> 

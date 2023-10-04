@@ -1,0 +1,54 @@
+<sly 
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.association="com.brookfieldpropertiesprogram.core.models.AssociationConfigModel"
+    >
+    <!--You May Also Like section html Start-->
+    <div class="cmp-crossPromotion" data-layer-section="you-may-also-like">
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="cmp-crossPromotion__headline">
+                    <!--replace the headline with dynamic headline from author dialog-->
+                    <h2 class="large-title">${properties.title}</h2>
+                </div>
+                <div class="cmp-crossPromotion__brands" data-sly-test="${association.propertyConfigModels}">
+                    <ul>
+                        <sly data-sly-list.property="${association.propertyConfigModels}">
+                            <li class="cmp-crossPromotion__brand-item" data-sly-test="${propertyList.index < 3}">
+                                <div class="cmp-crossPromotion__logo">
+                                    <!--link to to the property page-->
+                                    <!--property url, logo image src, logo image alt(property name) need to be populated-->
+                                    <a href="/properties/${property.name}.html">
+                                        <img src="${property.logo}" alt="${property.title ? property.title : 'You May Also Like Promotion Logo'}" >
+                                    </a>
+                                </div>
+                                <div class="cmp-crossPromotion__cta">
+                                    <!--link to to the property page-->
+                                    <!--property name and url need to be populated-->
+                                    <a class="btn btn-tertiary btn-light" href="/content/portfolio/en/properties/${property.name}.html">${property.title}</a>
+                                </div>
+                                <div class="cmp-crossPromotion__address">
+                                    <!--link to the google map with populated property location-->
+                                    <a href="${property.getMapLink}">
+                                        <!--addresses need to be populated-->
+                                        <span class="body-text">${property.address}</span>
+                                        <span class="body-text">${property.stateCode} ${property.zipCode}</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </sly>
+
+                        <!--View All cta: link to all properties -->
+                        <li class="cmp-crossPromotion__view-all">
+                            <a class="btn btn-tertiary btn-light" href="${properties.viewallctalink}.html">${properties.viewallctatitle}</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--You May Also Like section html End-->
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.title, classAppend='cmp-text'}"></sly>
